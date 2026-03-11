@@ -700,8 +700,8 @@ document.getElementById('exit-modal').addEventListener('click', e => {
 });
 function updateHUD() {
   if (!currentCase) return;
-  const total = currentCase.phases.length, pct = (GS.phaseIdx/total*100).toFixed(0);
-  document.getElementById('hud-score').textContent = String(GS.score).padStart(3,'0');
+  const total = currentCase.phases.length;
+  const pct   = Math.round((GS.phaseIdx + 1) / total * 100);  document.getElementById('hud-score').textContent = String(GS.score).padStart(3,'0');
   document.getElementById('hud-prog').style.width  = pct + '%';
   document.getElementById('hud-txt').textContent   = `FASE ${GS.phaseIdx+1}/${total}`;
   document.getElementById('hud-hits').textContent  = `${GS.hits}/${GS.total}`;
@@ -748,6 +748,15 @@ function renderError(msg) {
    RENDER: INTRO
 ═══════════════════════════════════════════════════════ */
 function renderIntro() {
+  
+  // ── reset visual do HUD para o novo caso ──────────
+  const t = currentCase.phases.length;
+  document.getElementById('hud-score').textContent = '000';
+  document.getElementById('hud-prog').style.width  = '0%';
+  document.getElementById('hud-txt').textContent   = `0 / ${t} FASES`;
+  document.getElementById('hud-hits').textContent  = '0 / 0';
+  // ──────────────────────────────────────────────────
+
   const c = currentCase;
   const canChange = manifest.filter(f => f !== currentFile).length > 0;
   const pName = c.plaintiff.split(' ')[0].toUpperCase();
@@ -1014,6 +1023,12 @@ function nextPhase() { SFX.advance(); GS.phaseIdx++; fade(() => renderPhase()); 
 ═══════════════════════════════════════════════════════ */
 function renderResult() {
   SFX.finish();
+  // ── forçar barra a 100% ao concluir o caso ────────
+  const t = currentCase.phases.length;
+  document.getElementById('hud-prog').style.width = '100%';
+  document.getElementById('hud-txt').textContent  = `${t} / ${t} FASES`;
+  // ──────────────────────────────────────────────────
+
   const c    = currentCase;
   const pct  = GS.total > 0 ? (GS.hits / GS.total * 100) : 0;
   const errors = GS.total - GS.hits;
