@@ -1,0 +1,88 @@
+{
+  "id": "case-017",
+  "icon": "🏡",
+  "title": "A Casa de 17 Anos",
+  "area": "DIREITO DAS COISAS · USUCAPIÃO URBANA · ART. 1.240 CC",
+  "plaintiff": "Maria José dos Santos",
+  "defendant": "Espólio de Antônio Ferreira (proprietário registral)",
+  "intro": "Sua cliente Maria José dos Santos, 58 anos, mora em uma casa de 60m² há 17 anos, sem nunca ter recebido oposição de ninguém. O imóvel está em área urbana.\n\nO proprietário registral, Antônio Ferreira, faleceu há 5 anos sem deixar herdeiros conhecidos. O imóvel nunca foi utilizado por terceiros.\n\nMaria José quer regularizar a situação para poder vender, financiar e transmitir o imóvel por herança.\n\nVocê é o advogado de Maria José — prove os requisitos da usucapião!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "REQUISITOS",
+      "stepIcon": "📋",
+      "narrative": "Antes de ajuizar a ação, você precisa verificar se Maria José atende a todos os requisitos da usucapião especial urbana. Ela mora na casa há 17 anos, é sua única moradia e não tem outro imóvel em seu nome.",
+      "speaker": null,
+      "question": "Quais são os requisitos da usucapião especial urbana (art. 1.240 CC) que Maria José deve comprovar?",
+      "opts": [
+        "Posse de área urbana de até 250m² por 5 anos ininterruptos e sem oposição, com fins de moradia própria ou familiar, sem possuir outro imóvel — todos cumpridos por Maria José",
+        "Prazo de 15 anos de posse ininterrupta, independentemente do tamanho ou finalidade",
+        "Pagamento de IPTU durante todo o período — sem comprovante fiscal a usucapião é impossível",
+        "Necessidade de escritura particular assinada pelo antigo proprietário concordando com a transmissão"
+      ],
+      "correct": 0,
+      "explanation": "O art. 1.240 CC e o art. 183 CF/88 preveem a usucapião especial urbana com os seguintes requisitos:\n\n1. ÁREA URBANA: até 250m² (Maria José tem 60m² ✓)\n2. PRAZO: 5 anos ininterruptos e sem oposição (Maria José tem 17 anos ✓)\n3. FINALIDADE: moradia própria ou de sua família ✓\n4. NÃO TER OUTRO IMÓVEL: Maria José não tem outro imóvel ✓\n\nNão se exige:\n- Justo título ou boa-fé (diferente da usucapião ordinária do art. 1.242 CC)\n- Pagamento de IPTU (embora ajude como prova indireta)\n- Consentimento do proprietário\n\nMaria José cumpre todos os requisitos — pode ajuizar a ação.",
+      "refs": [
+        "Art. 1.240 CC",
+        "Art. 183 CF/88",
+        "Art. 9º Lei 10.257/2001",
+        "Art. 216-A LRP",
+        "Súmula 237 STJ"
+      ],
+      "bridge": "A ação foi ajuizada. O MP foi citado como fiscal da lei. Um herdeiro distante do proprietário apareceu para contestar..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "Apareceu Jorge, sobrinho do falecido proprietário, que nunca esteve no imóvel mas se diz herdeiro. Ele contesta alegando que há 8 anos enviou carta notificando Maria José de que o imóvel pertencia ao seu tio — o que tornaria a posse 'contestada' desde então.",
+      "speaker": {
+        "name": "Dr. Rangel — Advogado de Jorge",
+        "icon": "🕴",
+        "text": "Enviamos notificação extrajudicial há 8 anos! Isso interrompeu a posse! A usucapião não pode ser reconhecida porque desde a notificação a posse de Maria José é contestada — ela própria sabe que o imóvel é de terceiro!",
+        "color": "var(--orange)"
+      },
+      "question": "A notificação extrajudicial de 8 anos atrás interrompeu a contagem da posse?",
+      "opts": [
+        "Não — a interrupção da posse requer AÇÃO JUDICIAL possessória ou reivindicatória; simples notificação extrajudicial não interrompe a contagem; além disso, quando a carta chegou Maria José já tinha 9 anos de posse — o prazo de 5 anos já estava consumado",
+        "Sim — qualquer manifestação do proprietário, mesmo por carta, interrompe a posse ad usucapionem",
+        "A notificação transformou a posse em detenção — Maria José não tem mais direito à usucapião",
+        "Maria José deve provar que não recebeu a carta para que a notificação não surta efeitos"
+      ],
+      "correct": 0,
+      "explanation": "A INTERRUPÇÃO da posse para fins de usucapião requer:\n- AÇÃO JUDICIAL de reintegração de posse, possessória ou reivindicatória (arts. 202 e 1.244 CC)\n- Ou citação válida em ação judicial\n\nMera notificação extrajudicial NÃO interrompe a contagem da usucapião — entendimento pacífico na doutrina e jurisprudência.\n\nDuplamente protegida: quando Maria José recebeu a notificação, já haviam 9 anos de posse. O prazo mínimo de 5 anos estava CUMPRIDO — o direito já estava adquirido antes mesmo da notificação.\n\nPortanto, mesmo que a carta tivesse algum efeito jurídico (o que não tem), a usucapião já estava consumada.",
+      "refs": [
+        "Art. 1.244 CC",
+        "Art. 202 CC",
+        "Art. 1.240 CC",
+        "Art. 1.238 CC",
+        "REsp 1.088.082/RJ"
+      ],
+      "bridge": "O juiz rejeitou a contestação. Chegou a hora da sentença e do registro da usucapião..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "SENTENÇA",
+      "stepIcon": "⚖",
+      "narrative": "O juiz está pronto para proferir sentença favorável. Jorge requer que, mesmo reconhecida a usucapião, Maria José pague indenização ao espólio pelo período em que 'usou' o imóvel gratuitamente nos 17 anos.",
+      "speaker": null,
+      "question": "Jorge tem direito à indenização pelo período de uso do imóvel por Maria José?",
+      "opts": [
+        "Não — a usucapião reconhece que Maria José exerceu a posse como proprietária durante todo o período; não há 'aluguel' a pagar pelo tempo de posse que gerou a própria usucapião",
+        "Sim — Maria José usou imóvel alheio e deve indenizar pelo valor locatício de 17 anos",
+        "Maria José deve pagar o IPTU dos últimos 5 anos como condição da sentença",
+        "O juiz deve dividir o imóvel entre Maria José e o espólio como solução equitativa"
+      ],
+      "correct": 0,
+      "explanation": "A usucapião é modo ORIGINÁRIO de aquisição da propriedade — não derivado.\n\nIsso significa que quando o juiz reconhece a usucapião, Maria José é considerada proprietária DESDE O INÍCIO da posse, não a partir da sentença.\n\nNão há período em que ela 'usou' imóvel alheio — ela estava exercendo a posse que gerou a própria usucapião.\n\nSeria juridicamente contraditório reconhecer a propriedade pela posse e ao mesmo tempo cobrar pelo período de posse que gerou a propriedade.\n\nO STJ e a doutrina são unânimes: a sentença de usucapião tem natureza DECLARATÓRIA, não constitutiva — declara direito que já existia.",
+      "refs": [
+        "Art. 1.240 CC",
+        "Art. 183 CF/88",
+        "Art. 1.228 CC",
+        "REsp 1.361.226/SP",
+        "Enunciado 313 CJF"
+      ],
+      "bridge": null
+    }
+  ]
+}
