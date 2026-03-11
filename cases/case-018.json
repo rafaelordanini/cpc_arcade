@@ -1,0 +1,88 @@
+{
+  "id": "case-018",
+  "icon": "🏢",
+  "title": "O Condômino que Nunca Paga",
+  "area": "DIREITO DAS COISAS · CONDOMÍNIO · COBRANÇA",
+  "plaintiff": "Condomínio Residencial Parque Bela Vista",
+  "defendant": "Alexandre Rios",
+  "intro": "O Condomínio Residencial Parque Bela Vista, representado pelo síndico, está com problemas sérios.\n\nAlexandre Rios é proprietário do apartamento 204 e está inadimplente há 14 meses, acumulando R$ 19.600 em cotas condominiais + multa e juros previstos na convenção (1% de multa + 1% ao mês de juros).\n\nAlexandre alega que o imóvel é bem de família impenhorável.\n\nO síndico contratou você para recuperar os valores — encontre a solução jurídica!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "INSTRUMENTO PROCESSUAL",
+      "stepIcon": "📋",
+      "narrative": "O condomínio precisa cobrar Alexandre. As cotas estão aprovadas em assembleia e documentadas nas atas. O valor é certo e líquido. Qual é o instrumento processual mais eficiente?",
+      "speaker": null,
+      "question": "Qual é o instrumento processual mais adequado para cobrar as cotas condominiais de Alexandre?",
+      "opts": [
+        "Execução de título extrajudicial (art. 784, X CPC) — as cotas condominiais aprovadas em assembleia são título executivo extrajudicial, permitindo execução direta sem processo de conhecimento prévio",
+        "Ação de conhecimento comum — é necessário primeiro provar o débito em processo de cognição plena",
+        "Ação monitória — é a mais rápida para cobrança de dívidas documentadas",
+        "Arbitragem obrigatória — a Lei dos Condomínios exige tentativa extrajudicial antes do judiciário"
+      ],
+      "correct": 0,
+      "explanation": "O art. 784, X do CPC incluiu as cotas condominiais no rol dos títulos executivos extrajudiciais:\n\n'Art. 784. São títulos executivos extrajudiciais: X — o crédito referente às contribuições ordinárias ou extraordinárias de condomínio edilício, previstas na respectiva convenção ou aprovadas em assembleia geral, desde que documentalmente comprovadas.'\n\nIsso significa que o condomínio vai DIRETAMENTE à fase de execução — sem precisar provar o direito em processo de conhecimento.\n\nO devedor é citado para pagar em 3 dias ou nomear bens à penhora — muito mais rápido e eficiente.",
+      "refs": [
+        "Art. 784, X CPC",
+        "Art. 1.336, I CC",
+        "Art. 1.348 CC",
+        "Art. 1.350 CC",
+        "REsp 1.667.702/RS"
+      ],
+      "bridge": "A execução foi ajuizada. Alexandre foi citado e opôs embargos alegando que o imóvel é bem de família impenhorável..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "BEM DE FAMÍLIA",
+      "stepIcon": "🛡",
+      "narrative": "Alexandre opôs embargos de executado alegando que o apartamento 204 é seu único imóvel, onde reside com a família, sendo portanto bem de família impenhorável pela Lei 8.009/90. Sustenta que nenhuma dívida pode levar à penhora desse imóvel.",
+      "speaker": {
+        "name": "Dr. Neves — Advogado de Alexandre Rios",
+        "icon": "🕴",
+        "text": "O apartamento é bem de família! A Lei 8.009/90 é expressa! Nenhuma dívida, NENHUMA, pode tirar um pai de família de sua casa! Meu cliente tem filhos menores! O condomínio não pode penhorar o único imóvel de residência!",
+        "color": "var(--orange)"
+      },
+      "question": "A impenhorabilidade do bem de família se aplica a dívidas de condomínio?",
+      "opts": [
+        "Não — a Lei 8.009/90 expressamente excepciona as dívidas de condomínio: o bem de família PODE ser penhorado para pagar cotas condominiais (art. 3º, IV Lei 8.009/90)",
+        "Sim — o bem de família é absolutamente impenhorável por qualquer dívida sem exceção",
+        "Depende — só pode ser penhorado se Alexandre tiver outros bens além do apartamento",
+        "O bem de família só perde proteção em dívidas fiscais (IPTU) — condomínio não está na exceção"
+      ],
+      "correct": 0,
+      "explanation": "O art. 3º, IV da Lei 8.009/90 é expresso ao excepcionar da impenhorabilidade:\n\n'Art. 3º A impenhorabilidade é oponível em qualquer processo de execução civil, fiscal, previdenciária, trabalhista ou de outra natureza, salvo se movido: IV — para cobrança de impostos, predial ou territorial, taxas e contribuições devidas em função do imóvel familiar.'\n\nO STJ e a doutrina interpretam que as COTAS CONDOMINIAIS se enquadram nessa exceção como 'contribuições devidas em função do imóvel'.\n\nIsso faz sentido sistemático: seria injusto que o condômino inadimplente usasse a proteção do bem de família para não pagar as despesas do próprio imóvel que onera os demais condôminos.",
+      "refs": [
+        "Art. 3º, IV Lei 8.009/90",
+        "Art. 1.336, I CC",
+        "Súmula 449 STJ",
+        "REsp 1.473.484/RS",
+        "EREsp 1.172.470/RJ"
+      ],
+      "bridge": "Os embargos foram rejeitados. O imóvel pode ser penhorado. Alexandre ofereceu proposta de acordo questionando a multa e os juros..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "MULTA E JUROS",
+      "stepIcon": "💰",
+      "narrative": "Alexandre propõe pagar apenas os R$ 19.600 de principal, sem multa e juros, alegando que a convenção não pode criar encargos superiores aos legais.",
+      "speaker": null,
+      "question": "A convenção de condomínio pode fixar multa e juros moratórios? Quais são os limites?",
+      "opts": [
+        "A multa máxima por inadimplência condominial é de 2% do débito (art. 1.336, §1º CC) e os juros de mora seguem o art. 406 CC (1% ao mês); a convenção do caso prevê exatamente 1% de multa e 1% de juros — ambos dentro dos limites legais",
+        "A convenção tem plena liberdade para fixar qualquer multa e juros — prevalece a autonomia coletiva",
+        "A multa máxima é 10% conforme o CC — o condomínio poderia cobrar mais",
+        "Não há qualquer limite legal — a assembleia pode fixar os percentuais que desejar"
+      ],
+      "correct": 0,
+      "explanation": "O art. 1.336, §1º CC é expresso:\n\n'O condômino que não pagar a sua contribuição ficará sujeito aos juros moratórios convencionados ou, não sendo previstos, os de um por cento ao mês e multa de até dois por cento sobre o débito.'\n\nLimites legais:\n- MULTA: máximo de 2% do débito\n- JUROS: convencionais, ou 1% ao mês se não previstos (art. 406 CC)\n\nNo caso concreto:\n- Multa de 1% está dentro do limite legal (≤2%) ✓\n- Juros de 1% ao mês estão dentro do limite legal ✓\n\nPortanto, a proposta de Alexandre de pagar sem multa e juros não tem fundamento — os encargos previstos na convenção são perfeitamente legais.",
+      "refs": [
+        "Art. 1.336, §1º CC",
+        "Art. 406 CC",
+        "Art. 1.333 CC",
+        "REsp 1.247.020/DF",
+        "Enunciado 505 CJF"
+      ],
+      "bridge": null
+    }
+  ]
+}
