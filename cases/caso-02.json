@@ -1,0 +1,85 @@
+{
+  "title": "O Carro que Não Era do Vendedor",
+  "icon": "🚗",
+  "area": "DIREITO CIVIL · EVICÇÃO · CONTRATOS",
+  "plaintiff": "João Costa",
+  "defendant": "Pedro Matos",
+  "intro": "Seu cliente João Costa comprou um carro usado de Pedro Matos por R$ 35.000, com contrato particular assinado.\n\nTrês meses depois, a polícia apreendeu o veículo: era produto de roubo. O verdadeiro proprietário obteve decisão judicial reintegrando a posse.\n\nJoão perdeu o carro e quer seu dinheiro de volta. Você é o advogado de João — conheça a evicção e entre em ação!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "FUNDAMENTO JURÍDICO",
+      "stepIcon": "📖",
+      "narrative": "João comprou o carro com contrato particular de compra e venda. Pedro assinou o documento mas não era o verdadeiro proprietário — havia adquirido o bem de origem ilícita. João perdeu o bem por força de decisão judicial reconhecendo o direito anterior do proprietário original.",
+      "speaker": null,
+      "question": "Qual instituto jurídico protege João e fundamenta a ação?",
+      "opts": [
+        "Evicção — perda do bem por decisão judicial que reconhece direito anterior de terceiro sobre ele",
+        "Vício redibitório — defeito oculto que torna o bem impróprio ou lhe diminui o valor",
+        "Lesão — desproporção manifesta entre as prestações no momento da celebração do contrato",
+        "Enriquecimento sem causa — locupletamento indevido de Pedro às custas de João"
+      ],
+      "correct": 0,
+      "explanation": "A EVICÇÃO (art. 447 CC) é o instituto exato para este caso: ocorre quando o adquirente perde total ou parcialmente o bem em razão de decisão judicial ou ato administrativo que reconhece o direito de terceiro, anterior à aquisição.\n\nO vício redibitório (art. 441 CC) seria para defeitos ocultos do próprio bem — não se aplica aqui.\n\nA evicção garante ao evicto (João) o direito de acionar o alienante (Pedro) para reaver o preço pago, mais despesas do contrato e perdas e danos.",
+      "refs": [
+        "Art. 447 CC",
+        "Art. 448 CC",
+        "Art. 449 CC",
+        "Art. 450 CC",
+        "Art. 441 CC"
+      ],
+      "bridge": "Você fundou corretamente a ação em evicção. Pedro foi citado e compareceu com seu advogado para contestar..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO DO RÉU",
+      "stepIcon": "🛡",
+      "narrative": "Pedro alega na contestação que João sabia do risco ao fechar o negócio: o preço de R$ 35.000 estava bem abaixo da tabela FIPE (R$ 48.000), o que seria indício claro de ciência sobre a irregularidade do veículo.",
+      "speaker": {
+        "name": "Dr. Ramos — Advogado de Pedro Matos",
+        "icon": "🕴",
+        "text": "Meu cliente vendeu o carro por R$ 35.000 sendo que a FIPE indica R$ 48.000. João sabia do problema e assumiu o risco conscientemente. O preço baixo implica renúncia tácita à garantia de evicção!",
+        "color": "#ff8800"
+      },
+      "question": "Como você rebate o argumento nas réplicas e memoriais?",
+      "opts": [
+        "Preço abaixo da FIPE não comprova ciência do vício; a exclusão da garantia por evicção precisa ser EXPRESSA no contrato",
+        "Pedro tem razão — preço abaixo da tabela implica renúncia tácita e válida à evicção",
+        "Reconhece que João deveria ter feito pesquisa no DETRAN e divide a responsabilidade",
+        "O contrato informal afasta qualquer proteção legal para João"
+      ],
+      "correct": 0,
+      "explanation": "O art. 448 CC permite a exclusão contratual da garantia por evicção, MAS exige que seja EXPRESSA e CLARA no instrumento contratual. Cláusula implícita ou deduzida do preço é ineficaz.\n\nAlém disso, o art. 449 CC determina que mesmo havendo cláusula de exclusão, se o alienante agiu de má-fé (vendendo bem que sabia ser produto de crime), o evicto ainda tem direito à restituição integral do preço.\n\nO ônus de provar que João conhecia a irregularidade é de Pedro (art. 373, II CPC) — e preço baixo, por si só, não é prova suficiente.",
+      "refs": [
+        "Art. 448 CC",
+        "Art. 449 CC",
+        "Art. 373, II CPC",
+        "Art. 422 CC"
+      ],
+      "bridge": "O juiz rejeitou todos os argumentos de Pedro. Agora chega o momento de calcular o valor exato da condenação..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "VALOR DA INDENIZAÇÃO",
+      "stepIcon": "💰",
+      "narrative": "O juiz reconheceu a evicção. Agora fixa o valor a ser pago por Pedro a João. Fatos: o carro foi comprado por R$ 35.000 em 2021. Hoje a tabela FIPE indica R$ 52.000 para o mesmo modelo e ano. João teve R$ 3.000 em despesas com transferência, documentação e seguro.",
+      "speaker": null,
+      "question": "Qual é o valor total correto a ser pleiteado para João?",
+      "opts": [
+        "R$ 52.000 (valor atual FIPE) + R$ 3.000 (despesas comprovadas) = R$ 55.000",
+        "Apenas R$ 35.000 — somente o preço original pago, sem atualização",
+        "R$ 35.000 + R$ 3.000 = R$ 38.000, ignorando a valorização do bem",
+        "Apenas R$ 3.000 das despesas, pois João utilizou o carro por 3 meses e deve 'descontar' o uso"
+      ],
+      "correct": 0,
+      "explanation": "O art. 450, parágrafo único do CC é expresso: o valor a ser restituído é o do bem no MOMENTO DA EVICÇÃO (perda), e não o do momento da compra.\n\nComo o carro se valorizou de R$ 35.000 para R$ 52.000, João tem direito ao valor atual.\n\nAlém disso, o caput do art. 450 CC garante também 'a indenização pelas despesas dos contratos e pelos prejuízos que diretamente resultarem da evicção' — o que inclui os R$ 3.000 de transferência e seguro.\n\nTotal correto: R$ 52.000 + R$ 3.000 = R$ 55.000.",
+      "refs": [
+        "Art. 450 CC",
+        "Art. 450, parágrafo único CC",
+        "Art. 447 CC",
+        "Art. 402 CC"
+      ],
+      "bridge": null
+    }
+  ]
+}
