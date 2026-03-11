@@ -1,0 +1,70 @@
+{
+  "_instrucoes": {
+    "1": "Copie este arquivo, renomeie para case-XXX.json",
+    "2": "Adicione o nome do arquivo no manifest.json",
+    "3": "Preencha todos os campos — remova as chaves que começam com '_'",
+    "4": "Fases: mínimo 1, máximo recomendado 5",
+    "5": "speaker: use null se não houver diálogo de adversário nesta fase",
+    "6": "bridge: use null na última fase (não há próxima fase)",
+    "7": "correct: índice (0-based) da opção correta em opts",
+    "8": "Use \\n para quebras de linha nos textos"
+  },
+  "id": "case-XXX",
+  "icon": "⚖️",
+  "title": "Título do Caso",
+  "area": "Área do Direito · Subárea",
+  "plaintiff": "Nome do Autor / Parte Autora",
+  "defendant": "Nome do Réu / Parte Ré",
+  "intro": "Descrição do caso em 3-5 parágrafos.\nUse \\n para separar parágrafos.\n\nTermine com: Você é o advogado de [parte autora].",
+  "phases": [
+    {
+      "step": 1,
+      "stepIcon": "📋",
+      "stepLabel": "RÓTULO CURTO DA FASE",
+      "_stepIcon_opcoes": "📋⚔️⚖️💰⚡🔨📱🏥🏠👧",
+      "narrative": "O que aconteceu nesta fase do processo.\nDescreva o contexto que leva à decisão.",
+      "speaker": {
+        "_remova_se_nao_usar": true,
+        "name": "Nome do Adversário — Tipo de Peça",
+        "color": "var(--orange)",
+        "_color_opcoes": "var(--orange) | var(--red) | var(--yellow) | var(--cyan)",
+        "icon": "🛡",
+        "text": "\"Fala do adversário entre aspas. Use \\\" para aspas dentro da fala.\""
+      },
+      "question": "Qual é a decisão mais adequada neste momento?",
+      "opts": [
+        "Primeira opção — geralmente a correta",
+        "Segunda opção — plausível mas incorreta",
+        "Terceira opção — erro comum",
+        "Quarta opção — claramente errada"
+      ],
+      "correct": 0,
+      "explanation": "Explicação da resposta correta.\n\nUse \\n\\n para parágrafos.\nDetalhe o fundamento jurídico de forma didática.\nExplique também por que as outras opções estão erradas.",
+      "refs": [
+        "CC, Art. XXX",
+        "CDC, Art. XXX",
+        "CPC, Art. XXX",
+        "STJ — REsp XXXXX"
+      ],
+      "bridge": "Texto de transição para a próxima fase. O que acontece depois que o jogador resolve esta fase? Cria expectativa para o próximo desafio."
+    },
+    {
+      "step": 2,
+      "stepIcon": "⚔️",
+      "stepLabel": "FASE DOIS",
+      "narrative": "Narrativa da fase 2.",
+      "speaker": null,
+      "question": "Pergunta da fase 2?",
+      "opts": [
+        "Opção A",
+        "Opção B",
+        "Opção C",
+        "Opção D"
+      ],
+      "correct": 0,
+      "explanation": "Explicação da fase 2.",
+      "refs": ["Lei X, Art. Y"],
+      "bridge": null
+    }
+  ]
+}
