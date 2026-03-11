@@ -1,0 +1,88 @@
+{
+  "id": "case-013",
+  "icon": "🏗",
+  "title": "O Contrato Rompido",
+  "area": "DIREITO CONTRATUAL · ARRAS · RESCISÃO · CDC",
+  "plaintiff": "Renata Campos",
+  "defendant": "Construtora Horizonte Ltda",
+  "intro": "Sua cliente Renata Campos assinou contrato de compra e venda de apartamento na planta com a Construtora Horizonte Ltda. Pagou R$ 30.000 de sinal e parcelas mensais durante 18 meses, totalizando R$ 80.000 pagos.\n\nA construtora atrasou a obra em 14 meses além do prazo contratual (tolerância era de 6 meses). Renata não consegue mais arcar com as parcelas e quer rescindir o contrato.\n\nA construtora quer reter 30% de tudo que foi pago 'a título de indenização', conforme cláusula contratual.\n\nVocê é o advogado de Renata — garanta a restituição justa!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "FUNDAMENTO DA RESCISÃO",
+      "stepIcon": "📋",
+      "narrative": "Renata quer rescindir. Há duas questões centrais: (a) quem descumpriu o contrato primeiro? (b) qual o fundamento da rescisão? O atraso foi de 14 meses sendo que a tolerância contratual era de apenas 6 meses.",
+      "speaker": null,
+      "question": "Qual é o fundamento correto para a rescisão e quem deve arcar com os ônus?",
+      "opts": [
+        "A construtora descumpriu o contrato primeiro (8 meses de atraso além da tolerância) — Renata tem direito à resolução por culpa da construtora com devolução integral dos valores pagos + juros + dano moral",
+        "Renata descumpriu porque não consegue mais pagar — a culpa é dela e a construtora pode reter 30%",
+        "O atraso de obra é mero aborrecimento — não é fundamento para rescisão sem multa",
+        "Renata deve aguardar a entrega e depois cobrar multa por atraso, sem rescindir"
+      ],
+      "correct": 0,
+      "explanation": "O contrato bilateral se extingue pela resolução quando uma das partes descumpre a obrigação (art. 475 CC). Quem descumpre primeiro não pode exigir o cumprimento da outra parte.\n\nA construtora atrasou 8 meses além da tolerância contratual — é inadimplência contratual inequívoca.\n\nEm caso de rescisão por culpa da construtora:\n- Devolução INTEGRAL dos valores pagos (art. 475 CC)\n- Juros de mora e correção monetária\n- Multa contratual prevista para inadimplência da construtora\n- Dano moral pelo inadimplemento (STJ reconhece para frustração do sonho da casa própria)\n\nA cláusula de retenção de 30% só se aplicaria se Renata fosse a inadimplente.",
+      "refs": [
+        "Art. 475 CC",
+        "Art. 408 CC",
+        "Art. 51, II CDC",
+        "Lei 4.591/64",
+        "REsp 1.498.484/DF"
+      ],
+      "bridge": "A rescisão foi requerida. A construtora tentou aplicar a cláusula de retenção mesmo sendo culpada..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CLÁUSULA DE RETENÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "A construtora insiste na cláusula que prevê retenção de 30% 'para qualquer hipótese de rescisão, independentemente de culpa'. Alega que Renata assinou livremente e que o contrato deve ser respeitado (pacta sunt servanda).",
+      "speaker": {
+        "name": "Dra. Andrade — Advogada da Construtora Horizonte",
+        "icon": "👩‍⚖️",
+        "text": "O contrato foi assinado livremente! Pacta sunt servanda! A cláusula de retenção de 30% é válida para qualquer rescisão! Renata sabia do risco ao assinar! Não podemos ignorar o contrato!",
+        "color": "var(--red)"
+      },
+      "question": "Como você rebate o argumento do pacta sunt servanda?",
+      "opts": [
+        "Cláusula que impõe retenção mesmo quando a construtora é culpada é abusiva e nula (art. 51, II e IV CDC) — a boa-fé objetiva impede que o inadimplente se beneficie de sua própria torpeza",
+        "A construtora tem razão — o contrato deve ser respeitado integralmente como assinado",
+        "Aceitar a retenção de 30% como razoável para evitar litigância",
+        "O CDC não se aplica a contratos imobiliários — valem apenas as regras do CC"
+      ],
+      "correct": 0,
+      "explanation": "O CDC aplica-se às relações de consumo imobiliárias (STJ — Súmula 297).\n\nO art. 51, II e IV CDC declara nulas as cláusulas que subtraem do consumidor a opção de reembolso ou estabelecem obrigações iníquas e abusivas.\n\nAlém disso, o princípio da boa-fé objetiva (art. 422 CC) e a vedação do enriquecimento sem causa (art. 884 CC) impedem que o contratante culpado pelo descumprimento retenha valores como se fosse inocente.\n\nO STJ consolidou que a cláusula de retenção não pode ser aplicada quando a resolução se deu por culpa da construtora (REsp 1.729.593).",
+      "refs": [
+        "Art. 51, II e IV CDC",
+        "Art. 422 CC",
+        "Art. 884 CC",
+        "Súmula 297 STJ",
+        "REsp 1.729.593/SP"
+      ],
+      "bridge": "A cláusula foi declarada abusiva. Agora resta calcular o que Renata receberá de volta..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "RESTITUIÇÃO",
+      "stepIcon": "💰",
+      "narrative": "A construtora é culpada pelo inadimplemento. Renata pagou R$ 80.000 em 18 meses. Além da devolução integral, há outras verbas: correção monetária, juros, multa contratual por atraso (1% ao mês prevista em contrato) e dano moral.",
+      "speaker": null,
+      "question": "Qual é a composição correta da restituição a favor de Renata?",
+      "opts": [
+        "R$ 80.000 corrigidos + juros de mora + multa por atraso (8 meses × 1% × valor do contrato) + dano moral pela frustração do sonho da casa própria",
+        "Apenas devolução simples de R$ 80.000 — correção e juros não são devidos pois a construtora está em obras",
+        "Devolução de R$ 80.000 menos 10% pela depreciação do mercado imobiliário",
+        "Renata tem direito apenas à devolução do sinal de R$ 30.000 — as parcelas foram 'aluguel' pela promessa"
+      ],
+      "correct": 0,
+      "explanation": "Na resolução por culpa da construtora, Renata tem direito a:\n\n1. RESTITUIÇÃO INTEGRAL: R$ 80.000 — sem qualquer retenção.\n2. CORREÇÃO MONETÁRIA: desde cada pagamento (REsp 1.729.593).\n3. JUROS DE MORA: a partir da citação (art. 405 CC).\n4. MULTA CONTRATUAL: se o contrato prevê 1% ao mês de multa por atraso — 8 meses de atraso injustificado geram incidência da multa.\n5. DANO MORAL: o STJ reconhece dano moral pela frustração do sonho da casa própria em caso de descumprimento imobiliário.",
+      "refs": [
+        "Art. 475 CC",
+        "Art. 408 CC",
+        "Art. 405 CC",
+        "REsp 1.729.593/SP",
+        "REsp 1.641.702/DF"
+      ],
+      "bridge": null
+    }
+  ]
+}
