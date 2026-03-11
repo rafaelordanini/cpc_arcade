@@ -4,46 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gamificando o Direito Brasileiro</title>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://cpc-arcade.vercel.app">
-<meta property="og:title" content="GAMIFICANDO O DIREITO">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://cpc-arcade.vercel.app">
+<meta property="og:title"       content="GAMIFICANDO O DIREITO">
 <meta property="og:description" content="Você é o advogado! Tome decisões jurídicas reais a cada fase neste jogo de tribunal em pixel art.">
-<meta property="og:image" content="imagem.png">
-<meta property="twitter:card" content="image.png">
-<meta property="twitter:url" content="https://cpc-arcade.vercel.app">
-<meta property="twitter:title" content="TRIBUNAL DOS PIXELS">
+<meta property="og:image"       content="imagem.png">
+<meta property="twitter:card"   content="image.png">
+<meta property="twitter:url"    content="https://cpc-arcade.vercel.app">
+<meta property="twitter:title"  content="TRIBUNAL DOS PIXELS">
 <meta property="twitter:description" content="Você é o advogado! Tome decisões jurídicas reais a cada fase neste jogo de tribunal em pixel art.">
-<meta property="twitter:image" content="capa.png">
- 
+<meta property="twitter:image"  content="capa.png">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-<style>
-/* ══ RESET ══════════════════════════════════════════ */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
-/* ══ VARIÁVEIS ══════════════════════════════════════ */
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --green:#00ff41;--yellow:#ffff00;--cyan:#00ffff;
   --red:#ff4444;--orange:#ff8800;--white:#f0f0e8;
   --dim:#cccccc;--muted:#888888;--bg:#000;--panel:#05050f;
-  --ui:'Press Start 2P',monospace;
-  --body:'VT323',monospace;
+  --ui:'Press Start 2P',monospace;--body:'VT323',monospace;
 }
-
-/* ══ BASE ═══════════════════════════════════════════ */
-body{
-  background:var(--bg);color:var(--green);
-  font-family:var(--ui);min-height:100vh;
-  overflow-x:hidden;line-height:1.8;
-}
-body::after{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
-  background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,
-    rgba(0,0,0,.15) 3px,rgba(0,0,0,.15) 4px);
-}
-@keyframes flicker{0%,89%,91%,93%,100%{opacity:1}90%,92%{opacity:.87}}
-body{animation:flicker 10s infinite}
-
-/* ══ KEYFRAMES ══════════════════════════════════════ */
+body{background:var(--bg);color:var(--green);font-family:var(--ui);min-height:100vh;overflow-x:hidden;line-height:1.8}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(0,0,0,.15) 3px,rgba(0,0,0,.15) 4px)}
+@keyframes flicker    {0%,89%,91%,93%,100%{opacity:1}90%,92%{opacity:.87}}
 @keyframes blink      {0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes slideDown  {from{transform:translateY(-24px);opacity:0}to{transform:translateY(0);opacity:1}}
 @keyframes slideLeft  {from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
@@ -59,32 +43,29 @@ body{animation:flicker 10s infinite}
 @keyframes rainbow    {0%{color:var(--yellow)}33%{color:var(--cyan)}66%{color:var(--orange)}100%{color:var(--yellow)}}
 @keyframes loadScroll {0%{width:0;margin-left:0}50%{width:80%;margin-left:0}100%{width:0;margin-left:100%}}
 @keyframes loadPulse  {0%,100%{opacity:.5}50%{opacity:1}}
+body{animation:flicker 10s infinite}
 
-/* ══ LAYOUT ═════════════════════════════════════════ */
+/* ── LAYOUT ──────────────────────────────────────── */
 .wrap{max-width:680px;margin:0 auto;padding:16px 12px 64px}
 .screen{display:none}
 .screen.active{display:block;animation:slideDown .3s ease both}
 
-/* ══ PIXEL BOX ══════════════════════════════════════ */
-.pbox{
-  border:3px solid var(--cyan);padding:18px 20px;
-  margin-bottom:14px;position:relative;background:var(--panel);
-  box-shadow:0 0 12px rgba(0,255,255,.16),inset 0 0 10px rgba(0,0,0,.4);
-}
-.pbox::before,.pbox::after{
-  content:'';position:absolute;width:10px;height:10px;
-  border-style:solid;border-color:var(--yellow);
-}
+/* ── PIXEL BOX ───────────────────────────────────── */
+.pbox{border:3px solid var(--cyan);padding:18px 20px;margin-bottom:14px;
+  position:relative;background:var(--panel);
+  box-shadow:0 0 12px rgba(0,255,255,.16),inset 0 0 10px rgba(0,0,0,.4)}
+.pbox::before,.pbox::after{content:'';position:absolute;width:10px;height:10px;
+  border-style:solid;border-color:var(--yellow)}
 .pbox::before{top:-2px;left:-2px;border-width:3px 0 0 3px}
 .pbox::after{bottom:-2px;right:-2px;border-width:0 3px 3px 0}
-.pbox-green {border-color:var(--green); box-shadow:0 0 12px rgba(0,255,65,.16)}
+.pbox-green {border-color:var(--green);box-shadow:0 0 12px rgba(0,255,65,.16)}
 .pbox-green::before,.pbox-green::after{border-color:var(--green)}
 .pbox-yellow{border-color:var(--yellow);box-shadow:0 0 12px rgba(255,255,0,.16)}
 .pbox-yellow::before,.pbox-yellow::after{border-color:var(--cyan)}
-.pbox-red   {border-color:var(--red);   box-shadow:0 0 12px rgba(255,60,60,.2)}
+.pbox-red   {border-color:var(--red);box-shadow:0 0 12px rgba(255,60,60,.2)}
 .pbox-red::before,.pbox-red::after{border-color:var(--orange)}
 
-/* ══ MENU ═══════════════════════════════════════════ */
+/* ── MENU ────────────────────────────────────────── */
 .logo-l1{font-family:var(--ui);font-size:clamp(13px,3vw,21px);color:var(--yellow);
   text-shadow:0 0 10px var(--yellow),0 0 22px var(--yellow);letter-spacing:4px;display:block}
 .logo-l2{font-family:var(--ui);font-size:clamp(9px,2vw,14px);color:var(--cyan);
@@ -93,39 +74,31 @@ body{animation:flicker 10s infinite}
   letter-spacing:3px;animation:glowPulse 2.2s ease infinite}
 .blink-lbl{font-family:var(--ui);font-size:10px;color:var(--yellow);
   letter-spacing:3px;animation:blink 1.1s step-start infinite}
-.btn-start{
-  font-family:var(--ui);font-size:clamp(10px,2vw,13px);
-  background:var(--green);color:#000;border:none;
-  padding:15px 30px;cursor:pointer;letter-spacing:2px;
-  box-shadow:4px 4px 0 rgba(0,255,65,.4);transition:all .15s;
-}
+.btn-start{font-family:var(--ui);font-size:clamp(10px,2vw,13px);
+  background:var(--green);color:#000;border:none;padding:15px 30px;
+  cursor:pointer;letter-spacing:2px;box-shadow:4px 4px 0 rgba(0,255,65,.4);transition:all .15s}
 .btn-start:disabled{background:var(--muted);color:#222;cursor:not-allowed;box-shadow:none}
-.btn-start:not(:disabled):hover{
-  background:var(--yellow);transform:translate(-2px,-2px);
-  box-shadow:6px 6px 0 rgba(255,255,0,.4);
-}
+.btn-start:not(:disabled):hover{background:var(--yellow);transform:translate(-2px,-2px);
+  box-shadow:6px 6px 0 rgba(255,255,0,.4)}
 .btn-start:not(:disabled):active{transform:translate(2px,2px);box-shadow:2px 2px 0}
 
-/* ══ JUIZ ═══════════════════════════════════════════ */
-.judge-wrap{display:flex;flex-direction:column;align-items:center;gap:6px}
-.judge-canvas{image-rendering:pixelated;image-rendering:crisp-edges;width:112px;height:168px}
-.judge-label{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:2px}
-.judge-wrap.bob-anim    canvas{animation:judgeBob   1.4s ease-in-out infinite}
-.judge-wrap.jump-anim   canvas{animation:judgeJump  .8s ease both}
-.judge-wrap.shake-anim  canvas{animation:judgeShake .7s ease both}
+/* ── PERSONAGENS ─────────────────────────────────── */
+.char-wrap{display:flex;flex-direction:column;align-items:center;gap:6px}
+.char-canvas{image-rendering:pixelated;image-rendering:crisp-edges;width:112px;height:168px}
+.char-label{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:2px;
+  text-align:center;max-width:120px}
+.char-wrap.bob-anim   canvas{animation:judgeBob   1.4s ease-in-out infinite}
+.char-wrap.jump-anim  canvas{animation:judgeJump  .8s ease both}
+.char-wrap.shake-anim canvas{animation:judgeShake .7s ease both}
+.char-duo{display:flex;justify-content:center;align-items:flex-end;gap:20px;margin:10px 0}
 
-/* ══ HUD ════════════════════════════════════════════ */
-.hud{
-  display:flex;align-items:center;gap:8px;background:#000;
+/* ── HUD ─────────────────────────────────────────── */
+.hud{display:flex;align-items:center;gap:8px;background:#000;
   border:2px solid var(--green);padding:8px 12px;margin-bottom:14px;
-  position:sticky;top:6px;z-index:80;
-  box-shadow:0 0 14px rgba(0,255,65,.28);
-}
-.hud-btn{
-  font-family:var(--ui);font-size:8px;background:transparent;
-  color:var(--muted);border:2px solid var(--muted);
-  padding:7px 10px;cursor:pointer;flex-shrink:0;transition:all .15s;
-}
+  position:sticky;top:6px;z-index:80;box-shadow:0 0 14px rgba(0,255,65,.28)}
+.hud-btn{font-family:var(--ui);font-size:8px;background:transparent;
+  color:var(--muted);border:2px solid var(--muted);padding:7px 10px;
+  cursor:pointer;flex-shrink:0;transition:all .15s}
 .hud-btn:hover{border-color:var(--red);color:var(--red);text-shadow:0 0 8px var(--red)}
 .hud-sep{width:1px;height:28px;background:rgba(0,255,65,.3);flex-shrink:0}
 .hud-item{text-align:center;flex-shrink:0}
@@ -133,22 +106,24 @@ body{animation:flicker 10s infinite}
 .hud-val{font-size:15px;color:var(--yellow)}
 .hud-mid{flex:1;min-width:0}
 .prog-track{height:7px;background:#111;border:1px solid var(--green);overflow:hidden}
-.prog-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));transition:width .5s steps(10)}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));
+  transition:width .5s steps(10)}
 .prog-lbl{font-size:6px;color:var(--muted);text-align:center;margin-top:3px;letter-spacing:1px}
 
-/* ══ LOADING ════════════════════════════════════════ */
-.load-icon{font-size:2.6rem;animation:loadPulse 1s ease-in-out infinite;display:block;text-align:center;margin-bottom:14px}
+/* ── LOADING ─────────────────────────────────────── */
+.load-icon{font-size:2.6rem;animation:loadPulse 1s ease-in-out infinite;
+  display:block;text-align:center;margin-bottom:14px}
 .load-bar{height:12px;background:#111;border:2px solid var(--green);overflow:hidden;margin:14px 0}
-.load-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));animation:loadScroll 1.4s linear infinite}
+.load-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));
+  animation:loadScroll 1.4s linear infinite}
 
-/* ══ CASE INTRO ═════════════════════════════════════ */
+/* ── INTRO DO CASO ───────────────────────────────── */
 .case-icon-big{font-size:2.6rem;display:block;text-align:center;margin-bottom:8px}
-.case-title-big{
-  font-family:var(--ui);font-size:clamp(11px,2.2vw,16px);
-  color:var(--yellow);text-shadow:0 0 8px var(--yellow);
-  letter-spacing:2px;margin-bottom:6px;line-height:1.6;text-align:center;
-}
-.case-area-tag{font-family:var(--ui);font-size:7px;color:var(--cyan);letter-spacing:1px;line-height:2;text-align:center}
+.case-title-big{font-family:var(--ui);font-size:clamp(11px,2.2vw,16px);color:var(--yellow);
+  text-shadow:0 0 8px var(--yellow);letter-spacing:2px;margin-bottom:6px;
+  line-height:1.6;text-align:center}
+.case-area-tag{font-family:var(--ui);font-size:7px;color:var(--cyan);
+  letter-spacing:1px;line-height:2;text-align:center}
 .parties-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
 @media(max-width:440px){.parties-row{grid-template-columns:1fr}}
 .party-chip{padding:10px 12px}
@@ -160,34 +135,37 @@ body{animation:flicker 10s infinite}
 .party-re b,.party-re p{color:var(--orange)}
 .intro-txt{font-family:var(--body);font-size:21px;color:var(--white);line-height:1.65;white-space:pre-line}
 
-/* ══ TRILHA DE FASES ════════════════════════════════ */
+/* ── TRILHA DE FASES ─────────────────────────────── */
 .phase-trail{display:flex;align-items:flex-start;justify-content:center;padding:4px 0}
 .pt-step{display:flex;flex-direction:column;align-items:center;gap:5px}
-.pt-dot{
-  width:30px;height:30px;border:2px solid var(--muted);color:var(--muted);
+.pt-dot{width:30px;height:30px;border:2px solid var(--muted);color:var(--muted);
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--ui);font-size:9px;flex-shrink:0;
-}
+  font-family:var(--ui);font-size:9px;flex-shrink:0}
 .pt-step.done   .pt-dot{border-color:var(--green);color:var(--green);background:rgba(0,255,65,.07)}
-.pt-step.active .pt-dot{border-color:var(--yellow);color:var(--yellow);background:rgba(255,255,0,.07);animation:dotPulse 1.5s ease infinite}
-.pt-lbl{font-family:var(--ui);font-size:5px;color:var(--muted);letter-spacing:.5px;text-align:center;max-width:64px;line-height:1.5}
+.pt-step.active .pt-dot{border-color:var(--yellow);color:var(--yellow);
+  background:rgba(255,255,0,.07);animation:dotPulse 1.5s ease infinite}
+.pt-lbl{font-family:var(--ui);font-size:5px;color:var(--muted);
+  letter-spacing:.5px;text-align:center;max-width:64px;line-height:1.5}
 .pt-step.done   .pt-lbl{color:var(--green)}
 .pt-step.active .pt-lbl{color:var(--yellow)}
-.pt-connector{flex:1;height:2px;background:rgba(100,100,100,.3);min-width:10px;max-width:56px;margin-top:14px}
+.pt-connector{flex:1;height:2px;background:rgba(100,100,100,.3);
+  min-width:10px;max-width:56px;margin-top:14px}
 .pt-connector.done{background:var(--green);opacity:.5}
 
-/* ══ FASE — HEADER ══════════════════════════════════ */
+/* ── FASE — HEADER ───────────────────────────────── */
 .phase-hdr{display:flex;align-items:center;gap:14px}
-.phase-badge{font-family:var(--ui);font-size:7px;letter-spacing:1px;border:1px solid;padding:3px 8px;text-align:center;margin-top:6px}
+.phase-badge{font-family:var(--ui);font-size:7px;letter-spacing:1px;
+  border:1px solid;padding:3px 8px;text-align:center;margin-top:6px}
 .phase-info{flex:1}
 .phase-case-lbl{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:1px;margin-bottom:5px}
-.phase-name-lbl{font-family:var(--ui);font-size:clamp(9px,2vw,12px);color:var(--yellow);letter-spacing:2px;line-height:1.7}
+.phase-name-lbl{font-family:var(--ui);font-size:clamp(9px,2vw,12px);color:var(--yellow);
+  letter-spacing:2px;line-height:1.7}
 
-/* ══ NARRATIVA / SEÇÕES ═════════════════════════════ */
+/* ── NARRATIVA ───────────────────────────────────── */
 .sec-lbl{font-family:var(--ui);font-size:8px;letter-spacing:2px;margin-bottom:10px}
 .narrative-txt{font-family:var(--body);font-size:21px;color:var(--white);line-height:1.65;white-space:pre-line}
 
-/* ══ DIÁLOGO RPG ════════════════════════════════════ */
+/* ── DIÁLOGO RPG ─────────────────────────────────── */
 .dialogue-wrap{margin:0 0 14px;animation:slideLeft .4s ease both}
 .dialogue-box{border:2px solid;padding:14px 16px;background:var(--panel)}
 .db-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px}
@@ -195,7 +173,7 @@ body{animation:flicker 10s infinite}
 .db-name{font-family:var(--ui);font-size:7px;letter-spacing:1px}
 .db-text{font-family:var(--body);font-size:19px;color:var(--white);line-height:1.5;font-style:italic}
 
-/* ══ QUESTÃO / OPÇÕES ═══════════════════════════════ */
+/* ── OPÇÕES ──────────────────────────────────────── */
 .question-lbl{font-family:var(--ui);font-size:8px;color:var(--yellow);letter-spacing:2px;margin-bottom:10px}
 .question-txt{font-family:var(--body);font-size:22px;color:var(--white);line-height:1.5}
 .options{display:grid;gap:8px;margin-top:4px}
@@ -204,13 +182,12 @@ body{animation:flicker 10s infinite}
 .opt:hover{border-color:var(--yellow);background:rgba(255,255,0,.04)}
 .opt:hover .opt-letter,.opt:hover .opt-cur{color:var(--yellow);border-color:var(--yellow)}
 .opt:hover .opt-cur{opacity:1}
-.opt-cur{font-family:var(--ui);font-size:11px;color:var(--yellow);opacity:0;flex-shrink:0;margin-top:4px;transition:opacity .1s}
-.opt-letter{
-  font-family:var(--ui);font-size:12px;color:var(--muted);
+.opt-cur{font-family:var(--ui);font-size:11px;color:var(--yellow);
+  opacity:0;flex-shrink:0;margin-top:4px;transition:opacity .1s}
+.opt-letter{font-family:var(--ui);font-size:12px;color:var(--muted);
   border:2px solid rgba(100,100,100,.45);min-width:30px;height:30px;
   display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;margin-top:2px;transition:all .15s;
-}
+  flex-shrink:0;margin-top:2px;transition:all .15s}
 .opt-text{font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.5;padding-top:3px}
 .opt.correct{border-color:var(--green);background:rgba(0,255,65,.07);animation:flashGreen .5s ease}
 .opt.correct .opt-letter{color:var(--green);border-color:var(--green)}
@@ -222,31 +199,29 @@ body{animation:flicker 10s infinite}
 .opt.disabled{pointer-events:none}
 .opt.disabled:not(.correct):not(.wrong){opacity:.45}
 
-/* ══ RESULTADO IMEDIATO ═════════════════════════════ */
+/* ── RESULTADO IMEDIATO ──────────────────────────── */
 .result-icon{font-size:1.9rem;margin-bottom:6px}
-.result-title{font-family:var(--ui);font-size:clamp(12px,2.5vw,17px);letter-spacing:3px;margin-bottom:6px;animation:textPop .4s ease both}
+.result-title{font-family:var(--ui);font-size:clamp(12px,2.5vw,17px);letter-spacing:3px;
+  margin-bottom:6px;animation:textPop .4s ease both}
 .result-pts{font-family:var(--ui);font-size:10px;color:var(--yellow);margin-top:6px;letter-spacing:2px}
 .stars-wrap{position:relative;height:32px;margin:6px 0}
 .star-pop{position:absolute;font-size:20px;animation:starPop .8s ease both}
 
-/* ══ FUNDAMENTO ═════════════════════════════════════ */
+/* ── FUNDAMENTO ──────────────────────────────────── */
 .explain-txt{font-family:var(--body);font-size:20px;color:var(--white);line-height:1.65;white-space:pre-line}
 .refs-lbl{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:1px;margin:12px 0 7px}
 .ref-chip{font-family:var(--ui);display:inline-block;border:1px solid rgba(0,255,255,.35);
   color:var(--cyan);padding:4px 9px;font-size:7px;margin:2px;letter-spacing:1px}
 
-/* ══ PONTE NARRATIVA ════════════════════════════════ */
+/* ── PONTE NARRATIVA ─────────────────────────────── */
 .bridge-panel{border:2px solid rgba(255,255,0,.28);background:rgba(255,255,0,.03);padding:14px 16px;margin-top:12px}
 .bridge-lbl{font-family:var(--ui);font-size:7px;color:var(--yellow);letter-spacing:2px;margin-bottom:10px;opacity:.8}
 .bridge-txt{font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.6}
 
-/* ══ BOTÕES ═════════════════════════════════════════ */
+/* ── BOTÕES ──────────────────────────────────────── */
 .action-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.btn-px{
-  font-family:var(--ui);font-size:9px;background:transparent;
-  border:2px solid;padding:11px 17px;cursor:pointer;
-  letter-spacing:1px;transition:all .15s;
-}
+.btn-px{font-family:var(--ui);font-size:9px;background:transparent;
+  border:2px solid;padding:11px 17px;cursor:pointer;letter-spacing:1px;transition:all .15s}
 .btn-px:active{transform:translate(2px,2px)}
 .btn-green {border-color:var(--green); color:var(--green); box-shadow:3px 3px 0 rgba(0,255,65,.28)}
 .btn-green:hover {background:var(--green); color:#000;transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,255,65,.4)}
@@ -257,24 +232,21 @@ body{animation:flicker 10s infinite}
 .btn-muted {border-color:var(--muted); color:var(--muted)}
 .btn-muted:hover {border-color:var(--red);color:var(--red)}
 
-/* ══ RESULTADO DO CASO ══════════════════════════════ */
+/* ── RESULTADO DO CASO ───────────────────────────── */
 .score-box{border:3px solid var(--yellow);padding:16px 28px;display:inline-block;
   margin:10px 0;box-shadow:0 0 20px rgba(255,255,0,.28)}
 .score-big{font-family:var(--ui);font-size:clamp(28px,6vw,46px);animation:rainbow 2s linear infinite}
 .score-lbl{font-family:var(--ui);font-size:8px;color:var(--muted);letter-spacing:2px;margin-top:6px}
-.phase-result-row{display:flex;align-items:center;gap:10px;
-  font-family:var(--body);font-size:19px;padding:8px 0;
-  border-bottom:1px solid #0d0d0d;line-height:1.4}
+.phase-result-row{display:flex;align-items:center;gap:10px;font-family:var(--body);
+  font-size:19px;padding:8px 0;border-bottom:1px solid #0d0d0d;line-height:1.4}
 
-/* ══ MODAL ══════════════════════════════════════════ */
+/* ── MODAL ───────────────────────────────────────── */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);
   z-index:200;align-items:center;justify-content:center}
 .modal-bg.open{display:flex}
-.modal-box{
-  border:3px solid var(--red);background:var(--panel);
-  padding:32px 28px;max-width:380px;width:90%;text-align:center;
-  box-shadow:0 0 30px rgba(255,60,60,.4);animation:slideDown .3s ease both;position:relative;
-}
+.modal-box{border:3px solid var(--red);background:var(--panel);padding:32px 28px;
+  max-width:380px;width:90%;text-align:center;
+  box-shadow:0 0 30px rgba(255,60,60,.4);animation:slideDown .3s ease both;position:relative}
 .modal-box::before,.modal-box::after{content:'';position:absolute;width:10px;height:10px;
   border-color:var(--yellow);border-style:solid}
 .modal-box::before{top:-2px;left:-2px;border-width:3px 0 0 3px}
@@ -284,13 +256,14 @@ body{animation:flicker 10s infinite}
 .modal-msg{font-family:var(--body);font-size:21px;color:var(--dim);line-height:1.6;margin-bottom:20px}
 .modal-msg strong{color:var(--yellow)}
 
-/* ══ MISC ═══════════════════════════════════════════ */
+/* ── MISC ────────────────────────────────────────── */
 #screen-flash{position:fixed;inset:0;pointer-events:none;z-index:190;opacity:0;transition:opacity .1s}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:#000}
 ::-webkit-scrollbar-thumb{background:#1a1a1a}
 </style>
 </head>
+
 <body>
 <div id="screen-flash"></div>
 <div class="wrap">
@@ -301,286 +274,34 @@ body{animation:flicker 10s infinite}
       <span class="logo-l1">⚖ TRIBUNAL ⚖</span>
       <span class="logo-l2">DOS PIXELS</span>
       <div style="margin:16px 0">
-        <div id="menu-jw" class="judge-wrap bob-anim" style="display:inline-flex">
-          <canvas id="menu-jc" class="judge-canvas"></canvas>
-          <div class="judge-label">DR. PIXEL</div>
-        </div>
-      </div>
-      <div class="hi-score-lbl">HI-SCORE: <span id="hi-val">000</span></div>
-    </div>
-
-    <div class="pbox pbox-green">
-      <div style="font-family:var(--ui);font-size:9px;color:var(--cyan);letter-spacing:2px;margin-bottom:12px">◄ COMO FUNCIONA ►</div>
-      <div style="font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.85">
-        Cada sessão apresenta <span style="color:var(--yellow)">1 caso</span> com <span style="color:var(--yellow)">3 a 5 fases</span> encadeadas.
-        Você é o <span style="color:var(--cyan)">advogado</span> — tome decisões reais a cada fase.
-        O caso é escolhido <span style="color:var(--green)">aleatoriamente</span> e varia a cada sessão.
-        Ao final, retorna ao menu para um novo caso.
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px">
-        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;border:1px solid rgba(0,255,65,.3);padding:10px">
-          ✓ <span style="color:var(--green)">ACERTO</span><br>+10 PONTOS
-        </div>
-        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;border:1px solid rgba(255,60,60,.3);padding:10px">
-          ✗ <span style="color:var(--red)">ERRO</span><br>VER FUNDAMENTO
-        </div>
-      </div>
-    </div>
-
-    <div class="pbox" style="text-align:center;padding:14px">
-      <div id="manifest-info" style="font-family:var(--body);font-size:20px;color:var(--muted);line-height:1.8">
-        ⏳ Carregando casos...
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-bottom:6px">
-      <button id="btn-abrir" class="btn-start" onclick="openCase()" disabled>
-        ⏳ CARREGANDO...
-      </button>
-    </div>
-    <div class="blink-lbl" style="text-align:center">✦ SELECIONE UM CASO ✦</div>
-  </div>
-
-  <!-- ════ JOGO ═════════════════════════════════════ -->
-  <div id="s-game" class="screen">
-    <div class="hud">
-      <button class="hud-btn" onclick="openExitModal()">🏠 MENU</button>
-      <div class="hud-sep"></div>
-      <div class="hud-item">
-        <div class="hud-lbl">SCORE</div>
-        <div class="hud-val" id="hud-score">000</div>
-      </div>
-      <div class="hud-mid">
-        <div class="prog-track"><div class="prog-fill" id="hud-prog" style="width:0%"></div></div>
-        <div class="prog-lbl" id="hud-txt">FASE 1/3</div>
-      </div>
-      <div class="hud-item">
-        <div class="hud-lbl">ACERTOS</div>
-        <div class="hud-val" id="hud-hits" style="color:var(--cyan)">0/0</div>
-      </div>
-    </div>
-    <div id="game-body"></div>
-  </div>
-</div>
-
-<!-- ════ MODAL EXIT ═══════════════════════════════ -->
-<div class="modal-bg" id="exit-modal">
-  <div class="modal-box">
-    <div class="modal-icon">⚠️</div>
-    <div class="modal-title">ABANDONAR?</div>
-    <p class="modal-msg">Se sair agora o progresso<br>deste caso será <strong>PERDIDO</strong>.</p>
-    <div class="action-row">
-      <button class="btn-px btn-muted" onclick="confirmExit()">SIM, SAIR</button>
-      <button class="btn-px btn-green" onclick="closeExitModal()">CONTINUAR</button>
-    </div>
-  </div>
-</div>
-
-  <!--<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRIBUNAL DOS PIXELS</title>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --green:#00ff41;--yellow:#ffff00;--cyan:#00ffff;
-  --red:#ff4444;--orange:#ff8800;--white:#f0f0e8;
-  --dim:#cccccc;--muted:#888888;--bg:#000;--panel:#05050f;
-  --ui:'Press Start 2P',monospace;--body:'VT323',monospace;
-}
-body{background:var(--bg);color:var(--green);font-family:var(--ui);min-height:100vh;overflow-x:hidden;line-height:1.8}
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(0,0,0,.15) 3px,rgba(0,0,0,.15) 4px)}
-@keyframes flicker{0%,89%,91%,93%,100%{opacity:1}90%,92%{opacity:.87}}
-body{animation:flicker 10s infinite}
-@keyframes blink      {0%,49%{opacity:1}50%,100%{opacity:0}}
-@keyframes slideDown  {from{transform:translateY(-24px);opacity:0}to{transform:translateY(0);opacity:1}}
-@keyframes slideLeft  {from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
-@keyframes judgeJump  {0%,100%{transform:translateY(0)}25%{transform:translateY(-26px)}60%{transform:translateY(-12px)}}
-@keyframes judgeShake {0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-7px)}80%{transform:translateX(7px)}}
-@keyframes judgeBob   {0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@keyframes flashGreen {0%,100%{background:transparent}40%{background:rgba(0,255,65,.14)}}
-@keyframes flashRed   {0%,100%{background:transparent}40%{background:rgba(255,60,60,.16)}}
-@keyframes starPop    {0%{transform:scale(0) rotate(0deg);opacity:1}70%{transform:scale(1.4) rotate(180deg);opacity:1}100%{transform:scale(1.8) rotate(360deg);opacity:0}}
-@keyframes textPop    {0%{transform:scale(.5);opacity:0}60%{transform:scale(1.2);opacity:1}100%{transform:scale(1);opacity:1}}
-@keyframes glowPulse  {0%,100%{text-shadow:0 0 8px var(--green),0 0 16px var(--green)}50%{text-shadow:0 0 14px var(--green),0 0 30px var(--green)}}
-@keyframes dotPulse   {0%,100%{box-shadow:0 0 4px currentColor}50%{box-shadow:0 0 12px currentColor,0 0 22px currentColor}}
-@keyframes rainbow    {0%{color:var(--yellow)}33%{color:var(--cyan)}66%{color:var(--orange)}100%{color:var(--yellow)}}
-@keyframes loadScroll {0%{width:0;margin-left:0}50%{width:80%;margin-left:0}100%{width:0;margin-left:100%}}
-@keyframes loadPulse  {0%,100%{opacity:.5}50%{opacity:1}}
-.wrap{max-width:680px;margin:0 auto;padding:16px 12px 64px}
-.screen{display:none}
-.screen.active{display:block;animation:slideDown .3s ease both}
-.pbox{border:3px solid var(--cyan);padding:18px 20px;margin-bottom:14px;position:relative;background:var(--panel);box-shadow:0 0 12px rgba(0,255,255,.16),inset 0 0 10px rgba(0,0,0,.4)}
-.pbox::before,.pbox::after{content:'';position:absolute;width:10px;height:10px;border-style:solid;border-color:var(--yellow)}
-.pbox::before{top:-2px;left:-2px;border-width:3px 0 0 3px}
-.pbox::after{bottom:-2px;right:-2px;border-width:0 3px 3px 0}
-.pbox-green {border-color:var(--green);box-shadow:0 0 12px rgba(0,255,65,.16)}
-.pbox-green::before,.pbox-green::after{border-color:var(--green)}
-.pbox-yellow{border-color:var(--yellow);box-shadow:0 0 12px rgba(255,255,0,.16)}
-.pbox-yellow::before,.pbox-yellow::after{border-color:var(--cyan)}
-.pbox-red   {border-color:var(--red);box-shadow:0 0 12px rgba(255,60,60,.2)}
-.pbox-red::before,.pbox-red::after{border-color:var(--orange)}
-.logo-l1{font-family:var(--ui);font-size:clamp(13px,3vw,21px);color:var(--yellow);text-shadow:0 0 10px var(--yellow),0 0 22px var(--yellow);letter-spacing:4px;display:block}
-.logo-l2{font-family:var(--ui);font-size:clamp(9px,2vw,14px);color:var(--cyan);letter-spacing:8px;display:block;margin-top:6px}
-.hi-score-lbl{font-family:var(--ui);font-size:9px;color:var(--orange);letter-spacing:3px;animation:glowPulse 2.2s ease infinite}
-.blink-lbl{font-family:var(--ui);font-size:10px;color:var(--yellow);letter-spacing:3px;animation:blink 1.1s step-start infinite}
-.btn-start{font-family:var(--ui);font-size:clamp(10px,2vw,13px);background:var(--green);color:#000;border:none;padding:15px 30px;cursor:pointer;letter-spacing:2px;box-shadow:4px 4px 0 rgba(0,255,65,.4);transition:all .15s}
-.btn-start:disabled{background:var(--muted);color:#222;cursor:not-allowed;box-shadow:none}
-.btn-start:not(:disabled):hover{background:var(--yellow);transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(255,255,0,.4)}
-.btn-start:not(:disabled):active{transform:translate(2px,2px);box-shadow:2px 2px 0}
-.char-wrap{display:flex;flex-direction:column;align-items:center;gap:6px}
-.char-canvas{image-rendering:pixelated;image-rendering:crisp-edges;width:112px;height:168px}
-.char-label{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:2px;text-align:center;max-width:120px}
-.char-wrap.bob-anim   canvas{animation:judgeBob   1.4s ease-in-out infinite}
-.char-wrap.jump-anim  canvas{animation:judgeJump  .8s ease both}
-.char-wrap.shake-anim canvas{animation:judgeShake .7s ease both}
-/* duo chars side by side */
-.char-duo{display:flex;justify-content:center;align-items:flex-end;gap:20px;margin:10px 0}
-.hud{display:flex;align-items:center;gap:8px;background:#000;border:2px solid var(--green);padding:8px 12px;margin-bottom:14px;position:sticky;top:6px;z-index:80;box-shadow:0 0 14px rgba(0,255,65,.28)}
-.hud-btn{font-family:var(--ui);font-size:8px;background:transparent;color:var(--muted);border:2px solid var(--muted);padding:7px 10px;cursor:pointer;flex-shrink:0;transition:all .15s}
-.hud-btn:hover{border-color:var(--red);color:var(--red);text-shadow:0 0 8px var(--red)}
-.hud-sep{width:1px;height:28px;background:rgba(0,255,65,.3);flex-shrink:0}
-.hud-item{text-align:center;flex-shrink:0}
-.hud-lbl{font-size:6px;color:var(--muted);letter-spacing:1px;margin-bottom:3px}
-.hud-val{font-size:15px;color:var(--yellow)}
-.hud-mid{flex:1;min-width:0}
-.prog-track{height:7px;background:#111;border:1px solid var(--green);overflow:hidden}
-.prog-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));transition:width .5s steps(10)}
-.prog-lbl{font-size:6px;color:var(--muted);text-align:center;margin-top:3px;letter-spacing:1px}
-.load-icon{font-size:2.6rem;animation:loadPulse 1s ease-in-out infinite;display:block;text-align:center;margin-bottom:14px}
-.load-bar{height:12px;background:#111;border:2px solid var(--green);overflow:hidden;margin:14px 0}
-.load-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));animation:loadScroll 1.4s linear infinite}
-.case-icon-big{font-size:2.6rem;display:block;text-align:center;margin-bottom:8px}
-.case-title-big{font-family:var(--ui);font-size:clamp(11px,2.2vw,16px);color:var(--yellow);text-shadow:0 0 8px var(--yellow);letter-spacing:2px;margin-bottom:6px;line-height:1.6;text-align:center}
-.case-area-tag{font-family:var(--ui);font-size:7px;color:var(--cyan);letter-spacing:1px;line-height:2;text-align:center}
-.parties-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
-@media(max-width:440px){.parties-row{grid-template-columns:1fr}}
-.party-chip{padding:10px 12px}
-.party-chip b{font-family:var(--ui);font-size:7px;display:block;margin-bottom:5px;letter-spacing:1px}
-.party-chip p{font-family:var(--body);font-size:20px;line-height:1.55}
-.party-autora{border:2px solid rgba(0,255,255,.55);background:rgba(0,255,255,.03)}
-.party-autora b,.party-autora p{color:var(--cyan)}
-.party-re{border:2px solid rgba(255,136,0,.55);background:rgba(255,136,0,.03)}
-.party-re b,.party-re p{color:var(--orange)}
-.intro-txt{font-family:var(--body);font-size:21px;color:var(--white);line-height:1.65;white-space:pre-line}
-.phase-trail{display:flex;align-items:flex-start;justify-content:center;padding:4px 0}
-.pt-step{display:flex;flex-direction:column;align-items:center;gap:5px}
-.pt-dot{width:30px;height:30px;border:2px solid var(--muted);color:var(--muted);display:flex;align-items:center;justify-content:center;font-family:var(--ui);font-size:9px;flex-shrink:0}
-.pt-step.done   .pt-dot{border-color:var(--green);color:var(--green);background:rgba(0,255,65,.07)}
-.pt-step.active .pt-dot{border-color:var(--yellow);color:var(--yellow);background:rgba(255,255,0,.07);animation:dotPulse 1.5s ease infinite}
-.pt-lbl{font-family:var(--ui);font-size:5px;color:var(--muted);letter-spacing:.5px;text-align:center;max-width:64px;line-height:1.5}
-.pt-step.done   .pt-lbl{color:var(--green)}
-.pt-step.active .pt-lbl{color:var(--yellow)}
-.pt-connector{flex:1;height:2px;background:rgba(100,100,100,.3);min-width:10px;max-width:56px;margin-top:14px}
-.pt-connector.done{background:var(--green);opacity:.5}
-.phase-hdr{display:flex;align-items:center;gap:14px}
-.phase-badge{font-family:var(--ui);font-size:7px;letter-spacing:1px;border:1px solid;padding:3px 8px;text-align:center;margin-top:6px}
-.phase-info{flex:1}
-.phase-case-lbl{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:1px;margin-bottom:5px}
-.phase-name-lbl{font-family:var(--ui);font-size:clamp(9px,2vw,12px);color:var(--yellow);letter-spacing:2px;line-height:1.7}
-.sec-lbl{font-family:var(--ui);font-size:8px;letter-spacing:2px;margin-bottom:10px}
-.narrative-txt{font-family:var(--body);font-size:21px;color:var(--white);line-height:1.65;white-space:pre-line}
-.dialogue-wrap{margin:0 0 14px;animation:slideLeft .4s ease both}
-.dialogue-box{border:2px solid;padding:14px 16px;background:var(--panel)}
-.db-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.db-icon{font-size:1.1rem;flex-shrink:0}
-.db-name{font-family:var(--ui);font-size:7px;letter-spacing:1px}
-.db-text{font-family:var(--body);font-size:19px;color:var(--white);line-height:1.5;font-style:italic}
-.question-lbl{font-family:var(--ui);font-size:8px;color:var(--yellow);letter-spacing:2px;margin-bottom:10px}
-.question-txt{font-family:var(--body);font-size:22px;color:var(--white);line-height:1.5}
-.options{display:grid;gap:8px;margin-top:4px}
-.opt{display:flex;align-items:flex-start;gap:12px;background:#000;border:2px solid rgba(100,100,100,.45);padding:13px 14px;cursor:pointer;transition:all .15s}
-.opt:hover{border-color:var(--yellow);background:rgba(255,255,0,.04)}
-.opt:hover .opt-letter,.opt:hover .opt-cur{color:var(--yellow);border-color:var(--yellow)}
-.opt:hover .opt-cur{opacity:1}
-.opt-cur{font-family:var(--ui);font-size:11px;color:var(--yellow);opacity:0;flex-shrink:0;margin-top:4px;transition:opacity .1s}
-.opt-letter{font-family:var(--ui);font-size:12px;color:var(--muted);border:2px solid rgba(100,100,100,.45);min-width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all .15s}
-.opt-text{font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.5;padding-top:3px}
-.opt.correct{border-color:var(--green);background:rgba(0,255,65,.07);animation:flashGreen .5s ease}
-.opt.correct .opt-letter{color:var(--green);border-color:var(--green)}
-.opt.correct .opt-text{color:var(--green)}
-.opt.correct .opt-cur{opacity:1;color:var(--green)}
-.opt.wrong{border-color:var(--red);background:rgba(255,60,60,.07);animation:flashRed .5s ease}
-.opt.wrong .opt-letter{color:var(--red);border-color:var(--red)}
-.opt.wrong .opt-text{color:var(--red)}
-.opt.disabled{pointer-events:none}
-.opt.disabled:not(.correct):not(.wrong){opacity:.45}
-.result-icon{font-size:1.9rem;margin-bottom:6px}
-.result-title{font-family:var(--ui);font-size:clamp(12px,2.5vw,17px);letter-spacing:3px;margin-bottom:6px;animation:textPop .4s ease both}
-.result-pts{font-family:var(--ui);font-size:10px;color:var(--yellow);margin-top:6px;letter-spacing:2px}
-.stars-wrap{position:relative;height:32px;margin:6px 0}
-.star-pop{position:absolute;font-size:20px;animation:starPop .8s ease both}
-.explain-txt{font-family:var(--body);font-size:20px;color:var(--white);line-height:1.65;white-space:pre-line}
-.refs-lbl{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:1px;margin:12px 0 7px}
-.ref-chip{font-family:var(--ui);display:inline-block;border:1px solid rgba(0,255,255,.35);color:var(--cyan);padding:4px 9px;font-size:7px;margin:2px;letter-spacing:1px}
-.bridge-panel{border:2px solid rgba(255,255,0,.28);background:rgba(255,255,0,.03);padding:14px 16px;margin-top:12px}
-.bridge-lbl{font-family:var(--ui);font-size:7px;color:var(--yellow);letter-spacing:2px;margin-bottom:10px;opacity:.8}
-.bridge-txt{font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.6}
-.action-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.btn-px{font-family:var(--ui);font-size:9px;background:transparent;border:2px solid;padding:11px 17px;cursor:pointer;letter-spacing:1px;transition:all .15s}
-.btn-px:active{transform:translate(2px,2px)}
-.btn-green {border-color:var(--green); color:var(--green); box-shadow:3px 3px 0 rgba(0,255,65,.28)}
-.btn-green:hover {background:var(--green); color:#000;transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,255,65,.4)}
-.btn-yellow{border-color:var(--yellow);color:var(--yellow);box-shadow:3px 3px 0 rgba(255,255,0,.28)}
-.btn-yellow:hover{background:var(--yellow);color:#000;transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(255,255,0,.4)}
-.btn-cyan  {border-color:var(--cyan);  color:var(--cyan);  box-shadow:3px 3px 0 rgba(0,255,255,.28)}
-.btn-cyan:hover  {background:var(--cyan);  color:#000;transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,255,255,.4)}
-.btn-muted {border-color:var(--muted); color:var(--muted)}
-.btn-muted:hover {border-color:var(--red);color:var(--red)}
-.score-box{border:3px solid var(--yellow);padding:16px 28px;display:inline-block;margin:10px 0;box-shadow:0 0 20px rgba(255,255,0,.28)}
-.score-big{font-family:var(--ui);font-size:clamp(28px,6vw,46px);animation:rainbow 2s linear infinite}
-.score-lbl{font-family:var(--ui);font-size:8px;color:var(--muted);letter-spacing:2px;margin-top:6px}
-.phase-result-row{display:flex;align-items:center;gap:10px;font-family:var(--body);font-size:19px;padding:8px 0;border-bottom:1px solid #0d0d0d;line-height:1.4}
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:200;align-items:center;justify-content:center}
-.modal-bg.open{display:flex}
-.modal-box{border:3px solid var(--red);background:var(--panel);padding:32px 28px;max-width:380px;width:90%;text-align:center;box-shadow:0 0 30px rgba(255,60,60,.4);animation:slideDown .3s ease both;position:relative}
-.modal-box::before,.modal-box::after{content:'';position:absolute;width:10px;height:10px;border-color:var(--yellow);border-style:solid}
-.modal-box::before{top:-2px;left:-2px;border-width:3px 0 0 3px}
-.modal-box::after{bottom:-2px;right:-2px;border-width:0 3px 3px 0}
-.modal-icon{font-size:2rem;margin-bottom:12px}
-.modal-title{font-family:var(--ui);font-size:13px;color:var(--red);margin-bottom:12px;letter-spacing:2px}
-.modal-msg{font-family:var(--body);font-size:21px;color:var(--dim);line-height:1.6;margin-bottom:20px}
-.modal-msg strong{color:var(--yellow)}
-#screen-flash{position:fixed;inset:0;pointer-events:none;z-index:190;opacity:0;transition:opacity .1s}
-::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-track{background:#000}
-::-webkit-scrollbar-thumb{background:#1a1a1a}
-</style>
-</head>
-<body>
-<div id="screen-flash"></div>
-<div class="wrap">
-
-  <!-- ════ MENU ════ -->
-  <div id="s-menu" class="screen active">
-    <div class="pbox pbox-yellow" style="text-align:center;padding:24px">
-      <span class="logo-l1">⚖ TRIBUNAL ⚖</span>
-      <span class="logo-l2">DOS PIXELS</span>
-      <div style="margin:16px 0">
         <div id="menu-jw" class="char-wrap bob-anim" style="display:inline-flex">
           <canvas id="menu-jc" class="char-canvas"></canvas>
-          <div class="char-label">DR. PIXEL — JUIZ</div>
+          <div id="menu-jc-label" class="char-label">DR. PIXEL — JUIZ</div>
         </div>
       </div>
       <div class="hi-score-lbl">HI-SCORE: <span id="hi-val">000</span></div>
     </div>
 
     <div class="pbox pbox-green">
-      <div style="font-family:var(--ui);font-size:9px;color:var(--cyan);letter-spacing:2px;margin-bottom:12px">◄ COMO FUNCIONA ►</div>
+      <div style="font-family:var(--ui);font-size:9px;color:var(--cyan);letter-spacing:2px;margin-bottom:12px">
+        ◄ COMO FUNCIONA ►
+      </div>
       <div style="font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.85">
-        Cada sessão apresenta <span style="color:var(--yellow)">1 caso</span> com <span style="color:var(--yellow)">3 a 5 fases</span> encadeadas.
-        Você é o <span style="color:var(--cyan)">advogado</span> — tome decisões reais a cada fase.
-        O caso é escolhido <span style="color:var(--green)">aleatoriamente</span> e varia a cada sessão.
+        Cada sessão apresenta <span style="color:var(--yellow)">1 caso</span> com
+        <span style="color:var(--yellow)">3 a 5 fases</span> encadeadas.
+        Você é o <span style="color:var(--cyan)">advogado</span> —
+        tome decisões reais a cada fase.
+        O caso é escolhido <span style="color:var(--green)">aleatoriamente</span>
+        e varia a cada sessão.
         Ao final, retorna ao menu para um novo caso.
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px">
-        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;border:1px solid rgba(0,255,65,.3);padding:10px">
+        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;
+             border:1px solid rgba(0,255,65,.3);padding:10px">
           ✓ <span style="color:var(--green)">ACERTO</span><br>+10 PONTOS
         </div>
-        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;border:1px solid rgba(255,60,60,.3);padding:10px">
+        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;
+             border:1px solid rgba(255,60,60,.3);padding:10px">
           ✗ <span style="color:var(--red)">ERRO</span><br>VER FUNDAMENTO
         </div>
       </div>
@@ -600,7 +321,7 @@ body{animation:flicker 10s infinite}
     <div class="blink-lbl" style="text-align:center">✦ SELECIONE UM CASO ✦</div>
   </div>
 
-  <!-- ════ JOGO ════ -->
+  <!-- ════ JOGO ════════════════════════════════════ -->
   <div id="s-game" class="screen">
     <div class="hud">
       <button class="hud-btn" onclick="openExitModal()">🏠 MENU</button>
@@ -610,7 +331,9 @@ body{animation:flicker 10s infinite}
         <div class="hud-val" id="hud-score">000</div>
       </div>
       <div class="hud-mid">
-        <div class="prog-track"><div class="prog-fill" id="hud-prog" style="width:0%"></div></div>
+        <div class="prog-track">
+          <div class="prog-fill" id="hud-prog" style="width:0%"></div>
+        </div>
         <div class="prog-lbl" id="hud-txt">FASE 1/3</div>
       </div>
       <div class="hud-item">
@@ -620,8 +343,10 @@ body{animation:flicker 10s infinite}
     </div>
     <div id="game-body"></div>
   </div>
-</div>
 
+</div><!-- /.wrap -->
+
+<!-- ════ MODAL EXIT ══════════════════════════════ -->
 <div class="modal-bg" id="exit-modal">
   <div class="modal-box">
     <div class="modal-icon">⚠️</div>
@@ -632,303 +357,168 @@ body{animation:flicker 10s infinite}
       <button class="btn-px btn-green" onclick="closeExitModal()">CONTINUAR</button>
     </div>
   </div>
-</div>-->
+</div>
 
 <script>
-/* ═══════════════════════════════════════════════════════════════════
-   PALETA GLOBAL — todos os personagens compartilham esta paleta
-═══════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   PALETA GLOBAL
+═══════════════════════════════════════════════════════ */
 const PAL = {
-  // universal
   '.': null,
-  'P': '#FFC87C',   // pele normal
-  'A': '#FF6644',   // pele irritada / angry
-  'Q': '#FFAA88',   // pele preocupada / worried
-  'D': '#3D1A00',   // olhos / pupila
-  'S': '#CC8833',   // sombra nariz
-  'M': '#BB3311',   // boca
-
-  // JUIZ — peruca branca, toga azul-escuro
-  'W': '#F5F5F0',   // peruca
-  'G': '#CCCCCC',   // sombra peruca
-  'C': '#FFFDE7',   // colarinho
-  'N': '#000066',   // toga escura
-  'B': '#0000AA',   // toga média
-  'Y': '#FFD700',   // insígnia
-
-  // AUTOR — cabelo castanho, paletó azul
-  'H': '#5C3317',   // cabelo castanho
-  'K': '#7A4A22',   // reflexo cabelo
-  'J': '#1A3A8C',   // paletó azul
-  'T': '#4488CC',   // gravata azul
-  'L': '#F0F0F0',   // camisa branca
-
-  // RÉU — cabelo preto, terno cinza, gravata vermelha
-  'X': '#1A1A1A',   // cabelo preto
-  'Z': '#2A2A2A',   // reflexo cabelo
-  'U': '#555555',   // terno cinza
-  'V': '#777777',   // terno claro
-  'E': '#CC1111',   // gravata vermelha
-  'O': '#F0F0F0',   // camisa branca
+  'P': '#FFC87C', 'A': '#FF6644', 'Q': '#FFAA88',
+  'D': '#3D1A00', 'S': '#CC8833', 'M': '#BB3311',
+  // Juiz
+  'W': '#F5F5F0', 'G': '#CCCCCC', 'C': '#FFFDE7',
+  'N': '#000066', 'B': '#0000AA', 'Y': '#FFD700',
+  // Autor
+  'H': '#5C3317', 'K': '#7A4A22', 'J': '#1A3A8C',
+  'T': '#4488CC', 'L': '#F0F0F0',
+  // Réu
+  'X': '#1A1A1A', 'Z': '#2A2A2A', 'U': '#555555',
+  'V': '#777777', 'E': '#CC1111', 'O': '#F0F0F0',
 };
 
-/* ═══════════════════════════════════════════════════════════════════
-   SPRITES — 16 × 24 pixels, 3 personagens × 3 estados
-═══════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   SPRITES  16 × 24
+═══════════════════════════════════════════════════════ */
 const SPR = {
-
-  /* ── JUIZ (Dr. Pixel) ─────────────────────────────────────────── */
   judge: {
     neutral: [
-      '....WWWWWWWW....',
-      '...WWWWWWWWWW...',
-      '..WWWWWWWWWWWW..',
-      '..WGGWWWWWWGGW..',
-      '..WWWWWWWWWWWW..',
-      '..WWW.PPPPPP.WW.',
-      '..WW.PPPPPPPPPP.',
-      '..WW.PPPPPPPPPP.',
-      '..WW.PDDPPPDDPP.',
-      '..WW.PPPPPPPPPP.',
-      '..WW.PPPSSPPPPP.',
-      '..WW.PP.MMMM.PP.',
-      '..WW..PPPPPPPP..',
-      '....CCCCCCCC....',
-      '..NNNNCCCCNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNBBNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '...NNNNNNNNNN...',
-      '...NNNNNNNNNN...',
-      '....NNNNNNNN....',
-      '....NNNNNNNN....',
+      '....WWWWWWWW....','...WWWWWWWWWW...',
+      '..WWWWWWWWWWWW..','..WGGWWWWWWGGW..',
+      '..WWWWWWWWWWWW..','..WWW.PPPPPP.WW.',
+      '..WW.PPPPPPPPPP.','..WW.PPPPPPPPPP.',
+      '..WW.PDDPPPDDPP.','..WW.PPPPPPPPPP.',
+      '..WW.PPPSSPPPPP.','..WW.PP.MMMM.PP.',
+      '..WW..PPPPPPPP..','....CCCCCCCC....',
+      '..NNNNCCCCNNNN..','..NNNNNNNNNNNN..',
+      '..NNNNNNNNNNNN..','..NNNNBBNNNNNN..',
+      '..NNNNNNNNNNNN..','..NNNNNNNNNNNN..',
+      '...NNNNNNNNNN...','...NNNNNNNNNN...',
+      '....NNNNNNNN....','....NNNNNNNN....',
     ],
     happy: [
-      '....WWWWWWWW....',
-      '...WWWWWWWWWW...',
-      '..WWWWWWWWWWWW..',
-      '..WGGWWWWWWGGW..',
-      '..WWWWWWWWWWWW..',
-      '..WWW.PPPPPP.WW.',
-      '..WW.PPPPPPPPPP.',
-      '..WW.PPPPPPPPPP.',
-      '..WW.PDDPPPDDPP.',
-      '..WW.PPPPPPPPPP.',
-      '..WW.PPPSSPPPPP.',
-      '..WW.PDPPPPPDPP.',
-      '..WW..PPMMMMPP..',
-      '....CCCCCCCC....',
-      '..NNNNCCCCNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNBBNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '...NNNNNNNNNN...',
-      '...NNNNNNNNNN...',
-      '....NNNNNNNN....',
-      '....NNNNNNNN....',
+      '....WWWWWWWW....','...WWWWWWWWWW...',
+      '..WWWWWWWWWWWW..','..WGGWWWWWWGGW..',
+      '..WWWWWWWWWWWW..','..WWW.PPPPPP.WW.',
+      '..WW.PPPPPPPPPP.','..WW.PPPPPPPPPP.',
+      '..WW.PDDPPPDDPP.','..WW.PPPPPPPPPP.',
+      '..WW.PPPSSPPPPP.','..WW.PDPPPPPDPP.',
+      '..WW..PPMMMMPP..','....CCCCCCCC....',
+      '..NNNNCCCCNNNN..','..NNNNNNNNNNNN..',
+      '..NNNNNNNNNNNN..','..NNNNBBNNNNNN..',
+      '..NNNNNNNNNNNN..','..NNNNNNNNNNNN..',
+      '...NNNNNNNNNN...','...NNNNNNNNNN...',
+      '....NNNNNNNN....','....NNNNNNNN....',
     ],
     angry: [
-      '....WWWWWWWW....',
-      '...WWWWWWWWWW...',
-      '..WWWWWWWWWWWW..',
-      '..WGGWWWWWWGGW..',
-      '..WWWWWWWWWWWW..',
-      '..WWW.AAAAAA.WW.',
-      '..WW.AAAAAAAAAA.',
-      '..WW.AAAAAAAAAA.',
-      '..WW.ADDAAADDAA.',
-      '..WW.AAAAAAAAAA.',
-      '..WW.AAASSAAAAA.',
-      '..WW.AA.MMMM.AA.',
-      '..WW.AMAAAAAAMA.',
-      '....CCCCCCCC....',
-      '..NNNNCCCCNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNBBNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '..NNNNNNNNNNNN..',
-      '...NNNNNNNNNN...',
-      '...NNNNNNNNNN...',
-      '....NNNNNNNN....',
-      '....NNNNNNNN....',
+      '....WWWWWWWW....','...WWWWWWWWWW...',
+      '..WWWWWWWWWWWW..','..WGGWWWWWWGGW..',
+      '..WWWWWWWWWWWW..','..WWW.AAAAAA.WW.',
+      '..WW.AAAAAAAAAA.','..WW.AAAAAAAAAA.',
+      '..WW.ADDAAADDAA.','..WW.AAAAAAAAAA.',
+      '..WW.AAASSAAAAA.','..WW.AA.MMMM.AA.',
+      '..WW.AMAAAAAAMA.','....CCCCCCCC....',
+      '..NNNNCCCCNNNN..','..NNNNNNNNNNNN..',
+      '..NNNNNNNNNNNN..','..NNNNBBNNNNNN..',
+      '..NNNNNNNNNNNN..','..NNNNNNNNNNNN..',
+      '...NNNNNNNNNN...','...NNNNNNNNNN...',
+      '....NNNNNNNN....','....NNNNNNNN....',
     ],
   },
-
-  /* ── AUTOR / PLAINTIFF ────────────────────────────────────────── */
-  /* Cabelo castanho, paletó azul, gravata azul claro               */
   plaintiff: {
     neutral: [
-      '....HHHHHHHH....',  //  0 cabelo
-      '...HHHHHHHHHH...',  //  1
-      '..HHHHHHHHHHHH..',  //  2
-      '..HKHHHHHHHKHH..',  //  3 reflexo
-      '..HHHHHHHHHHHH..',  //  4
-      '..HHH.PPPPPP.HH.',  //  5 testa
-      '..HH.PPPPPPPPPP.',  //  6 rosto
-      '..HH.PPPPPPPPPP.',  //  7
-      '..HH.PDDPPPDDPP.',  //  8 olhos
-      '..HH.PPPPPPPPPP.',  //  9
-      '..HH.PPPSSPPPPP.',  // 10 nariz
-      '..HH.PP.MMMM.PP.',  // 11 boca (neutro)
-      '..HH..PPPPPPPP..',  // 12 queixo
-      '....LLLLLLLL....',  // 13 camisa
-      '..JJLLLLTTLLLJJ.',  // 14 paletó + gravata
-      '..JJJJJTTJJJJJJ.',  // 15
-      '..JJJJJTTJJJJJJ.',  // 16
-      '..JJJJJTTJJJJJJ.',  // 17
-      '..JJJJJJJJJJJJJJ',  // 18
-      '..JJJJJJJJJJJJJJ',  // 19
-      '...JJJJJJJJJJJJJ',  // 20
-      '...JJJJJJJJJJJJJ',  // 21
-      '....JJJJJJJJJJ..',  // 22
-      '....JJJJJJJJJJ..',  // 23
+      '....HHHHHHHH....','...HHHHHHHHHH...',
+      '..HHHHHHHHHHHH..','..HKHHHHHHHKHH..',
+      '..HHHHHHHHHHHH..','..HHH.PPPPPP.HH.',
+      '..HH.PPPPPPPPPP.','..HH.PPPPPPPPPP.',
+      '..HH.PDDPPPDDPP.','..HH.PPPPPPPPPP.',
+      '..HH.PPPSSPPPPP.','..HH.PP.MMMM.PP.',
+      '..HH..PPPPPPPP..','....LLLLLLLL....',
+      '..JJLLLLTTLLLJJ.','..JJJJJTTJJJJJJ.',
+      '..JJJJJTTJJJJJJ.','..JJJJJTTJJJJJJ.',
+      '..JJJJJJJJJJJJJJ','..JJJJJJJJJJJJJJ',
+      '...JJJJJJJJJJJJJ','...JJJJJJJJJJJJJ',
+      '....JJJJJJJJJJ..','....JJJJJJJJJJ..',
     ],
     happy: [
-      '....HHHHHHHH....',
-      '...HHHHHHHHHH...',
-      '..HHHHHHHHHHHH..',
-      '..HKHHHHHHHKHH..',
-      '..HHHHHHHHHHHH..',
-      '..HHH.PPPPPP.HH.',
-      '..HH.PPPPPPPPPP.',
-      '..HH.PPPPPPPPPP.',
-      '..HH.PDDPPPDDPP.',
-      '..HH.PPPPPPPPPP.',
-      '..HH.PPPSSPPPPP.',
-      '..HH.PDPPPPPDPP.',  // 11 olhos alegres
-      '..HH..PPMMMMPP..',  // 12 sorriso
-      '....LLLLLLLL....',
-      '..JJLLLLTTLLLJJ.',
-      '..JJJJJTTJJJJJJ.',
-      '..JJJJJTTJJJJJJ.',
-      '..JJJJJTTJJJJJJ.',
-      '..JJJJJJJJJJJJJJ',
-      '..JJJJJJJJJJJJJJ',
-      '...JJJJJJJJJJJJJ',
-      '...JJJJJJJJJJJJJ',
-      '....JJJJJJJJJJ..',
-      '....JJJJJJJJJJ..',
+      '....HHHHHHHH....','...HHHHHHHHHH...',
+      '..HHHHHHHHHHHH..','..HKHHHHHHHKHH..',
+      '..HHHHHHHHHHHH..','..HHH.PPPPPP.HH.',
+      '..HH.PPPPPPPPPP.','..HH.PPPPPPPPPP.',
+      '..HH.PDDPPPDDPP.','..HH.PPPPPPPPPP.',
+      '..HH.PPPSSPPPPP.','..HH.PDPPPPPDPP.',
+      '..HH..PPMMMMPP..','....LLLLLLLL....',
+      '..JJLLLLTTLLLJJ.','..JJJJJTTJJJJJJ.',
+      '..JJJJJTTJJJJJJ.','..JJJJJTTJJJJJJ.',
+      '..JJJJJJJJJJJJJJ','..JJJJJJJJJJJJJJ',
+      '...JJJJJJJJJJJJJ','...JJJJJJJJJJJJJ',
+      '....JJJJJJJJJJ..','....JJJJJJJJJJ..',
     ],
     worried: [
-      '....HHHHHHHH....',
-      '...HHHHHHHHHH...',
-      '..HHHHHHHHHHHH..',
-      '..HKHHHHHHHKHH..',
-      '..HHHHHHHHHHHH..',
-      '..HHH.QQQQQQ.HH.',  //  5 pele preocupada
-      '..HH.QQQQQQQQQQ.',  //  6
-      '..HH.QQQQQQQQQQ.',  //  7
-      '..HH.QDDQQQDDQQ.',  //  8 olhos preocupados
-      '..HH.QQQQQQQQQQ.',  //  9
-      '..HH.QQQSSQQQQQ.',  // 10
-      '..HH.QM.QQQQ.MQ.',  // 11 boca triste (franzido)
-      '..HH..QQQQQQQQ..',  // 12
-      '....LLLLLLLL....',
-      '..JJLLLLTTLLLJJ.',
-      '..JJJJJTTJJJJJJ.',
-      '..JJJJJTTJJJJJJ.',
-      '..JJJJJTTJJJJJJ.',
-      '..JJJJJJJJJJJJJJ',
-      '..JJJJJJJJJJJJJJ',
-      '...JJJJJJJJJJJJJ',
-      '...JJJJJJJJJJJJJ',
-      '....JJJJJJJJJJ..',
-      '....JJJJJJJJJJ..',
+      '....HHHHHHHH....','...HHHHHHHHHH...',
+      '..HHHHHHHHHHHH..','..HKHHHHHHHKHH..',
+      '..HHHHHHHHHHHH..','..HHH.QQQQQQ.HH.',
+      '..HH.QQQQQQQQQQ.','..HH.QQQQQQQQQQ.',
+      '..HH.QDDQQQDDQQ.','..HH.QQQQQQQQQQ.',
+      '..HH.QQQSSQQQQQ.','..HH.QM.QQQQ.MQ.',
+      '..HH..QQQQQQQQ..','....LLLLLLLL....',
+      '..JJLLLLTTLLLJJ.','..JJJJJTTJJJJJJ.',
+      '..JJJJJTTJJJJJJ.','..JJJJJTTJJJJJJ.',
+      '..JJJJJJJJJJJJJJ','..JJJJJJJJJJJJJJ',
+      '...JJJJJJJJJJJJJ','...JJJJJJJJJJJJJ',
+      '....JJJJJJJJJJ..','....JJJJJJJJJJ..',
     ],
   },
-
-  /* ── RÉU / DEFENDANT ─────────────────────────────────────────── */
-  /* Cabelo preto, terno cinza, gravata vermelha                    */
   defendant: {
     neutral: [
-      '....XXXXXXXX....',  //  0 cabelo preto
-      '...XXXXXXXXXX...',  //  1
-      '..XXXXXXXXXXXX..',  //  2
-      '..XZXXXXXXXZXX..',  //  3 reflexo
-      '..XXXXXXXXXXXX..',  //  4
-      '..XXX.PPPPPP.XX.',  //  5 testa
-      '..XX.PPPPPPPPPP.',  //  6 rosto
-      '..XX.PPPPPPPPPP.',  //  7
-      '..XX.PDDPPPDDPP.',  //  8 olhos
-      '..XX.PPPPPPPPPP.',  //  9
-      '..XX.PPPSSPPPPP.',  // 10 nariz
-      '..XX.PP.MMMM.PP.',  // 11 boca
-      '..XX..PPPPPPPP..',  // 12 queixo
-      '....OOOOOOOO....',  // 13 camisa
-      '..UUOOOEEEOOUUU.',  // 14 terno + gravata
-      '..UUUUUEEEUUUUU.',  // 15
-      '..UUUUUEEEUUUUU.',  // 16
-      '..UUUUUEEEUUUUU.',  // 17
-      '..UUUUUUUUUUUUUU',  // 18
-      '..UUUUUUUUUUUUUU',  // 19
-      '...UUUUUUUUUUUUU',  // 20
-      '...UUUUUUUUUUUUU',  // 21
-      '....UUUUUUUUUU..',  // 22
-      '....UUUUUUUUUU..',  // 23
+      '....XXXXXXXX....','...XXXXXXXXXX...',
+      '..XXXXXXXXXXXX..','..XZXXXXXXXZXX..',
+      '..XXXXXXXXXXXX..','..XXX.PPPPPP.XX.',
+      '..XX.PPPPPPPPPP.','..XX.PPPPPPPPPP.',
+      '..XX.PDDPPPDDPP.','..XX.PPPPPPPPPP.',
+      '..XX.PPPSSPPPPP.','..XX.PP.MMMM.PP.',
+      '..XX..PPPPPPPP..','....OOOOOOOO....',
+      '..UUOOOEEEOOUUU.','..UUUUUEEEUUUUU.',
+      '..UUUUUEEEUUUUU.','..UUUUUEEEUUUUU.',
+      '..UUUUUUUUUUUUUU','..UUUUUUUUUUUUUU',
+      '...UUUUUUUUUUUUU','...UUUUUUUUUUUUU',
+      '....UUUUUUUUUU..','....UUUUUUUUUU..',
     ],
     angry: [
-      '....XXXXXXXX....',
-      '...XXXXXXXXXX...',
-      '..XXXXXXXXXXXX..',
-      '..XZXXXXXXXZXX..',
-      '..XXXXXXXXXXXX..',
-      '..XXX.AAAAAA.XX.',  //  5 pele irritada
-      '..XX.AAAAAAAAAA.',  //  6
-      '..XX.AAAAAAAAAA.',  //  7
-      '..XX.ADDAAADDAA.',  //  8 olhos furiosos
-      '..XX.AAAAAAAAAA.',  //  9
-      '..XX.AAASSAAAAA.',  // 10
-      '..XX.AA.MMMM.AA.',  // 11 boca raivosa
-      '..XX.AMAAAAAAMA.',  // 12 franzido
-      '....OOOOOOOO....',
-      '..UUOOOEEEOOUUU.',
-      '..UUUUUEEEUUUUU.',
-      '..UUUUUEEEUUUUU.',
-      '..UUUUUEEEUUUUU.',
-      '..UUUUUUUUUUUUUU',
-      '..UUUUUUUUUUUUUU',
-      '...UUUUUUUUUUUUU',
-      '...UUUUUUUUUUUUU',
-      '....UUUUUUUUUU..',
-      '....UUUUUUUUUU..',
+      '....XXXXXXXX....','...XXXXXXXXXX...',
+      '..XXXXXXXXXXXX..','..XZXXXXXXXZXX..',
+      '..XXXXXXXXXXXX..','..XXX.AAAAAA.XX.',
+      '..XX.AAAAAAAAAA.','..XX.AAAAAAAAAA.',
+      '..XX.ADDAAADDAA.','..XX.AAAAAAAAAA.',
+      '..XX.AAASSAAAAA.','..XX.AA.MMMM.AA.',
+      '..XX.AMAAAAAAMA.','....OOOOOOOO....',
+      '..UUOOOEEEOOUUU.','..UUUUUEEEUUUUU.',
+      '..UUUUUEEEUUUUU.','..UUUUUEEEUUUUU.',
+      '..UUUUUUUUUUUUUU','..UUUUUUUUUUUUUU',
+      '...UUUUUUUUUUUUU','...UUUUUUUUUUUUU',
+      '....UUUUUUUUUU..','....UUUUUUUUUU..',
     ],
     happy: [
-      '....XXXXXXXX....',  // réu satisfeito (quando jogador erra)
-      '...XXXXXXXXXX...',
-      '..XXXXXXXXXXXX..',
-      '..XZXXXXXXXZXX..',
-      '..XXXXXXXXXXXX..',
-      '..XXX.PPPPPP.XX.',
-      '..XX.PPPPPPPPPP.',
-      '..XX.PPPPPPPPPP.',
-      '..XX.PDDPPPDDPP.',
-      '..XX.PPPPPPPPPP.',
-      '..XX.PPPSSPPPPP.',
-      '..XX.PDPPPPPDPP.',  // 11 sorriso arrogante
-      '..XX..PPMMMMPP..',  // 12
-      '....OOOOOOOO....',
-      '..UUOOOEEEOOUUU.',
-      '..UUUUUEEEUUUUU.',
-      '..UUUUUEEEUUUUU.',
-      '..UUUUUEEEUUUUU.',
-      '..UUUUUUUUUUUUUU',
-      '..UUUUUUUUUUUUUU',
-      '...UUUUUUUUUUUUU',
-      '...UUUUUUUUUUUUU',
-      '....UUUUUUUUUU..',
-      '....UUUUUUUUUU..',
+      '....XXXXXXXX....','...XXXXXXXXXX...',
+      '..XXXXXXXXXXXX..','..XZXXXXXXXZXX..',
+      '..XXXXXXXXXXXX..','..XXX.PPPPPP.XX.',
+      '..XX.PPPPPPPPPP.','..XX.PPPPPPPPPP.',
+      '..XX.PDDPPPDDPP.','..XX.PPPPPPPPPP.',
+      '..XX.PPPSSPPPPP.','..XX.PDPPPPPDPP.',
+      '..XX..PPMMMMPP..','....OOOOOOOO....',
+      '..UUOOOEEEOOUUU.','..UUUUUEEEUUUUU.',
+      '..UUUUUEEEUUUUU.','..UUUUUEEEUUUUU.',
+      '..UUUUUUUUUUUUUU','..UUUUUUUUUUUUUU',
+      '...UUUUUUUUUUUUU','...UUUUUUUUUUUUU',
+      '....UUUUUUUUUU..','....UUUUUUUUUU..',
     ],
   },
 };
 
-/* ═══════════════════════════════════════════════════════════════════
-   RENDERER — desenha qualquer personagem em qualquer canvas
-═══════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   RENDERER
+═══════════════════════════════════════════════════════ */
 function renderCharacter(canvas, charType, state) {
   const char = SPR[charType];
   if (!char) { console.warn('[TRIBUNAL] Personagem desconhecido:', charType); return; }
@@ -943,24 +533,17 @@ function renderCharacter(canvas, charType, state) {
     }
   });
 }
-
-/* Mantém retrocompatibilidade com chamadas renderJudge() */
 function renderJudge(canvas, state) { renderCharacter(canvas, 'judge', state); }
 
-/* ═══════════════════════════════════════════════════════════════════
-   ANIMAÇÃO DO PERSONAGEM EM CENA
-   charType : 'judge' | 'plaintiff' | 'defendant'
-   state    : 'neutral' | 'happy' | 'angry' | 'worried'
-═══════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   ANIMAÇÃO DO PERSONAGEM
+═══════════════════════════════════════════════════════ */
 function setCharacter(charType, state, canvasId, wrapId, labelOverride) {
-  const canvas = document.getElementById(canvasId  || 'jc');
-  const wrap   = document.getElementById(wrapId    || 'jw');
+  const canvas = document.getElementById(canvasId || 'jc');
+  const wrap   = document.getElementById(wrapId   || 'jw');
   const label  = document.getElementById((canvasId || 'jc') + '-label');
-
   if (!canvas || !wrap) return;
   renderCharacter(canvas, charType, state);
-
-  // Atualiza label
   if (label) {
     const auto = {
       judge:     'DR. PIXEL',
@@ -969,18 +552,14 @@ function setCharacter(charType, state, canvasId, wrapId, labelOverride) {
     };
     label.textContent = labelOverride || auto[charType] || charType.toUpperCase();
   }
-
-  // Animação
   const anim = { happy:'jump-anim', angry:'shake-anim', worried:'shake-anim', neutral:'bob-anim' }[state] || 'bob-anim';
   wrap.className = 'char-wrap ' + anim;
-  if (anim !== 'bob-anim') {
-    setTimeout(() => { wrap.className = 'char-wrap bob-anim'; }, 900);
-  }
+  if (anim !== 'bob-anim') setTimeout(() => { wrap.className = 'char-wrap bob-anim'; }, 900);
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    ÁUDIO 8-BIT
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 let _ac = null;
 function getAC() { if (!_ac) _ac = new (window.AudioContext || window.webkitAudioContext)(); return _ac; }
 function tone(f, d, t='square', v=0.18, dl=0) {
@@ -993,7 +572,7 @@ function tone(f, d, t='square', v=0.18, dl=0) {
     o.start(ac.currentTime+dl); o.stop(ac.currentTime+dl+d+.05);
   } catch(e) {}
 }
-function seq(n) { n.forEach(x=>tone(x.f,x.d,x.t||'square',x.v||.18,x.dl||0)); }
+function seq(n) { n.forEach(x => tone(x.f,x.d,x.t||'square',x.v||.18,x.dl||0)); }
 const SFX = {
   blip:    () => tone(440,.07,'square',.15),
   correct: () => seq([{f:523,d:.10,dl:0},{f:659,d:.10,dl:.11},{f:784,d:.10,dl:.22},{f:1047,d:.35,dl:.33}]),
@@ -1003,24 +582,20 @@ const SFX = {
   advance: () => seq([{f:392,d:.08,dl:.00},{f:523,d:.12,dl:.10}]),
 };
 
-/* ═══════════════════════════════════════════════════════════════════
-   CONFIGURAÇÃO
-═══════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   CONFIG & ESTADO GLOBAL
+═══════════════════════════════════════════════════════ */
 const CASES_DIR = 'cases/';
 
-/* ═══════════════════════════════════════════════════════════════════
-   ESTADO GLOBAL
-═══════════════════════════════════════════════════════════════════ */
 let manifest       = [];
 let sessionPlayed  = new Set();
 let sessionSkipped = new Set();
 let currentFile    = null;
 let currentCase    = null;
-let currentPhaseChar = 'judge';   // ← personagem ativo na fase atual
+let currentPhaseChar = 'judge';
 
 let GS = { phaseIdx:0, score:0, hits:0, total:0, answers:[] };
 
-/* localStorage com fallback (funciona em sandbox) */
 const SafeStorage = {
   _m: {},
   get(k,fb='0') { try { return localStorage.getItem(k)??fb; } catch(e) { return this._m[k]??fb; } },
@@ -1028,17 +603,14 @@ const SafeStorage = {
 };
 let hiScore = parseInt(SafeStorage.get('tdp_hi','0'));
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    INIT
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 (async function init() {
   renderCharacter(document.getElementById('menu-jc'), 'judge', 'neutral');
   document.getElementById('hi-val').textContent = String(hiScore).padStart(3,'0');
-
   try {
-    const res = await fetch(`${CASES_DIR}manifest.json?cb=${Date.now()}`, {
-      cache: 'no-store'
-    });
+    const res = await fetch(`${CASES_DIR}manifest.json?cb=${Date.now()}`, { cache:'no-store' });
     if (!res.ok) throw new Error('manifest.json não encontrado');
     manifest = (await res.json()).cases;
     updateManifestInfo();
@@ -1065,9 +637,9 @@ function updateManifestInfo() {
      &nbsp;·&nbsp; <span style="color:var(--yellow)">${Math.max(0,total-played)}</span> restantes`;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    SELEÇÃO ALEATÓRIA
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function pickRandom(excludeFile=null) {
   let pool = manifest.filter(f => !sessionPlayed.has(f));
   if (pool.length === 0) { sessionPlayed.clear(); sessionSkipped.clear(); pool = [...manifest]; }
@@ -1077,9 +649,9 @@ function pickRandom(excludeFile=null) {
   return final[Math.floor(Math.random() * final.length)];
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    ABRIR / MUDAR / CARREGAR CASO
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 async function openCase()   { SFX.blip(); await loadCase(pickRandom()); }
 async function changeCase() { SFX.blip(); if (currentFile) sessionSkipped.add(currentFile); await loadCase(pickRandom(currentFile)); }
 
@@ -1106,9 +678,9 @@ function startCase() {
   renderPhase();
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    UTILITÁRIOS DE UI
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
@@ -1139,22 +711,26 @@ function fade(fn) {
   setTimeout(() => { fn(); b.style.opacity='1'; window.scrollTo({top:0,behavior:'smooth'}); }, 220);
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    RENDER: LOADING
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function renderLoading(file) {
   document.getElementById('game-body').innerHTML = `
     <div class="pbox pbox-yellow" style="text-align:center;padding:44px 24px">
       <div class="load-icon">⚖</div>
-      <div style="font-family:var(--ui);font-size:10px;color:var(--cyan);letter-spacing:3px;margin-bottom:16px">CARREGANDO CASO...</div>
+      <div style="font-family:var(--ui);font-size:10px;color:var(--cyan);letter-spacing:3px;margin-bottom:16px">
+        CARREGANDO CASO...
+      </div>
       <div class="load-bar"><div class="load-bar-fill"></div></div>
-      <div style="font-family:var(--body);font-size:18px;color:var(--muted);margin-top:10px">Consultando: ${file||'...'}</div>
+      <div style="font-family:var(--body);font-size:18px;color:var(--muted);margin-top:10px">
+        Consultando: ${file||'...'}
+      </div>
     </div>`;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    RENDER: ERRO
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function renderError(msg) {
   document.getElementById('game-body').innerHTML = `
     <div class="pbox pbox-red" style="text-align:center;padding:30px">
@@ -1167,10 +743,9 @@ function renderError(msg) {
     </div>`;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   RENDER: INTRO DO CASO
-   → personagem: AUTOR (plaintiff) apresenta o caso
-═══════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   RENDER: INTRO
+═══════════════════════════════════════════════════════ */
 function renderIntro() {
   const c = currentCase;
   const canChange = manifest.filter(f => f !== currentFile).length > 0;
@@ -1178,9 +753,9 @@ function renderIntro() {
 
   document.getElementById('game-body').innerHTML = `
     <div class="pbox pbox-yellow" style="text-align:center">
-      <div style="font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:2px;margin-bottom:10px">◄ CASO SELECIONADO ►</div>
-
-      <!-- ★ AUTOR apresenta o caso ★ -->
+      <div style="font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:2px;margin-bottom:10px">
+        ◄ CASO SELECIONADO ►
+      </div>
       <div style="margin-bottom:12px">
         <div id="intro-char-w" class="char-wrap bob-anim" style="display:inline-flex">
           <canvas id="intro-char-c" class="char-canvas"></canvas>
@@ -1189,11 +764,9 @@ function renderIntro() {
           </div>
         </div>
       </div>
-
       <div class="case-icon-big">${c.icon}</div>
       <div class="case-title-big">${c.title.toUpperCase()}</div>
       <div class="case-area-tag">${c.area}</div>
-
       <div class="parties-row" style="margin-top:14px">
         <div class="party-chip party-autora">
           <b>⚖ PARTE AUTORA</b><p>${c.plaintiff}</p>
@@ -1213,54 +786,50 @@ function renderIntro() {
     </div>
 
     <div class="action-row" style="margin-top:16px">
-      <button class="btn-px btn-green" onclick="startCase()" style="font-size:11px;padding:14px 24px">► INICIAR CASO</button>
+      <button class="btn-px btn-green" onclick="startCase()" style="font-size:11px;padding:14px 24px">
+        ► INICIAR CASO
+      </button>
       ${canChange ? `<button class="btn-px btn-yellow" onclick="changeCase()">🔀 MUDAR CASO</button>` : ''}
       <button class="btn-px btn-muted" onclick="confirmExit()">🏠 MENU</button>
     </div>
 
     <div style="text-align:center;margin-top:12px;font-family:var(--body);font-size:18px;color:var(--muted)">
-      ${sessionPlayed.size>0
+      ${sessionPlayed.size > 0
         ? `${sessionPlayed.size} caso${sessionPlayed.size>1?'s':''} jogado${sessionPlayed.size>1?'s':''} nesta sessão`
         : 'Primeiro caso da sessão'}
     </div>`;
 
-  // Renderiza o sprite do AUTOR
   const ic = document.getElementById('intro-char-c');
   if (ic) renderCharacter(ic, 'plaintiff', 'neutral');
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    RENDER: FASE
-   → sem speaker  → JUIZ no cabeçalho (árbitro neutro)
-   → com speaker  → RÉU no cabeçalho (adversário argumentando)
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function renderPhase() {
   const c = currentCase;
   const p = c.phases[GS.phaseIdx];
   updateHUD();
 
-  // Define qual personagem aparece nesta fase
-  const hasOpponent = !!p.speaker;
-  currentPhaseChar  = hasOpponent ? 'defendant' : 'judge';
-  const charLabel   = hasOpponent
+  const hasOpponent   = !!p.speaker;
+  currentPhaseChar    = hasOpponent ? 'defendant' : 'judge';
+  const charLabel     = hasOpponent
     ? `${c.defendant.split(' ')[0].toUpperCase()}<br><span style="color:var(--muted)">ADVERSÁRIO</span>`
     : 'DR. PIXEL<br><span style="color:var(--muted)">JUIZ</span>';
-  const charColor   = hasOpponent ? 'var(--orange)' : 'var(--yellow)';
+  const charColor     = hasOpponent ? 'var(--orange)' : 'var(--yellow)';
 
-  // Trilha de progresso
   const trailHTML = c.phases.map((ph, i) => {
-    const cls = i < GS.phaseIdx ? 'done' : i === GS.phaseIdx ? 'active' : '';
-    const dot = i < GS.phaseIdx ? '✓' : String(i+1);
-    const lineClass = i < GS.phaseIdx ? 'done' : '';
-    return `${i>0 ? `<div class="pt-connector ${lineClass}"></div>` : ''}
+    const cls  = i < GS.phaseIdx ? 'done' : i === GS.phaseIdx ? 'active' : '';
+    const dot  = i < GS.phaseIdx ? '✓' : String(i+1);
+    const line = i < GS.phaseIdx ? 'done' : '';
+    return `${i > 0 ? `<div class="pt-connector ${line}"></div>` : ''}
       <div class="pt-step ${cls}">
         <div class="pt-dot">${dot}</div>
         <div class="pt-lbl">${ph.stepLabel}</div>
       </div>`;
   }).join('');
 
-  // Diálogo do adversário
   let dialogueHTML = '';
   if (p.speaker) {
     dialogueHTML = `
@@ -1288,7 +857,6 @@ function renderPhase() {
     <div class="pbox pbox-yellow">
       <div class="phase-hdr">
         <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0">
-          <!-- ★ Personagem contextual ★ -->
           <div id="jw" class="char-wrap bob-anim">
             <canvas id="jc" class="char-canvas"></canvas>
             <div id="jc-label" class="char-label" style="color:${charColor}">${charLabel}</div>
@@ -1328,17 +896,14 @@ function renderPhase() {
     <div id="result-zone"></div>
   `;
 
-  // Renderiza o sprite correto
   const jc = document.getElementById('jc');
   if (jc) renderCharacter(jc, currentPhaseChar, 'neutral');
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    RESPONDER
-   → Juiz reage SEMPRE (árbitro dá o veredito)
-   → Se havia RÉU: réu reage no sentido inverso (venceu/perdeu)
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function pick(sel) {
   const c           = currentCase;
   const p           = c.phases[GS.phaseIdx];
@@ -1351,36 +916,23 @@ function pick(sel) {
   GS.answers.push({ phaseIdx:GS.phaseIdx, correct:ok, sel });
   updateHUD();
 
-  // Marca as opções
   document.querySelectorAll('.opt').forEach((el,i) => {
     el.classList.add('disabled');
-    if (i === p.correct)       el.classList.add('correct');
-    else if (i===sel && !ok)   el.classList.add('wrong');
+    if (i === p.correct)     el.classList.add('correct');
+    else if (i===sel && !ok) el.classList.add('wrong');
   });
 
-  // ── Reação dos personagens ──────────────────────────────────────
   if (currentPhaseChar === 'defendant') {
-    // Havia réu em cena
-    if (ok) {
-      // Jogador venceu o argumento → Juiz aparece feliz, réu é "derrotado"
-      setCharacter('judge', 'happy');
-      flashScreen('rgba(0,255,65,.16)');
-      SFX.correct();
-    } else {
-      // Réu ganhou este round → réu fica satisfeito
-      setCharacter('defendant', 'happy');
-      flashScreen('rgba(255,60,60,.18)');
-      SFX.wrong();
-    }
+    if (ok) { setCharacter('judge', 'happy');     flashScreen('rgba(0,255,65,.16)'); SFX.correct(); }
+    else    { setCharacter('defendant','happy');  flashScreen('rgba(255,60,60,.18)'); SFX.wrong();  }
   } else {
-    // Fase sem adversário → juiz reage normalmente
     if (ok) { setCharacter('judge','happy'); flashScreen('rgba(0,255,65,.16)'); SFX.correct(); }
     else    { setCharacter('judge','angry'); flashScreen('rgba(255,60,60,.18)'); SFX.wrong();   }
   }
 
   const starsHTML = ok ? `
     <div class="stars-wrap">
-      ${['18%','30%','45%','60%','74%'].map((l,i)=>
+      ${['18%','30%','45%','60%','74%'].map((l,i) =>
         `<span class="star-pop" style="left:${l};animation-delay:${i*.08}s">⭐</span>`
       ).join('')}
     </div>` : '';
@@ -1429,21 +981,19 @@ function pick(sel) {
       .scrollIntoView({behavior:'smooth', block:'start'}), 200);
 }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    AVANÇAR FASE
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function nextPhase() { SFX.advance(); GS.phaseIdx++; fade(() => renderPhase()); }
 
-/* ═══════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
    RENDER: RESULTADO DO CASO
-   → AUTOR + JUIZ lado a lado refletem o desempenho
-═══════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════ */
 function renderResult() {
   SFX.finish();
-  const c      = currentCase;
-  const pct    = GS.total > 0 ? (GS.hits / GS.total * 100) : 0;
+  const c    = currentCase;
+  const pct  = GS.total > 0 ? (GS.hits / GS.total * 100) : 0;
   const errors = GS.total - GS.hits;
-  const maxPts = c.phases.length * 10;
 
   if (GS.score > hiScore) {
     hiScore = GS.score;
@@ -1451,25 +1001,23 @@ function renderResult() {
     document.getElementById('hi-val').textContent = String(hiScore).padStart(3,'0');
   }
 
-  // Escolhe medal, título e estados dos personagens
   let medal, title, msg, plaintiffState, judgeState;
   if (pct >= 100) {
-    medal='🏆'; title='CASO VENCIDO!';   msg='Domínio completo — todas as fases corretas!';
+    medal='🏆'; title='CASO VENCIDO!';    msg='Domínio completo — todas as fases corretas!';
     plaintiffState='happy';   judgeState='happy';
   } else if (pct >= 67) {
-    medal='🥇'; title='BOA ADVOCACIA!';  msg='Análise sólida e bem fundamentada.';
+    medal='🥇'; title='BOA ADVOCACIA!';   msg='Análise sólida e bem fundamentada.';
     plaintiffState='happy';   judgeState='happy';
   } else if (pct >= 33) {
-    medal='🥈'; title='PARCIALMENTE...'; msg='Revise os fundamentos das fases erradas.';
+    medal='🥈'; title='PARCIALMENTE...';  msg='Revise os fundamentos das fases erradas.';
     plaintiffState='neutral'; judgeState='neutral';
   } else {
-    medal='📚'; title='PRECISA REVISAR!';msg='Estude os fundamentos antes do próximo caso.';
+    medal='📚'; title='PRECISA REVISAR!'; msg='Estude os fundamentos antes do próximo caso.';
     plaintiffState='worried'; judgeState='angry';
   }
 
-  const isNewHi = (GS.score > 0 && GS.score === hiScore);
-  const pName   = c.plaintiff.split(' ')[0].toUpperCase();
-
+  const isNewHi       = (GS.score > 0 && GS.score === hiScore);
+  const pName         = c.plaintiff.split(' ')[0].toUpperCase();
   const playedAfter   = new Set([...sessionPlayed, currentFile]);
   const nextAvailable = manifest.some(f => !playedAfter.has(f));
 
@@ -1489,8 +1037,6 @@ function renderResult() {
 
   fade(() => {
     document.getElementById('game-body').innerHTML = `
-
-      <!-- ★ AUTOR + JUIZ — reagem ao resultado ★ -->
       <div class="char-duo">
         <div id="r-plaintiff-w" class="char-wrap bob-anim">
           <canvas id="r-plaintiff-c" class="char-canvas"></canvas>
@@ -1545,8 +1091,10 @@ function renderResult() {
         ${nextAvailable
           ? `<button class="btn-px btn-yellow" onclick="openCase()" style="font-size:10px">🔀 PRÓXIMO CASO</button>`
           : ''}
-        <button class="btn-px btn-green" onclick="loadCase(currentFile)" style="font-size:10px">🔄 REVER CASO</button>
-        <button class="btn-px btn-cyan"  onclick="confirmExit()">🏠 MENU</button>
+        <button class="btn-px btn-green" onclick="loadCase(currentFile)" style="font-size:10px">
+          🔄 REVER CASO
+        </button>
+        <button class="btn-px btn-cyan" onclick="confirmExit()">🏠 MENU</button>
       </div>
 
       <div style="text-align:center;margin-top:14px;font-family:var(--ui);font-size:7px;
@@ -1556,7 +1104,6 @@ function renderResult() {
       </div>
     `;
 
-    // Renderiza os sprites com animação de entrada
     const rpc = document.getElementById('r-plaintiff-c');
     const rjc = document.getElementById('r-judge-c');
     const rpw = document.getElementById('r-plaintiff-w');
@@ -1564,16 +1111,12 @@ function renderResult() {
 
     if (rpc) renderCharacter(rpc, 'plaintiff', plaintiffState);
     if (rjc) renderCharacter(rjc, 'judge',     judgeState);
-
-    // Animação de entrada com pequeno delay entre os dois
-    if (rpw) { rpw.className = 'char-wrap jump-anim'; setTimeout(() => rpw.className = 'char-wrap bob-anim', 900); }
-    if (rjw) { setTimeout(() => { rjw.className = 'char-wrap jump-anim'; setTimeout(() => rjw.className = 'char-wrap bob-anim', 900); }, 300); }
+    if (rpw) { rpw.className='char-wrap jump-anim'; setTimeout(()=>rpw.className='char-wrap bob-anim',900); }
+    if (rjw) { setTimeout(()=>{ rjw.className='char-wrap jump-anim'; setTimeout(()=>rjw.className='char-wrap bob-anim',900); },300); }
 
     updateManifestInfo();
   });
 }
 </script>
-</body>
-</html>
 </body>
 </html>
