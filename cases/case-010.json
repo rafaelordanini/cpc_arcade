@@ -1,0 +1,88 @@
+{
+  "id": "case-010",
+  "icon": "🚛",
+  "title": "O Motorista e o Patrão",
+  "area": "RESPONSABILIDADE CIVIL · ART. 932 CC · PREPOSTO",
+  "plaintiff": "Luciana Martins",
+  "defendant": "Transportadora Veloz Ltda",
+  "intro": "Sua cliente Luciana Martins estava na calçada quando foi atropelada por caminhão da Transportadora Veloz Ltda, conduzido pelo motorista empregado João Santos, que estava embriagado (bafômetro: 0,8 mg/L).\n\nJoão foi preso em flagrante mas solto após pagamento de fiança. Não tem bens em seu nome.\n\nLuciana sofreu fratura em três costelas, ficou 12 dias internada e tem sequela permanente que reduz sua capacidade laboral em 30%.\n\nVocê é o advogado de Luciana — defina quem processar e por qual fundamento!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "LEGITIMIDADE PASSIVA",
+      "stepIcon": "📋",
+      "narrative": "Luciana pergunta se deve processar apenas João Santos, apenas a Transportadora Veloz, ou ambos. João não tem bens. A transportadora tem frota de 50 caminhões e patrimônio robusto.",
+      "speaker": null,
+      "question": "Qual é a estratégia processual correta para garantir a efetividade da indenização?",
+      "opts": [
+        "Processar a Transportadora Veloz Ltda como responsável pelo ato do empregado (art. 932, III CC), podendo incluir João em litisconsórcio passivo — a empresa tem patrimônio para suportar a indenização",
+        "Processar apenas João Santos — ele causou o acidente diretamente e é o único responsável",
+        "Processar apenas o seguro obrigatório — é o mecanismo específico para acidentes de trânsito",
+        "Aguardar o resultado do processo criminal para então ajuizar a ação civil"
+      ],
+      "correct": 0,
+      "explanation": "O art. 932, III do CC estabelece responsabilidade do empregador pelos atos dos empregados no exercício do trabalho. O art. 933 CC complementa: essa responsabilidade é OBJETIVA — independe de culpa do empregador.\n\nPortanto, a Transportadora Veloz responde mesmo que tenha selecionado João com cuidado, porque ele estava em serviço.\n\nA estratégia considera a efetividade: João sem bens não garante pagamento. A empresa, com patrimônio robusto, garante.\n\nAção civil é independente da criminal (art. 935 CC) — não precisa aguardar o processo penal.\n\nA empresa pode ajuizar ação regressiva contra João após pagar (art. 934 CC).",
+      "refs": [
+        "Art. 932, III CC",
+        "Art. 933 CC",
+        "Art. 934 CC",
+        "Art. 935 CC",
+        "REsp 1.641.294/MT"
+      ],
+      "bridge": "A ação foi ajuizada contra a transportadora. A empresa contestou tentando se esquivar da responsabilidade..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "A transportadora argumenta: João estava embriagado contra as regras expressas da empresa; há regulamento interno proibindo álcool; João agiu fora de suas atribuições ao beber. Portanto, culpa exclusiva do empregado.",
+      "speaker": {
+        "name": "Dr. Freitas — Advogado da Transportadora Veloz",
+        "icon": "🕴",
+        "text": "João violou as regras da empresa! Temos regulamento interno proibindo álcool! Ele agiu por conta própria — a empresa não pode ser responsabilizada por conduta contrária às suas normas! Culpa exclusiva do empregado!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você rebate o argumento da transportadora?",
+      "opts": [
+        "A responsabilidade do art. 932, III CC é objetiva (art. 933 CC) — independe de culpa da empresa; o que importa é que João estava em serviço; regulamento interno não afasta a responsabilidade perante terceiros",
+        "A empresa tem razão — se comprovou que João agiu contra as regras, fica isenta de responsabilidade",
+        "A embriaguez é fortuito externo que rompe o nexo causal entre a atividade da empresa e o dano",
+        "A empresa só responde se ficou provado que sabia da embriaguez de João antes do acidente"
+      ],
+      "correct": 0,
+      "explanation": "O art. 933 CC é expresso: os responsáveis indicados no art. 932 respondem pelos danos causados pelos seus dependentes 'ainda que não haja culpa da sua parte'.\n\nIsso significa que a responsabilidade do empregador é OBJETIVA — não admite discussão de culpa in eligendo ou in vigilando como excludente.\n\nO regulamento interno é relevante apenas para a AÇÃO REGRESSIVA da empresa contra o empregado (art. 934 CC) — não afasta a responsabilidade perante a vítima.\n\nO STJ consolidou: o nexo causal só se rompe se o empregado agir completamente FORA do âmbito do trabalho — não durante o exercício da função como aqui.",
+      "refs": [
+        "Art. 932, III CC",
+        "Art. 933 CC",
+        "Art. 934 CC",
+        "REsp 1.787.479/SP",
+        "Enunciado 451 CJF"
+      ],
+      "bridge": "A empresa foi condenada. Agora resta calcular a indenização integral de Luciana, incluindo a sequela permanente..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "INDENIZAÇÃO",
+      "stepIcon": "💰",
+      "narrative": "Luciana tem 35 anos, trabalhava como designer com renda de R$ 5.000/mês. A sequela permanente reduz sua capacidade laboral em 30%. Perito estimou expectativa de vida de 75 anos (40 anos de trabalho restante). Internação com despesas extras de R$ 18.000. Dano moral também foi pedido.",
+      "speaker": null,
+      "question": "Como calcular a indenização pela redução permanente da capacidade laboral?",
+      "opts": [
+        "Pensão mensal de 30% do salário (R$ 1.500/mês) pelo período de vida laboral restante (art. 950 CC) + danos emergentes (R$ 18.000) + dano moral arbitrado pelo juiz",
+        "Indenização única de R$ 1.500 — a pensão mensal só se aplica em incapacidade total",
+        "Luciana só tem direito às despesas médicas — capacidade reduzida não gera pensão se ainda pode trabalhar",
+        "A pensão deve ser calculada sobre 100% do salário por 40 anos, ignorando o percentual da redução"
+      ],
+      "correct": 0,
+      "explanation": "O art. 950 CC regula a indenização por ofensa que diminui a capacidade laboral:\n\n'Se da ofensa resultar defeito pelo qual o ofendido não possa exercer o seu ofício ou profissão, ou se lhe diminua a capacidade de trabalho, a indenização incluirá pensão correspondente à importância do trabalho para que se inabilitou.'\n\nPENSÃO: 30% de R$ 5.000 = R$ 1.500/mês pelo período laboral restante (40 anos = 480 meses).\n\nTotal pensão capitalizada: R$ 720.000 (ou paga mensalmente).\nDanos emergentes: R$ 18.000.\nDano moral: arbitramento judicial.\n\nO STJ permite capitalização da pensão em parcela única (art. 950, parágrafo único CC) a pedido do credor.",
+      "refs": [
+        "Art. 950 CC",
+        "Art. 949 CC",
+        "Art. 944 CC",
+        "Art. 950, parágrafo único CC",
+        "REsp 1.278.627/SC"
+      ],
+      "bridge": null
+    }
+  ]
+}
