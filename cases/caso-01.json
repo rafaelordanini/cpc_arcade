@@ -1,0 +1,92 @@
+{
+  "title": "O Nome Sujo Indevido",
+  "icon": "💳",
+  "area": "DIREITO DO CONSUMIDOR · DANO MORAL · CDC",
+  "plaintiff": "Maria Silva",
+  "defendant": "Banco Digital S/A",
+  "intro": "Sua cliente Maria Silva descobriu que seu nome foi inscrito no SPC/Serasa pelo Banco Digital S/A — mesmo após ter quitado sua dívida há 3 meses, com recibo em mãos.\n\nPor causa dessa negativação indevida, ela perdeu a aprovação de um financiamento imobiliário que aguardava há anos.\n\nVocê é o advogado de Maria. Analise o caso, tome as decisões corretas e leve a causa até o fim!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "PETIÇÃO INICIAL",
+      "stepIcon": "📋",
+      "narrative": "Maria comprova com recibo que quitou o débito em 15/03/2023. O Banco manteve a negativação por 90 dias após o pagamento. Ela tem documentação do crédito imobiliário recusado em razão do apontamento indevido.",
+      "speaker": null,
+      "question": "Qual é o pedido mais adequado na petição inicial?",
+      "opts": [
+        "Indenização por dano moral + obrigação de retirar o nome do cadastro (tutela inibitória)",
+        "Apenas a retirada do nome do cadastro, sem pedido de indenização",
+        "Indenização por dano material equivalente ao valor integral do financiamento negado",
+        "Denúncia criminal por estelionato contra o banco"
+      ],
+      "correct": 0,
+      "explanation": "O consumidor tem direito cumulado à retirada imediata da negativação (tutela inibitória — art. 84 CDC) E à indenização por dano moral.\n\nO STJ pacificou que a manutenção indevida do nome em cadastro restritivo após a quitação configura dano moral IN RE IPSA — presumido, independente de prova do abalo. Não é mero aborrecimento: atinge diretamente a honra e o crédito do consumidor.\n\nA cumulação dos pedidos é tecnicamente correta e necessária para a reparação integral.",
+      "refs": [
+        "Art. 42 CDC",
+        "Art. 43 CDC",
+        "Art. 84 CDC",
+        "Art. 186 CC",
+        "Súmula 385 STJ",
+        "REsp 1.059.663/MS"
+      ],
+      "bridge": "O Banco foi citado e apresentou contestação. Seu advogado comparece à audiência de conciliação com uma proposta..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "AUDIÊNCIA",
+      "stepIcon": "🎤",
+      "narrative": "Na audiência de conciliação, o advogado do Banco Digital apresenta a contestação e faz uma proposta: retirar o nome do cadastro e pagar R$ 500,00 como 'mero aborrecimento', argumentando que o dano moral não seria cabível no caso.",
+      "speaker": {
+        "name": "Dr. Falcão — Banco Digital S/A",
+        "icon": "🏦",
+        "text": "O atraso foi erro sistêmico isolado. Propomos retirar a negativação e pagar R$ 500 como cortesia. Jurisprudência recente trata isso como mero aborrecimento, sem gerar dano moral indenizável!",
+        "color": "#ff8800"
+      },
+      "question": "Como você responde à proposta do banco?",
+      "opts": [
+        "Rejeita — dano moral in re ipsa supera R$ 500; a jurisprudência do STJ vai contra o argumento do banco",
+        "Aceita os R$ 500 — o banco tem razão sobre mero aborrecimento, é melhor encerrar logo",
+        "Aceita apenas a retirada do nome e abre mão do dano moral para agilizar o processo",
+        "Suspende o processo sem ouvir Maria para ganhar tempo de negociação"
+      ],
+      "correct": 0,
+      "explanation": "O STJ consolidou que inscrição indevida em cadastro de inadimplentes gera dano moral IN RE IPSA (presumido, dispensando prova do abalo — REsp 1.631.870).\n\nR$ 500 está muito abaixo dos parâmetros praticados pela jurisprudência para este tipo de caso (entre R$ 5.000 e R$ 15.000).\n\nA tese do 'mero aborrecimento' foi justamente afastada pelo STJ nas hipóteses de negativação indevida, pois a situação viola objetivamente a honra e o crédito do consumidor. Rejeitar a proposta é a decisão tecnicamente correta.",
+      "refs": [
+        "Súmula 385 STJ",
+        "Art. 5º, X CF/88",
+        "Art. 927 CC",
+        "REsp 1.631.870/SP",
+        "REsp 1.059.663/MS"
+      ],
+      "bridge": "O banco recusou acordo razoável. O processo seguiu e o juiz de 1ª instância condenou o Banco Digital a pagar R$ 8.000 de dano moral. O banco apelou imediatamente..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "APELAÇÃO DO BANCO",
+      "stepIcon": "⚖",
+      "narrative": "O Banco Digital interpôs Apelação com dois argumentos: (a) R$ 8.000 seria valor excessivo e desproporcional; (b) Maria já possuía outro apontamento de R$ 200 em seu nome de outra empresa, o que, pela Súmula 385 do STJ, afastaria o dano moral.",
+      "speaker": {
+        "name": "Dr. Falcão — Banco Digital S/A",
+        "icon": "🏦",
+        "text": "Excelência, Maria já possuía negativação de R$ 200 do Mercadinho X antes da nossa. A Súmula 385 do STJ afasta o dano moral quando há inscrição preexistente! E R$ 8.000 é manifestamente excessivo!",
+        "color": "#ff4444"
+      },
+      "question": "Como você rebate os argumentos do banco nas contrarrazões de apelação?",
+      "opts": [
+        "A Súmula 385 só se aplica se a inscrição preexistente for LEGÍTIMA; se o apontamento do Mercadinho também for indevido, a súmula não se aplica",
+        "Concorda com o banco — qualquer apontamento preexistente, legítimo ou não, afasta automaticamente o dano moral",
+        "Pede redução do valor para R$ 2.000 para facilitar o encerramento do caso",
+        "Desiste do dano moral e foca apenas na retirada definitiva do nome"
+      ],
+      "correct": 0,
+      "explanation": "A Súmula 385 do STJ estabelece: 'Da anotação irregular em cadastro de proteção ao crédito, não cabe indenização por dano moral, quando preexistente legítima inscrição, ressalvado o direito ao cancelamento.'\n\nA palavra-chave é LEGÍTIMA. Se o apontamento do Mercadinho X também for indevido ou contestado judicialmente, a Súmula 385 não se aplica ao caso.\n\nO ônus de provar que a outra inscrição era legítima é do banco (art. 373, II CPC). Sobre o valor, R$ 8.000 está dentro dos parâmetros razoáveis — não há excesso a ser reconhecido.",
+      "refs": [
+        "Súmula 385 STJ",
+        "Art. 373, II CPC",
+        "REsp 1.002.985/RS",
+        "Art. 43 CDC"
+      ],
+      "bridge": null
+    }
+  ]
+}
