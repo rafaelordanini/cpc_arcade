@@ -1,0 +1,89 @@
+{
+  "id": "case-004",
+  "icon": "👨‍👧",
+  "title": "O Filho Negado",
+  "area": "DIREITO DE FAMÍLIA · PATERNIDADE · ALIMENTOS",
+  "plaintiff": "Juliana Ramos",
+  "defendant": "Carlos Menezes",
+  "intro": "Sua cliente Juliana Ramos teve um filho, Lucas, de 4 anos, fruto de um relacionamento de 2 anos com Carlos Menezes.\n\nApós o término, Carlos passou a negar completamente a paternidade, recusando-se a registrar o filho e a pagar alimentos.\n\nJuliana trabalha como auxiliar de limpeza e mal consegue sustentar Lucas sozinha.\n\nCarlos se recusa a comparecer para o exame de DNA.\n\nVocê é o advogado de Juliana — use os instrumentos processuais corretos para garantir o direito de Lucas!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "TUTELA DE URGÊNCIA",
+      "stepIcon": "⚡",
+      "narrative": "Lucas tem 4 anos e está sem receber qualquer verba alimentar desde o nascimento. Carlos tem renda comprovada de R$ 8.000/mês como engenheiro civil. A ação de reconhecimento de paternidade cumulada com alimentos foi ajuizada, mas o processo pode demorar meses até a sentença.",
+      "speaker": null,
+      "question": "Qual medida processual você requer imediatamente para garantir alimentos a Lucas durante o processo?",
+      "opts": [
+        "Tutela de urgência antecipada de alimentos provisórios (art. 300 CPC c/c art. 4º Lei 5.478/68), demonstrando probabilidade do direito e perigo de dano",
+        "Aguardar a sentença de mérito — não é possível exigir alimentos antes do reconhecimento judicial da paternidade",
+        "Pedir a prisão imediata de Carlos por abandono afetivo antes de qualquer prova",
+        "Propor ação autônoma de alimentos separada da investigação de paternidade"
+      ],
+      "correct": 0,
+      "explanation": "A tutela de urgência (art. 300 CPC) permite a antecipação dos efeitos da tutela quando há elementos que evidenciem a probabilidade do direito (fumus boni iuris) e o perigo de dano ou risco ao resultado útil do processo (periculum in mora).\n\nNos casos de alimentos, a Lei 5.478/68 (art. 4º) permite a fixação de alimentos provisórios desde o despacho inicial da ação.\n\nA necessidade alimentar da criança de 4 anos e a capacidade financeira do suposto pai (R$ 8.000/mês) são suficientes para embasar o pedido.\n\nNão é necessário aguardar o trânsito em julgado do reconhecimento de paternidade — o juiz pode fixar alimentos provisionais com base na probabilidade do direito.",
+      "refs": [
+        "Art. 300 CPC",
+        "Art. 303 CPC",
+        "Art. 4º Lei 5.478/68",
+        "Art. 13 Lei 5.478/68",
+        "Art. 1.694 CC",
+        "Súmula 277 STJ"
+      ],
+      "bridge": "O juiz fixou alimentos provisórios de R$ 1.200/mês. Carlos foi intimado e ainda assim se recusou a comparecer para a coleta do DNA..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "RECUSA AO DNA",
+      "stepIcon": "🧬",
+      "narrative": "Carlos foi intimado três vezes para comparecer ao Instituto de Medicina Legal para coleta de material genético. Em todas as oportunidades apresentou atestado médico duvidoso ou simplesmente não compareceu. Seu advogado alega que ninguém pode ser obrigado a produzir prova contra si mesmo.",
+      "speaker": {
+        "name": "Dr. Braga — Advogado de Carlos Menezes",
+        "icon": "🕴",
+        "text": "Meu cliente tem direito constitucional de não produzir prova contra si mesmo! A CF/88 garante que ninguém é obrigado a se submeter a exame de DNA. A recusa não pode ser usada contra ele!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você contesta o argumento e qual é o efeito jurídico da recusa de Carlos ao exame de DNA?",
+      "opts": [
+        "A recusa injustificada ao DNA gera presunção relativa de paternidade — o juiz pode declará-la com base nos demais elementos do processo",
+        "O advogado tem razão — a recusa não gera qualquer consequência e o juiz não pode presumir a paternidade",
+        "Carlos pode ser preso em flagrante por desobediência às ordens judiciais de comparecimento",
+        "Sem o exame de DNA é impossível reconhecer a paternidade — o processo deve ser extinto"
+      ],
+      "correct": 0,
+      "explanation": "A Súmula 301 do STJ é expressa: 'Em ação investigatória, a recusa do suposto pai a submeter-se ao exame de DNA induz presunção juris tantum de paternidade.'\n\nEmbora o STF tenha reconhecido que não se pode fisicamente coagir alguém ao exame (STF — HC 71.373/RS), a recusa injustificada gera PRESUNÇÃO RELATIVA de paternidade.\n\nIsso significa que, conjugada com outros elementos probatórios (testemunhos, fotos, mensagens que comprovem o relacionamento), o juiz pode declarar a paternidade mesmo sem o exame.\n\nO argumento do advogado de Carlos confunde a proibição de coerção física com a impossibilidade de consequências jurídicas — estas são plenamente válidas.",
+      "refs": [
+        "Súmula 301 STJ",
+        "Art. 2-A Lei 8.560/92",
+        "Art. 231 CC",
+        "Art. 232 CC",
+        "STF — HC 71.373/RS"
+      ],
+      "bridge": "O juiz, com base na Súmula 301 STJ e nas provas do relacionamento, declarou Carlos pai de Lucas. Agora resta fixar os alimentos definitivos..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "ALIMENTOS DEFINITIVOS",
+      "stepIcon": "💰",
+      "narrative": "Carlos foi declarado pai de Lucas. Agora o juiz fixará os alimentos definitivos. Carlos ganha R$ 8.000/mês líquidos e tem outro filho de casamento anterior que recebe R$ 800/mês. As necessidades básicas de Lucas (escola, saúde, alimentação) somam aproximadamente R$ 2.500/mês. Juliana ganha R$ 1.800/mês.",
+      "speaker": null,
+      "question": "Qual é o critério legal para fixação dos alimentos e qual valor seria mais adequado pleitear?",
+      "opts": [
+        "Binômio necessidade-possibilidade: considerar as necessidades de Lucas e a capacidade de Carlos (R$ 8.000 menos o filho anterior) — entre R$ 1.500 e R$ 2.000 seria razoável e proporcional",
+        "Carlos deve pagar R$ 2.500 integrais pois é o valor das necessidades de Lucas, independentemente da renda de Juliana",
+        "O valor deve ser 1/3 do salário de Carlos automaticamente, conforme previsão legal expressa",
+        "Como Juliana também tem renda, Carlos não precisa pagar alimentos — ambos devem arcar igualmente"
+      ],
+      "correct": 0,
+      "explanation": "O art. 1.694, §1º CC consagra o BINÔMIO NECESSIDADE-POSSIBILIDADE como critério de fixação dos alimentos:\n\n- NECESSIDADE: o que o alimentando precisa para viver com dignidade (R$ 2.500/mês para Lucas).\n- POSSIBILIDADE: a capacidade financeira do alimentante sem comprometer o seu próprio sustento.\n\nCarlos ganha R$ 8.000 líquidos e já paga R$ 800 de outro filho. Capacidade disponível: ~R$ 7.200.\n\nA jurisprudência do STJ não fixa percentual rígido — o 1/3 é apenas referência histórica, não obrigação legal.\n\nAplica-se também o TRINÔMIO: necessidade + possibilidade + proporcionalidade entre os obrigados. Juliana (R$ 1.800) também contribui, o que justifica Carlos arcar com maior parcela mas não com 100% das necessidades.",
+      "refs": [
+        "Art. 1.694 CC",
+        "Art. 1.694, §1º CC",
+        "Art. 1.695 CC",
+        "Art. 1.703 CC",
+        "REsp 1.488.589/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
