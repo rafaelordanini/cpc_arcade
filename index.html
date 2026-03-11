@@ -1,803 +1,993 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tribunal dos Pixels ⚖️</title>
-  <style>
-    /* ─── TOKENS ─────────────────────────────────────────────── */
-    :root {
-      --bg:          #070d1a;
-      --surface:     #0f172a;
-      --surface2:    #1e293b;
-      --surface3:    #334155;
-      --accent:      #f59e0b;
-      --correct:     #10b981;
-      --wrong:       #ef4444;
-      --text:        #f1f5f9;
-      --text-muted:  #94a3b8;
-      --text-dim:    #64748b;
-      --border:      #1e293b;
-      --radius:      12px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRIBUNAL DOS PIXELS</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+/* ══ RESET ══════════════════════════════════════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
-    /* ─── RESET ──────────────────────────────────────────────── */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+/* ══ VARIÁVEIS ══════════════════════════════════════ */
+:root{
+  --green:#00ff41;--yellow:#ffff00;--cyan:#00ffff;
+  --red:#ff4444;--orange:#ff8800;--white:#f0f0e8;
+  --dim:#cccccc;--muted:#888888;--bg:#000;--panel:#05050f;
+  --ui:'Press Start 2P',monospace;
+  --body:'VT323',monospace;
+}
 
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+/* ══ BASE ═══════════════════════════════════════════ */
+body{
+  background:var(--bg);color:var(--green);
+  font-family:var(--ui);min-height:100vh;
+  overflow-x:hidden;line-height:1.8;
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,
+    rgba(0,0,0,.15) 3px,rgba(0,0,0,.15) 4px);
+}
+@keyframes flicker{0%,89%,91%,93%,100%{opacity:1}90%,92%{opacity:.87}}
+body{animation:flicker 10s infinite}
 
-    /* ─── SCREENS ────────────────────────────────────────────── */
-    .screen { display: none; min-height: 100vh; flex-direction: column; }
-    .screen.active { display: flex; }
+/* ══ KEYFRAMES ══════════════════════════════════════ */
+@keyframes blink      {0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes slideDown  {from{transform:translateY(-24px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes slideLeft  {from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes judgeJump  {0%,100%{transform:translateY(0)}25%{transform:translateY(-26px)}60%{transform:translateY(-12px)}}
+@keyframes judgeShake {0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-7px)}80%{transform:translateX(7px)}}
+@keyframes judgeBob   {0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes flashGreen {0%,100%{background:transparent}40%{background:rgba(0,255,65,.14)}}
+@keyframes flashRed   {0%,100%{background:transparent}40%{background:rgba(255,60,60,.16)}}
+@keyframes starPop    {0%{transform:scale(0) rotate(0deg);opacity:1}70%{transform:scale(1.4) rotate(180deg);opacity:1}100%{transform:scale(1.8) rotate(360deg);opacity:0}}
+@keyframes textPop    {0%{transform:scale(.5);opacity:0}60%{transform:scale(1.2);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes glowPulse  {0%,100%{text-shadow:0 0 8px var(--green),0 0 16px var(--green)}50%{text-shadow:0 0 14px var(--green),0 0 30px var(--green)}}
+@keyframes dotPulse   {0%,100%{box-shadow:0 0 4px currentColor}50%{box-shadow:0 0 12px currentColor,0 0 22px currentColor}}
+@keyframes rainbow    {0%{color:var(--yellow)}33%{color:var(--cyan)}66%{color:var(--orange)}100%{color:var(--yellow)}}
+@keyframes loadScroll {0%{width:0;margin-left:0}50%{width:80%;margin-left:0}100%{width:0;margin-left:100%}}
+@keyframes loadPulse  {0%,100%{opacity:.5}50%{opacity:1}}
 
-    /* ─── ANIMATIONS ─────────────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes loadBar {
-      0%   { width: 0%; }
-      60%  { width: 75%; }
-      100% { width: 100%; }
-    }
-    @keyframes spinScale {
-      0%, 100% { transform: scale(1); }
-      50%       { transform: scale(1.12); }
-    }
-    .animate-in { animation: fadeUp 0.4s ease both; }
+/* ══ LAYOUT ═════════════════════════════════════════ */
+.wrap{max-width:680px;margin:0 auto;padding:16px 12px 64px}
+.screen{display:none}
+.screen.active{display:block;animation:slideDown .3s ease both}
 
-    /* ─── LOADING ────────────────────────────────────────────── */
-    #screen-loading {
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-    }
-    .load-icon  { font-size: 4rem; animation: spinScale 1.6s ease-in-out infinite; }
-    .load-title { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
-    .load-bar   {
-      width: 220px; height: 4px;
-      background: var(--surface2); border-radius: 2px; overflow: hidden;
-    }
-    .load-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--accent), #fbbf24);
-      border-radius: 2px;
-      animation: loadBar 1.8s ease-in-out forwards;
-    }
-    .load-msg { font-size: 0.8rem; color: var(--text-dim); }
+/* ══ PIXEL BOX ══════════════════════════════════════ */
+.pbox{
+  border:3px solid var(--cyan);padding:18px 20px;
+  margin-bottom:14px;position:relative;background:var(--panel);
+  box-shadow:0 0 12px rgba(0,255,255,.16),inset 0 0 10px rgba(0,0,0,.4);
+}
+.pbox::before,.pbox::after{
+  content:'';position:absolute;width:10px;height:10px;
+  border-style:solid;border-color:var(--yellow);
+}
+.pbox::before{top:-2px;left:-2px;border-width:3px 0 0 3px}
+.pbox::after{bottom:-2px;right:-2px;border-width:0 3px 3px 0}
+.pbox-green {border-color:var(--green); box-shadow:0 0 12px rgba(0,255,65,.16)}
+.pbox-green::before,.pbox-green::after{border-color:var(--green)}
+.pbox-yellow{border-color:var(--yellow);box-shadow:0 0 12px rgba(255,255,0,.16)}
+.pbox-yellow::before,.pbox-yellow::after{border-color:var(--cyan)}
+.pbox-red   {border-color:var(--red);   box-shadow:0 0 12px rgba(255,60,60,.2)}
+.pbox-red::before,.pbox-red::after{border-color:var(--orange)}
 
-    /* ─── TOP BAR ────────────────────────────────────────────── */
-    .top-bar {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky; top: 0; z-index: 100;
-    }
-    .brand       { display: flex; align-items: center; gap: 10px; }
-    .brand-logo  { font-size: 1.4rem; }
-    .brand-name  { font-size: 0.95rem; font-weight: 700; color: var(--accent); }
-    .brand-sub   { display: block; font-size: 0.68rem; color: var(--text-dim); }
+/* ══ MENU ═══════════════════════════════════════════ */
+.logo-l1{font-family:var(--ui);font-size:clamp(13px,3vw,21px);color:var(--yellow);
+  text-shadow:0 0 10px var(--yellow),0 0 22px var(--yellow);letter-spacing:4px;display:block}
+.logo-l2{font-family:var(--ui);font-size:clamp(9px,2vw,14px);color:var(--cyan);
+  letter-spacing:8px;display:block;margin-top:6px}
+.hi-score-lbl{font-family:var(--ui);font-size:9px;color:var(--orange);
+  letter-spacing:3px;animation:glowPulse 2.2s ease infinite}
+.blink-lbl{font-family:var(--ui);font-size:10px;color:var(--yellow);
+  letter-spacing:3px;animation:blink 1.1s step-start infinite}
+.btn-start{
+  font-family:var(--ui);font-size:clamp(10px,2vw,13px);
+  background:var(--green);color:#000;border:none;
+  padding:15px 30px;cursor:pointer;letter-spacing:2px;
+  box-shadow:4px 4px 0 rgba(0,255,65,.4);transition:all .15s;
+}
+.btn-start:disabled{background:var(--muted);color:#222;cursor:not-allowed;box-shadow:none}
+.btn-start:not(:disabled):hover{
+  background:var(--yellow);transform:translate(-2px,-2px);
+  box-shadow:6px 6px 0 rgba(255,255,0,.4);
+}
+.btn-start:not(:disabled):active{transform:translate(2px,2px);box-shadow:2px 2px 0}
 
-    /* ─── MENU ───────────────────────────────────────────────── */
-    .menu-hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
-      padding: 60px 24px;
-      text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .menu-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at center, rgba(245,158,11,.12) 0%, transparent 70%);
-    }
-    .hero-icon     { font-size: 4rem; display: block; margin-bottom: 14px; position: relative; }
-    .hero-title    { font-size: 2.4rem; font-weight: 900; color: var(--accent); position: relative; }
-    .hero-subtitle {
-      font-size: .95rem; color: var(--text-muted);
-      max-width: 480px; margin: 10px auto 0; line-height: 1.6; position: relative;
-    }
+/* ══ JUIZ ═══════════════════════════════════════════ */
+.judge-wrap{display:flex;flex-direction:column;align-items:center;gap:6px}
+.judge-canvas{image-rendering:pixelated;image-rendering:crisp-edges;width:112px;height:168px}
+.judge-label{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:2px}
+.judge-wrap.bob-anim    canvas{animation:judgeBob   1.4s ease-in-out infinite}
+.judge-wrap.jump-anim   canvas{animation:judgeJump  .8s ease both}
+.judge-wrap.shake-anim  canvas{animation:judgeShake .7s ease both}
 
-    .menu-body  { padding: 36px 24px; max-width: 940px; margin: 0 auto; width: 100%; }
-    .sec-label  {
-      font-size: .72rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 1.5px;
-      color: var(--text-dim); margin-bottom: 20px;
-    }
+/* ══ HUD ════════════════════════════════════════════ */
+.hud{
+  display:flex;align-items:center;gap:8px;background:#000;
+  border:2px solid var(--green);padding:8px 12px;margin-bottom:14px;
+  position:sticky;top:6px;z-index:80;
+  box-shadow:0 0 14px rgba(0,255,65,.28);
+}
+.hud-btn{
+  font-family:var(--ui);font-size:8px;background:transparent;
+  color:var(--muted);border:2px solid var(--muted);
+  padding:7px 10px;cursor:pointer;flex-shrink:0;transition:all .15s;
+}
+.hud-btn:hover{border-color:var(--red);color:var(--red);text-shadow:0 0 8px var(--red)}
+.hud-sep{width:1px;height:28px;background:rgba(0,255,65,.3);flex-shrink:0}
+.hud-item{text-align:center;flex-shrink:0}
+.hud-lbl{font-size:6px;color:var(--muted);letter-spacing:1px;margin-bottom:3px}
+.hud-val{font-size:15px;color:var(--yellow)}
+.hud-mid{flex:1;min-width:0}
+.prog-track{height:7px;background:#111;border:1px solid var(--green);overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));transition:width .5s steps(10)}
+.prog-lbl{font-size:6px;color:var(--muted);text-align:center;margin-top:3px;letter-spacing:1px}
 
-    .cases-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
-      gap: 16px;
-    }
+/* ══ LOADING ════════════════════════════════════════ */
+.load-icon{font-size:2.6rem;animation:loadPulse 1s ease-in-out infinite;display:block;text-align:center;margin-bottom:14px}
+.load-bar{height:12px;background:#111;border:2px solid var(--green);overflow:hidden;margin:14px 0}
+.load-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));animation:loadScroll 1.4s linear infinite}
 
-    .case-card {
-      background: var(--surface);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px; cursor: pointer;
-      transition: transform .2s, border-color .2s, box-shadow .2s;
-      position: relative; overflow: hidden;
-    }
-    .case-card::after {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--accent);
-      transform: scaleX(0); transition: transform .2s;
-    }
-    .case-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(245,158,11,.15); }
-    .case-card:hover::after { transform: scaleX(1); }
+/* ══ CASE INTRO ═════════════════════════════════════ */
+.case-icon-big{font-size:2.6rem;display:block;text-align:center;margin-bottom:8px}
+.case-title-big{
+  font-family:var(--ui);font-size:clamp(11px,2.2vw,16px);
+  color:var(--yellow);text-shadow:0 0 8px var(--yellow);
+  letter-spacing:2px;margin-bottom:6px;line-height:1.6;text-align:center;
+}
+.case-area-tag{font-family:var(--ui);font-size:7px;color:var(--cyan);letter-spacing:1px;line-height:2;text-align:center}
+.parties-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+@media(max-width:440px){.parties-row{grid-template-columns:1fr}}
+.party-chip{padding:10px 12px}
+.party-chip b{font-family:var(--ui);font-size:7px;display:block;margin-bottom:5px;letter-spacing:1px}
+.party-chip p{font-family:var(--body);font-size:20px;line-height:1.55}
+.party-autora{border:2px solid rgba(0,255,255,.55);background:rgba(0,255,255,.03)}
+.party-autora b,.party-autora p{color:var(--cyan)}
+.party-re{border:2px solid rgba(255,136,0,.55);background:rgba(255,136,0,.03)}
+.party-re b,.party-re p{color:var(--orange)}
+.intro-txt{font-family:var(--body);font-size:21px;color:var(--white);line-height:1.65;white-space:pre-line}
 
-    .card-icon   { font-size: 2.4rem; display: block; margin-bottom: 12px; }
-    .card-area   { font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 6px; }
-    .card-title  { font-size: 1.05rem; font-weight: 800; line-height: 1.3; margin-bottom: 10px; }
-    .card-vs     { font-size: .78rem; color: var(--text-muted); }
-    .card-meta   { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); font-size: .73rem; color: var(--text-dim); }
-    .card-cta    { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; padding: 8px 16px; background: var(--accent); color: #000; border-radius: 6px; font-size: .78rem; font-weight: 800; }
+/* ══ TRILHA DE FASES ════════════════════════════════ */
+.phase-trail{display:flex;align-items:flex-start;justify-content:center;padding:4px 0}
+.pt-step{display:flex;flex-direction:column;align-items:center;gap:5px}
+.pt-dot{
+  width:30px;height:30px;border:2px solid var(--muted);color:var(--muted);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ui);font-size:9px;flex-shrink:0;
+}
+.pt-step.done   .pt-dot{border-color:var(--green);color:var(--green);background:rgba(0,255,65,.07)}
+.pt-step.active .pt-dot{border-color:var(--yellow);color:var(--yellow);background:rgba(255,255,0,.07);animation:dotPulse 1.5s ease infinite}
+.pt-lbl{font-family:var(--ui);font-size:5px;color:var(--muted);letter-spacing:.5px;text-align:center;max-width:64px;line-height:1.5}
+.pt-step.done   .pt-lbl{color:var(--green)}
+.pt-step.active .pt-lbl{color:var(--yellow)}
+.pt-connector{flex:1;height:2px;background:rgba(100,100,100,.3);min-width:10px;max-width:56px;margin-top:14px}
+.pt-connector.done{background:var(--green);opacity:.5}
 
-    /* ─── INTRO ──────────────────────────────────────────────── */
-    .intro-scroll { flex: 1; overflow-y: auto; }
-    .intro-wrap   { max-width: 720px; margin: 0 auto; padding: 36px 24px; }
+/* ══ FASE — HEADER ══════════════════════════════════ */
+.phase-hdr{display:flex;align-items:center;gap:14px}
+.phase-badge{font-family:var(--ui);font-size:7px;letter-spacing:1px;border:1px solid;padding:3px 8px;text-align:center;margin-top:6px}
+.phase-info{flex:1}
+.phase-case-lbl{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:1px;margin-bottom:5px}
+.phase-name-lbl{font-family:var(--ui);font-size:clamp(9px,2vw,12px);color:var(--yellow);letter-spacing:2px;line-height:1.7}
 
-    .back-btn {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 8px 14px; background: transparent;
-      border: 1px solid var(--border); border-radius: 8px;
-      color: var(--text-muted); cursor: pointer;
-      font-size: .82rem; transition: all .2s; margin-bottom: 28px;
-    }
-    .back-btn:hover { border-color: var(--text-muted); color: var(--text); }
+/* ══ NARRATIVA / SEÇÕES ═════════════════════════════ */
+.sec-lbl{font-family:var(--ui);font-size:8px;letter-spacing:2px;margin-bottom:10px}
+.narrative-txt{font-family:var(--body);font-size:21px;color:var(--white);line-height:1.65;white-space:pre-line}
 
-    .intro-head   { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 28px; }
-    .intro-icon-b {
-      width: 70px; height: 70px; flex-shrink: 0;
-      background: var(--surface2); border: 1px solid var(--border);
-      border-radius: var(--radius); display: flex; align-items: center;
-      justify-content: center; font-size: 2rem;
-    }
-    .intro-area  { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 5px; }
-    .intro-title { font-size: 1.7rem; font-weight: 900; line-height: 1.2; }
+/* ══ DIÁLOGO RPG ════════════════════════════════════ */
+.dialogue-wrap{margin:0 0 14px;animation:slideLeft .4s ease both}
+.dialogue-box{border:2px solid;padding:14px 16px;background:var(--panel)}
+.db-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.db-icon{font-size:1.1rem;flex-shrink:0}
+.db-name{font-family:var(--ui);font-size:7px;letter-spacing:1px}
+.db-text{font-family:var(--body);font-size:19px;color:var(--white);line-height:1.5;font-style:italic}
 
-    .parties-row {
-      display: flex; align-items: center; gap: 12px;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px;
-    }
-    .party      { flex: 1; text-align: center; }
-    .party-lbl  { font-size: .63rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 4px; }
-    .party-name { font-size: .98rem; font-weight: 800; }
-    .vs-pill    {
-      padding: 5px 10px;
-      background: rgba(245,158,11,.1); border: 1px solid rgba(245,158,11,.3);
-      border-radius: 6px; font-size: .72rem; font-weight: 800; color: var(--accent);
-    }
+/* ══ QUESTÃO / OPÇÕES ═══════════════════════════════ */
+.question-lbl{font-family:var(--ui);font-size:8px;color:var(--yellow);letter-spacing:2px;margin-bottom:10px}
+.question-txt{font-family:var(--body);font-size:22px;color:var(--white);line-height:1.5}
+.options{display:grid;gap:8px;margin-top:4px}
+.opt{display:flex;align-items:flex-start;gap:12px;background:#000;
+  border:2px solid rgba(100,100,100,.45);padding:13px 14px;cursor:pointer;transition:all .15s}
+.opt:hover{border-color:var(--yellow);background:rgba(255,255,0,.04)}
+.opt:hover .opt-letter,.opt:hover .opt-cur{color:var(--yellow);border-color:var(--yellow)}
+.opt:hover .opt-cur{opacity:1}
+.opt-cur{font-family:var(--ui);font-size:11px;color:var(--yellow);opacity:0;flex-shrink:0;margin-top:4px;transition:opacity .1s}
+.opt-letter{
+  font-family:var(--ui);font-size:12px;color:var(--muted);
+  border:2px solid rgba(100,100,100,.45);min-width:30px;height:30px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;transition:all .15s;
+}
+.opt-text{font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.5;padding-top:3px}
+.opt.correct{border-color:var(--green);background:rgba(0,255,65,.07);animation:flashGreen .5s ease}
+.opt.correct .opt-letter{color:var(--green);border-color:var(--green)}
+.opt.correct .opt-text{color:var(--green)}
+.opt.correct .opt-cur{opacity:1;color:var(--green)}
+.opt.wrong{border-color:var(--red);background:rgba(255,60,60,.07);animation:flashRed .5s ease}
+.opt.wrong .opt-letter{color:var(--red);border-color:var(--red)}
+.opt.wrong .opt-text{color:var(--red)}
+.opt.disabled{pointer-events:none}
+.opt.disabled:not(.correct):not(.wrong){opacity:.45}
 
-    .intro-text {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: var(--radius); padding: 22px;
-      font-size: .92rem; line-height: 1.85; color: var(--text-muted);
-      white-space: pre-line; margin-bottom: 22px;
-    }
+/* ══ RESULTADO IMEDIATO ═════════════════════════════ */
+.result-icon{font-size:1.9rem;margin-bottom:6px}
+.result-title{font-family:var(--ui);font-size:clamp(12px,2.5vw,17px);letter-spacing:3px;margin-bottom:6px;animation:textPop .4s ease both}
+.result-pts{font-family:var(--ui);font-size:10px;color:var(--yellow);margin-top:6px;letter-spacing:2px}
+.stars-wrap{position:relative;height:32px;margin:6px 0}
+.star-pop{position:absolute;font-size:20px;animation:starPop .8s ease both}
 
-    .phases-pre-title { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 10px; }
-    .phases-chips     { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-    .phase-chip       {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 7px 14px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 20px;
-      font-size: .78rem; color: var(--text-muted);
-    }
+/* ══ FUNDAMENTO ═════════════════════════════════════ */
+.explain-txt{font-family:var(--body);font-size:20px;color:var(--white);line-height:1.65;white-space:pre-line}
+.refs-lbl{font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:1px;margin:12px 0 7px}
+.ref-chip{font-family:var(--ui);display:inline-block;border:1px solid rgba(0,255,255,.35);
+  color:var(--cyan);padding:4px 9px;font-size:7px;margin:2px;letter-spacing:1px}
 
-    .start-btn {
-      width: 100%; padding: 15px;
-      background: var(--accent); color: #000;
-      border: none; border-radius: var(--radius);
-      font-size: .98rem; font-weight: 900; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      letter-spacing: .4px; transition: all .2s;
-    }
-    .start-btn:hover { background: #fbbf24; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(245,158,11,.35); }
+/* ══ PONTE NARRATIVA ════════════════════════════════ */
+.bridge-panel{border:2px solid rgba(255,255,0,.28);background:rgba(255,255,0,.03);padding:14px 16px;margin-top:12px}
+.bridge-lbl{font-family:var(--ui);font-size:7px;color:var(--yellow);letter-spacing:2px;margin-bottom:10px;opacity:.8}
+.bridge-txt{font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.6}
 
-    /* ─── PHASE HEADER ───────────────────────────────────────── */
-    .phase-top {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
-      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-      position: sticky; top: 0; z-index: 100;
-    }
-    .phase-case-lbl { font-size: .82rem; font-weight: 700; color: var(--text-muted); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .phase-dots     { display: flex; gap: 6px; }
-    .dot            { width: 9px; height: 9px; border-radius: 50%; background: var(--surface3); transition: all .3s; }
-    .dot.done       { background: var(--correct); }
-    .dot.current    { background: var(--accent); transform: scale(1.3); }
-    .score-pill     {
-      display: flex; align-items: center; gap: 5px;
-      padding: 5px 12px; background: var(--surface2);
-      border: 1px solid rgba(245,158,11,.2); border-radius: 20px;
-      font-size: .78rem; font-weight: 700; color: var(--accent);
-    }
+/* ══ BOTÕES ═════════════════════════════════════════ */
+.action-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.btn-px{
+  font-family:var(--ui);font-size:9px;background:transparent;
+  border:2px solid;padding:11px 17px;cursor:pointer;
+  letter-spacing:1px;transition:all .15s;
+}
+.btn-px:active{transform:translate(2px,2px)}
+.btn-green {border-color:var(--green); color:var(--green); box-shadow:3px 3px 0 rgba(0,255,65,.28)}
+.btn-green:hover {background:var(--green); color:#000;transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,255,65,.4)}
+.btn-yellow{border-color:var(--yellow);color:var(--yellow);box-shadow:3px 3px 0 rgba(255,255,0,.28)}
+.btn-yellow:hover{background:var(--yellow);color:#000;transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(255,255,0,.4)}
+.btn-cyan  {border-color:var(--cyan);  color:var(--cyan);  box-shadow:3px 3px 0 rgba(0,255,255,.28)}
+.btn-cyan:hover  {background:var(--cyan);  color:#000;transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,255,255,.4)}
+.btn-muted {border-color:var(--muted); color:var(--muted)}
+.btn-muted:hover {border-color:var(--red);color:var(--red)}
 
-    /* ─── PHASE BODY ─────────────────────────────────────────── */
-    .phase-scroll { flex: 1; overflow-y: auto; }
-    .phase-wrap   { max-width: 760px; margin: 0 auto; padding: 30px 24px 60px; }
+/* ══ RESULTADO DO CASO ══════════════════════════════ */
+.score-box{border:3px solid var(--yellow);padding:16px 28px;display:inline-block;
+  margin:10px 0;box-shadow:0 0 20px rgba(255,255,0,.28)}
+.score-big{font-family:var(--ui);font-size:clamp(28px,6vw,46px);animation:rainbow 2s linear infinite}
+.score-lbl{font-family:var(--ui);font-size:8px;color:var(--muted);letter-spacing:2px;margin-top:6px}
+.phase-result-row{display:flex;align-items:center;gap:10px;
+  font-family:var(--body);font-size:19px;padding:8px 0;
+  border-bottom:1px solid #0d0d0d;line-height:1.4}
 
-    .phase-badge {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 5px 14px;
-      background: rgba(245,158,11,.1); border: 1px solid rgba(245,158,11,.3);
-      border-radius: 20px; font-size: .72rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 1px; color: var(--accent);
-      margin-bottom: 18px;
-    }
+/* ══ MODAL ══════════════════════════════════════════ */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);
+  z-index:200;align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal-box{
+  border:3px solid var(--red);background:var(--panel);
+  padding:32px 28px;max-width:380px;width:90%;text-align:center;
+  box-shadow:0 0 30px rgba(255,60,60,.4);animation:slideDown .3s ease both;position:relative;
+}
+.modal-box::before,.modal-box::after{content:'';position:absolute;width:10px;height:10px;
+  border-color:var(--yellow);border-style:solid}
+.modal-box::before{top:-2px;left:-2px;border-width:3px 0 0 3px}
+.modal-box::after{bottom:-2px;right:-2px;border-width:0 3px 3px 0}
+.modal-icon{font-size:2rem;margin-bottom:12px}
+.modal-title{font-family:var(--ui);font-size:13px;color:var(--red);margin-bottom:12px;letter-spacing:2px}
+.modal-msg{font-family:var(--body);font-size:21px;color:var(--dim);line-height:1.6;margin-bottom:20px}
+.modal-msg strong{color:var(--yellow)}
 
-    .narrative {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 18px 20px;
-      font-size: .88rem; line-height: 1.75; color: var(--text-muted);
-      margin-bottom: 18px;
-    }
-
-    .speaker-box {
-      background: var(--surface2); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 18px 20px; margin-bottom: 18px;
-    }
-    .speaker-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .speaker-ava  {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: var(--surface); border: 2px solid var(--border);
-      display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
-    }
-    .speaker-nm   { font-size: .78rem; font-weight: 800; }
-    .speaker-role { font-size: .68rem; color: var(--text-dim); }
-    .speech       {
-      padding: 12px 16px; background: var(--surface);
-      border-radius: 8px; border-left: 3px solid;
-      font-size: .88rem; line-height: 1.7; color: var(--text-muted); font-style: italic;
-    }
-
-    .question { font-size: 1.08rem; font-weight: 800; line-height: 1.5; margin-bottom: 18px; }
-
-    .opts-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
-
-    .opt {
-      display: flex; align-items: flex-start; gap: 12px;
-      padding: 14px 16px; background: var(--surface);
-      border: 1.5px solid var(--border); border-radius: var(--radius);
-      cursor: pointer; text-align: left;
-      font-size: .88rem; line-height: 1.55; color: var(--text-muted);
-      transition: all .18s;
-    }
-    .opt:hover:not(:disabled)  { border-color: var(--accent); background: var(--surface2); color: var(--text); }
-    .opt.sel                   { border-color: var(--accent); background: rgba(245,158,11,.08); color: var(--text); }
-    .opt.hit                   { border-color: var(--correct); background: rgba(16,185,129,.08); color: var(--text); }
-    .opt.miss                  { border-color: var(--wrong);   background: rgba(239,68,68,.08);  color: var(--text); }
-    .opt:disabled              { cursor: default; }
-
-    .opt-letter {
-      min-width: 28px; height: 28px; border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .72rem; font-weight: 800; flex-shrink: 0;
-      background: var(--surface2); transition: all .18s;
-    }
-    .opt.sel  .opt-letter { background: var(--accent); color: #000; }
-    .opt.hit  .opt-letter { background: var(--correct); color: #000; }
-    .opt.miss .opt-letter { background: var(--wrong);   color: #fff; }
-
-    .confirm-btn {
-      width: 100%; padding: 14px;
-      background: var(--accent); color: #000;
-      border: none; border-radius: var(--radius);
-      font-size: .95rem; font-weight: 900; cursor: pointer;
-      transition: all .2s; letter-spacing: .4px;
-    }
-    .confirm-btn:disabled { background: var(--surface3); color: var(--text-dim); cursor: not-allowed; }
-    .confirm-btn:not(:disabled):hover { background: #fbbf24; transform: translateY(-1px); }
-
-    /* ─── FEEDBACK ───────────────────────────────────────────── */
-    .feedback {
-      border-radius: var(--radius); padding: 24px;
-      margin-top: 22px; animation: fadeUp .35s ease;
-    }
-    .feedback.ok  { background: rgba(16,185,129,.07); border: 1.5px solid var(--correct); }
-    .feedback.bad { background: rgba(239,68,68,.07);  border: 1.5px solid var(--wrong); }
-
-    .fb-head  { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
-    .fb-icon  { font-size: 1.4rem; }
-    .fb-title { font-size: .98rem; font-weight: 900; }
-    .fb-title.ok  { color: var(--correct); }
-    .fb-title.bad { color: var(--wrong); }
-
-    .fb-text  { font-size: .88rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 18px; white-space: pre-line; }
-
-    .refs-lbl  { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 8px; }
-    .refs-row  { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
-    .ref-pill  {
-      padding: 3px 10px; background: var(--surface2);
-      border: 1px solid var(--border); border-radius: 20px;
-      font-size: .7rem; font-weight: 600; color: var(--text-muted);
-    }
-
-    .bridge {
-      padding: 12px 16px; background: var(--surface2);
-      border-left: 3px solid var(--accent); border-radius: 8px;
-      font-size: .83rem; color: var(--text-muted); font-style: italic;
-      margin-bottom: 18px;
-    }
-
-    .next-btn {
-      width: 100%; padding: 13px;
-      background: var(--correct); color: #000;
-      border: none; border-radius: var(--radius);
-      font-size: .93rem; font-weight: 900; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 7px;
-      transition: all .2s;
-    }
-    .next-btn:hover { background: #34d399; transform: translateY(-1px); }
-
-    /* ─── FINAL ──────────────────────────────────────────────── */
-    .final-center { flex: 1; display: flex; align-items: center; justify-content: center; overflow-y: auto; }
-    .final-wrap   { max-width: 540px; width: 100%; padding: 52px 24px; text-align: center; }
-
-    .final-icon { font-size: 4rem; display: block; margin-bottom: 14px; }
-    .final-h    { font-size: 1.9rem; font-weight: 900; margin-bottom: 6px; }
-    .final-sub  { font-size: .9rem; color: var(--text-muted); margin-bottom: 36px; }
-
-    .score-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 16px; padding: 30px; margin-bottom: 24px;
-    }
-    .score-num  { font-size: 3.8rem; font-weight: 900; line-height: 1; margin-bottom: 6px; }
-    .score-sub  { font-size: .88rem; color: var(--text-muted); margin-bottom: 22px; }
-    .bar-outer  { height: 10px; background: var(--surface2); border-radius: 5px; overflow: hidden; }
-    .bar-inner  { height: 100%; background: linear-gradient(90deg, var(--accent), #fbbf24); border-radius: 5px; transition: width 1.2s ease; }
-
-    .verdict {
-      display: inline-block; padding: 7px 20px; border-radius: 20px;
-      font-size: .82rem; font-weight: 900; text-transform: uppercase;
-      letter-spacing: 1px; margin-bottom: 28px;
-    }
-    .verdict.ace  { background: rgba(16,185,129,.15); color: var(--correct); border: 1px solid var(--correct); }
-    .verdict.good { background: rgba(245,158,11,.15);  color: var(--accent);  border: 1px solid var(--accent); }
-    .verdict.bad  { background: rgba(239,68,68,.15);   color: var(--wrong);   border: 1px solid var(--wrong); }
-
-    .final-btns { display: flex; flex-direction: column; gap: 10px; }
-
-    .btn-gold {
-      padding: 14px; background: var(--accent); color: #000;
-      border: none; border-radius: var(--radius);
-      font-size: .93rem; font-weight: 900; cursor: pointer; transition: all .2s;
-    }
-    .btn-gold:hover { background: #fbbf24; transform: translateY(-1px); }
-
-    .btn-ghost {
-      padding: 14px; background: transparent; color: var(--text-muted);
-      border: 1px solid var(--border); border-radius: var(--radius);
-      font-size: .93rem; font-weight: 600; cursor: pointer; transition: all .2s;
-    }
-    .btn-ghost:hover { border-color: var(--text-muted); color: var(--text); }
-
-    /* ─── ERROR ──────────────────────────────────────────────── */
-    .err-wrap { text-align: center; padding: 60px 24px; }
-    .err-icon { font-size: 3rem; margin-bottom: 14px; }
-    .err-h    { font-size: 1.15rem; font-weight: 700; color: var(--wrong); margin-bottom: 8px; }
-    .err-msg  { font-size: .88rem; color: var(--text-muted); line-height: 1.6; }
-    .err-msg code { background: var(--surface2); padding: 2px 6px; border-radius: 4px; }
-
-    /* ─── RESPONSIVE ─────────────────────────────────────────── */
-    @media (max-width: 600px) {
-      .hero-title  { font-size: 1.8rem; }
-      .intro-head  { flex-direction: column; }
-      .parties-row { flex-direction: column; }
-      .phase-case-lbl { font-size: .7rem; }
-    }
-  </style>
+/* ══ MISC ═══════════════════════════════════════════ */
+#screen-flash{position:fixed;inset:0;pointer-events:none;z-index:190;opacity:0;transition:opacity .1s}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#000}
+::-webkit-scrollbar-thumb{background:#1a1a1a}
+</style>
 </head>
 <body>
+<div id="screen-flash"></div>
+<div class="wrap">
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!--  LOADING                                                     -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div id="screen-loading" class="screen active">
-  <span class="load-icon">⚖️</span>
-  <div class="load-title">Tribunal dos Pixels</div>
-  <div class="load-bar"><div class="load-bar-fill"></div></div>
-  <div class="load-msg">Carregando casos jurídicos…</div>
-</div>
+  <!-- ════ MENU ════════════════════════════════════ -->
+  <div id="s-menu" class="screen active">
+    <div class="pbox pbox-yellow" style="text-align:center;padding:24px">
+      <span class="logo-l1">⚖ TRIBUNAL ⚖</span>
+      <span class="logo-l2">DOS PIXELS</span>
+      <div style="margin:16px 0">
+        <div id="menu-jw" class="judge-wrap bob-anim" style="display:inline-flex">
+          <canvas id="menu-jc" class="judge-canvas"></canvas>
+          <div class="judge-label">DR. PIXEL</div>
+        </div>
+      </div>
+      <div class="hi-score-lbl">HI-SCORE: <span id="hi-val">000</span></div>
+    </div>
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!--  MENU                                                        -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div id="screen-menu" class="screen">
-  <div class="menu-hero">
-    <span class="hero-icon">⚖️</span>
-    <h1 class="hero-title">Tribunal dos Pixels</h1>
-    <p class="hero-subtitle">
-      Jogo interativo de Direito Civil Brasileiro.<br>
-      Analise casos reais, tome decisões e aprenda os fundamentos jurídicos.
-    </p>
-  </div>
-  <div class="menu-body animate-in">
-    <p class="sec-label">📁 Casos disponíveis</p>
-    <div class="cases-grid" id="cases-grid"><!-- JS --></div>
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════════ -->
-<!--  INTRO                                                       -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div id="screen-intro" class="screen">
-  <div class="top-bar">
-    <div class="brand">
-      <span class="brand-logo">⚖️</span>
-      <div>
-        <span class="brand-name">Tribunal dos Pixels</span>
-        <span class="brand-sub">Direito Civil Brasileiro</span>
+    <div class="pbox pbox-green">
+      <div style="font-family:var(--ui);font-size:9px;color:var(--cyan);letter-spacing:2px;margin-bottom:12px">◄ COMO FUNCIONA ►</div>
+      <div style="font-family:var(--body);font-size:20px;color:var(--dim);line-height:1.85">
+        Cada sessão apresenta <span style="color:var(--yellow)">1 caso</span> com <span style="color:var(--yellow)">3 a 5 fases</span> encadeadas.
+        Você é o <span style="color:var(--cyan)">advogado</span> — tome decisões reais a cada fase.
+        O caso é escolhido <span style="color:var(--green)">aleatoriamente</span> e varia a cada sessão.
+        Ao final, retorna ao menu para um novo caso.
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px">
+        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;border:1px solid rgba(0,255,65,.3);padding:10px">
+          ✓ <span style="color:var(--green)">ACERTO</span><br>+10 PONTOS
+        </div>
+        <div style="font-family:var(--ui);font-size:8px;line-height:2.4;border:1px solid rgba(255,60,60,.3);padding:10px">
+          ✗ <span style="color:var(--red)">ERRO</span><br>VER FUNDAMENTO
+        </div>
       </div>
     </div>
+
+    <div class="pbox" style="text-align:center;padding:14px">
+      <div id="manifest-info" style="font-family:var(--body);font-size:20px;color:var(--muted);line-height:1.8">
+        ⏳ Carregando casos...
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-bottom:6px">
+      <button id="btn-abrir" class="btn-start" onclick="openCase()" disabled>
+        ⏳ CARREGANDO...
+      </button>
+    </div>
+    <div class="blink-lbl" style="text-align:center">✦ SELECIONE UM CASO ✦</div>
   </div>
-  <div class="intro-scroll">
-    <div class="intro-wrap animate-in" id="intro-content"><!-- JS --></div>
+
+  <!-- ════ JOGO ═════════════════════════════════════ -->
+  <div id="s-game" class="screen">
+    <div class="hud">
+      <button class="hud-btn" onclick="openExitModal()">🏠 MENU</button>
+      <div class="hud-sep"></div>
+      <div class="hud-item">
+        <div class="hud-lbl">SCORE</div>
+        <div class="hud-val" id="hud-score">000</div>
+      </div>
+      <div class="hud-mid">
+        <div class="prog-track"><div class="prog-fill" id="hud-prog" style="width:0%"></div></div>
+        <div class="prog-lbl" id="hud-txt">FASE 1/3</div>
+      </div>
+      <div class="hud-item">
+        <div class="hud-lbl">ACERTOS</div>
+        <div class="hud-val" id="hud-hits" style="color:var(--cyan)">0/0</div>
+      </div>
+    </div>
+    <div id="game-body"></div>
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!--  PHASE                                                       -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div id="screen-phase" class="screen">
-  <div class="phase-top">
-    <div class="phase-case-lbl" id="phase-case-lbl"></div>
-    <div class="phase-dots" id="phase-dots"></div>
-    <div class="score-pill">⭐ <span id="score-display">0</span></div>
-  </div>
-  <div class="phase-scroll">
-    <div class="phase-wrap" id="phase-content"><!-- JS --></div>
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════════ -->
-<!--  FINAL                                                       -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div id="screen-final" class="screen">
-  <div class="top-bar">
-    <div class="brand">
-      <span class="brand-logo">⚖️</span>
-      <div><span class="brand-name">Tribunal dos Pixels</span></div>
+<!-- ════ MODAL EXIT ═══════════════════════════════ -->
+<div class="modal-bg" id="exit-modal">
+  <div class="modal-box">
+    <div class="modal-icon">⚠️</div>
+    <div class="modal-title">ABANDONAR?</div>
+    <p class="modal-msg">Se sair agora o progresso<br>deste caso será <strong>PERDIDO</strong>.</p>
+    <div class="action-row">
+      <button class="btn-px btn-muted" onclick="confirmExit()">SIM, SAIR</button>
+      <button class="btn-px btn-green" onclick="closeExitModal()">CONTINUAR</button>
     </div>
   </div>
-  <div class="final-center">
-    <div class="final-wrap animate-in" id="final-content"><!-- JS --></div>
-  </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!--  JAVASCRIPT                                                  -->
-<!-- ════════════════════════════════════════════════════════════ -->
 <script>
-// ─── STATE ────────────────────────────────────────────────────────────────────
-const state = {
-  cases: [],
-  caseIndex: 0,
-  phaseIndex: 0,
-  score: 0,
-  selected: null,
-  answered: false,
+/* ═══════════════════════════════════════════════════
+   PIXEL ART — SPRITE DO JUIZ
+═══════════════════════════════════════════════════ */
+const PAL={
+  '.':null,'W':'#FFFDE7','G':'#AAAAAA','P':'#FFC87C',
+  'A':'#FF6644','D':'#3D1A00','S':'#CC8833','M':'#BB3311',
+  'N':'#000066','C':'#FFFDE7','B':'#0000CC'
+};
+const SPR={
+  neutral:['....WWWWWWWW....','...WWWWWWWWWW...','..WWWWWWWWWWWW..','..WGGWWWWWWGGW..','..WWWWWWWWWWWW..','..WWW.PPPPPP.WW.','..WW.PPPPPPPPPP.','..WW.PPPPPPPPPP.','..WW.PDDPPPDDPP.','..WW.PPPPPPPPPP.','..WW.PPPSSPPPPP.','..WW.PP.MMMM.PP.','..WW..PPPPPPPP..','....CCCCCCCC....','..NNNNCCCCNNNN..','..NNNNNNNNNNNN..','..NNNNNNNNNNNN..','..NNNNBBNNNNNN..','..NNNNNNNNNNNN..','..NNNNNNNNNNNN..','...NNNNNNNNNN...','...NNNNNNNNNN...','....NNNNNNNN....','....NNNNNNNN....'],
+  happy:  ['....WWWWWWWW....','...WWWWWWWWWW...','..WWWWWWWWWWWW..','..WGGWWWWWWGGW..','..WWWWWWWWWWWW..','..WWW.PPPPPP.WW.','..WW.PPPPPPPPPP.','..WW.PPPPPPPPPP.','..WW.PDDPPPDDPP.','..WW.PPPPPPPPPP.','..WW.PPPSSPPPPP.','..WW.PDPPPPPDPP.','..WW..PPMMMMPP..','....CCCCCCCC....','..NNNNCCCCNNNN..','..NNNNNNNNNNNN..','..NNNNNNNNNNNN..','..NNNNBBNNNNNN..','..NNNNNNNNNNNN..','..NNNNNNNNNNNN..','...NNNNNNNNNN...','...NNNNNNNNNN...','....NNNNNNNN....','....NNNNNNNN....'],
+  angry:  ['....WWWWWWWW....','...WWWWWWWWWW...','..WWWWWWWWWWWW..','..WGGWWWWWWGGW..','..WWWWWWWWWWWW..','..WWW.AAAAAA.WW.','..WW.AAAAAAAAAA.','..WW.AAAAAAAAAA.','..WW.ADDAAADDAA.','..WW.AAAAAAAAAA.','..WW.AAASSAAAAA.','..WW.AA.MMMM.AA.','..WW.AMAAAAAAMA.','....CCCCCCCC....','..NNNNCCCCNNNN..','..NNNNNNNNNNNN..','..NNNNNNNNNNNN..','..NNNNBBNNNNNN..','..NNNNNNNNNNNN..','..NNNNNNNNNNNN..','...NNNNNNNNNN...','...NNNNNNNNNN...','....NNNNNNNN....','....NNNNNNNN....'],
+};
+function renderJudge(canvas, state) {
+  const rows = SPR[state || 'neutral'];
+  canvas.width = 16; canvas.height = 24;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 16, 24);
+  rows.forEach((row, y) => {
+    for (let x = 0; x < row.length; x++) {
+      const c = PAL[row[x]];
+      if (c) { ctx.fillStyle = c; ctx.fillRect(x, y, 1, 1); }
+    }
+  });
+}
+
+/* ═══════════════════════════════════════════════════
+   ÁUDIO 8-BIT
+═══════════════════════════════════════════════════ */
+let _ac = null;
+function getAC() { if (!_ac) _ac = new (window.AudioContext || window.webkitAudioContext)(); return _ac; }
+function tone(f, d, t = 'square', v = 0.18, dl = 0) {
+  try {
+    const ac = getAC(), o = ac.createOscillator(), g = ac.createGain();
+    o.connect(g); g.connect(ac.destination); o.type = t;
+    o.frequency.setValueAtTime(f, ac.currentTime + dl);
+    g.gain.setValueAtTime(v, ac.currentTime + dl);
+    g.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + dl + d);
+    o.start(ac.currentTime + dl); o.stop(ac.currentTime + dl + d + .05);
+  } catch(e) {}
+}
+function seq(n) { n.forEach(x => tone(x.f, x.d, x.t || 'square', x.v || .18, x.dl || 0)); }
+const SFX = {
+  blip:    () => tone(440, .07, 'square', .15),
+  correct: () => seq([{f:523,d:.10,dl:0},{f:659,d:.10,dl:.11},{f:784,d:.10,dl:.22},{f:1047,d:.35,dl:.33}]),
+  wrong:   () => seq([{f:330,d:.10,t:'sawtooth',dl:.00},{f:247,d:.10,t:'sawtooth',dl:.12},{f:185,d:.15,t:'sawtooth',dl:.24},{f:123,d:.35,t:'sawtooth',dl:.40}]),
+  start:   () => seq([{f:262,d:.09,dl:.00},{f:330,d:.09,dl:.10},{f:392,d:.09,dl:.20},{f:523,d:.09,dl:.30},{f:659,d:.12,dl:.40},{f:784,d:.18,dl:.53},{f:1047,d:.35,dl:.72}]),
+  finish:  () => seq([{f:523,d:.10,dl:.00},{f:523,d:.10,dl:.15},{f:523,d:.10,dl:.30},{f:659,d:.30,dl:.45},{f:523,d:.15,dl:.80},{f:659,d:.15,dl:1.00},{f:784,d:.50,dl:1.20}]),
+  advance: () => seq([{f:392,d:.08,dl:.00},{f:523,d:.12,dl:.10}]),
 };
 
-// ─── UTILS ────────────────────────────────────────────────────────────────────
+/* ═══════════════════════════════════════════════════
+   ★ CONFIGURAÇÃO — edite apenas CASES_DIR se mudar o caminho
+     Para adicionar casos: crie o JSON e adicione ao manifest.json
+═══════════════════════════════════════════════════ */
+const CASES_DIR = 'cases/';
+
+/* ═══════════════════════════════════════════════════
+   ESTADO GLOBAL
+═══════════════════════════════════════════════════ */
+let manifest      = [];              // nomes dos arquivos (de manifest.json)
+let sessionPlayed = new Set();       // arquivos jogados nesta sessão
+let sessionSkipped= new Set();       // arquivos pulados nesta sessão
+let currentFile   = null;            // arquivo do caso carregado
+let currentCase   = null;            // objeto do caso (JSON parseado)
+
+let GS = { phaseIdx:0, score:0, hits:0, total:0, answers:[] };
+
+let hiScore = parseInt(localStorage.getItem('tdp_hi') || '0');
+
+/* ═══════════════════════════════════════════════════
+   INIT — carrega manifest ao abrir a página
+═══════════════════════════════════════════════════ */
+(async function init() {
+  renderJudge(document.getElementById('menu-jc'), 'neutral');
+  document.getElementById('hi-val').textContent = String(hiScore).padStart(3, '0');
+
+  try {
+    const res = await fetch(CASES_DIR + 'manifest.json');
+    if (!res.ok) throw new Error('manifest.json não encontrado');
+    const data = await res.json();
+    manifest = data.cases;            // ex: ["case-001.json", "case-002.json", ...]
+
+    updateManifestInfo();
+
+    const btn = document.getElementById('btn-abrir');
+    btn.disabled = false;
+    btn.textContent = '► ABRIR CASO';
+
+  } catch (e) {
+    console.error('[TRIBUNAL] Erro ao carregar manifest:', e);
+    document.getElementById('manifest-info').innerHTML = `
+      <span style="color:var(--red);font-size:17px">
+        ⚠ Execute em servidor web:<br>
+        <span style="color:var(--yellow)">python -m http.server 8000</span><br>
+        ou use o Live Server do VS Code.
+      </span>`;
+    document.getElementById('btn-abrir').textContent = '✗ SEM SERVIDOR';
+  }
+})();
+
+function updateManifestInfo() {
+  const total     = manifest.length;
+  const played    = sessionPlayed.size;
+  const remaining = Math.max(0, total - played);
+  document.getElementById('manifest-info').innerHTML =
+    `<span style="color:var(--cyan)">${total}</span> casos disponíveis
+     &nbsp;·&nbsp;
+     <span style="color:var(--green)">${played}</span> jogados esta sessão
+     &nbsp;·&nbsp;
+     <span style="color:var(--yellow)">${remaining}</span> restantes`;
+}
+
+/* ═══════════════════════════════════════════════════
+   SELEÇÃO ALEATÓRIA (evita repetição na sessão)
+═══════════════════════════════════════════════════ */
+function pickRandom(excludeFile = null) {
+  // Pool: não jogados nesta sessão
+  let pool = manifest.filter(f => !sessionPlayed.has(f));
+
+  // Se todos foram jogados: reinicia rastreamento
+  if (pool.length === 0) {
+    sessionPlayed.clear();
+    sessionSkipped.clear();
+    pool = [...manifest];
+  }
+
+  // Exclui o arquivo atual (para "mudar caso")
+  if (excludeFile && pool.length > 1) {
+    pool = pool.filter(f => f !== excludeFile);
+  }
+
+  // Prefere casos não pulados
+  const notSkipped = pool.filter(f => !sessionSkipped.has(f));
+  const finalPool  = notSkipped.length > 0 ? notSkipped : pool;
+
+  return finalPool[Math.floor(Math.random() * finalPool.length)];
+}
+
+/* ═══════════════════════════════════════════════════
+   ABRIR CASO (do menu)
+═══════════════════════════════════════════════════ */
+async function openCase() {
+  SFX.blip();
+  const file = pickRandom();
+  await loadCase(file);
+}
+
+/* ═══════════════════════════════════════════════════
+   MUDAR CASO (da tela de intro)
+═══════════════════════════════════════════════════ */
+async function changeCase() {
+  SFX.blip();
+  if (currentFile) sessionSkipped.add(currentFile);   // marca como pulado
+  const file = pickRandom(currentFile);
+  await loadCase(file);
+}
+
+/* ═══════════════════════════════════════════════════
+   CARREGAR CASO VIA FETCH
+═══════════════════════════════════════════════════ */
+async function loadCase(file) {
+  showScreen('s-game');
+  renderLoading(file);
+
+  try {
+    const res = await fetch(CASES_DIR + file);
+    if (!res.ok) throw new Error(`Arquivo não encontrado: ${file}`);
+    currentCase = await res.json();
+    currentFile = file;
+    renderIntro();
+
+  } catch (e) {
+    console.error('[TRIBUNAL] Erro ao carregar caso:', e);
+    renderError(`Erro ao carregar <em>${file}</em>.<br>Verifique se o arquivo existe em <em>cases/</em>.`);
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   INICIAR CASO (da intro)
+═══════════════════════════════════════════════════ */
+function startCase() {
+  SFX.start();
+  sessionPlayed.add(currentFile);
+  GS = { phaseIdx: 0, score: 0, hits: 0, total: 0, answers: [] };
+  updateHUD();
+  renderPhase();
+}
+
+/* ═══════════════════════════════════════════════════
+   UTILITÁRIOS DE UI
+═══════════════════════════════════════════════════ */
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function currentCase()  { return state.cases[state.caseIndex]; }
-function currentPhase() { return currentCase().phases[state.phaseIndex]; }
+function flashScreen(color) {
+  const el = document.getElementById('screen-flash');
+  el.style.background = color; el.style.opacity = '1';
+  setTimeout(() => el.style.opacity = '0', 160);
+}
 
-// ─── INIT ─────────────────────────────────────────────────────────────────────
-async function init() {
-  try {
-    const manifest = await fetch('cases/manifest.json').then(r => r.json());
+function openExitModal()  { SFX.blip(); document.getElementById('exit-modal').classList.add('open'); }
+function closeExitModal() { SFX.blip(); document.getElementById('exit-modal').classList.remove('open'); }
+function confirmExit()    { closeExitModal(); showScreen('s-menu'); updateManifestInfo(); }
 
-    state.cases = await Promise.all(
-      manifest.cases.map(file => fetch(`cases/${file}`).then(r => r.json()))
-    );
+document.getElementById('exit-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('exit-modal')) closeExitModal();
+});
 
-    renderMenu();
-    showScreen('screen-menu');
-  } catch (err) {
-    document.getElementById('screen-loading').innerHTML = `
-      <div class="err-wrap">
-        <div class="err-icon">❌</div>
-        <div class="err-h">Erro ao carregar os casos</div>
-        <div class="err-msg">
-          Verifique se os arquivos existem:<br><br>
-          <code>cases/manifest.json</code><br>
-          <code>cases/caso-01.json</code><br>
-          <code>cases/caso-02.json</code><br><br>
-          ${err.message}
+function updateHUD() {
+  if (!currentCase) return;
+  const total = currentCase.phases.length;
+  const pct   = (GS.phaseIdx / total * 100).toFixed(0);
+  document.getElementById('hud-score').textContent = String(GS.score).padStart(3, '0');
+  document.getElementById('hud-prog').style.width  = pct + '%';
+  document.getElementById('hud-txt').textContent   = `FASE ${GS.phaseIdx + 1}/${total}`;
+  document.getElementById('hud-hits').textContent  = `${GS.hits}/${GS.total}`;
+}
+
+function setJudge(state) {
+  const jc = document.getElementById('jc');
+  const jw = document.getElementById('jw');
+  if (!jc || !jw) return;
+  renderJudge(jc, state);
+  const from = state === 'happy' ? 'bob-anim' : 'bob-anim';
+  const to   = state === 'happy' ? 'jump-anim' : state === 'angry' ? 'shake-anim' : 'bob-anim';
+  jw.classList.replace(from, to);
+  setTimeout(() => jw.classList.replace(to, 'bob-anim'), 900);
+}
+
+function fade(fn) {
+  const b = document.getElementById('game-body');
+  b.style.opacity = '0'; b.style.transition = 'opacity .2s';
+  setTimeout(() => { fn(); b.style.opacity = '1'; window.scrollTo({ top: 0, behavior: 'smooth' }); }, 220);
+}
+
+/* ═══════════════════════════════════════════════════
+   RENDER: LOADING
+═══════════════════════════════════════════════════ */
+function renderLoading(file) {
+  document.getElementById('game-body').innerHTML = `
+    <div class="pbox pbox-yellow" style="text-align:center;padding:44px 24px">
+      <div class="load-icon">⚖</div>
+      <div style="font-family:var(--ui);font-size:10px;color:var(--cyan);letter-spacing:3px;margin-bottom:16px">
+        CARREGANDO CASO...
+      </div>
+      <div class="load-bar"><div class="load-bar-fill"></div></div>
+      <div style="font-family:var(--body);font-size:18px;color:var(--muted);margin-top:10px">
+        Consultando: ${file || '...'}
+      </div>
+    </div>`;
+}
+
+/* ═══════════════════════════════════════════════════
+   RENDER: ERRO
+═══════════════════════════════════════════════════ */
+function renderError(msg) {
+  document.getElementById('game-body').innerHTML = `
+    <div class="pbox pbox-red" style="text-align:center;padding:30px">
+      <div style="font-size:2rem;margin-bottom:12px">⚠️</div>
+      <div style="font-family:var(--body);font-size:21px;color:var(--red);line-height:1.7">${msg}</div>
+    </div>
+    <div class="action-row">
+      <button class="btn-px btn-yellow" onclick="openCase()">TENTAR OUTRO</button>
+      <button class="btn-px btn-muted"  onclick="confirmExit()">🏠 MENU</button>
+    </div>`;
+}
+
+/* ═══════════════════════════════════════════════════
+   RENDER: INTRO DO CASO
+═══════════════════════════════════════════════════ */
+function renderIntro() {
+  const c = currentCase;
+
+  // Quantos casos disponíveis para mudar?
+  const canChange = manifest.filter(f => f !== currentFile).length > 0;
+
+  document.getElementById('game-body').innerHTML = `
+    <div class="pbox pbox-yellow" style="text-align:center">
+      <div style="font-family:var(--ui);font-size:7px;color:var(--muted);letter-spacing:2px;margin-bottom:10px">
+        ◄ CASO SELECIONADO ►
+      </div>
+      <div class="case-icon-big">${c.icon}</div>
+      <div class="case-title-big">${c.title.toUpperCase()}</div>
+      <div class="case-area-tag">${c.area}</div>
+      <div class="parties-row" style="margin-top:14px">
+        <div class="party-chip party-autora">
+          <b>⚖ PARTE AUTORA</b><p>${c.plaintiff}</p>
         </div>
-      </div>`;
-    console.error(err);
-  }
-}
-
-// ─── MENU ─────────────────────────────────────────────────────────────────────
-function renderMenu() {
-  document.getElementById('cases-grid').innerHTML = state.cases.map((c, i) => `
-    <div class="case-card animate-in" style="animation-delay:${i * 0.07}s"
-         onclick="openIntro(${i})">
-      <span class="card-icon">${c.icon}</span>
-      <div class="card-area">${c.area}</div>
-      <div class="card-title">${c.title}</div>
-      <div class="card-vs">👤 ${c.plaintiff} <span style="color:var(--text-dim)">vs</span> ${c.defendant}</div>
-      <div class="card-meta">📋 ${c.phases.length} fase${c.phases.length > 1 ? 's' : ''}</div>
-      <div class="card-cta">▶ Iniciar Caso</div>
-    </div>
-  `).join('');
-}
-
-// ─── INTRO ────────────────────────────────────────────────────────────────────
-function openIntro(index) {
-  state.caseIndex = index;
-  const c = currentCase();
-
-  document.getElementById('intro-content').innerHTML = `
-    <button class="back-btn" onclick="showScreen('screen-menu')">← Voltar aos casos</button>
-
-    <div class="intro-head">
-      <div class="intro-icon-b">${c.icon}</div>
-      <div>
-        <div class="intro-area">${c.area}</div>
-        <h2 class="intro-title">${c.title}</h2>
+        <div class="party-chip party-re">
+          <b>🛡 PARTE RÉ</b><p>${c.defendant}</p>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-family:var(--ui);font-size:8px;color:var(--muted);letter-spacing:1px">
+        ${c.phases.length} FASE${c.phases.length > 1 ? 'S' : ''}
+        &nbsp;·&nbsp;
+        ATÉ ${c.phases.length * 10} PONTOS
       </div>
     </div>
 
-    <div class="parties-row">
-      <div class="party">
-        <div class="party-lbl">⚔️ Parte Autora</div>
-        <div class="party-name">${c.plaintiff}</div>
-      </div>
-      <div class="vs-pill">VS</div>
-      <div class="party">
-        <div class="party-lbl">🛡️ Parte Ré</div>
-        <div class="party-name">${c.defendant}</div>
-      </div>
+    <div class="pbox pbox-green">
+      <div class="sec-lbl" style="color:var(--cyan)">► BRIEFING — VOCÊ É O ADVOGADO</div>
+      <div class="intro-txt">${c.intro}</div>
     </div>
 
-    <div class="intro-text">${c.intro}</div>
-
-    <div class="phases-pre-title">📋 Fases do caso</div>
-    <div class="phases-chips">
-      ${c.phases.map(p => `
-        <div class="phase-chip">${p.stepIcon} ${p.stepLabel}</div>
-      `).join('')}
+    <div class="action-row" style="margin-top:16px">
+      <button class="btn-px btn-green" onclick="startCase()" style="font-size:11px;padding:14px 24px">
+        ► INICIAR CASO
+      </button>
+      ${canChange ? `
+        <button class="btn-px btn-yellow" onclick="changeCase()" title="Sortear outro caso">
+          🔀 MUDAR CASO
+        </button>` : ''}
+      <button class="btn-px btn-muted" onclick="confirmExit()">🏠 MENU</button>
     </div>
 
-    <button class="start-btn" onclick="startGame()">
-      ⚖️ Iniciar Julgamento
-    </button>
+    <div style="text-align:center;margin-top:12px;font-family:var(--body);font-size:18px;color:var(--muted)">
+      ${sessionPlayed.size > 0
+        ? `${sessionPlayed.size} caso${sessionPlayed.size > 1 ? 's' : ''} jogado${sessionPlayed.size > 1 ? 's' : ''} nesta sessão`
+        : 'Primeiro caso da sessão'}
+    </div>
   `;
-
-  showScreen('screen-intro');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ─── GAME ─────────────────────────────────────────────────────────────────────
-function startGame() {
-  state.phaseIndex = 0;
-  state.score      = 0;
-  state.selected   = null;
-  state.answered   = false;
-  renderPhase();
-  showScreen('screen-phase');
-}
-
+/* ═══════════════════════════════════════════════════
+   RENDER: FASE
+═══════════════════════════════════════════════════ */
 function renderPhase() {
-  const c = currentCase();
-  const p = currentPhase();
-  state.selected = null;
-  state.answered = false;
+  const c = currentCase;
+  const p = c.phases[GS.phaseIdx];
+  updateHUD();
 
-  // Header
-  document.getElementById('phase-case-lbl').textContent = `${c.icon} ${c.title}`;
-  document.getElementById('score-display').textContent  = state.score;
-
-  // Progress dots
-  document.getElementById('phase-dots').innerHTML = c.phases.map((_, i) => {
-    let cls = 'dot';
-    if (i < state.phaseIndex)      cls += ' done';
-    else if (i === state.phaseIndex) cls += ' current';
-    return `<div class="${cls}"></div>`;
+  // Trilha de progresso
+  const trailHTML = c.phases.map((ph, i) => {
+    const cls      = i < GS.phaseIdx ? 'done' : i === GS.phaseIdx ? 'active' : '';
+    const dot      = i < GS.phaseIdx ? '✓' : String(i + 1);
+    const lineClass= i < GS.phaseIdx ? 'done' : '';
+    return `${i > 0 ? `<div class="pt-connector ${lineClass}"></div>` : ''}
+      <div class="pt-step ${cls}">
+        <div class="pt-dot">${dot}</div>
+        <div class="pt-lbl">${ph.stepLabel}</div>
+      </div>`;
   }).join('');
 
-  // Speaker block
-  let speakerBlock = '';
+  // Diálogo do adversário (opcional)
+  let dialogueHTML = '';
   if (p.speaker) {
-    speakerBlock = `
-      <div class="speaker-box">
-        <div class="speaker-head">
-          <div class="speaker-ava">${p.speaker.icon}</div>
-          <div>
-            <div class="speaker-nm" style="color:${p.speaker.color}">${p.speaker.name}</div>
-            <div class="speaker-role">Alegação da parte</div>
+    dialogueHTML = `
+      <div class="dialogue-wrap">
+        <div style="width:0;height:0;margin-left:20px;margin-bottom:-1px;
+             border-left:9px solid transparent;border-right:9px solid transparent;
+             border-bottom:10px solid ${p.speaker.color}"></div>
+        <div class="dialogue-box" style="border-color:${p.speaker.color}">
+          <div class="db-hdr">
+            <span class="db-icon">${p.speaker.icon}</span>
+            <span class="db-name" style="color:${p.speaker.color}">${p.speaker.name}</span>
           </div>
-        </div>
-        <div class="speech" style="border-color:${p.speaker.color}">
-          "${p.speaker.text}"
+          <div class="db-text">${p.speaker.text}</div>
         </div>
       </div>`;
   }
 
-  // Options
-  const letters = ['A','B','C','D'];
-  const optsHTML = p.opts.map((opt, i) => `
-    <button class="opt" id="opt-${i}" onclick="selectOpt(${i})">
-      <span class="opt-letter">${letters[i]}</span>
-      <span>${opt}</span>
-    </button>`).join('');
+  const letters = ['A', 'B', 'C', 'D', 'E'];
 
-  // Render
-  document.getElementById('phase-content').innerHTML = `
-    <div class="phase-badge">${p.stepIcon} Fase ${p.step} — ${p.stepLabel}</div>
+  document.getElementById('game-body').innerHTML = `
+    <div class="pbox" style="padding:12px 10px">
+      <div class="phase-trail">${trailHTML}</div>
+    </div>
 
-    <div class="narrative">📌 ${p.narrative}</div>
+    <div class="pbox pbox-yellow">
+      <div class="phase-hdr">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0">
+          <div id="jw" class="judge-wrap bob-anim">
+            <canvas id="jc" class="judge-canvas"></canvas>
+            <div class="judge-label">DR. PIXEL</div>
+          </div>
+          <div class="phase-badge" style="color:var(--yellow);border-color:rgba(255,255,0,.35)">
+            ${p.stepIcon} FASE ${p.step}/${c.phases.length}
+          </div>
+        </div>
+        <div class="phase-info">
+          <div class="phase-case-lbl">${c.icon} ${c.title.toUpperCase()}</div>
+          <div class="phase-name-lbl">${p.stepLabel}</div>
+        </div>
+      </div>
+    </div>
 
-    ${speakerBlock}
+    <div class="pbox pbox-green" style="margin-bottom:${p.speaker ? '0' : '14px'}">
+      <div class="sec-lbl" style="color:var(--cyan)">► O QUE ACONTECEU</div>
+      <div class="narrative-txt">${p.narrative}</div>
+    </div>
 
-    <div class="question">❓ ${p.question}</div>
+    ${dialogueHTML}
 
-    <div class="opts-list">${optsHTML}</div>
+    <div class="pbox" style="margin-top:${p.speaker ? '14px' : '0'}">
+      <div class="question-lbl">⚖ SUA DECISÃO:</div>
+      <div class="question-txt">${p.question}</div>
+    </div>
 
-    <button class="confirm-btn" id="confirm-btn" onclick="confirmAnswer()" disabled>
-      Confirmar Resposta
-    </button>
+    <div class="options" id="opts" style="margin-top:10px">
+      ${p.opts.map((o, i) => `
+        <div class="opt" id="opt-${i}" onclick="pick(${i})">
+          <span class="opt-cur">►</span>
+          <div class="opt-letter">${letters[i]}</div>
+          <div class="opt-text">${o}</div>
+        </div>`).join('')}
+    </div>
 
-    <div id="feedback-area"></div>
+    <div id="result-zone"></div>
   `;
+
+  const jc = document.getElementById('jc');
+  if (jc) renderJudge(jc, 'neutral');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function selectOpt(index) {
-  if (state.answered) return;
-  state.selected = index;
+/* ═══════════════════════════════════════════════════
+   RESPONDER
+═══════════════════════════════════════════════════ */
+function pick(sel) {
+  const c          = currentCase;
+  const p          = c.phases[GS.phaseIdx];
+  const ok         = (sel === p.correct);
+  const isLastPhase= (GS.phaseIdx >= c.phases.length - 1);
+  const letters    = ['A', 'B', 'C', 'D', 'E'];
 
+  if (ok) { GS.score += 10; GS.hits++; }
+  GS.total++;
+  GS.answers.push({ phaseIdx: GS.phaseIdx, correct: ok, sel });
+  updateHUD();
+
+  // Marca opções
   document.querySelectorAll('.opt').forEach((el, i) => {
-    el.classList.toggle('sel', i === index);
+    el.classList.add('disabled');
+    if (i === p.correct)        el.classList.add('correct');
+    else if (i === sel && !ok)  el.classList.add('wrong');
   });
 
-  document.getElementById('confirm-btn').disabled = false;
-}
+  if (ok) { SFX.correct(); flashScreen('rgba(0,255,65,.16)'); setJudge('happy'); }
+  else    { SFX.wrong();   flashScreen('rgba(255,60,60,.18)'); setJudge('angry'); }
 
-function confirmAnswer() {
-  if (state.selected === null || state.answered) return;
-  state.answered = true;
-
-  const p         = currentPhase();
-  const isCorrect = state.selected === p.correct;
-  if (isCorrect) state.score++;
-
-  document.getElementById('score-display').textContent = state.score;
-  document.getElementById('confirm-btn').style.display = 'none';
-
-  // Style options
-  document.querySelectorAll('.opt').forEach((el, i) => {
-    el.disabled = true;
-    el.classList.remove('sel');
-    if (i === p.correct)                     el.classList.add('hit');
-    else if (i === state.selected && !isCorrect) el.classList.add('miss');
-  });
-
-  // Build feedback
-  const isLast     = state.phaseIndex === currentCase().phases.length - 1;
-  const nextLabel  = isLast ? '🏁 Ver Resultado Final' : '▶ Próxima Fase';
-  const nextAction = isLast ? 'showFinal()' : 'nextPhase()';
-
-  const refsBlock = (p.refs?.length) ? `
-    <div class="refs-lbl">📚 Fundamentos jurídicos</div>
-    <div class="refs-row">
-      ${p.refs.map(r => `<span class="ref-pill">${r}</span>`).join('')}
+  const starsHTML = ok ? `
+    <div class="stars-wrap">
+      ${['18%','30%','45%','60%','74%'].map((l, i) =>
+        `<span class="star-pop" style="left:${l};animation-delay:${i * .08}s">⭐</span>`
+      ).join('')}
     </div>` : '';
 
-  const bridgeBlock = p.bridge
-    ? `<div class="bridge">📖 ${p.bridge}</div>` : '';
+  const nextBtn = isLastPhase
+    ? `<button class="btn-px btn-green" onclick="renderResult()">► VER RESULTADO</button>`
+    : `<button class="btn-px btn-yellow" onclick="nextPhase()">► PRÓXIMA FASE</button>`;
 
-  document.getElementById('feedback-area').innerHTML = `
-    <div class="feedback ${isCorrect ? 'ok' : 'bad'}">
-      <div class="fb-head">
-        <span class="fb-icon">${isCorrect ? '✅' : '❌'}</span>
-        <span class="fb-title ${isCorrect ? 'ok' : 'bad'}">
-          ${isCorrect ? 'Decisão Correta!' : 'Decisão Incorreta'}
-        </span>
+  const bridgeHTML = (!isLastPhase && p.bridge) ? `
+    <div class="bridge-panel">
+      <div class="bridge-lbl">◄ O CASO CONTINUA ►</div>
+      <div class="bridge-txt">${p.bridge}</div>
+    </div>` : '';
+
+  document.getElementById('result-zone').innerHTML = `
+    <div class="pbox ${ok ? 'pbox-green' : 'pbox-red'}" style="margin-top:14px;text-align:center">
+      <div class="result-icon">${ok ? '✅' : '❌'}</div>
+      ${starsHTML}
+      <div class="result-title" style="color:${ok ? 'var(--green)' : 'var(--red)'}">
+        ${ok ? 'DECISÃO CORRETA!' : 'DECISÃO INCORRETA'}
       </div>
-      <div class="fb-text">${p.explanation}</div>
-      ${refsBlock}
-      ${bridgeBlock}
-      <button class="next-btn" onclick="${nextAction}">
-        ${nextLabel} →
-      </button>
+      <div style="font-family:var(--body);font-size:20px;color:var(--dim);margin-top:4px">
+        ${ok ? 'EXCELENTE ANÁLISE JURÍDICA!'
+             : `Resposta correta: <span style="color:var(--yellow);font-family:var(--ui);font-size:12px">[${letters[p.correct]}]</span>`}
+      </div>
+      ${ok ? `<div class="result-pts">+ 10 PONTOS !!!</div>` : ''}
+    </div>
+
+    <div class="pbox" style="margin-top:10px">
+      <div class="sec-lbl" style="color:var(--cyan)">► FUNDAMENTO JURÍDICO</div>
+      <div class="explain-txt">${p.explanation}</div>
+      <div class="refs-lbl">BASE LEGAL:</div>
+      <div>${p.refs.map(r => `<span class="ref-chip">${r}</span>`).join('')}</div>
+    </div>
+
+    ${bridgeHTML}
+
+    <div class="action-row">
+      ${nextBtn}
+      <button class="btn-px btn-muted" onclick="openExitModal()">🏠 MENU</button>
     </div>
   `;
 
-  setTimeout(() => {
-    document.getElementById('feedback-area')
-      .scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, 120);
+  setTimeout(() =>
+    document.getElementById('result-zone')
+      .scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
 }
 
+/* ═══════════════════════════════════════════════════
+   AVANÇAR FASE
+═══════════════════════════════════════════════════ */
 function nextPhase() {
-  state.phaseIndex++;
-  renderPhase();
-  document.querySelector('.phase-scroll').scrollTo({ top: 0, behavior: 'smooth' });
+  SFX.advance();
+  GS.phaseIdx++;
+  fade(() => renderPhase());
 }
 
-// ─── FINAL ────────────────────────────────────────────────────────────────────
-function showFinal() {
-  const total = currentCase().phases.length;
-  const pct   = Math.round((state.score / total) * 100);
+/* ═══════════════════════════════════════════════════
+   RENDER: RESULTADO DO CASO
+═══════════════════════════════════════════════════ */
+function renderResult() {
+  SFX.finish();
 
-  let vClass, vText, icon;
-  if (pct === 100) {
-    [vClass, vText, icon] = ['ace',  '🏆 Aprovado com Louvor', '🏆'];
-  } else if (pct >= 50) {
-    [vClass, vText, icon] = ['good', '⚖️ Aprovado',            '⚖️'];
-  } else {
-    [vClass, vText, icon] = ['bad',  '📚 Precisa Estudar Mais','📚'];
+  const c      = currentCase;
+  const pct    = GS.total > 0 ? (GS.hits / GS.total * 100) : 0;
+  const errors = GS.total - GS.hits;
+  const maxPts = c.phases.length * 10;
+
+  // Persiste hi-score
+  if (GS.score > hiScore) {
+    hiScore = GS.score;
+    localStorage.setItem('tdp_hi', String(hiScore));
+    document.getElementById('hi-val').textContent = String(hiScore).padStart(3, '0');
   }
 
-  const numColor = pct === 100 ? 'var(--correct)' : pct >= 50 ? 'var(--accent)' : 'var(--wrong)';
+  let medal, title, msg;
+  if (pct >= 100)      { medal='🏆'; title='CASO VENCIDO!';    msg='Domínio completo — todas as fases corretas!'; }
+  else if (pct >= 67)  { medal='🥇'; title='BOA ADVOCACIA!';   msg='Análise sólida e bem fundamentada.'; }
+  else if (pct >= 33)  { medal='🥈'; title='PARCIALMENTE...';  msg='Revise os fundamentos das fases erradas.'; }
+  else                 { medal='📚'; title='PRECISA REVISAR!';  msg='Estude os fundamentos antes do próximo caso.'; }
 
-  document.getElementById('final-content').innerHTML = `
-    <span class="final-icon">${icon}</span>
-    <h2 class="final-h">${currentCase().title}</h2>
-    <p class="final-sub">Caso encerrado</p>
+  const judgeState = pct >= 67 ? 'happy' : pct < 33 ? 'angry' : 'neutral';
+  const isNewHi    = (GS.score > 0 && GS.score === hiScore);
 
-    <div class="score-card">
-      <div class="score-num" style="color:${numColor}">${state.score}/${total}</div>
-      <div class="score-sub">${pct}% de aproveitamento</div>
-      <div class="bar-outer">
-        <div class="bar-inner" id="bar-inner" style="width:0%"></div>
+  // Detalhe por fase
+  const phasesHTML = c.phases.map((ph, i) => {
+    const ans = GS.answers.find(a => a.phaseIdx === i);
+    const ok  = ans && ans.correct;
+    return `
+      <div class="phase-result-row">
+        <div style="width:9px;height:9px;background:${ok ? 'var(--green)' : 'var(--red)'};flex-shrink:0"></div>
+        <span style="font-family:var(--ui);font-size:9px">${ph.stepIcon}</span>
+        <span style="color:var(--dim);flex:1">FASE ${i + 1}: ${ph.stepLabel}</span>
+        <span style="font-family:var(--ui);font-size:9px;color:${ok ? 'var(--green)' : 'var(--red)'}">
+          ${ok ? '+10' : '+0'}
+        </span>
+      </div>`;
+  }).join('');
+
+  // Tem próximo caso disponível?
+  const playedAfter  = new Set([...sessionPlayed, currentFile]);
+  const nextAvailable= manifest.some(f => !playedAfter.has(f));
+
+  fade(() => {
+    document.getElementById('game-body').innerHTML = `
+      <div style="text-align:center;margin-bottom:14px">
+        <div id="rjw" class="judge-wrap bob-anim" style="display:inline-flex">
+          <canvas id="rjc" class="judge-canvas"></canvas>
+          <div class="judge-label">DR. PIXEL</div>
+        </div>
       </div>
-    </div>
 
-    <div class="verdict ${vClass}">${vText}</div>
+      <div class="pbox pbox-yellow" style="text-align:center">
+        <div style="font-size:2.8rem;margin-bottom:8px">${medal}</div>
+        <div style="font-family:var(--ui);font-size:clamp(11px,2.5vw,16px);color:var(--yellow);
+             letter-spacing:3px;margin-bottom:6px;animation:textPop .4s ease both">
+          ${title}
+        </div>
+        <div style="font-family:var(--body);font-size:20px;color:var(--dim);margin-bottom:14px">${msg}</div>
+        <div class="score-box">
+          <div class="score-big">${String(GS.score).padStart(3, '0')}</div>
+          <div class="score-lbl">PONTOS &nbsp;·&nbsp; ${GS.hits}/${GS.total} ACERTOS</div>
+        </div>
+        ${isNewHi ? `
+          <div style="font-family:var(--ui);font-size:8px;color:var(--orange);
+               letter-spacing:2px;margin-top:10px;animation:glowPulse 1.5s ease infinite">
+            ★ NOVO HI-SCORE! ★
+          </div>` : ''}
+      </div>
 
-    <div class="final-btns">
-      <button class="btn-gold" onclick="restartCase()">🔄 Refazer este caso</button>
-      <button class="btn-ghost" onclick="goMenu()">🏠 Voltar ao menu</button>
-    </div>
-  `;
+      <div class="pbox pbox-green">
+        <div class="sec-lbl" style="color:var(--cyan)">► RESULTADO POR FASE — ${c.icon} ${c.title}</div>
+        ${phasesHTML}
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px;text-align:center">
+          <div style="border:2px solid rgba(100,100,100,.35);padding:10px">
+            <div style="font-family:var(--ui);font-size:20px;color:var(--green)">${GS.hits}</div>
+            <div style="font-family:var(--ui);font-size:6px;color:var(--muted);margin-top:4px">ACERTOS</div>
+          </div>
+          <div style="border:2px solid rgba(100,100,100,.35);padding:10px">
+            <div style="font-family:var(--ui);font-size:20px;color:var(--red)">${errors}</div>
+            <div style="font-family:var(--ui);font-size:6px;color:var(--muted);margin-top:4px">ERROS</div>
+          </div>
+          <div style="border:2px solid rgba(100,100,100,.35);padding:10px">
+            <div style="font-family:var(--ui);font-size:20px;color:var(--cyan)">${pct.toFixed(0)}%</div>
+            <div style="font-family:var(--ui);font-size:6px;color:var(--muted);margin-top:4px">APROVEIT.</div>
+          </div>
+        </div>
+      </div>
 
-  showScreen('screen-final');
+      <div class="action-row">
+        ${nextAvailable ? `
+          <button class="btn-px btn-yellow" onclick="openCase()" style="font-size:10px">
+            🔀 PRÓXIMO CASO
+          </button>` : ''}
+        <button class="btn-px btn-green" onclick="loadCase(currentFile)" style="font-size:10px">
+          🔄 REVER CASO
+        </button>
+        <button class="btn-px btn-cyan" onclick="confirmExit()">🏠 MENU</button>
+      </div>
 
-  // Animate bar after paint
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      const bar = document.getElementById('bar-inner');
-      if (bar) bar.style.width = pct + '%';
-    });
+      <div style="text-align:center;margin-top:14px;font-family:var(--ui);font-size:7px;
+           color:var(--muted);letter-spacing:2px;line-height:2">
+        HI-SCORE: ${String(hiScore).padStart(3, '0')}
+        &nbsp;·&nbsp;
+        SESSÃO: ${sessionPlayed.size}/${manifest.length} CASOS
+      </div>
+    `;
+
+    const rjc = document.getElementById('rjc');
+    if (rjc) renderJudge(rjc, judgeState);
+
+    updateManifestInfo();
   });
 }
-
-function restartCase() {
-  const idx = state.caseIndex;
-  openIntro(idx);
-}
-
-function goMenu() {
-  renderMenu();
-  showScreen('screen-menu');
-}
-
-// ─── BOOT ─────────────────────────────────────────────────────────────────────
-init();
 </script>
 </body>
 </html>
