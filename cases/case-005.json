@@ -1,0 +1,88 @@
+{
+  "id": "case-005",
+  "icon": "👧",
+  "title": "A Guarda Disputada",
+  "area": "DIREITO DE FAMÍLIA · GUARDA · PODER FAMILIAR",
+  "plaintiff": "Fernanda Lima",
+  "defendant": "Marcelo Lima",
+  "intro": "Seus clientes Fernanda e Marcelo Lima estão em processo de divórcio após 8 anos de casamento. Têm uma filha, Sofia, de 6 anos.\n\nMarcelo quer a guarda unilateral para si, alegando que Fernanda viaja frequentemente a trabalho e não tem condições de cuidar da filha no dia a dia.\n\nFernanda quer a guarda compartilhada, argumentando que ambos têm condições de cuidar de Sofia e que a participação do pai é fundamental.\n\nVocê é o advogado de Fernanda — defenda a solução que melhor atende ao interesse de Sofia!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "TUTELA PROVISÓRIA",
+      "stepIcon": "⚡",
+      "narrative": "O processo de divórcio foi ajuizado mas está em fase inicial. Marcelo, sem autorização judicial, passou a impedir Sofia de ter contato com a mãe nos fins de semana, alegando que as viagens de Fernanda prejudicam a criança. Fernanda não vê a filha há 3 semanas.",
+      "speaker": null,
+      "question": "Qual medida processual urgente você adota para garantir o direito de convivência de Fernanda com Sofia?",
+      "opts": [
+        "Tutela de urgência cautelar para regulamentação provisória de convivência (art. 300 e 301 CPC), com pedido de fixação imediata de regime de visitas até a sentença",
+        "Aguardar a sentença de mérito do divórcio — medidas provisórias não são cabíveis em questões de guarda",
+        "Registrar Boletim de Ocorrência criminal por sequestro de menor contra Marcelo",
+        "Propor ação autônoma de regulamentação de visitas separada do divórcio"
+      ],
+      "correct": 0,
+      "explanation": "O art. 300 do CPC permite a tutela de urgência quando há elementos que evidenciem a probabilidade do direito e risco de dano irreparável.\n\nA privação do convívio materno por 3 semanas configura risco de dano de difícil reparação ao desenvolvimento emocional da criança, justificando a medida liminar.\n\nO art. 1.589 CC garante ao genitor que não detenha a guarda o direito de convivência. A obstrução injustificada pode ainda configurar ALIENAÇÃO PARENTAL (Lei 12.318/2010), com sanções ao genitor alienador.\n\nA medida pode ser requerida nos próprios autos do divórcio como tutela provisória incidental — não precisa de ação autônoma.",
+      "refs": [
+        "Art. 300 CPC",
+        "Art. 301 CPC",
+        "Art. 1.589 CC",
+        "Art. 2º Lei 12.318/2010",
+        "Art. 4º Lei 12.318/2010"
+      ],
+      "bridge": "O juiz determinou convivência provisória às quartas-feiras e fins de semana alternados. Na audiência de instrução, chegou o momento de debater o modelo definitivo de guarda..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "AUDIÊNCIA",
+      "stepIcon": "🎤",
+      "narrative": "Na audiência, Marcelo apresenta testemunha — a babá de Sofia — que confirma que Fernanda viaja ao menos 2 vezes por mês a trabalho, ficando fora de 3 a 5 dias por viagem. Marcelo argumenta que a guarda compartilhada é inviável por conta das viagens.",
+      "speaker": {
+        "name": "Dr. Bento — Advogado de Marcelo Lima",
+        "icon": "🕴",
+        "text": "Sofia precisa de estabilidade! Fernanda viaja 2 vezes por mês — como pode ter guarda compartilhada? A lei exige que os pais residam na mesma cidade e tenham rotinas compatíveis. Guarda compartilhada aqui é juridicamente inviável!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você rebate o argumento de que as viagens de Fernanda inviabilizam a guarda compartilhada?",
+      "opts": [
+        "Guarda compartilhada não exige rotinas idênticas nem mesma cidade — o que importa é a participação de ambos nas decisões sobre a filha; viagens esporádicas a trabalho não impedem o modelo",
+        "Marcelo tem razão — a lei exige rotinas compatíveis e mesma cidade para guarda compartilhada",
+        "Concorda que Fernanda tem menor disponibilidade e propõe guarda unilateral com Marcelo e visitas quinzenais para Fernanda",
+        "A guarda compartilhada só funciona se ambos os pais concordam — como Marcelo é contra, é juridicamente inviável"
+      ],
+      "correct": 0,
+      "explanation": "A Lei 13.058/2014 alterou o CC para tornar a guarda compartilhada a REGRA, não a exceção. O art. 1.584, §2º CC determina que, quando não houver acordo, o juiz DEVE aplicar a guarda compartilhada, salvo se um dos genitores declarar que não deseja a guarda.\n\nO STJ consolidou que:\n1. Guarda compartilhada não exige que os pais residam na mesma cidade;\n2. Litígio entre os pais não impede a guarda compartilhada;\n3. Viagens a trabalho não comprometem o exercício do poder familiar.\n\nO interesse do menor é o critério central — e a presença de ambos os pais nas decisões atende esse interesse.",
+      "refs": [
+        "Art. 1.583 CC",
+        "Art. 1.584, §2º CC",
+        "Lei 13.058/2014",
+        "REsp 1.251.000/MG",
+        "Art. 227 CF/88"
+      ],
+      "bridge": "O juiz determinou estudo social e psicológico. O laudo foi favorável à guarda compartilhada. Chegou o momento da sentença..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "SENTENÇA",
+      "stepIcon": "⚖",
+      "narrative": "O laudo psicossocial indicou que Sofia tem vínculos afetivos sólidos com ambos os pais e que a guarda compartilhada atende ao melhor interesse dela. Marcelo apresentou pedido final de guarda unilateral para si com visitas quinzenais para Fernanda.",
+      "speaker": null,
+      "question": "Qual é a resposta jurídica correta sobre o pedido de Marcelo?",
+      "opts": [
+        "O pedido contraria a regra legal — sem prova de que Fernanda é inapta para o exercício do poder familiar, o juiz deve fixar guarda compartilhada com definição de domicílio base e ampla convivência com ambos",
+        "Marcelo tem razão — maior disponibilidade de tempo é fundamento suficiente para a guarda unilateral",
+        "O juiz deve seguir exatamente o laudo psicossocial, sem análise jurídica própria",
+        "Visitas quinzenais são suficientes para preservar o vínculo de Sofia com Fernanda"
+      ],
+      "correct": 0,
+      "explanation": "Após a Lei 13.058/2014, a guarda compartilhada é a REGRA legal (art. 1.584, §2º CC). Para afastá-la, é necessário demonstrar que um dos genitores é inapto ou que o modelo prejudica o menor.\n\nMaior disponibilidade de tempo de Marcelo não é fundamento legal para afastar a guarda compartilhada — apenas indica que ele pode ter mais tempo de convivência física.\n\nNa guarda compartilhada, ambos participam das decisões sobre saúde, educação e lazer de Sofia. A residência pode ter domicílio base com ampla convivência ao outro genitor.\n\nO laudo psicossocial é subsídio importante, mas não substitui a análise jurídica do juiz.",
+      "refs": [
+        "Art. 1.583 CC",
+        "Art. 1.584, §2º CC",
+        "Art. 1.585 CC",
+        "Art. 1.586 CC",
+        "Lei 13.058/2014"
+      ],
+      "bridge": null
+    }
+  ]
+}
