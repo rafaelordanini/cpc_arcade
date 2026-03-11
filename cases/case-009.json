@@ -1,0 +1,88 @@
+{
+  "id": "case-009",
+  "icon": "📊",
+  "title": "O Nome Sujo Indevido",
+  "area": "RESPONSABILIDADE CIVIL · CDC · DANO MORAL",
+  "plaintiff": "Beatriz Fernandes",
+  "defendant": "Banco Meridional S/A",
+  "intro": "Sua cliente Beatriz Fernandes teve seu nome inscrito no SPC/Serasa pelo Banco Meridional S/A por uma dívida de R$ 1.200 referente a um cartão de crédito que ela jamais contratou.\n\nBeatriz nunca foi cliente do banco — foi vítima de fraude com uso dos seus documentos.\n\nEla perdeu um financiamento imobiliário por conta da negativação e o banco se recusa a resolver, pedindo 60 dias para 'investigação interna'.\n\nVocê é o advogado de Beatriz — remova a negativação e garanta a indenização!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "TUTELA URGENTE",
+      "stepIcon": "⚡",
+      "narrative": "Beatriz está com o nome negativado há 3 meses e perdeu o financiamento de um apartamento. O banco estima 60 dias para resposta. Beatriz não consegue esperar mais.",
+      "speaker": null,
+      "question": "Qual medida processual você requer imediatamente para retirar o nome de Beatriz do SPC/Serasa?",
+      "opts": [
+        "Tutela de urgência antecipada (art. 300 CPC) com pedido de exclusão imediata da negativação, demonstrando probabilidade do direito (fraude) e perigo de dano (impossibilidade de crédito)",
+        "Aguardar os 60 dias que o banco pediu — não há urgência suficiente para tutela de urgência",
+        "Registrar queixa-crime por estelionato contra o banco antes da ação civil",
+        "Propor ação monitória para cobrança do dano moral sem pedir exclusão da negativação"
+      ],
+      "correct": 0,
+      "explanation": "A tutela de urgência antecipada (art. 300 CPC) é cabível quando há:\n1. Probabilidade do direito (fumus boni iuris): Beatriz nunca contratou o cartão — há indício claro de fraude.\n2. Perigo de dano: negativação impede acesso a crédito, financiamento e prejudica honra e imagem.\n\nO STJ possui entendimento consolidado (Súmula 385) de que a negativação indevida gera dano moral in re ipsa — prescinde de prova do sofrimento.\n\nA tutela pode ser concedida liminarmente quando a oitiva prévia do réu puder frustrar a eficácia da medida (art. 9º, parágrafo único, II CPC).",
+      "refs": [
+        "Art. 300 CPC",
+        "Art. 303 CPC",
+        "Súmula 385 STJ",
+        "Art. 43 CDC",
+        "Art. 5º, X CF/88"
+      ],
+      "bridge": "O juiz determinou liminarmente a exclusão do nome. O banco foi citado e contestou com excludente de responsabilidade..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "O banco apresentou contestação alegando que agiu de boa-fé: recebeu documentação da suposta Beatriz, seguiu seus procedimentos internos de análise de crédito, e que a culpa foi exclusiva do estelionatário — fato de terceiro exclui a responsabilidade.",
+      "speaker": {
+        "name": "Dra. Lima — Advogada do Banco Meridional",
+        "icon": "👩‍⚖️",
+        "text": "O banco agiu de boa-fé! Recebeu documentos que pareciam legítimos! A culpa é exclusivamente do estelionatário — fato de terceiro é excludente de responsabilidade! O banco também foi vítima!",
+        "color": "var(--red)"
+      },
+      "question": "Como você rebate a excludente de responsabilidade do banco?",
+      "opts": [
+        "Na relação de consumo, o banco responde objetivamente (art. 14 CDC) e o fortuito interno — fraude nos seus próprios serviços de concessão de crédito — não exclui a responsabilidade; é risco inerente à atividade bancária",
+        "O banco tem razão — fraude de terceiro é fortuito externo que exclui completamente a responsabilidade",
+        "Beatriz deve processar apenas o estelionatário, não o banco que agiu de boa-fé",
+        "O banco só responde se ficou provado que deixou de seguir seus próprios procedimentos internos"
+      ],
+      "correct": 0,
+      "explanation": "O STJ possui Súmula 479: 'As instituições financeiras respondem objetivamente pelos danos gerados por fortuito interno relativo a fraudes e delitos praticados por terceiros no âmbito de operações bancárias.'\n\nO fortuito INTERNO ocorre dentro da própria atividade do fornecedor — é risco do negócio e não exclui responsabilidade.\n\nO fortuito EXTERNO (imprevisível e irresistível, alheio à atividade) excluiria a responsabilidade — mas fraude em processo de concessão de crédito é inerente ao risco da atividade bancária.\n\nO banco tem o dever de criar mecanismos seguros de verificação de identidade. A falha nesse dever gera responsabilidade objetiva (art. 14 CDC).",
+      "refs": [
+        "Art. 14 CDC",
+        "Súmula 479 STJ",
+        "Art. 927, parágrafo único CC",
+        "Art. 12, §3º CDC",
+        "REsp 1.199.782/PR"
+      ],
+      "bridge": "O juiz rejeitou a excludente. Agora resta fixar o valor do dano moral sofrido por Beatriz..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "DANO MORAL",
+      "stepIcon": "💰",
+      "narrative": "O banco foi condenado. Falta fixar o dano moral. Beatriz ficou 3 meses negativada, perdeu o financiamento do apartamento, foi humilhada ao ter cartão recusado em público e sofreu estresse documentado. O banco movimenta R$ 200 bilhões por ano.",
+      "speaker": null,
+      "question": "Qual critério o juiz deve usar para fixar o dano moral?",
+      "opts": [
+        "Critério bifásico: valor mínimo pelo tipo de caso (jurisprudência do STJ) ajustado pelas circunstâncias específicas (3 meses, perda do financiamento, porte do banco) — sem valor fixo em lei",
+        "O dano moral é tarifado em 50 salários mínimos para negativação indevida por lei expressa",
+        "O dano moral não é cabível pois Beatriz não provou internação ou tratamento psiquiátrico",
+        "O valor deve ser limitado ao valor da dívida indevida (R$ 1.200) para não gerar enriquecimento sem causa"
+      ],
+      "correct": 0,
+      "explanation": "O dano moral por negativação indevida é in re ipsa — independe de prova do sofrimento (Súmula 385 STJ).\n\nO STJ consolidou o CRITÉRIO BIFÁSICO para fixação do quantum (REsp 1.374.284/MG):\n1. FASE 1: valor mínimo pelo tipo de caso com base na jurisprudência.\n2. FASE 2: ajuste pelas circunstâncias específicas (tempo, consequências, porte econômico do réu, caráter pedagógico).\n\nNão existe tarifação legal do dano moral no Brasil — o STF declarou inconstitucional a tentativa de tarifar danos morais (ADI 6050).\n\nO valor deve compensar a vítima E desestimular o causador, sem gerar enriquecimento excessivo.",
+      "refs": [
+        "Art. 944 CC",
+        "Súmula 385 STJ",
+        "Art. 6º, VI CDC",
+        "REsp 1.374.284/MG",
+        "ADI 6050 STF"
+      ],
+      "bridge": null
+    }
+  ]
+}
