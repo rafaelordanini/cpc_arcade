@@ -1,0 +1,88 @@
+{
+  "id": "case-012",
+  "icon": "📱",
+  "title": "A Conta de Telefone Absurda",
+  "area": "DIREITO DO CONSUMIDOR · COBRANÇA INDEVIDA · REPETIÇÃO DO INDÉBITO",
+  "plaintiff": "Antônia Pereira",
+  "defendant": "Operadora TelStar S/A",
+  "intro": "Sua cliente Antônia Pereira recebeu fatura de telefone de R$ 2.400 quando seu plano mensal é de R$ 120. A operadora cobrou R$ 2.280 por serviços de streaming e dados adicionais que Antônia jamais contratou.\n\nAntônia ligou 4 vezes para o SAC sem resolução. A operadora ameaçou negativar seu nome se ela não pagar a fatura integral em 10 dias.\n\nVocê é o advogado de Antônia — impeça a negativação e garanta a devolução em dobro!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "TUTELA URGENTE",
+      "stepIcon": "⚡",
+      "narrative": "A negativação acontecerá em 10 dias se Antônia não pagar. A cobrança é claramente indevida (ela nunca contratou os serviços extras). Você precisa de medida imediata.",
+      "speaker": null,
+      "question": "Quais medidas você requer em tutela de urgência?",
+      "opts": [
+        "Tutela de urgência para: (a) suspender a exigibilidade da cobrança indevida e (b) proibir a negativação, sob pena de multa diária (astreintes)",
+        "Aguardar a negativação e depois pedir a retirada — tutela de urgência não é cabível antes do dano",
+        "Pagar a fatura para evitar a negativação e depois pedir ressarcimento — estratégia mais segura",
+        "Registrar queixa no PROCON e aguardar decisão administrativa antes do judiciário"
+      ],
+      "correct": 0,
+      "explanation": "A tutela de urgência (art. 300 CPC) pode ser concedida para PREVENIR dano iminente — não precisa esperar o dano se concretizar.\n\nA ameaça de negativação em 10 dias é o periculum in mora. A cobrança de serviços não contratados é a probabilidade do direito.\n\nAs astreintes (art. 537 CPC) são fundamentais: o valor da multa diária deve ser suficiente para compelir a empresa a obedecer — geralmente entre R$ 500 e R$ 2.000/dia para operadoras de grande porte.\n\nO PROCON é instrumento válido mas paralelo — não substitui a tutela judicial quando há urgência real.",
+      "refs": [
+        "Art. 300 CPC",
+        "Art. 537 CPC",
+        "Art. 42 CDC",
+        "Art. 43 CDC",
+        "Súmula 385 STJ"
+      ],
+      "bridge": "O juiz proibiu a negativação. A empresa foi citada e contestou alegando que os serviços foram contratados pelo aplicativo..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "ÔNUS DA PROVA",
+      "stepIcon": "🛡",
+      "narrative": "A empresa apresentou print de tela do aplicativo mostrando suposta contratação de pacote premium às 3h17 da madrugada, a partir do número de Antônia. Alega que ela mesma (ou alguém autorizado) contratou.",
+      "speaker": {
+        "name": "Dr. Moreira — Advogado da TelStar",
+        "icon": "🕴",
+        "text": "Temos log do sistema! A contratação foi feita pelo celular de Antônia às 3h17! Ela ou alguém com acesso ao aparelho contratou o serviço! Não há cobrança indevida — há serviço efetivamente contratado!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você contesta a prova apresentada pela operadora?",
+      "opts": [
+        "O ônus de provar que Antônia contratou o serviço é da empresa (art. 6º, VIII CDC — inversão do ônus); log de sistema unilateral não é prova suficiente; a empresa deve provar consentimento inequívoco da consumidora",
+        "A prova do log é válida e definitiva — Antônia terá dificuldade de provar o não-contrato; sugerir acordo",
+        "Contestar apenas o horário (3h17) — presumir que Antônia estava dormindo é prova suficiente",
+        "Requerer perícia no celular de Antônia para provar que ela não usou o aparelho naquele horário"
+      ],
+      "correct": 0,
+      "explanation": "O art. 6º, VIII CDC permite a inversão do ônus da prova quando for verossímil a alegação ou quando o consumidor for hipossuficiente.\n\nLog de sistema produzido unilateralmente pela própria empresa não é prova neutra — é documento elaborado pelo próprio interessado.\n\nO STJ consolidou que nas relações de consumo digital, o fornecedor deve provar com evidências robustas que o consumidor efetivamente contratou — não apenas que houve acesso pelo número.\n\nAlém disso, se houve falha de segurança no sistema (terceiro usou o número sem autorização), é responsabilidade objetiva da operadora (art. 14 CDC).",
+      "refs": [
+        "Art. 6º, VIII CDC",
+        "Art. 14 CDC",
+        "Art. 42 CDC",
+        "Art. 373, §1º CPC",
+        "REsp 1.737.428/RS"
+      ],
+      "bridge": "O juiz inverteu o ônus da prova. A empresa não provou a contratação. Chegou a hora de calcular a devolução..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "REPETIÇÃO DO INDÉBITO",
+      "stepIcon": "💰",
+      "narrative": "A cobrança foi declarada indevida. Antônia pagou R$ 2.400 por medo da negativação, mas devia apenas R$ 120 do plano. Pagou indevidamente R$ 2.280. Qual é seu direito de devolução?",
+      "speaker": null,
+      "question": "Qual é o valor que Antônia tem direito a receber?",
+      "opts": [
+        "Devolução em dobro do valor cobrado indevidamente: R$ 2.280 × 2 = R$ 4.560 (art. 42, parágrafo único CDC) + dano moral pelo constrangimento e horas perdidas no SAC",
+        "Apenas devolução simples de R$ 2.280 — a dobra só se aplica se houve negativação efetiva",
+        "Devolução de R$ 2.280 com correção monetária — a duplicidade não se aplica a cobranças por serviço",
+        "Apenas R$ 1.140 — a devolução em dobro é dividida igualmente entre as partes"
+      ],
+      "correct": 0,
+      "explanation": "O art. 42, parágrafo único do CDC é expresso: 'O consumidor cobrado em quantia indevida tem direito à repetição do indébito, por valor igual ao dobro do que pagou em excesso, acrescido de correção monetária e juros legais, salvo hipótese de engano justificável.'\n\nRequisitos cumpridos:\n1. Cobrança indevida ✓\n2. Pagamento pelo consumidor ✓ (Antônia pagou R$ 2.400)\n3. Inexistência de engano justificável ✓\n\nValor: R$ 2.280 × 2 = R$ 4.560 + correção + juros.\n\nO dano moral é CUMULÁVEL com a repetição do indébito — são pretensões distintas.",
+      "refs": [
+        "Art. 42, parágrafo único CDC",
+        "Art. 940 CC",
+        "Art. 6º, VI CDC",
+        "REsp 1.247.973/RS",
+        "REsp 1.113.804/RS"
+      ],
+      "bridge": null
+    }
+  ]
+}
