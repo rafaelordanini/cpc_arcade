@@ -1,0 +1,88 @@
+{
+  "id": "case-006",
+  "icon": "📉",
+  "title": "Alimentos em Revisão",
+  "area": "DIREITO DE FAMÍLIA · ALIMENTOS · REVISÃO",
+  "plaintiff": "Paulo Henrique Dias",
+  "defendant": "Carla Dias (em nome de Pedro Dias)",
+  "intro": "Seu cliente Paulo Henrique Dias paga R$ 3.000/mês de alimentos ao filho Pedro, de 15 anos, valor fixado há 5 anos quando trabalhava como gerente bancário com salário de R$ 12.000/mês.\n\nHá 8 meses, Paulo foi demitido sem justa causa e desde então recebe apenas seguro-desemprego de R$ 2.200/mês, que se encerrará em 3 meses.\n\nCarla, mãe de Pedro, recusa-se a qualquer acordo, afirmando que Paulo está omitindo renda e trabalhando informalmente.\n\nVocê é o advogado de Paulo — use os instrumentos processuais adequados para revisar os alimentos!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "CABIMENTO DA AÇÃO",
+      "stepIcon": "📋",
+      "narrative": "Paulo quer entrar com ação revisional de alimentos mas está pagando os R$ 3.000/mês com dificuldade e acumulando dívidas. Ele pergunta se pode parar de pagar enquanto o processo tramita e qual é o fundamento legal para a revisão.",
+      "speaker": null,
+      "question": "Qual é o fundamento correto para a ação revisional e Paulo pode suspender os pagamentos durante o processo?",
+      "opts": [
+        "A revisão se funda na alteração superveniente do binômio necessidade-possibilidade (art. 1.699 CC); Paulo NÃO pode suspender os pagamentos — a obrigação só muda com nova decisão judicial",
+        "Paulo pode suspender imediatamente pois o desemprego é fato notório e a revisão é certamente procedente",
+        "A revisão só é cabível após 2 anos da última decisão — Paulo deve aguardar esse prazo mínimo",
+        "O desemprego não é fundamento para revisão pois Paulo poderia ter constituído reservas financeiras"
+      ],
+      "correct": 0,
+      "explanation": "O art. 1.699 CC é o fundamento da ação revisional: 'Se, fixados os alimentos, sobrevier mudança na situação financeira de quem os supre ou na de quem os recebe, poderá o interessado reclamar ao juiz, conforme as circunstâncias, exoneração, redução ou majoração do encargo.'\n\nO requisito é a MUDANÇA SUPERVENIENTE na situação financeira — a demissão de Paulo é fato objetivo e suficiente. Não há prazo mínimo entre ações revisionais.\n\nPorém, Paulo JAMAIS deve suspender os pagamentos unilateralmente: a obrigação alimentar vigente continua exigível até nova decisão judicial, e o inadimplemento pode gerar prisão civil (art. 528 CPC).",
+      "refs": [
+        "Art. 1.699 CC",
+        "Art. 1.694 CC",
+        "Art. 528 CPC",
+        "Art. 15 Lei 5.478/68",
+        "REsp 1.205.408/SP"
+      ],
+      "bridge": "A ação revisional foi distribuída. Carla foi citada e contestou com argumentos graves sobre a real situação financeira de Paulo..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "Carla apresentou contestação com: prints de redes sociais mostrando Paulo em viagem internacional 2 meses atrás, extrato de veículo de luxo 2023 em seu nome e depoimento de vizinho que afirma ver Paulo saindo regularmente de manhã para trabalhar. Carla alega omissão de renda e pede multa por litigância de má-fé.",
+      "speaker": {
+        "name": "Dra. Moura — Advogada de Carla Dias",
+        "icon": "👩‍⚖️",
+        "text": "Paulo está mentindo para o juízo! Viajou ao exterior, tem carro importado 2023 e sai todo dia de manhã. Como pode alegar desemprego? Pedimos improcedência e aplicação de multa por litigância de má-fé!",
+        "color": "var(--red)"
+      },
+      "question": "Como você responde às provas apresentadas por Carla?",
+      "opts": [
+        "Explicar cada elemento: viagem pode ter sido custeada por terceiros; carro pode ter financiamento; saídas matinais não provam renda — o ônus de provar renda ocultada é de Carla, não meros indícios",
+        "Reconhecer a má-fé de Paulo e desistir da ação — as provas são suficientes para desacreditar o cliente",
+        "Alegar que provas de redes sociais são inadmissíveis no processo civil e pedir seu desentranhamento",
+        "Contra-atacar pedindo a prisão civil de Carla por litigância de má-fé"
+      ],
+      "correct": 0,
+      "explanation": "O ônus da prova segue o art. 373 CPC: quem alega, prova. Carla alega que Paulo oculta renda — o ônus é dela.\n\nIndícios (fotos, vizinhos) não são prova de renda. Provas digitais de redes sociais são válidas no processo civil (art. 369 CPC), mas precisam ser cotejadas com outras provas.\n\nUma viagem pode ter sido financiada por familiares. Um carro 2023 pode ter financiamento que consome boa parte da renda. Saídas matinais podem ser para buscar emprego.\n\nA estratégia correta é explicar cada elemento e requerer que o juízo oficie à Receita Federal e ao INSS para apurar a real situação de Paulo (art. 399 CPC) — o que pode confirmar o desemprego.",
+      "refs": [
+        "Art. 373 CPC",
+        "Art. 369 CPC",
+        "Art. 399 CPC",
+        "Art. 77 CPC",
+        "Art. 80 CPC"
+      ],
+      "bridge": "O juiz determinou ofícios à Receita Federal e ao INSS. Os documentos confirmaram o desemprego de Paulo. Chegou a hora de fixar o novo valor..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "NOVO VALOR",
+      "stepIcon": "💰",
+      "narrative": "Os ofícios confirmaram que Paulo está desempregado com renda de apenas R$ 2.200/mês de seguro-desemprego. Pedro (15 anos) estuda em escola particular: R$ 1.200/mês. Demais necessidades: R$ 900/mês. Total de necessidades de Pedro: R$ 2.100/mês. Carla trabalha como professora com salário de R$ 4.500/mês.",
+      "speaker": null,
+      "question": "Qual deve ser o novo valor dos alimentos enquanto Paulo permanece desempregado?",
+      "opts": [
+        "Reduzir para valor proporcional: Paulo representa ~33% da renda combinada (R$ 2.200 de R$ 6.700 totais) — sua contribuição justa fica entre R$ 700 e R$ 900/mês, preservando seu mínimo existencial",
+        "Manter os R$ 3.000 — o juiz não pode reduzir alimentos sem prova de que Pedro não precisa mais do valor",
+        "Exonerar completamente Paulo enquanto estiver desempregado",
+        "Fixar exatamente metade das necessidades de Pedro: R$ 1.050, independentemente da renda de Paulo"
+      ],
+      "correct": 0,
+      "explanation": "A revisão de alimentos aplica o TRINÔMIO: necessidade do alimentando + possibilidade do alimentante + proporcionalidade entre os obrigados.\n\nNecessidades de Pedro: R$ 2.100/mês.\nRenda de Paulo: R$ 2.200 | Renda de Carla: R$ 4.500 | Total: R$ 6.700.\nParticipação proporcional de Paulo: ~33% → ~R$ 700 de R$ 2.100.\n\nPagar R$ 3.000 com renda de R$ 2.200 viola o mínimo existencial do devedor — ninguém pode ser reduzido à miséria para pagar alimentos.\n\nA exoneração total seria desproporcional: Paulo tem renda (seguro-desemprego) e filho tem necessidades reais. O valor justo fica entre R$ 700 e R$ 900, revisável quando Paulo recolocar-se no mercado.",
+      "refs": [
+        "Art. 1.699 CC",
+        "Art. 1.694, §1º CC",
+        "Art. 1.703 CC",
+        "Art. 1.695 CC",
+        "REsp 1.488.589/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
