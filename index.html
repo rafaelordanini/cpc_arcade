@@ -1024,7 +1024,9 @@ let hiScore = parseInt(SafeStorage.get('tdp_hi','0'));
   document.getElementById('hi-val').textContent = String(hiScore).padStart(3,'0');
 
   try {
-    const res = await fetch(CASES_DIR + 'manifest.json');
+    const res = await fetch(`${CASES_DIR}manifest.json?cb=${Date.now()}`, {
+      cache: 'no-store'
+    });
     if (!res.ok) throw new Error('manifest.json não encontrado');
     manifest = (await res.json()).cases;
     updateManifestInfo();
