@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tribunal dos Pixels ⚖️</title>
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --bg:          #070d1a;
+      --surface:     #0f172a;
+      --surface2:    #1e293b;
+      --surface3:    #334155;
+      --accent:      #f59e0b;
+      --correct:     #10b981;
+      --wrong:       #ef4444;
+      --text:        #f1f5f9;
+      --text-muted:  #94a3b8;
+      --text-dim:    #64748b;
+      --border:      #1e293b;
+      --radius:      12px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── SCREENS ────────────────────────────────────────────── */
+    .screen { display: none; min-height: 100vh; flex-direction: column; }
+    .screen.active { display: flex; }
+
+    /* ─── ANIMATIONS ─────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes loadBar {
+      0%   { width: 0%; }
+      60%  { width: 75%; }
+      100% { width: 100%; }
+    }
+    @keyframes spinScale {
+      0%, 100% { transform: scale(1); }
+      50%       { transform: scale(1.12); }
+    }
+    .animate-in { animation: fadeUp 0.4s ease both; }
+
+    /* ─── LOADING ────────────────────────────────────────────── */
+    #screen-loading {
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .load-icon  { font-size: 4rem; animation: spinScale 1.6s ease-in-out infinite; }
+    .load-title { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+    .load-bar   {
+      width: 220px; height: 4px;
+      background: var(--surface2); border-radius: 2px; overflow: hidden;
+    }
+    .load-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), #fbbf24);
+      border-radius: 2px;
+      animation: loadBar 1.8s ease-in-out forwards;
+    }
+    .load-msg { font-size: 0.8rem; color: var(--text-dim); }
+
+    /* ─── TOP BAR ────────────────────────────────────────────── */
+    .top-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .brand       { display: flex; align-items: center; gap: 10px; }
+    .brand-logo  { font-size: 1.4rem; }
+    .brand-name  { font-size: 0.95rem; font-weight: 700; color: var(--accent); }
+    .brand-sub   { display: block; font-size: 0.68rem; color: var(--text-dim); }
+
+    /* ─── MENU ───────────────────────────────────────────────── */
+    .menu-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 60px 24px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .menu-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(245,158,11,.12) 0%, transparent 70%);
+    }
+    .hero-icon     { font-size: 4rem; display: block; margin-bottom: 14px; position: relative; }
+    .hero-title    { font-size: 2.4rem; font-weight: 900; color: var(--accent); position: relative; }
+    .hero-subtitle {
+      font-size: .95rem; color: var(--text-muted);
+      max-width: 480px; margin: 10px auto 0; line-height: 1.6; position: relative;
+    }
+
+    .menu-body  { padding: 36px 24px; max-width: 940px; margin: 0 auto; width: 100%; }
+    .sec-label  {
+      font-size: .72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--text-dim); margin-bottom: 20px;
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+      gap: 16px;
+    }
+
+    .case-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px; cursor: pointer;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      position: relative; overflow: hidden;
+    }
+    .case-card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--accent);
+      transform: scaleX(0); transition: transform .2s;
+    }
+    .case-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(245,158,11,.15); }
+    .case-card:hover::after { transform: scaleX(1); }
+
+    .card-icon   { font-size: 2.4rem; display: block; margin-bottom: 12px; }
+    .card-area   { font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 6px; }
+    .card-title  { font-size: 1.05rem; font-weight: 800; line-height: 1.3; margin-bottom: 10px; }
+    .card-vs     { font-size: .78rem; color: var(--text-muted); }
+    .card-meta   { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); font-size: .73rem; color: var(--text-dim); }
+    .card-cta    { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; padding: 8px 16px; background: var(--accent); color: #000; border-radius: 6px; font-size: .78rem; font-weight: 800; }
+
+    /* ─── INTRO ──────────────────────────────────────────────── */
+    .intro-scroll { flex: 1; overflow-y: auto; }
+    .intro-wrap   { max-width: 720px; margin: 0 auto; padding: 36px 24px; }
+
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px; background: transparent;
+      border: 1px solid var(--border); border-radius: 8px;
+      color: var(--text-muted); cursor: pointer;
+      font-size: .82rem; transition: all .2s; margin-bottom: 28px;
+    }
+    .back-btn:hover { border-color: var(--text-muted); color: var(--text); }
+
+    .intro-head   { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 28px; }
+    .intro-icon-b {
+      width: 70px; height: 70px; flex-shrink: 0;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--radius); display: flex; align-items: center;
+      justify-content: center; font-size: 2rem;
+    }
+    .intro-area  { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 5px; }
+    .intro-title { font-size: 1.7rem; font-weight: 900; line-height: 1.2; }
+
+    .parties-row {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px;
+    }
+    .party      { flex: 1; text-align: center; }
+    .party-lbl  { font-size: .63rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 4px; }
+    .party-name { font-size: .98rem; font-weight: 800; }
+    .vs-pill    {
+      padding: 5px 10px;
+      background: rgba(245,158,11,.1); border: 1px solid rgba(245,158,11,.3);
+      border-radius: 6px; font-size: .72rem; font-weight: 800; color: var(--accent);
+    }
+
+    .intro-text {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius); padding: 22px;
+      font-size: .92rem; line-height: 1.85; color: var(--text-muted);
+      white-space: pre-line; margin-bottom: 22px;
+    }
+
+    .phases-pre-title { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 10px; }
+    .phases-chips     { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    .phase-chip       {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 20px;
+      font-size: .78rem; color: var(--text-muted);
+    }
+
+    .start-btn {
+      width: 100%; padding: 15px;
+      background: var(--accent); color: #000;
+      border: none; border-radius: var(--radius);
+      font-size: .98rem; font-weight: 900; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      letter-spacing: .4px; transition: all .2s;
+    }
+    .start-btn:hover { background: #fbbf24; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(245,158,11,.35); }
+
+    /* ─── PHASE HEADER ───────────────────────────────────────── */
+    .phase-top {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .phase-case-lbl { font-size: .82rem; font-weight: 700; color: var(--text-muted); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .phase-dots     { display: flex; gap: 6px; }
+    .dot            { width: 9px; height: 9px; border-radius: 50%; background: var(--surface3); transition: all .3s; }
+    .dot.done       { background: var(--correct); }
+    .dot.current    { background: var(--accent); transform: scale(1.3); }
+    .score-pill     {
+      display: flex; align-items: center; gap: 5px;
+      padding: 5px 12px; background: var(--surface2);
+      border: 1px solid rgba(245,158,11,.2); border-radius: 20px;
+      font-size: .78rem; font-weight: 700; color: var(--accent);
+    }
+
+    /* ─── PHASE BODY ─────────────────────────────────────────── */
+    .phase-scroll { flex: 1; overflow-y: auto; }
+    .phase-wrap   { max-width: 760px; margin: 0 auto; padding: 30px 24px 60px; }
+
+    .phase-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 14px;
+      background: rgba(245,158,11,.1); border: 1px solid rgba(245,158,11,.3);
+      border-radius: 20px; font-size: .72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px; color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .narrative {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px;
+      font-size: .88rem; line-height: 1.75; color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .speaker-box {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px; margin-bottom: 18px;
+    }
+    .speaker-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .speaker-ava  {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--surface); border: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+    }
+    .speaker-nm   { font-size: .78rem; font-weight: 800; }
+    .speaker-role { font-size: .68rem; color: var(--text-dim); }
+    .speech       {
+      padding: 12px 16px; background: var(--surface);
+      border-radius: 8px; border-left: 3px solid;
+      font-size: .88rem; line-height: 1.7; color: var(--text-muted); font-style: italic;
+    }
+
+    .question { font-size: 1.08rem; font-weight: 800; line-height: 1.5; margin-bottom: 18px; }
+
+    .opts-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+
+    .opt {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 16px; background: var(--surface);
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      cursor: pointer; text-align: left;
+      font-size: .88rem; line-height: 1.55; color: var(--text-muted);
+      transition: all .18s;
+    }
+    .opt:hover:not(:disabled)  { border-color: var(--accent); background: var(--surface2); color: var(--text); }
+    .opt.sel                   { border-color: var(--accent); background: rgba(245,158,11,.08); color: var(--text); }
+    .opt.hit                   { border-color: var(--correct); background: rgba(16,185,129,.08); color: var(--text); }
+    .opt.miss                  { border-color: var(--wrong);   background: rgba(239,68,68,.08);  color: var(--text); }
+    .opt:disabled              { cursor: default; }
+
+    .opt-letter {
+      min-width: 28px; height: 28px; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .72rem; font-weight: 800; flex-shrink: 0;
+      background: var(--surface2); transition: all .18s;
+    }
+    .opt.sel  .opt-letter { background: var(--accent); color: #000; }
+    .opt.hit  .opt-letter { background: var(--correct); color: #000; }
+    .opt.miss .opt-letter { background: var(--wrong);   color: #fff; }
+
+    .confirm-btn {
+      width: 100%; padding: 14px;
+      background: var(--accent); color: #000;
+      border: none; border-radius: var(--radius);
+      font-size: .95rem; font-weight: 900; cursor: pointer;
+      transition: all .2s; letter-spacing: .4px;
+    }
+    .confirm-btn:disabled { background: var(--surface3); color: var(--text-dim); cursor: not-allowed; }
+    .confirm-btn:not(:disabled):hover { background: #fbbf24; transform: translateY(-1px); }
+
+    /* ─── FEEDBACK ───────────────────────────────────────────── */
+    .feedback {
+      border-radius: var(--radius); padding: 24px;
+      margin-top: 22px; animation: fadeUp .35s ease;
+    }
+    .feedback.ok  { background: rgba(16,185,129,.07); border: 1.5px solid var(--correct); }
+    .feedback.bad { background: rgba(239,68,68,.07);  border: 1.5px solid var(--wrong); }
+
+    .fb-head  { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+    .fb-icon  { font-size: 1.4rem; }
+    .fb-title { font-size: .98rem; font-weight: 900; }
+    .fb-title.ok  { color: var(--correct); }
+    .fb-title.bad { color: var(--wrong); }
+
+    .fb-text  { font-size: .88rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 18px; white-space: pre-line; }
+
+    .refs-lbl  { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 8px; }
+    .refs-row  { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+    .ref-pill  {
+      padding: 3px 10px; background: var(--surface2);
+      border: 1px solid var(--border); border-radius: 20px;
+      font-size: .7rem; font-weight: 600; color: var(--text-muted);
+    }
+
+    .bridge {
+      padding: 12px 16px; background: var(--surface2);
+      border-left: 3px solid var(--accent); border-radius: 8px;
+      font-size: .83rem; color: var(--text-muted); font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .next-btn {
+      width: 100%; padding: 13px;
+      background: var(--correct); color: #000;
+      border: none; border-radius: var(--radius);
+      font-size: .93rem; font-weight: 900; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      transition: all .2s;
+    }
+    .next-btn:hover { background: #34d399; transform: translateY(-1px); }
+
+    /* ─── FINAL ──────────────────────────────────────────────── */
+    .final-center { flex: 1; display: flex; align-items: center; justify-content: center; overflow-y: auto; }
+    .final-wrap   { max-width: 540px; width: 100%; padding: 52px 24px; text-align: center; }
+
+    .final-icon { font-size: 4rem; display: block; margin-bottom: 14px; }
+    .final-h    { font-size: 1.9rem; font-weight: 900; margin-bottom: 6px; }
+    .final-sub  { font-size: .9rem; color: var(--text-muted); margin-bottom: 36px; }
+
+    .score-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 30px; margin-bottom: 24px;
+    }
+    .score-num  { font-size: 3.8rem; font-weight: 900; line-height: 1; margin-bottom: 6px; }
+    .score-sub  { font-size: .88rem; color: var(--text-muted); margin-bottom: 22px; }
+    .bar-outer  { height: 10px; background: var(--surface2); border-radius: 5px; overflow: hidden; }
+    .bar-inner  { height: 100%; background: linear-gradient(90deg, var(--accent), #fbbf24); border-radius: 5px; transition: width 1.2s ease; }
+
+    .verdict {
+      display: inline-block; padding: 7px 20px; border-radius: 20px;
+      font-size: .82rem; font-weight: 900; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 28px;
+    }
+    .verdict.ace  { background: rgba(16,185,129,.15); color: var(--correct); border: 1px solid var(--correct); }
+    .verdict.good { background: rgba(245,158,11,.15);  color: var(--accent);  border: 1px solid var(--accent); }
+    .verdict.bad  { background: rgba(239,68,68,.15);   color: var(--wrong);   border: 1px solid var(--wrong); }
+
+    .final-btns { display: flex; flex-direction: column; gap: 10px; }
+
+    .btn-gold {
+      padding: 14px; background: var(--accent); color: #000;
+      border: none; border-radius: var(--radius);
+      font-size: .93rem; font-weight: 900; cursor: pointer; transition: all .2s;
+    }
+    .btn-gold:hover { background: #fbbf24; transform: translateY(-1px); }
+
+    .btn-ghost {
+      padding: 14px; background: transparent; color: var(--text-muted);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      font-size: .93rem; font-weight: 600; cursor: pointer; transition: all .2s;
+    }
+    .btn-ghost:hover { border-color: var(--text-muted); color: var(--text); }
+
+    /* ─── ERROR ──────────────────────────────────────────────── */
+    .err-wrap { text-align: center; padding: 60px 24px; }
+    .err-icon { font-size: 3rem; margin-bottom: 14px; }
+    .err-h    { font-size: 1.15rem; font-weight: 700; color: var(--wrong); margin-bottom: 8px; }
+    .err-msg  { font-size: .88rem; color: var(--text-muted); line-height: 1.6; }
+    .err-msg code { background: var(--surface2); padding: 2px 6px; border-radius: 4px; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero-title  { font-size: 1.8rem; }
+      .intro-head  { flex-direction: column; }
+      .parties-row { flex-direction: column; }
+      .phase-case-lbl { font-size: .7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!--  LOADING                                                     -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div id="screen-loading" class="screen active">
+  <span class="load-icon">⚖️</span>
+  <div class="load-title">Tribunal dos Pixels</div>
+  <div class="load-bar"><div class="load-bar-fill"></div></div>
+  <div class="load-msg">Carregando casos jurídicos…</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!--  MENU                                                        -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div id="screen-menu" class="screen">
+  <div class="menu-hero">
+    <span class="hero-icon">⚖️</span>
+    <h1 class="hero-title">Tribunal dos Pixels</h1>
+    <p class="hero-subtitle">
+      Jogo interativo de Direito Civil Brasileiro.<br>
+      Analise casos reais, tome decisões e aprenda os fundamentos jurídicos.
+    </p>
+  </div>
+  <div class="menu-body animate-in">
+    <p class="sec-label">📁 Casos disponíveis</p>
+    <div class="cases-grid" id="cases-grid"><!-- JS --></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!--  INTRO                                                       -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div id="screen-intro" class="screen">
+  <div class="top-bar">
+    <div class="brand">
+      <span class="brand-logo">⚖️</span>
+      <div>
+        <span class="brand-name">Tribunal dos Pixels</span>
+        <span class="brand-sub">Direito Civil Brasileiro</span>
+      </div>
+    </div>
+  </div>
+  <div class="intro-scroll">
+    <div class="intro-wrap animate-in" id="intro-content"><!-- JS --></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!--  PHASE                                                       -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div id="screen-phase" class="screen">
+  <div class="phase-top">
+    <div class="phase-case-lbl" id="phase-case-lbl"></div>
+    <div class="phase-dots" id="phase-dots"></div>
+    <div class="score-pill">⭐ <span id="score-display">0</span></div>
+  </div>
+  <div class="phase-scroll">
+    <div class="phase-wrap" id="phase-content"><!-- JS --></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!--  FINAL                                                       -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div id="screen-final" class="screen">
+  <div class="top-bar">
+    <div class="brand">
+      <span class="brand-logo">⚖️</span>
+      <div><span class="brand-name">Tribunal dos Pixels</span></div>
+    </div>
+  </div>
+  <div class="final-center">
+    <div class="final-wrap animate-in" id="final-content"><!-- JS --></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!--  JAVASCRIPT                                                  -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<script>
+// ─── STATE ────────────────────────────────────────────────────────────────────
+const state = {
+  cases: [],
+  caseIndex: 0,
+  phaseIndex: 0,
+  score: 0,
+  selected: null,
+  answered: false,
+};
+
+// ─── UTILS ────────────────────────────────────────────────────────────────────
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function currentCase()  { return state.cases[state.caseIndex]; }
+function currentPhase() { return currentCase().phases[state.phaseIndex]; }
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const manifest = await fetch('cases/manifest.json').then(r => r.json());
+
+    state.cases = await Promise.all(
+      manifest.cases.map(file => fetch(`cases/${file}`).then(r => r.json()))
+    );
+
+    renderMenu();
+    showScreen('screen-menu');
+  } catch (err) {
+    document.getElementById('screen-loading').innerHTML = `
+      <div class="err-wrap">
+        <div class="err-icon">❌</div>
+        <div class="err-h">Erro ao carregar os casos</div>
+        <div class="err-msg">
+          Verifique se os arquivos existem:<br><br>
+          <code>cases/manifest.json</code><br>
+          <code>cases/caso-01.json</code><br>
+          <code>cases/caso-02.json</code><br><br>
+          ${err.message}
+        </div>
+      </div>`;
+    console.error(err);
+  }
+}
+
+// ─── MENU ─────────────────────────────────────────────────────────────────────
+function renderMenu() {
+  document.getElementById('cases-grid').innerHTML = state.cases.map((c, i) => `
+    <div class="case-card animate-in" style="animation-delay:${i * 0.07}s"
+         onclick="openIntro(${i})">
+      <span class="card-icon">${c.icon}</span>
+      <div class="card-area">${c.area}</div>
+      <div class="card-title">${c.title}</div>
+      <div class="card-vs">👤 ${c.plaintiff} <span style="color:var(--text-dim)">vs</span> ${c.defendant}</div>
+      <div class="card-meta">📋 ${c.phases.length} fase${c.phases.length > 1 ? 's' : ''}</div>
+      <div class="card-cta">▶ Iniciar Caso</div>
+    </div>
+  `).join('');
+}
+
+// ─── INTRO ────────────────────────────────────────────────────────────────────
+function openIntro(index) {
+  state.caseIndex = index;
+  const c = currentCase();
+
+  document.getElementById('intro-content').innerHTML = `
+    <button class="back-btn" onclick="showScreen('screen-menu')">← Voltar aos casos</button>
+
+    <div class="intro-head">
+      <div class="intro-icon-b">${c.icon}</div>
+      <div>
+        <div class="intro-area">${c.area}</div>
+        <h2 class="intro-title">${c.title}</h2>
+      </div>
+    </div>
+
+    <div class="parties-row">
+      <div class="party">
+        <div class="party-lbl">⚔️ Parte Autora</div>
+        <div class="party-name">${c.plaintiff}</div>
+      </div>
+      <div class="vs-pill">VS</div>
+      <div class="party">
+        <div class="party-lbl">🛡️ Parte Ré</div>
+        <div class="party-name">${c.defendant}</div>
+      </div>
+    </div>
+
+    <div class="intro-text">${c.intro}</div>
+
+    <div class="phases-pre-title">📋 Fases do caso</div>
+    <div class="phases-chips">
+      ${c.phases.map(p => `
+        <div class="phase-chip">${p.stepIcon} ${p.stepLabel}</div>
+      `).join('')}
+    </div>
+
+    <button class="start-btn" onclick="startGame()">
+      ⚖️ Iniciar Julgamento
+    </button>
+  `;
+
+  showScreen('screen-intro');
+}
+
+// ─── GAME ─────────────────────────────────────────────────────────────────────
+function startGame() {
+  state.phaseIndex = 0;
+  state.score      = 0;
+  state.selected   = null;
+  state.answered   = false;
+  renderPhase();
+  showScreen('screen-phase');
+}
+
+function renderPhase() {
+  const c = currentCase();
+  const p = currentPhase();
+  state.selected = null;
+  state.answered = false;
+
+  // Header
+  document.getElementById('phase-case-lbl').textContent = `${c.icon} ${c.title}`;
+  document.getElementById('score-display').textContent  = state.score;
+
+  // Progress dots
+  document.getElementById('phase-dots').innerHTML = c.phases.map((_, i) => {
+    let cls = 'dot';
+    if (i < state.phaseIndex)      cls += ' done';
+    else if (i === state.phaseIndex) cls += ' current';
+    return `<div class="${cls}"></div>`;
+  }).join('');
+
+  // Speaker block
+  let speakerBlock = '';
+  if (p.speaker) {
+    speakerBlock = `
+      <div class="speaker-box">
+        <div class="speaker-head">
+          <div class="speaker-ava">${p.speaker.icon}</div>
+          <div>
+            <div class="speaker-nm" style="color:${p.speaker.color}">${p.speaker.name}</div>
+            <div class="speaker-role">Alegação da parte</div>
+          </div>
+        </div>
+        <div class="speech" style="border-color:${p.speaker.color}">
+          "${p.speaker.text}"
+        </div>
+      </div>`;
+  }
+
+  // Options
+  const letters = ['A','B','C','D'];
+  const optsHTML = p.opts.map((opt, i) => `
+    <button class="opt" id="opt-${i}" onclick="selectOpt(${i})">
+      <span class="opt-letter">${letters[i]}</span>
+      <span>${opt}</span>
+    </button>`).join('');
+
+  // Render
+  document.getElementById('phase-content').innerHTML = `
+    <div class="phase-badge">${p.stepIcon} Fase ${p.step} — ${p.stepLabel}</div>
+
+    <div class="narrative">📌 ${p.narrative}</div>
+
+    ${speakerBlock}
+
+    <div class="question">❓ ${p.question}</div>
+
+    <div class="opts-list">${optsHTML}</div>
+
+    <button class="confirm-btn" id="confirm-btn" onclick="confirmAnswer()" disabled>
+      Confirmar Resposta
+    </button>
+
+    <div id="feedback-area"></div>
+  `;
+}
+
+function selectOpt(index) {
+  if (state.answered) return;
+  state.selected = index;
+
+  document.querySelectorAll('.opt').forEach((el, i) => {
+    el.classList.toggle('sel', i === index);
+  });
+
+  document.getElementById('confirm-btn').disabled = false;
+}
+
+function confirmAnswer() {
+  if (state.selected === null || state.answered) return;
+  state.answered = true;
+
+  const p         = currentPhase();
+  const isCorrect = state.selected === p.correct;
+  if (isCorrect) state.score++;
+
+  document.getElementById('score-display').textContent = state.score;
+  document.getElementById('confirm-btn').style.display = 'none';
+
+  // Style options
+  document.querySelectorAll('.opt').forEach((el, i) => {
+    el.disabled = true;
+    el.classList.remove('sel');
+    if (i === p.correct)                     el.classList.add('hit');
+    else if (i === state.selected && !isCorrect) el.classList.add('miss');
+  });
+
+  // Build feedback
+  const isLast     = state.phaseIndex === currentCase().phases.length - 1;
+  const nextLabel  = isLast ? '🏁 Ver Resultado Final' : '▶ Próxima Fase';
+  const nextAction = isLast ? 'showFinal()' : 'nextPhase()';
+
+  const refsBlock = (p.refs?.length) ? `
+    <div class="refs-lbl">📚 Fundamentos jurídicos</div>
+    <div class="refs-row">
+      ${p.refs.map(r => `<span class="ref-pill">${r}</span>`).join('')}
+    </div>` : '';
+
+  const bridgeBlock = p.bridge
+    ? `<div class="bridge">📖 ${p.bridge}</div>` : '';
+
+  document.getElementById('feedback-area').innerHTML = `
+    <div class="feedback ${isCorrect ? 'ok' : 'bad'}">
+      <div class="fb-head">
+        <span class="fb-icon">${isCorrect ? '✅' : '❌'}</span>
+        <span class="fb-title ${isCorrect ? 'ok' : 'bad'}">
+          ${isCorrect ? 'Decisão Correta!' : 'Decisão Incorreta'}
+        </span>
+      </div>
+      <div class="fb-text">${p.explanation}</div>
+      ${refsBlock}
+      ${bridgeBlock}
+      <button class="next-btn" onclick="${nextAction}">
+        ${nextLabel} →
+      </button>
+    </div>
+  `;
+
+  setTimeout(() => {
+    document.getElementById('feedback-area')
+      .scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 120);
+}
+
+function nextPhase() {
+  state.phaseIndex++;
+  renderPhase();
+  document.querySelector('.phase-scroll').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── FINAL ────────────────────────────────────────────────────────────────────
+function showFinal() {
+  const total = currentCase().phases.length;
+  const pct   = Math.round((state.score / total) * 100);
+
+  let vClass, vText, icon;
+  if (pct === 100) {
+    [vClass, vText, icon] = ['ace',  '🏆 Aprovado com Louvor', '🏆'];
+  } else if (pct >= 50) {
+    [vClass, vText, icon] = ['good', '⚖️ Aprovado',            '⚖️'];
+  } else {
+    [vClass, vText, icon] = ['bad',  '📚 Precisa Estudar Mais','📚'];
+  }
+
+  const numColor = pct === 100 ? 'var(--correct)' : pct >= 50 ? 'var(--accent)' : 'var(--wrong)';
+
+  document.getElementById('final-content').innerHTML = `
+    <span class="final-icon">${icon}</span>
+    <h2 class="final-h">${currentCase().title}</h2>
+    <p class="final-sub">Caso encerrado</p>
+
+    <div class="score-card">
+      <div class="score-num" style="color:${numColor}">${state.score}/${total}</div>
+      <div class="score-sub">${pct}% de aproveitamento</div>
+      <div class="bar-outer">
+        <div class="bar-inner" id="bar-inner" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="verdict ${vClass}">${vText}</div>
+
+    <div class="final-btns">
+      <button class="btn-gold" onclick="restartCase()">🔄 Refazer este caso</button>
+      <button class="btn-ghost" onclick="goMenu()">🏠 Voltar ao menu</button>
+    </div>
+  `;
+
+  showScreen('screen-final');
+
+  // Animate bar after paint
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const bar = document.getElementById('bar-inner');
+      if (bar) bar.style.width = pct + '%';
+    });
+  });
+}
+
+function restartCase() {
+  const idx = state.caseIndex;
+  openIntro(idx);
+}
+
+function goMenu() {
+  renderMenu();
+  showScreen('screen-menu');
+}
+
+// ─── BOOT ─────────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
