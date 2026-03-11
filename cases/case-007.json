@@ -1,0 +1,90 @@
+{
+  "id": "case-007",
+  "icon": "🏠",
+  "title": "A União Estável não Registrada",
+  "area": "DIREITO DE FAMÍLIA · UNIÃO ESTÁVEL · PARTILHA",
+  "plaintiff": "Cláudia Ferreira",
+  "defendant": "Rodrigo Campos",
+  "intro": "Sua cliente Cláudia Ferreira viveu com Rodrigo Campos por 9 anos em regime de coabitação contínua, pública e duradoura, com intenção de constituir família.\n\nO casal nunca registrou a união em cartório nem assinou contrato escrito.\n\nApós a separação, Rodrigo nega a existência da união estável para evitar a partilha de um apartamento de R$ 320.000 adquirido durante a convivência — registrado apenas em seu nome.\n\nVocê é o advogado de Cláudia — prove a união e garanta seus direitos na partilha!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "AÇÃO DE RECONHECIMENTO",
+      "stepIcon": "📋",
+      "narrative": "Rodrigo alega que ele e Cláudia eram apenas namorados, sem vida em comum. Cláudia tem: fotos juntos em viagens ao longo de 9 anos, conta bancária conjunta, declaração de IR onde Rodrigo a declarou como dependente por 3 anos, e três testemunhas dispostas a depor.",
+      "speaker": null,
+      "question": "Qual é a melhor estratégia processual para provar a união estável sem escritura pública?",
+      "opts": [
+        "Propor ação de reconhecimento e dissolução de união estável com pedido cumulado de partilha, usando prova documental (IR, conta conjunta) e testemunhal para demonstrar os requisitos do art. 1.723 CC",
+        "Sem escritura pública é impossível reconhecer a união estável — Cláudia não tem direito à partilha",
+        "Propor ação de enriquecimento sem causa, que é mais simples e dispensa prova da união",
+        "Registrar a união estável em cartório agora com efeito retroativo para suprir a falta de documento"
+      ],
+      "correct": 0,
+      "explanation": "O art. 1.723 CC define a união estável como 'convivência pública, contínua e duradoura estabelecida com o objetivo de constituição de família' — NÃO exige escritura pública ou registro em cartório para sua existência.\n\nO registro é apenas instrumento de publicidade, não requisito de constituição.\n\nA união estável pode ser provada por qualquer meio admitido em direito (art. 369 CPC): documentos fiscais (IR como dependente), conta bancária conjunta, testemunhas, fotografias e correspondências.\n\nO pedido correto é CUMULAR o reconhecimento da união com a dissolução e partilha dos bens na mesma ação — mais eficiente e evita dupla discussão judicial.",
+      "refs": [
+        "Art. 1.723 CC",
+        "Art. 1.726 CC",
+        "Art. 369 CPC",
+        "Art. 226, §3º CF/88",
+        "REsp 1.329.003/SP"
+      ],
+      "bridge": "A ação foi ajuizada. Rodrigo foi citado e contestou, sendo forçado a admitir parte da convivência, mas apresentando novos argumentos sobre o regime de bens..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "Rodrigo admite a convivência diante das provas, mas alega: (a) não havia intenção de constituir família — era apenas relacionamento afetivo; (b) o apartamento foi comprado com R$ 80.000 que ele tinha antes do relacionamento, portanto Cláudia não tem direito à meação.",
+      "speaker": {
+        "name": "Dr. Castelo — Advogado de Rodrigo Campos",
+        "icon": "🕴",
+        "text": "Mesmo que houvesse convivência, era namoro qualificado — não união estável! E o apartamento foi comprado com dinheiro exclusivamente de Rodrigo. Cláudia não contribuiu financeiramente — não tem direito a nada!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você rebate os dois argumentos de Rodrigo?",
+      "opts": [
+        "9 anos de coabitação com IR como dependente e conta conjunta demonstram objetivamente a intenção de constituir família; na união estável aplica-se comunhão parcial, comunicando-se os bens adquiridos durante a convivência independentemente de quem pagou",
+        "Rodrigo tem razão — sem contribuição financeira comprovada de Cláudia, ela não tem direito à meação",
+        "Concorda que era namoro, mas pede indenização por serviços domésticos prestados durante 9 anos",
+        "A falta de contrato confirma que era apenas relacionamento afetivo sem efeitos patrimoniais"
+      ],
+      "correct": 0,
+      "explanation": "Dois pontos fundamentais:\n\n1. INTENÇÃO DE CONSTITUIR FAMÍLIA: O STJ firmou que essa intenção se extrai dos elementos objetivos da convivência — não é declaração expressa. 9 anos de coabitação, IR como dependente e conta conjunta são sinais inequívocos.\n\n2. MEAÇÃO: O art. 1.725 CC estabelece que na união estável sem contrato aplica-se o regime da COMUNHÃO PARCIAL. Comunicam-se os bens adquiridos durante a convivência (art. 1.660 CC) independentemente de quem arcou com o pagamento.\n\nO STJ é pacífico: a meação na união estável não exige contribuição financeira direta — a contribuição pode ser indireta (cuidados do lar, suporte).",
+      "refs": [
+        "Art. 1.723 CC",
+        "Art. 1.725 CC",
+        "Art. 1.658 CC",
+        "Art. 1.660 CC",
+        "REsp 1.337.992/SP",
+        "REsp 471.958/RS"
+      ],
+      "bridge": "O juiz reconheceu a união estável pelo período de 9 anos. Agora resta definir o que entra na partilha e o valor correto da meação de Cláudia..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "PARTILHA",
+      "stepIcon": "💰",
+      "narrative": "O juiz reconheceu a união estável. Bens existentes: (a) apartamento de R$ 320.000 — Rodrigo comprova que R$ 80.000 eram dele antes da união; (b) veículo de R$ 45.000 adquirido durante a união; (c) aplicação financeira de R$ 30.000 formada durante a união. Rodrigo quer deduzir os R$ 80.000 de sua meação.",
+      "speaker": null,
+      "question": "O que entra na partilha e qual é a meação correta de Cláudia?",
+      "opts": [
+        "Os R$ 80.000 anteriores à união são bem particular de Rodrigo (sub-rogação, art. 1.659, II CC) e podem ser deduzidos; o restante do apartamento, o veículo e a aplicação entram na partilha em 50% para cada um",
+        "O apartamento entra integralmente na partilha — não importa se parte do pagamento foi anterior à união",
+        "Apenas o veículo entra na partilha — imóveis e aplicações financeiras nunca se comunicam na união estável",
+        "Nada entra na partilha pois Cláudia não contribuiu financeiramente para nenhum dos bens"
+      ],
+      "correct": 0,
+      "explanation": "Na comunhão parcial, comunicam-se os bens adquiridos durante a convivência a título oneroso.\n\nPorém, o art. 1.659, II CC exclui da comunhão os bens adquiridos com valores exclusivamente pertencentes a um dos companheiros em sub-rogação dos bens particulares.\n\nAssim:\n- R$ 80.000 investidos antes da união → bem particular de Rodrigo, deduzível.\n- Valor do apartamento pago durante a união (R$ 240.000) → comunica-se, partilha 50/50.\n- Veículo (R$ 45.000) → entra integralmente, partilha 50/50.\n- Aplicação (R$ 30.000) → entra integralmente, partilha 50/50.\n\nMeação de Cláudia: R$ 120.000 (apartamento) + R$ 22.500 (veículo) + R$ 15.000 (aplicação) = R$ 157.500.",
+      "refs": [
+        "Art. 1.725 CC",
+        "Art. 1.658 CC",
+        "Art. 1.659, II CC",
+        "Art. 1.660 CC",
+        "Art. 1.661 CC",
+        "REsp 1.641.160/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
