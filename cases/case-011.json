@@ -1,0 +1,88 @@
+{
+  "id": "case-011",
+  "icon": "🔥",
+  "title": "O Eletrodoméstico em Chamas",
+  "area": "DIREITO DO CONSUMIDOR · FATO DO PRODUTO · CDC",
+  "plaintiff": "Eduardo Santos",
+  "defendant": "BrasilMax Eletrodomésticos S/A",
+  "intro": "Seu cliente Eduardo Santos comprou uma fritadeira elétrica da BrasilMax há 8 meses. Na semana passada, o produto pegou fogo espontaneamente enquanto estava desligado, causando incêndio que destruiu parcialmente a cozinha (R$ 35.000 de dano) e queimou o braço de Eduardo (queimadura de segundo grau).\n\nA empresa alega que Eduardo usou o produto de forma incorreta — o manual proíbe deixar o aparelho na tomada quando não está em uso.\n\nVocê é o advogado de Eduardo — comprove a responsabilidade do fabricante!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "FUNDAMENTAÇÃO",
+      "stepIcon": "📋",
+      "narrative": "Você precisa definir o fundamento legal correto. O produto causou dano além de si mesmo — destruiu a cozinha e causou lesão corporal. A empresa é fabricante e o produto tem menos de 1 ano de uso.",
+      "speaker": null,
+      "question": "Qual é a modalidade de responsabilidade e o fundamento legal correto?",
+      "opts": [
+        "Fato do produto — art. 12 CDC: responsabilidade objetiva do fabricante pelo defeito de segurança que causou dano além do próprio produto",
+        "Vício do produto — art. 18 CDC: responsabilidade por produto que não funciona adequadamente",
+        "Responsabilidade subjetiva — art. 186 CC: necessário provar culpa na linha de produção",
+        "Garantia contratual — art. 441 CC: empresa deve apenas reparar ou substituir o produto"
+      ],
+      "correct": 0,
+      "explanation": "O CDC distingue duas modalidades:\n\nVÍCIO (arts. 18-25 CDC): produto que não funciona como esperado — remédio é substituição, reparo ou restituição do preço.\n\nFATO DO PRODUTO (art. 12 CDC): produto defeituoso que causa acidente com dano além do próprio produto (dano à cozinha, lesão corporal).\n\nNo FATO DO PRODUTO:\n- Responsabilidade OBJETIVA do fabricante (independe de culpa)\n- Responde pelo defeito de segurança\n- Exclui-se apenas se provar: não colocou no mercado, não há defeito, ou culpa exclusiva do consumidor\n\nO incêndio espontâneo indica defeito de segurança — não mero vício de funcionamento.",
+      "refs": [
+        "Art. 12 CDC",
+        "Art. 14 CDC",
+        "Art. 12, §3º CDC",
+        "Art. 6º, VI CDC",
+        "REsp 1.613.561/SP"
+      ],
+      "bridge": "A ação foi ajuizada. A empresa contestou alegando uso indevido e culpa exclusiva do consumidor..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "EXCLUDENTE",
+      "stepIcon": "🛡",
+      "narrative": "A empresa apresentou o manual destacando em vermelho: 'PROIBIDO deixar o aparelho conectado à tomada quando não estiver em uso'. Juntou fotos do manual e alega que Eduardo descumpriu orientação básica de segurança, configurando culpa exclusiva do consumidor.",
+      "speaker": {
+        "name": "Dra. Fonseca — Advogada da BrasilMax",
+        "icon": "👩‍⚖️",
+        "text": "O manual é claro! Proibido deixar na tomada! Eduardo descumpriu instrução básica de segurança — culpa exclusiva do consumidor! O art. 12, §3º, III do CDC isenta o fabricante quando há culpa exclusiva do consumidor!",
+        "color": "var(--red)"
+      },
+      "question": "Como você rebate o argumento de culpa exclusiva do consumidor?",
+      "opts": [
+        "Deixar eletrodoméstico na tomada é uso comum e previsível — o produto deve ser seguro para esse uso; se há risco real, o fabricante deve criar mecanismo de segurança, não apenas alertar no manual",
+        "A empresa tem razão — o manual é lei entre as partes e Eduardo assumiu o risco ao desrespeitar",
+        "Concordar com culpa concorrente (50/50) para obter vitória parcial",
+        "O manual em letras miúdas é automaticamente inválido — só vale aviso em tamanho mínimo previsto em lei"
+      ],
+      "correct": 0,
+      "explanation": "O art. 12, §3º CDC lista as excludentes, incluindo culpa exclusiva do consumidor.\n\nPorém, para configurar CULPA EXCLUSIVA, o uso precisa ser ANORMAL e IMPREVISÍVEL.\n\nDeixar eletrodoméstico na tomada é uso HABITUAL e PREVISÍVEL de grande parte dos consumidores. O fabricante SABE disso.\n\nO STJ e a doutrina consumerista consolidaram: o fornecedor deve projetar produtos seguros para os usos PREVISÍVEIS — a segurança não pode ser delegada ao consumidor via aviso no manual.\n\nAlém disso, informação insuficiente sobre risco é defeito de informação (art. 12, §1º, III CDC).",
+      "refs": [
+        "Art. 12 CDC",
+        "Art. 12, §1º, III CDC",
+        "Art. 12, §3º, III CDC",
+        "Art. 8º CDC",
+        "REsp 1.289.238/SP"
+      ],
+      "bridge": "O juiz rejeitou a excludente. Chegou a hora de fixar a indenização integral de Eduardo..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "INDENIZAÇÃO",
+      "stepIcon": "💰",
+      "narrative": "A empresa foi condenada. Danos apurados: cozinha R$ 35.000, tratamento da queimadura R$ 8.200, 15 dias de afastamento (salário R$ 4.500/mês), dano estético (cicatriz no braço) e dano moral. Eduardo tem 28 anos.",
+      "speaker": null,
+      "question": "Qual é a composição correta da indenização e há algo especial sobre o dano estético?",
+      "opts": [
+        "Danos materiais + dano moral + dano estético são CUMULÁVEIS e devem ser fixados separadamente pelo juiz (Súmula 387 STJ)",
+        "Dano moral e dano estético não são cumuláveis — deve-se escolher o de maior valor",
+        "Dano estético é apenas subcategoria do dano moral e não pode ser pedido separadamente",
+        "A empresa só responde pelos danos até o valor do produto (fritadeira)"
+      ],
+      "correct": 0,
+      "explanation": "O STJ possui Súmula 387: 'É lícita a cumulação das indenizações de dano estético e dano moral.'\n\nSão danos autônomos:\n- DANO MORAL: sofrimento psíquico, abalo emocional\n- DANO ESTÉTICO: alteração física permanente que afeta a aparência — a cicatriz no braço\n\nComposição da indenização:\n- Danos emergentes: R$ 35.000 (cozinha) + R$ 8.200 (médico) = R$ 43.200\n- Lucros cessantes: 15 dias × R$ 150/dia = R$ 2.250\n- Dano moral: arbitramento judicial\n- Dano estético: arbitramento judicial (separado do moral)\n\nTotal mínimo material: R$ 45.450 + dano moral + dano estético.",
+      "refs": [
+        "Súmula 387 STJ",
+        "Art. 944 CC",
+        "Art. 6º, VI CDC",
+        "Art. 12 CDC",
+        "REsp 1.394.100/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
