@@ -1,0 +1,88 @@
+{
+  "id": "case-020",
+  "icon": "📜",
+  "title": "O Testamento que Deserdou os Filhos",
+  "area": "DIREITO DAS SUCESSÕES · TESTAMENTO · LEGÍTIMA",
+  "plaintiff": "Pedro e Ana Costa (herdeiros necessários)",
+  "defendant": "Instituto Esperança (legatário testamentário)",
+  "intro": "José Costa faleceu deixando testamento público no qual doou 100% do seu patrimônio — R$ 1.200.000 — ao Instituto Esperança, uma ONG.\n\nJosé tinha dois filhos, Pedro e Ana, e nenhum cônjuge.\n\nPedro e Ana foram completamente excluídos do testamento.\n\nO Instituto recusa-se a reconhecer qualquer direito dos filhos, alegando que José tinha plena capacidade e liberdade para testar.\n\nVocê é o advogado de Pedro e Ana — garanta a legítima deles!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "A LEGÍTIMA",
+      "stepIcon": "📋",
+      "narrative": "O Instituto alega que a liberdade de testar é absoluta e José tinha direito de dar seus bens a quem quisesse. Pedro e Ana precisam entender seus direitos antes de contestar o testamento.",
+      "speaker": null,
+      "question": "José podia dispor de 100% do patrimônio em testamento excluindo os filhos?",
+      "opts": [
+        "Não — os filhos são herdeiros necessários e têm direito à legítima de 50% do patrimônio (art. 1.846 CC); José só podia dispor livremente da quota disponível (outra metade)",
+        "Sim — a liberdade de testar é absoluta no Brasil e José podia excluir os filhos completamente",
+        "José podia excluir os filhos apenas se houvesse causa legal de deserdação previamente declarada no testamento",
+        "A liberdade de testar é de 75% — os filhos teriam direito apenas a 25% do patrimônio"
+      ],
+      "correct": 0,
+      "explanation": "O art. 1.845 CC estabelece os HERDEIROS NECESSÁRIOS: descendentes, ascendentes e cônjuge.\n\nO art. 1.846 CC reserva a esses herdeiros a LEGÍTIMA: metade dos bens da herança — intocável pelo testador.\n\nO testador SÓ PODE dispor livremente da QUOTA DISPONÍVEL — a outra metade.\n\nPortanto:\n- Patrimônio total: R$ 1.200.000\n- Legítima de Pedro + Ana: R$ 600.000 (50%) — INTOCÁVEL\n- Quota disponível: R$ 600.000 (50%) — José poderia destinar ao Instituto\n\nJosé podia deixar até R$ 600.000 ao Instituto — jamais R$ 1.200.000 integrais.",
+      "refs": [
+        "Art. 1.845 CC",
+        "Art. 1.846 CC",
+        "Art. 1.848 CC",
+        "Art. 1.857 CC",
+        "Art. 1.962 CC"
+      ],
+      "bridge": "O Instituto foi citado e contestou com argumento de que o testamento deve ser respeitado integralmente..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "REDUÇÃO DO TESTAMENTO",
+      "stepIcon": "🛡",
+      "narrative": "O Instituto alega que a autonomia da vontade deve prevalecer, que o testamento foi feito com assistência de tabelião, e que Pedro e Ana nunca visitaram o pai nos últimos anos — 'abandono afetivo' que justificaria a exclusão.",
+      "speaker": {
+        "name": "Dra. Oliveira — Advogada do Instituto Esperança",
+        "icon": "👩‍⚖️",
+        "text": "José era livre! O tabelião conferiu a capacidade! Pedro e Ana abandonaram o pai idoso! A vontade do testador deve ser soberana! E mesmo que haja legítima, o Instituto deve receber os R$ 1.200.000 e depois pagar os filhos!",
+        "color": "var(--red)"
+      },
+      "question": "Como você rebate e qual é o mecanismo correto para proteger a legítima?",
+      "opts": [
+        "O abandono afetivo não é causa legal de deserdação no CC (art. 1.962) — o testamento deve ser REDUZIDO para respeitar a legítima de 50%; o excesso inoficioso é nulo de pleno direito (art. 1.967 CC)",
+        "O abandono afetivo é causa suficiente para deserdação implícita — o testamento deve ser mantido integralmente",
+        "O testamento lavrado em cartório é absolutamente incontestável — nenhum juiz pode revê-lo",
+        "Pedro e Ana devem primeiro provar que visitavam o pai antes de alegar qualquer direito"
+      ],
+      "correct": 0,
+      "explanation": "As causas de DESERDAÇÃO são TAXATIVAS no art. 1.962 CC:\n- Ofensa física ao testador\n- Injúria grave\n- Relações ilícitas com cônjuge do testador\n- Desamparo com alienação mental\n\nSimples 'abandono afetivo' ou ausência NÃO figuram entre as causas legais. A deserdação precisa ser EXPRESSA no testamento com a causa legal correspondente — o que não ocorreu aqui.\n\nO mecanismo para proteger a legítima é a REDUÇÃO DAS DISPOSIÇÕES TESTAMENTÁRIAS (art. 1.967 CC): o que excede a quota disponível é reduzido proporcionalmente.\n\nNão se invalida o testamento todo — apenas o excesso inoficioso.",
+      "refs": [
+        "Art. 1.846 CC",
+        "Art. 1.962 CC",
+        "Art. 1.967 CC",
+        "Art. 1.968 CC",
+        "REsp 1.334.933/RS"
+      ],
+      "bridge": "O juiz determinou a redução do testamento. Chegou a hora de calcular o quanto cada parte recebe..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "PARTILHA",
+      "stepIcon": "💰",
+      "narrative": "O testamento foi reduzido para respeitar a legítima. José não tinha cônjuge. Patrimônio: R$ 1.200.000. Pedro e Ana são os únicos filhos. O Instituto recebe o que sobrar da quota disponível. Como fica a divisão?",
+      "speaker": null,
+      "question": "Qual é a divisão correta após a redução do testamento?",
+      "opts": [
+        "Legítima (50%) = R$ 600.000 divididos igualmente entre Pedro e Ana (R$ 300.000 cada); Quota disponível (50%) = R$ 600.000 ao Instituto Esperança conforme o testamento",
+        "O Instituto recebe tudo e depois paga R$ 600.000 aos filhos — o testamento permanece válido integralmente",
+        "Pedro e Ana recebem 2/3 do patrimônio e o Instituto recebe 1/3",
+        "Os filhos recebem tudo pois o testamento foi declarado inválido por violar a legítima"
+      ],
+      "correct": 0,
+      "explanation": "A REDUÇÃO PROPORCIONAL das disposições testamentárias (art. 1.967 CC):\n\nPatrimônio total: R$ 1.200.000\nLegítima (50%): R$ 600.000 — INTOCÁVEL, vai para os herdeiros necessários\nQuota disponível (50%): R$ 600.000 — vai para o Instituto conforme o testamento\n\nDivisão da legítima entre Pedro e Ana (herdeiros em igual grau, por cabeça):\n- Pedro: R$ 300.000\n- Ana: R$ 300.000\n\nO testamento NÃO é invalidado — apenas REDUZIDO no excesso inoficioso. José pôde dispor dos R$ 600.000 da quota disponível ao Instituto — essa parte do testamento é plenamente válida.\n\nA vontade do testador é respeitada dentro dos limites legais.",
+      "refs": [
+        "Art. 1.846 CC",
+        "Art. 1.967 CC",
+        "Art. 1.857 CC",
+        "Art. 1.829, I CC",
+        "Art. 1.835 CC"
+      ],
+      "bridge": null
+    }
+  ]
+}
