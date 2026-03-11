@@ -593,6 +593,7 @@ let sessionSkipped = new Set();
 let currentFile    = null;
 let currentCase    = null;
 let currentPhaseChar = 'judge';
+let currentShuffledOpts = [];
 
 let GS = { phaseIdx:0, score:0, hits:0, total:0, answers:[] };
 
@@ -807,7 +808,18 @@ function renderIntro() {
 /* ═══════════════════════════════════════════════════════
    RENDER: FASE
 ═══════════════════════════════════════════════════════ */
-function renderPhase() {
+
+  function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+  
+  
+  function renderPhase() {
   const c = currentCase;
   const p = c.phases[GS.phaseIdx];
   updateHUD();
@@ -849,6 +861,13 @@ function renderPhase() {
 
   const letters = ['A','B','C','D','E'];
 
+// Mapeia cada opção com flag de correta, depois embaralha
+const optsWithMeta = p.opts.map((text, i) => ({
+  text,
+  isCorrect: i === p.correct
+}));
+currentShuffledOpts = shuffleArray(optsWithMeta);
+
   document.getElementById('game-body').innerHTML = `
     <div class="pbox" style="padding:12px 10px">
       <div class="phase-trail">${trailHTML}</div>
@@ -885,12 +904,14 @@ function renderPhase() {
     </div>
 
     <div class="options" id="opts" style="margin-top:10px">
-      ${p.opts.map((o,i) => `
-        <div class="opt" id="opt-${i}" onclick="pick(${i})">
-          <span class="opt-cur">►</span>
-          <div class="opt-letter">${letters[i]}</div>
-          <div class="opt-text">${o}</div>
-        </div>`).join('')}
+    
+     ${currentShuffledOpts.map((o,i) => `
+  <div class="opt" id="opt-${i}" onclick="pick(${i})">
+    <span class="opt-cur">►</span>
+    <div class="opt-letter">${letters[i]}</div>
+    <div class="opt-text">${o.text}</div>
+  </div>`).join('')}
+        
     </div>
 
     <div id="result-zone"></div>
@@ -905,11 +926,12 @@ function renderPhase() {
    RESPONDER
 ═══════════════════════════════════════════════════════ */
 function pick(sel) {
-  const c           = currentCase;
-  const p           = c.phases[GS.phaseIdx];
-  const ok          = (sel === p.correct);
-  const isLastPhase = (GS.phaseIdx >= c.phases.length - 1);
-  const letters     = ['A','B','C','D','E'];
+  const c                  = currentCase;
+  const p                  = c.phases[GS.phaseIdx];
+  const ok                 = currentShuffledOpts[sel].isCorrect;       // ← MUDOU
+  const correctShuffledIdx = currentShuffledOpts.findIndex(o => o.isCorrect); // ← NOVO
+  const isLastPhase        = (GS.phaseIdx >= c.phases.length - 1);
+  const letters            = ['A','B','C','D','E'];
 
   if (ok) { GS.score += 10; GS.hits++; }
   GS.total++;
@@ -917,9 +939,9 @@ function pick(sel) {
   updateHUD();
 
   document.querySelectorAll('.opt').forEach((el,i) => {
-    el.classList.add('disabled');
-    if (i === p.correct)     el.classList.add('correct');
-    else if (i===sel && !ok) el.classList.add('wrong');
+  el.classList.add('disabled');
+  if (i === correctShuffledIdx) el.classList.add('correct');  // ← MUDOU
+  else if (i===sel && !ok)      el.classList.add('wrong');
   });
 
   if (currentPhaseChar === 'defendant') {
@@ -956,7 +978,8 @@ function pick(sel) {
       </div>
       <div style="font-family:var(--body);font-size:20px;color:var(--dim);margin-top:4px">
         ${ok ? 'EXCELENTE ANÁLISE JURÍDICA!'
-             : `Resposta correta: <span style="color:var(--yellow);font-family:var(--ui);font-size:12px">[${letters[p.correct]}]</span>`}
+             : `Resposta correta: <span style="color:var(--yellow);font-family:var(--ui);font-size:12px">[${letters[correctShuffledIdx]}]</span>`}
+             
       </div>
       ${ok ? `<div class="result-pts">+ 10 PONTOS !!!</div>` : ''}
     </div>
