@@ -1,10 +1,12 @@
 {
-  "cleanUrls": true,
   "headers": [
     {
-      "source": "/cases/(.*)",
+      "source": "/cases/(.*).json",
       "headers": [
-        { "key": "Cache-Control", "value": "no-cache" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     }
   ]
