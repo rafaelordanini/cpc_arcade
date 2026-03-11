@@ -1,0 +1,86 @@
+{
+  "id": "case-003",
+  "icon": "💍",
+  "title": "O Divórcio e a Partilha de Dívidas",
+  "area": "DIREITO DE FAMÍLIA · DIVÓRCIO · PARTILHA",
+  "plaintiff": "Ana Paula Souza",
+  "defendant": "Roberto Souza",
+  "intro": "Sua cliente Ana Paula Souza é casada com Roberto Souza há 12 anos, sob regime de comunhão parcial de bens.\n\nDurante o casamento, Roberto contraiu um empréstimo de R$ 80.000 sem o consentimento de Ana Paula, alegando investimento no negócio da família. O negócio faliu e a dívida permanece em aberto.\n\nAna Paula quer o divórcio e recusa-se a pagar metade da dívida contraída sem sua anuência.\n\nVocê é o advogado de Ana Paula — escolha o caminho processual correto e defenda sua cliente na partilha!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "PETIÇÃO INICIAL",
+      "stepIcon": "📋",
+      "narrative": "Ana Paula quer ajuizar o divórcio litigioso imediatamente. Ela mora em São Paulo/SP. Roberto foi morar em Curitiba/PR após a separação de fato. O casal tem um filho maior de idade. Você precisa definir em qual juízo deve ser proposta a ação.",
+      "speaker": null,
+      "question": "Qual é o juízo competente para a ação de divórcio litigioso?",
+      "opts": [
+        "Foro do último domicílio do casal ou, se o réu não residir mais lá, o foro do domicílio do autor — Ana Paula pode ajuizar em SP",
+        "Exclusivamente o foro do domicílio do réu (Roberto) — Curitiba/PR",
+        "O foro onde foi celebrado o casamento, independentemente do domicílio atual das partes",
+        "O foro do domicílio de qualquer uma das partes, à livre escolha do autor"
+      ],
+      "correct": 0,
+      "explanation": "O art. 53, I do CPC estabelece competência especial para as ações de divórcio, separação e anulação de casamento:\n\na) Foro do domicílio do guardião dos filhos incapazes;\nb) Não havendo filhos incapazes, o último domicílio do casal;\nc) Se o réu não residir no último domicílio conjugal, o foro do domicílio do autor.\n\nComo o filho é maior de idade, aplica-se o critério do último domicílio conjugal (São Paulo). Se Roberto já saiu desse domicílio, Ana Paula pode ajuizar em SP onde reside.\n\nEsta é competência relativa — pode ser modificada por exceção declinatória, mas o foro de Ana Paula é correto.",
+      "refs": [
+        "Art. 53, I CPC",
+        "Art. 1.571 CC",
+        "Art. 1.580 CC"
+      ],
+      "bridge": "A ação foi ajuizada corretamente em São Paulo. Roberto foi citado e seu advogado apresentou contestação com um argumento surpresa sobre a dívida..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "Roberto, por seu advogado, argumenta que o empréstimo de R$ 80.000 foi contraído para pagar despesas do lar durante um período em que Ana Paula estava desempregada. Portanto, seria dívida em benefício da família e deveria ser partilhada igualmente.",
+      "speaker": {
+        "name": "Dr. Saraiva — Advogado de Roberto Souza",
+        "icon": "🕴",
+        "text": "O empréstimo foi necessário para manter o padrão de vida da família! Na comunhão parcial, dívidas contraídas durante o casamento em benefício da família são de responsabilidade de ambos — minha cliente deve arcar com metade!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você rebate o argumento de Roberto?",
+      "opts": [
+        "Dívidas contraídas por um cônjuge sem autorização do outro só obrigam o patrimônio comum se comprovado o benefício à família — o ônus da prova é de Roberto",
+        "Roberto tem razão — toda dívida contraída durante o casamento em comunhão parcial é automaticamente de ambos",
+        "Ana Paula deve pagar metade pois o casamento existia e qualquer dívida é compartilhada",
+        "O contrato de empréstimo com o banco prevalece sobre as normas do direito de família"
+      ],
+      "correct": 0,
+      "explanation": "Os arts. 1.643 e 1.644 do CC tratam das dívidas contraídas por um cônjuge sem autorização do outro.\n\nO art. 1.644 CC é claro: as dívidas contraídas para os fins do art. 1.643 (necessidades ordinárias da família e administração do bem comum) obrigam solidariamente ambos os cônjuges.\n\nPorém, o ônus de provar que a dívida foi contraída em benefício da família é de quem a alega — Roberto. Simples afirmação não basta.\n\nSe Roberto não provar o benefício concreto, a dívida é exclusivamente dele, nos termos do art. 1.659, IV CC: são excluídas da comunhão as obrigações provenientes de atos não autorizados pelo outro cônjuge.",
+      "refs": [
+        "Art. 1.643 CC",
+        "Art. 1.644 CC",
+        "Art. 1.659, IV CC",
+        "Art. 373, I CPC",
+        "Art. 1.663 CC"
+      ],
+      "bridge": "O juiz determinou que Roberto prove o benefício da dívida. Ele não conseguiu. Na audiência de instrução, chegou o momento da partilha dos bens comuns..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "PARTILHA",
+      "stepIcon": "💰",
+      "narrative": "Roberto não conseguiu provar que o empréstimo beneficiou a família. O juiz declarou a dívida exclusiva de Roberto. Agora resta partilhar os bens comuns: um apartamento avaliado em R$ 400.000 e uma aplicação financeira de R$ 60.000, todos adquiridos durante o casamento. Roberto quer o apartamento e propõe pagar R$ 170.000 a Ana Paula.",
+      "speaker": null,
+      "question": "A proposta de Roberto está matematicamente correta na comunhão parcial?",
+      "opts": [
+        "Não — na comunhão parcial cada um tem 50% dos bens comuns; R$ 460.000 ÷ 2 = R$ 230.000; Roberto deve pagar R$ 230.000 a Ana Paula, não R$ 170.000",
+        "Sim — a proposta está correta pois Roberto pode descontar o período em que Ana Paula estava desempregada",
+        "Ana Paula tem direito a 2/3 do patrimônio por ter sido prejudicada pela dívida não autorizada",
+        "O apartamento não pode ser atribuído a Roberto — deve necessariamente ser vendido a terceiros"
+      ],
+      "correct": 0,
+      "explanation": "Na comunhão parcial de bens (art. 1.658 CC), comunicam-se os bens adquiridos na constância do casamento a título oneroso. Ambos têm direito a 50% do patrimônio comum.\n\nPatrimônio comum total: R$ 400.000 (apartamento) + R$ 60.000 (aplicação) = R$ 460.000.\n\nMetade de Ana Paula: R$ 230.000.\n\nSe Roberto ficar com todos os bens (R$ 460.000), deve pagar a Ana Paula R$ 230.000 — não R$ 170.000 como propôs.\n\nA proposta de Roberto está errada em R$ 60.000. Ana Paula deve rejeitar e exigir o valor correto ou a venda do apartamento com divisão do produto (art. 731 CPC).",
+      "refs": [
+        "Art. 1.658 CC",
+        "Art. 1.660 CC",
+        "Art. 1.663 CC",
+        "Art. 1.670 CC",
+        "Art. 731 CPC"
+      ],
+      "bridge": null
+    }
+  ]
+}
