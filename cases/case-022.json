@@ -1,0 +1,88 @@
+{
+  "id": "case-022",
+  "icon": "🛡",
+  "title": "A Seguradora que Recusou Pagar",
+  "area": "DIREITO CONTRATUAL · SEGURO · RECUSA DE COBERTURA",
+  "plaintiff": "Roberto Mendes",
+  "defendant": "Seguradora Garantia Total S/A",
+  "intro": "Seu cliente Roberto Mendes contratou seguro de vida de R$ 500.000 há 3 anos e sempre pagou os prêmios em dia.\n\nAo sofrer um infarto que o deixou com invalidez permanente parcial de 60%, Roberto acionou o seguro.\n\nA seguradora recusou o pagamento alegando que Roberto omitiu, na proposta, que tinha histórico de hipertensão arterial diagnosticada 5 anos antes da contratação — configurando má-fé precontratual.\n\nVocê é o advogado de Roberto — garanta a indenização securitária!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "FUNDAMENTO DA RECUSA",
+      "stepIcon": "📋",
+      "narrative": "A seguradora alega que Roberto respondeu 'não' quando perguntado sobre doenças pré-existentes, quando tinha hipertensão diagnosticada. Isso, segundo ela, invalida o contrato por má-fé do segurado (art. 766 CC).",
+      "speaker": null,
+      "question": "A seguradora pode recusar o pagamento com base na omissão da hipertensão?",
+      "opts": [
+        "Depende — se a seguradora não realizou exame médico prévio, o STJ entende que ela assume o risco de aceitar declarações sem verificação; a Súmula 609 STJ protege Roberto nessa situação",
+        "Sim — qualquer omissão de doença pré-existente invalida o seguro automaticamente e sem exceção",
+        "A hipertensão nunca é relevante para seguro de vida — a seguradora não pode usar isso como excludente",
+        "Roberto deve devolver todos os prêmios pagos para manter o direito à indenização"
+      ],
+      "correct": 0,
+      "explanation": "O art. 766 CC prevê a perda do direito à indenização em caso de omissão DOLOSA de circunstâncias que agravem o risco.\n\nPorém, o STJ possui Súmula 609 fundamental:\n\n'A recusa de cobertura securitária, sob a alegação de doença preexistente, é ilícita se a seguradora não submeteu o segurado a prévio exame médico e não comprovou a má-fé do contratante.'\n\nPortanto, sem exame médico prévio, a seguradora NÃO pode usar doença preexistente como excludente — ela assumiu o risco ao aceitar o contrato sem verificação adequada.",
+      "refs": [
+        "Art. 766 CC",
+        "Súmula 609 STJ",
+        "Art. 765 CC",
+        "Art. 14 CDC",
+        "REsp 1.060.347/SP"
+      ],
+      "bridge": "A recusa foi contestada. A seguradora insistiu na má-fé de Roberto apresentando o prontuário médico..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "PROVA DA MÁ-FÉ",
+      "stepIcon": "🛡",
+      "narrative": "A seguradora apresenta prontuário médico de Roberto mostrando consultas de hipertensão há 5 anos. Alega que Roberto sabia da doença e deliberadamente ocultou para pagar prêmio menor. Sustenta que a má-fé é evidente.",
+      "speaker": {
+        "name": "Dra. Ferraz — Advogada da Seguradora",
+        "icon": "👩‍⚖️",
+        "text": "O prontuário prova que Roberto sabia da hipertensão! Ele marcou 'não' propositalmente! Isso é má-fé contratual evidente! O art. 766 CC é claro — perda do direito à indenização! O contrato deve ser anulado!",
+        "color": "var(--red)"
+      },
+      "question": "Como você rebate o argumento de má-fé da seguradora?",
+      "opts": [
+        "O ônus de provar a MÁ-FÉ (dolo específico de induzir a seguradora ao erro) é da seguradora — prontuário prova a doença, não o dolo; hipertensão é condição muito comum e Roberto pode não a ter considerado como 'doença' no sentido da pergunta",
+        "Reconhecer a má-fé e tentar negociar devolução dos prêmios pagos como solução",
+        "A má-fé é comprovada pelo prontuário — Roberto não tem como ganhar esse ponto",
+        "Alegar que a pergunta do formulário era ambígua e pedir anulação do contrato por vício de consentimento"
+      ],
+      "correct": 0,
+      "explanation": "O art. 766 CC exige que a omissão seja DOLOSA — intencional, com o fim específico de enganar a seguradora.\n\nA simples existência de doença pré-existente + marcação 'não' no formulário não prova automaticamente a má-fé:\n- Roberto pode ter entendido 'doenças' como condições graves (câncer, cardiopatia severa)\n- Hipertensão controlada por medicação é condição tão comum que muitos não a consideram 'doença' no sentido da pergunta\n- A seguradora poderia — e deveria — ter feito exame médico para verificar\n\nO ÔNUS DA PROVA da má-fé específica é da seguradora (art. 373 CPC).\n\nAlém disso, a Súmula 609 STJ protege Roberto pela ausência de exame médico prévio.",
+      "refs": [
+        "Art. 766 CC",
+        "Art. 765 CC",
+        "Súmula 609 STJ",
+        "Art. 373 CPC",
+        "REsp 1.424.831/SC"
+      ],
+      "bridge": "O juiz reconheceu que a seguradora não comprovou a má-fé. Resta calcular o valor da indenização devida..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "VALOR DA INDENIZAÇÃO",
+      "stepIcon": "💰",
+      "narrative": "Roberto tem invalidez permanente parcial de 60%. A apólice prevê: morte = R$ 500.000; invalidez total = R$ 500.000; invalidez parcial = percentual proporcional conforme tabela da apólice. A seguradora quer pagar R$ 300.000 (60%). Roberto quer R$ 500.000 integrais.",
+      "speaker": null,
+      "question": "Qual é o valor correto da indenização por invalidez parcial de 60%?",
+      "opts": [
+        "A apólice com tabela proporcional de invalidez parcial é válida — R$ 300.000 (60% de R$ 500.000) é o valor correto; contratos de adesão ambíguos devem ser interpretados em favor do segurado (art. 423 CC), mas cláusula clara deve ser respeitada",
+        "Roberto tem direito ao valor integral de R$ 500.000 — qualquer invalidez aciona o valor total do seguro",
+        "Roberto não tem direito a nada pois invalidez parcial não está coberta no seguro de vida",
+        "O valor deve ser decidido por arbitragem obrigatória da SUSEP antes de qualquer ação judicial"
+      ],
+      "correct": 0,
+      "explanation": "O contrato de seguro deve ser interpretado de acordo com suas cláusulas específicas.\n\nSe a apólice prevê tabela de invalidez parcial proporcional — modelo comum nos seguros de vida — o cálculo proporcional é contratualmente válido: R$ 300.000 para 60% de invalidez.\n\nO art. 423 CC determina que contratos de adesão devem ser interpretados em favor do aderente em caso de AMBIGUIDADE — mas cláusula clara e compreensível deve ser respeitada.\n\nAlém do valor principal, Roberto tem direito a:\n- Juros de mora desde a data da recusa indevida (Súmula 54 STJ)\n- Correção monetária\n- Dano moral pela recusa abusiva que foi reconhecida judicialmente como ilícita",
+      "refs": [
+        "Art. 757 CC",
+        "Art. 760 CC",
+        "Art. 423 CC",
+        "Súmula 609 STJ",
+        "Súmula 54 STJ"
+      ],
+      "bridge": null
+    }
+  ]
+}
