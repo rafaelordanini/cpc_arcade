@@ -1,0 +1,88 @@
+{
+  "id": "case-015",
+  "icon": "💳",
+  "title": "O Contrato Armadilha",
+  "area": "DIREITO DO CONSUMIDOR · CLÁUSULA ABUSIVA · REVISÃO CONTRATUAL",
+  "plaintiff": "Fernando Costa",
+  "defendant": "Financeira CréditoFácil S/A",
+  "intro": "Seu cliente Fernando Costa contratou empréstimo pessoal de R$ 10.000 com a Financeira CréditoFácil S/A. O contrato prevê:\n\n• Taxa de juros: 12% ao mês\n• Seguro prestamista obrigatório: R$ 150/mês\n• Tarifa de cadastro: R$ 800\n• Capitalização de juros diária\n• Foro exclusivo: cidade do credor (500 km de distância)\n\nApós 6 meses, Fernando já pagou R$ 12.400 e ainda deve R$ 14.800.\n\nVocê é o advogado de Fernando — identifique os abusos e revise o contrato!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "IDENTIFICAÇÃO DOS ABUSOS",
+      "stepIcon": "🔍",
+      "narrative": "Você precisa identificar quais cláusulas são nulas de pleno direito antes de propor a ação revisional. O contrato é de adesão — Fernando não teve qualquer poder de negociação.",
+      "speaker": null,
+      "question": "Quais das cláusulas listadas são nulas de pleno direito segundo o CDC e o STJ?",
+      "opts": [
+        "Foro exclusivo distante (art. 51, IV CDC), seguro obrigatório vinculado sem escolha do consumidor — venda casada (art. 39, I CDC) — e tarifa de cadastro sem serviço real (Súmula 566 STJ)",
+        "Apenas a taxa de juros de 12% ao mês é ilegal — as demais cláusulas são válidas por livre contratação",
+        "Todas as cláusulas são válidas — o contrato foi livremente assinado por pessoa capaz",
+        "Apenas a cláusula de foro é nula — juros e seguros são questões econômicas, não jurídicas"
+      ],
+      "correct": 0,
+      "explanation": "Cláusulas nulas identificadas:\n\n1. FORO EXCLUSIVO DISTANTE: Art. 51, IV CDC — cláusula que coloca o consumidor em desvantagem exagerada; foro a 500km dificulta o acesso à justiça.\n\n2. VENDA CASADA — SEGURO OBRIGATÓRIO: Art. 39, I CDC — é vedado condicionar o fornecimento de serviço ao fornecimento de outro; o seguro deve ser opcional.\n\n3. TARIFA DE CADASTRO: Súmula 566 STJ — a cobrança de tarifa de cadastro em contratos de empréstimo pessoal é abusiva.\n\nQuantos aos juros: instituições financeiras têm regramento próprio do BACEN. A abusividade pode ser arguida quando muito superiores à média de mercado.",
+      "refs": [
+        "Art. 51, IV CDC",
+        "Art. 39, I CDC",
+        "Súmula 566 STJ",
+        "Súmula 297 STJ",
+        "Resolução BACEN 4.676/2018"
+      ],
+      "bridge": "A ação revisional foi ajuizada. A financeira contestou alegando que os juros são livremente pactuados..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "REVISÃO DOS JUROS",
+      "stepIcon": "⚖",
+      "narrative": "A financeira argumenta que Fernando assinou voluntariamente e que os juros de 12% ao mês são prática de mercado. Apresenta tabela mostrando que outras financeiras cobram entre 8% e 15% ao mês para o mesmo perfil de risco.",
+      "speaker": {
+        "name": "Dra. Viana — Advogada da CréditoFácil",
+        "icon": "👩‍⚖️",
+        "text": "Fernando assinou o contrato! Os juros são compatíveis com o mercado! O judiciário não pode rever contratos livremente assinados por adultos capazes — isso viola a segurança jurídica e a autonomia da vontade!",
+        "color": "var(--red)"
+      },
+      "question": "Como você fundamenta a revisão judicial dos juros abusivos?",
+      "opts": [
+        "O STJ permite a revisão de juros abusivos quando muito superiores à taxa média do BACEN para a modalidade — a compatibilidade com um mercado que todo pratica abuso não é defesa suficiente",
+        "A financeira tem razão — se os juros são de mercado não há abusividade e o contrato deve ser mantido integralmente",
+        "Juros bancários são regulados exclusivamente pelo BACEN — o judiciário não tem competência para revê-los",
+        "Fernando deve pagar tudo e depois processar o advogado que não o orientou antes da assinatura"
+      ],
+      "correct": 0,
+      "explanation": "O STJ possui jurisprudência consolidada (REsp 1.061.530/RS — repetitivo) sobre revisão de juros bancários:\n\nSúmula 382 STJ: A estipulação de juros superiores a 12% ao ano, por si só, não indica abusividade.\n\nMas a abusividade PODE ser reconhecida quando os juros forem SIGNIFICATIVAMENTE superiores à taxa média do BACEN para a mesma modalidade de crédito.\n\nParâmetro aplicado: se os juros são superiores a 1,5× a taxa média do BACEN, há presunção de abusividade.\n\nAlém disso, a capitalização DIÁRIA pode ser vedada sem previsão expressa clara e autorização do BACEN.",
+      "refs": [
+        "Súmula 382 STJ",
+        "Súmula 294 STJ",
+        "Art. 51, IV CDC",
+        "Art. 6º, V CDC",
+        "REsp 1.061.530/RS"
+      ],
+      "bridge": "O juiz reconheceu a abusividade dos juros e das cláusulas nulas. Chegou a hora de recalcular a dívida real de Fernando..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "RECÁLCULO DA DÍVIDA",
+      "stepIcon": "💰",
+      "narrative": "O juiz reconheceu: juros reduzidos para 5% ao mês (taxa média BACEN), eliminação do seguro obrigatório (R$ 150/mês × 6 meses = R$ 900 pagos indevidamente) e devolução da tarifa de cadastro (R$ 800). Fernando quer saber o que receberá de volta.",
+      "speaker": null,
+      "question": "O que Fernando tem direito a receber além da revisão do saldo devedor?",
+      "opts": [
+        "Devolução em dobro das cobranças indevidas já pagas — seguro + tarifa (R$ 1.700 × 2 = R$ 3.400) — recálculo do saldo com juros corretos, e eventual dano moral pela cobrança abusiva comprovada",
+        "Apenas revisão do saldo devedor — os valores já pagos não são devolvidos pois a contratação foi voluntária",
+        "Fernando não tem direito a devolução pois recebeu os R$ 10.000 e deve todos eles integralmente",
+        "A devolução é simples (R$ 1.700) — a dobra do art. 42 CDC só se aplica a cobranças de produtos"
+      ],
+      "correct": 0,
+      "explanation": "O art. 42, parágrafo único do CDC determina repetição em dobro de cobranças indevidas.\n\nO STJ firmou que seguro prestamista obrigatório e tarifas abusivas são cobranças indevidas nos termos do art. 42.\n\nAlém disso:\n- Saldo devedor: recalculado com juros de 5% ao mês — redução significativa\n- Cobranças indevidas pagas × 2: R$ 900 (seguro) + R$ 800 (tarifa) = R$ 1.700 × 2 = R$ 3.400\n- Dano moral: possível em caso de superendividamento comprovado ou cobrança vexatória\n\nO objetivo é restabelecer o equilíbrio contratual (art. 6º, V CDC).",
+      "refs": [
+        "Art. 42, parágrafo único CDC",
+        "Art. 6º, V CDC",
+        "Súmula 566 STJ",
+        "Art. 51 CDC",
+        "REsp 1.529.940/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
