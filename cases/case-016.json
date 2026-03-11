@@ -1,0 +1,88 @@
+{
+  "id": "case-016",
+  "icon": "🏥",
+  "title": "O Erro no Bisturi",
+  "area": "RESPONSABILIDADE CIVIL · ERRO MÉDICO · OBRIGAÇÃO DE MEIO",
+  "plaintiff": "Teresa Nunes",
+  "defendant": "Dr. Gustavo Almeida e Hospital São Lucas",
+  "intro": "Sua cliente Teresa Nunes, 45 anos, submeteu-se a cirurgia de vesícula no Hospital São Lucas, realizada pelo Dr. Gustavo Almeida.\n\nDurante a cirurgia, o médico perfurou acidentalmente o intestino. A complicação só foi descoberta 48 horas depois, causando peritonite grave. Teresa ficou 21 dias na UTI, desenvolveu insuficiência renal parcial permanente e gastou R$ 45.000 além do coberto pelo plano.\n\nVocê é o advogado de Teresa — prove o erro médico e identifique todos os responsáveis!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "NATUREZA DA OBRIGAÇÃO",
+      "stepIcon": "📋",
+      "narrative": "Antes de propor a ação, você precisa definir a natureza da obrigação do médico e o tipo de responsabilidade aplicável. A cirurgia de vesícula é considerada de rotina com baixíssimo índice de complicações. A perfuração não foi comunicada à família imediatamente.",
+      "speaker": null,
+      "question": "A obrigação do médico cirurgião é de meio ou de resultado? O que isso implica para a prova?",
+      "opts": [
+        "Obrigação de MEIO — o médico obriga-se a empregar todos os recursos e técnicas disponíveis, não a curar; para responsabilizá-lo Teresa deve provar CULPA (imprudência, negligência ou imperícia)",
+        "Obrigação de RESULTADO — o médico garantiu a cura, portanto responde objetivamente pela complicação",
+        "O médico responde objetivamente como qualquer fornecedor de serviços (art. 14 CDC) — independe de culpa",
+        "A obrigação é de resultado apenas em cirurgias eletivas; em urgência é sempre de meio"
+      ],
+      "correct": 0,
+      "explanation": "A regra geral é que a obrigação médica é de MEIO (art. 951 CC + art. 14, §4º CDC). O médico deve empregar todos os recursos — não garante a cura.\n\nExceções (obrigação de RESULTADO):\n- Cirurgia plástica ESTÉTICA (REsp 236.708/SP)\n- Radiologia e análises laboratoriais\n- Exames diagnósticos\n\nPara responsabilizar o Dr. Gustavo, Teresa precisa provar:\n1. Conduta culposa (imperícia na técnica cirúrgica OU negligência ao não detectar a perfuração em 48h)\n2. Dano (peritonite, insuficiência renal, gastos)\n3. Nexo causal entre a conduta e o dano\n\nO ônus pode ser invertido (art. 6º, VIII CDC) se Teresa for hipossuficiente tecnicamente.",
+      "refs": [
+        "Art. 951 CC",
+        "Art. 14, §4º CDC",
+        "Art. 6º, VIII CDC",
+        "REsp 236.708/SP",
+        "CFM — Código de Ética Médica"
+      ],
+      "bridge": "Você ajuizou a ação contra o médico e o hospital. A defesa apresentou argumento sobre a autonomia do médico..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "RESPONSABILIDADE DO HOSPITAL",
+      "stepIcon": "🛡",
+      "narrative": "O hospital argumenta ser responsável apenas pelos serviços hospitalares (leito, equipamentos, enfermagem), não pelos atos do médico — que seria autônomo com contrato prestacional. O Dr. Gustavo alega que a perfuração foi 'complicação previsível' listada no termo de consentimento.",
+      "speaker": {
+        "name": "Dr. Salgado — Advogado do Hospital São Lucas",
+        "icon": "🕴",
+        "text": "O hospital não responde pelos atos do médico autônomo! Além disso, Teresa assinou o termo de consentimento informado listando a perfuração como risco — o consentimento exclui a responsabilidade!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você rebate os dois argumentos do hospital?",
+      "opts": [
+        "O hospital responde objetivamente pelos serviços que presta (art. 14 CDC) inclusive pelos médicos que disponibiliza; o consentimento informa sobre riscos mas não exonera o médico de agir com culpa",
+        "O hospital tem razão — médico autônomo exclui a responsabilidade hospitalar; e o consentimento assinado isenta de qualquer responsabilidade",
+        "Teresa deve processar apenas o médico — o hospital é parte ilegítima",
+        "O consentimento informado equivale a assunção de risco que exclui toda responsabilidade médica"
+      ],
+      "correct": 0,
+      "explanation": "RESPONSABILIDADE DO HOSPITAL:\nO STJ consolidou (REsp 908.359/SC) que o hospital responde OBJETIVAMENTE pelos serviços que coloca à disposição — incluindo médicos, sejam empregados ou credenciados. A distinção contratual interna não alcança o consumidor.\n\nCONSENTIMENTO INFORMADO:\nO termo informa sobre RISCOS INERENTES ao procedimento — não autoriza CULPA do médico.\n- Risco informado + complicação sem culpa = sem responsabilidade ✓\n- Risco informado + complicação POR CULPA = responsabilidade mantida ✓\n\nAlém disso, a demora de 48h para diagnosticar a perfuração pode configurar negligência autônoma, independente da perfuração em si.",
+      "refs": [
+        "Art. 14 CDC",
+        "REsp 908.359/SC",
+        "Art. 945 CC",
+        "CFM — Resolução 1.995/2012",
+        "REsp 1.540.580/DF"
+      ],
+      "bridge": "O hospital foi condenado solidariamente com o médico. Chegou a hora de calcular os danos de Teresa..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "DANOS",
+      "stepIcon": "💰",
+      "narrative": "Teresa, 45 anos, era professora universitária com renda de R$ 8.000/mês. Ficou 6 meses afastada. Desenvolveu insuficiência renal que exige diálise 3x/semana a R$ 1.800/mês de custo permanente. Gastos extras: R$ 45.000. Dano moral e estético também foram pleiteados.",
+      "speaker": null,
+      "question": "Como calcular o dano patrimonial futuro (custo de diálise permanente)?",
+      "opts": [
+        "Pensão mensal de R$ 1.800 pelo restante da expectativa de vida (art. 950 CC), capitalizável em parcela única; cumulável com danos emergentes, lucros cessantes e dano moral",
+        "O custo de diálise futuro é especulativo — só pode ser cobrado quando cada despesa ocorrer, mês a mês",
+        "Danos futuros não são indenizáveis — cobra-se apenas o que foi gasto até a sentença",
+        "O plano de saúde cobre os tratamentos futuros, portanto Teresa não pode cobrar do hospital"
+      ],
+      "correct": 0,
+      "explanation": "O dano futuro CERTO e DETERMINADO é indenizável no direito civil brasileiro.\n\nO art. 950 CC prevê pensão para incapacidade laboral, e o mesmo raciocínio se aplica a despesas médicas futuras certas e permanentes.\n\nO STJ permite capitalização das pensões em parcela única (art. 950, parágrafo único CC) ou pagamento mensal — escolha do credor.\n\nComposição total:\n- Danos emergentes: R$ 45.000\n- Lucros cessantes: 6 meses × R$ 8.000 = R$ 48.000\n- Pensão futura: R$ 1.800/mês × expectativa de vida restante\n- Dano moral: arbitramento judicial\n- Dano estético: se houver cicatrizes permanentes (Súmula 387 STJ)",
+      "refs": [
+        "Art. 949 CC",
+        "Art. 950 CC",
+        "Art. 950, parágrafo único CC",
+        "Súmula 387 STJ",
+        "REsp 1.473.575/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
