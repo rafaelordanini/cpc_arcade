@@ -1,0 +1,87 @@
+{
+  "id": "case-008",
+  "icon": "🚗",
+  "title": "Colisão na Avenida Principal",
+  "area": "RESPONSABILIDADE CIVIL · CULPA · INDENIZAÇÃO",
+  "plaintiff": "Marcos Oliveira",
+  "defendant": "André Sousa",
+  "intro": "Seu cliente Marcos Oliveira estava parado no semáforo vermelho quando seu veículo foi atingido por trás pelo carro de André Sousa, que usava o celular no momento da colisão.\n\nMarcos sofreu fratura cervical, ficou 45 dias afastado do trabalho como técnico de TI (salário de R$ 6.000/mês) e o veículo teve dano total avaliado em R$ 28.000.\n\nAndré admitiu o acidente à polícia mas agora, aconselhado por advogado, nega culpa exclusiva.\n\nVocê é o advogado de Marcos — prove a responsabilidade e garanta a indenização integral!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "FUNDAMENTOS",
+      "stepIcon": "📋",
+      "narrative": "Você tem em mãos: boletim de ocorrência com declaração de André admitindo uso do celular, laudo pericial do veículo (R$ 28.000), prontuário médico com diagnóstico de fratura cervical e 2 testemunhas presenciais. Precisa estruturar a ação indenizatória.",
+      "speaker": null,
+      "question": "Quais são os elementos obrigatórios da responsabilidade civil subjetiva que você precisa provar?",
+      "opts": [
+        "Conduta culposa (uso do celular), dano (material + moral) e nexo causal (colisão causou os danos) — os três elementos do art. 186 c/c art. 927 CC",
+        "Apenas o dano material — em acidente de trânsito a culpa é sempre presumida de quem bate atrás",
+        "Apenas dolo (intenção) de André — sem intenção não há responsabilidade civil",
+        "O seguro DPVAT cobre tudo — não é necessária ação de responsabilidade civil separada"
+      ],
+      "correct": 0,
+      "explanation": "A responsabilidade civil subjetiva exige a prova de três elementos (art. 186 c/c 927 CC):\n\n1. CONDUTA ILÍCITA: ação ou omissão culposa — o uso do celular ao volante configura infração grave (art. 252 CTB).\n2. DANO: prejuízo material (veículo + lucros cessantes) e moral efetivamente sofridos.\n3. NEXO CAUSAL: relação direta entre a conduta de André e os danos de Marcos.\n\nEmbora exista presunção relativa de culpa de quem bate atrás na jurisprudência majoritária, demonstrar ativamente os três elementos evita contestações bem-sucedidas.\n\nO DPVAT foi extinto em 2021 — não cobre mais os danos.",
+      "refs": [
+        "Art. 186 CC",
+        "Art. 927 CC",
+        "Art. 944 CC",
+        "Art. 252 CTB",
+        "REsp 1.354.536/SP"
+      ],
+      "bridge": "A petição inicial foi bem estruturada. André foi citado e seu advogado apresentou contestação com argumento de culpa concorrente..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONTESTAÇÃO",
+      "stepIcon": "🛡",
+      "narrative": "O advogado de André alega que Marcos freou bruscamente sem motivo antes da colisão, contribuindo para o acidente. Apresenta dashcam de terceiro que mostra Marcos reduzindo velocidade antes do semáforo — que já estava vermelho.",
+      "speaker": {
+        "name": "Dr. Tavares — Advogado de André Sousa",
+        "icon": "🕴",
+        "text": "Marcos freou bruscamente! A câmera mostra! Isso é culpa concorrente — meu cliente não pode ser responsabilizado integralmente. O valor da indenização deve ser reduzido pela metade!",
+        "color": "var(--orange)"
+      },
+      "question": "Como você responde ao argumento de culpa concorrente?",
+      "opts": [
+        "Frear antes de semáforo vermelho é conduta normal e previsível — André tem o dever de manter distância segura (art. 29, II CTB); culpa concorrente exige comportamento irregular de Marcos",
+        "Reconhecer culpa concorrente de 30% de Marcos para ser razoável e facilitar acordo",
+        "Culpa concorrente não existe no direito brasileiro — ou é culpa de um ou de outro",
+        "Requerer nova perícia no veículo de André para provar defeito nos freios"
+      ],
+      "correct": 0,
+      "explanation": "O art. 29, II do CTB obriga o motorista a guardar distância de segurança frontal suficiente para evitar colisões. É dever de quem vem atrás manter distância que permita parar em qualquer situação.\n\nFrear ao aproximar-se de semáforo vermelho é conduta NORMAL, LEGAL e PREVISÍVEL — não configura culpa.\n\nCulpa concorrente só se configura se AMBOS praticam conduta culposa. Marcos não praticou ato ilícito ao frear no semáforo.\n\nA tentativa de imputar culpa concorrente por comportamento lícito é argumento que deve ser rechaçado com o CTB e a jurisprudência.",
+      "refs": [
+        "Art. 29, II CTB",
+        "Art. 945 CC",
+        "Art. 186 CC",
+        "REsp 1.769.781/SP"
+      ],
+      "bridge": "O juiz rejeitou a culpa concorrente. Chegou a hora de calcular o valor integral da indenização devida por André..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "QUANTUM",
+      "stepIcon": "💰",
+      "narrative": "André foi considerado exclusivamente culpado. Danos apurados: veículo R$ 28.000, 45 dias afastado com salário de R$ 6.000/mês, tratamento médico particular R$ 4.500 e dano moral pelo trauma e dor física.",
+      "speaker": null,
+      "question": "Qual é a composição correta da indenização de Marcos?",
+      "opts": [
+        "Danos emergentes (R$ 28.000 + R$ 4.500) + lucros cessantes (45 dias = R$ 9.000) + dano moral arbitrado pelo juiz — arts. 402 e 944 CC",
+        "Apenas danos materiais comprovados por nota fiscal — dano moral e lucro cessante não são indenizáveis em acidente de trânsito",
+        "O seguro obrigatório cobre os danos corporais, então Marcos só pode cobrar o dano ao veículo",
+        "Dano moral é automaticamente fixado em 10 salários mínimos por lei para acidentes de trânsito"
+      ],
+      "correct": 0,
+      "explanation": "A indenização civil abrange (arts. 402 e 944 CC):\n\nDANOS EMERGENTES (o que efetivamente perdeu):\n- Veículo: R$ 28.000\n- Tratamento médico: R$ 4.500\nSubtotal: R$ 32.500\n\nLUCROS CESSANTES (o que razoavelmente deixou de ganhar):\n- 45 dias × R$ 200/dia (R$ 6.000 ÷ 30) = R$ 9.000\n\nDANO MORAL: arbitrado pelo juiz conforme extensão do dano (art. 944 CC). Não há valor fixo em lei — o STJ usa o critério da proporcionalidade e razoabilidade.\n\nTotal material mínimo: R$ 41.500 + dano moral a ser arbitrado.",
+      "refs": [
+        "Art. 402 CC",
+        "Art. 403 CC",
+        "Art. 944 CC",
+        "Art. 945 CC",
+        "REsp 1.245.550/MG"
+      ],
+      "bridge": null
+    }
+  ]
+}
