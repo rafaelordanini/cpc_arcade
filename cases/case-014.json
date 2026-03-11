@@ -1,0 +1,87 @@
+{
+  "id": "case-014",
+  "icon": "🔑",
+  "title": "O Inquilino Inadimplente",
+  "area": "DIREITO DAS LOCAÇÕES · DESPEJO · LEI 8.245/91",
+  "plaintiff": "João Azevedo (Locador)",
+  "defendant": "Marcos Silveira (Locatário)",
+  "intro": "Seu cliente João Azevedo é proprietário de imóvel residencial que alugou a Marcos Silveira por R$ 2.200/mês.\n\nMarcos está inadimplente há 4 meses, acumulando R$ 8.800 de aluguel + R$ 1.200 de IPTU que ele deveria pagar conforme contrato, totalizando R$ 10.000.\n\nO contrato tinha fiador (Paulo), mas Paulo faleceu há 2 meses e seus herdeiros recusaram a herança.\n\nVocê é o advogado de João — retome o imóvel e recupere os valores atrasados!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "AÇÃO DE DESPEJO",
+      "stepIcon": "📋",
+      "narrative": "João quer o imóvel de volta imediatamente. O contrato tem prazo determinado de 2 anos, com 8 meses de vigência restante. Marcos alega dificuldades financeiras mas não apresenta proposta de pagamento.",
+      "speaker": null,
+      "question": "Qual é o procedimento correto para obter o despejo por falta de pagamento?",
+      "opts": [
+        "Ação de despejo por falta de pagamento cumulada com cobrança dos aluguéis atrasados (art. 62 Lei 8.245/91), com pedido de liminar de despejo",
+        "João pode entrar no imóvel e trocar as fechaduras — o despejo extrajudicial é permitido para inadimplência grave",
+        "Primeiro intimar Marcos por cartório e só ajuizar após 60 dias de silêncio",
+        "Propor mediação obrigatória antes de qualquer medida judicial por força da Lei de Mediação"
+      ],
+      "correct": 0,
+      "explanation": "A Lei 8.245/91 (Lei do Inquilinato) regula o despejo residencial.\n\nO art. 62 permite LIMINAR DE DESPEJO nas ações por falta de pagamento quando não houver fiador solvente — o fiador faleceu e os herdeiros recusaram a herança.\n\nO despejo extrajudicial (troca de fechadura por conta própria) é ILEGAL — configura esbulho possessório e pode gerar responsabilidade civil e criminal contra o locador (art. 161 CC).\n\nA ação pode cumular pedido de despejo + cobrança dos atrasados na mesma petição, evitando ações separadas e economizando tempo.",
+      "refs": [
+        "Art. 62 Lei 8.245/91",
+        "Art. 59, §1º Lei 8.245/91",
+        "Art. 64 Lei 8.245/91",
+        "Art. 161 CC",
+        "Art. 345 CPC"
+      ],
+      "bridge": "A ação foi ajuizada. Marcos foi citado e dentro do prazo legal requereu a purgação da mora..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "PURGAÇÃO DA MORA",
+      "stepIcon": "🛡",
+      "narrative": "Marcos, no prazo de 15 dias após a citação, requereu a purgação da mora e depositou em juízo apenas R$ 8.800 (4 meses de aluguel). Não incluiu o IPTU de R$ 1.200, as custas processuais, nem o aluguel do mês em curso.",
+      "speaker": {
+        "name": "Dr. Cunha — Advogado de Marcos Silveira",
+        "icon": "🕴",
+        "text": "Meu cliente depositou os R$ 8.800 de aluguéis em atraso! A purgação da mora está completa! O processo deve ser extinto e Marcos permanece no imóvel!",
+        "color": "var(--orange)"
+      },
+      "question": "A purgação da mora foi realizada corretamente?",
+      "opts": [
+        "A purgação é incompleta — deve incluir aluguéis + IPTU + custas processuais + aluguel do mês corrente + honorários; depósito parcial não purga a mora (art. 62, II Lei 8.245/91)",
+        "Marcos purgou corretamente — o IPTU e custas são cobráveis separadamente",
+        "Qualquer depósito, mesmo parcial, suspende o processo de despejo indefinidamente",
+        "Aceitar a purgação parcial pois R$ 8.800 é valor relevante e João cobra o restante depois"
+      ],
+      "correct": 0,
+      "explanation": "O art. 62, II da Lei 8.245/91 exige que a purgação da mora inclua:\n- Aluguéis e acessórios em atraso (inclui IPTU previsto contratualmente)\n- Multas ou penalidades contratuais\n- Custas do processo\n- Honorários advocatícios provisionais\n- Aluguel do mês em curso (ou fração)\n\nA purgação INCOMPLETA não extingue a ação de despejo.\n\nO IPTU faz parte dos 'acessórios da locação' previstos no contrato — deve ser incluído obrigatoriamente.\n\nPortanto, a purgação de Marcos está incompleta e o processo prossegue até o depósito integral ou o prazo se encerra.",
+      "refs": [
+        "Art. 62, II Lei 8.245/91",
+        "Art. 23, I Lei 8.245/91",
+        "Art. 62, §3º Lei 8.245/91",
+        "REsp 1.207.161/SP"
+      ],
+      "bridge": "Marcos não completou o depósito no prazo adicional. O juiz julgou procedente o despejo. Chegou a fase da execução..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "CUMPRIMENTO",
+      "stepIcon": "⚖",
+      "narrative": "O despejo foi decretado. Marcos não saiu voluntariamente. O juiz expediu mandado de despejo com prazo de 30 dias. Marcos, no último dia, alegou ter filho de 2 anos e pediu prazo adicional de 6 meses por 'circunstâncias humanitárias'. João está pagando aluguel em outro imóvel enquanto aguarda.",
+      "speaker": null,
+      "question": "O pedido de Marcos de prazo adicional de 6 meses deve ser deferido?",
+      "opts": [
+        "A Lei 8.245/91 não prevê prazo adicional por filho menor em caso de despejo por falta de pagamento — a dilação especial de 6 meses é exclusiva para denúncia vazia (art. 64); o despejo deve ser cumprido",
+        "Sim — família com criança menor tem direito a 6 meses adicionais por força constitucional",
+        "O juiz pode conceder prazo indeterminado em atenção ao princípio da dignidade da família",
+        "João deve ser obrigado a desistir do despejo por ter filho menor envolvido"
+      ],
+      "correct": 0,
+      "explanation": "A Lei 8.245/91 prevê dilação de prazo do despejo apenas em casos específicos:\n- Art. 64: quando o despejo for por DENÚNCIA VAZIA em locação residencial — até 6 meses.\n\nO despejo por FALTA DE PAGAMENTO não prevê esse benefício.\n\nA existência de filhos menores não obsta o despejo por inadimplência — a jurisprudência é pacífica nesse sentido.\n\nContinuar usando o imóvel sem pagar causa dano concreto a João, que está arcando com custo de moradia alternativa — o direito de propriedade também é constitucionalmente garantido (art. 5º, XXII CF/88).",
+      "refs": [
+        "Art. 63 Lei 8.245/91",
+        "Art. 64 Lei 8.245/91",
+        "Art. 65 Lei 8.245/91",
+        "REsp 1.310.141/SP",
+        "Art. 5º, XXII CF/88"
+      ],
+      "bridge": null
+    }
+  ]
+}
