@@ -1,0 +1,88 @@
+{
+  "id": "case-021",
+  "icon": "🔨",
+  "title": "A Obra que Rachou a Casa",
+  "area": "RESPONSABILIDADE CIVIL · DIREITO DE VIZINHANÇA · ART. 1.277 CC",
+  "plaintiff": "Vera Lucia Santos",
+  "defendant": "Construtora Silva & Associados Ltda",
+  "intro": "Sua cliente Vera Lucia Santos é proprietária de casa residencial. Há 8 meses, a Construtora Silva & Associados iniciou escavação profunda para construção de edifício no terreno vizinho.\n\nDesde o início das obras, a casa de Vera apresenta rachaduras progressivas, o piso afundou em um cômodo e houve queda de reboco do teto.\n\nLaudo de engenheiro contratado por Vera concluiu que as vibrações e a alteração do lençol freático causaram os danos.\n\nVocê é o advogado de Vera — responsabilize a construtora!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "FUNDAMENTO DA RESPONSABILIDADE",
+      "stepIcon": "📋",
+      "narrative": "A construtora alega que tem todas as licenças, seguiu as normas técnicas da ABNT e que os danos na casa de Vera podem ter outras causas (casa antiga, má conservação). Você precisa definir o fundamento legal.",
+      "speaker": null,
+      "question": "Qual é o fundamento da responsabilidade da construtora? É necessário provar culpa?",
+      "opts": [
+        "Responsabilidade objetiva por dano de vizinhança (art. 1.277 CC + art. 927, parágrafo único CC) — atividade de construção é de risco; basta provar o dano e o nexo causal, sem necessidade de demonstrar culpa",
+        "Responsabilidade subjetiva — é preciso provar que a construtora agiu com imperícia ou negligência",
+        "A construtora não responde pois tem licença municipal — licença afasta qualquer responsabilidade civil",
+        "Vera deve processar apenas o proprietário do terreno vizinho, não a construtora contratada"
+      ],
+      "correct": 0,
+      "explanation": "O art. 1.277 CC prevê o direito do proprietário de fazer cessar as interferências prejudiciais à segurança, sossego e saúde do imóvel vizinho.\n\nAlém disso, a atividade de construção com escavações profundas é considerada atividade de RISCO pelo STJ, gerando responsabilidade objetiva pelo art. 927, parágrafo único CC.\n\nA licença municipal AUTORIZA a construção mas NÃO exonera a construtora de responsabilidade pelos danos causados a terceiros — é autorização administrativa, não isenção civil.\n\nPortanto, basta provar o DANO e o NEXO CAUSAL entre a obra e as rachaduras — sem necessidade de provar culpa.",
+      "refs": [
+        "Art. 1.277 CC",
+        "Art. 927, parágrafo único CC",
+        "Art. 1.280 CC",
+        "ABNT NBR 9061",
+        "REsp 1.650.576/SP"
+      ],
+      "bridge": "A ação foi ajuizada. A construtora contestou questionando a validade do laudo de Vera..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONFLITO DE LAUDOS",
+      "stepIcon": "🔬",
+      "narrative": "A construtora questiona o laudo particular de Vera e apresenta laudo próprio concluindo que os danos são pré-existentes à obra e decorrentes de má conservação da casa. Dois laudos particulares chegam a conclusões opostas.",
+      "speaker": {
+        "name": "Dr. Cardoso — Advogado da Construtora",
+        "icon": "🕴",
+        "text": "O laudo de Vera é parcial — ela mesma pagou! O nosso laudo é igualmente válido e conclui diferente! Com dois laudos particulares conflitantes, o processo deve ser extinto por falta de prova conclusiva!",
+        "color": "var(--orange)"
+      },
+      "question": "Como resolver o conflito entre os dois laudos particulares?",
+      "opts": [
+        "Requerer perícia judicial (art. 473 CPC) realizada por perito nomeado pelo juiz — ambos os laudos particulares valem como argumentação técnica, mas o laudo judicial tem maior presunção de imparcialidade",
+        "O processo deve ser extinto com resolução de mérito por improcedência — dois laudos conflitantes equivalem à ausência de prova",
+        "O laudo da construtora deve prevalecer por ser elaborado por empresa especializada de maior porte",
+        "O juiz deve escolher o laudo mais favorável à parte economicamente mais fraca por equidade"
+      ],
+      "correct": 0,
+      "explanation": "O conflito entre laudos particulares é resolvido pela PERÍCIA JUDICIAL (art. 473 CPC).\n\nO perito judicial:\n- É nomeado pelo juiz de lista de peritos cadastrados no tribunal\n- Tem compromisso de dizer a verdade (art. 467 CPC)\n- Tem presunção de neutralidade superior aos laudos das partes\n\nAs partes podem indicar ASSISTENTES TÉCNICOS que acompanham a perícia e apresentam quesitos e observações.\n\nOs laudos particulares NÃO são descartados — servem como subsídio técnico e podem influenciar os quesitos da perícia.\n\nO juiz não está vinculado ao laudo judicial (art. 479 CPC) mas deve fundamentar se discordar.",
+      "refs": [
+        "Art. 473 CPC",
+        "Art. 465 CPC",
+        "Art. 467 CPC",
+        "Art. 479 CPC",
+        "Art. 369 CPC"
+      ],
+      "bridge": "A perícia judicial concluiu que as obras causaram 70% dos danos. Chegou a hora de calcular a indenização..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "INDENIZAÇÃO",
+      "stepIcon": "💰",
+      "narrative": "O laudo judicial concluiu que 70% dos danos foram causados pela obra. Reforma necessária total: R$ 85.000 × 70% = R$ 59.500. Os outros 30% são pré-existentes. Vera ficou sem usar um cômodo por 8 meses e sofreu estresse e insônia.",
+      "speaker": null,
+      "question": "Além dos R$ 59.500 de dano material, Vera tem direito a outras indenizações?",
+      "opts": [
+        "Sim — dano material (R$ 59.500) + dano moral pelo estresse, medo de desabamento e privação parcial do lar + eventual desvalorização permanente do imóvel, todos cumuláveis",
+        "Apenas os R$ 59.500 de reforma — dano moral não cabe em dano a imóvel",
+        "Vera deve aceitar R$ 59.500 e assinar quitação geral — não pode cobrar mais de uma vez",
+        "Dano moral em dano à propriedade só é cabível se houve risco de morte comprovado"
+      ],
+      "correct": 0,
+      "explanation": "O dano por obra de vizinhança pode gerar múltiplas indenizações cumuláveis:\n\n1. DANO MATERIAL: custo da reforma proporcional — R$ 59.500 já calculado.\n\n2. DANO MORAL: o STJ reconhece dano moral decorrente de perturbação grave ao lar, insegurança estrutural e impossibilidade de usar a residência plenamente. Rachaduras com risco de desabamento causam sofrimento que vai além do mero aborrecimento.\n\n3. DESVALORIZAÇÃO DO IMÓVEL: se as rachaduras causam depreciação permanente, é dano patrimonial indenizável separadamente.\n\nO princípio é a REPARAÇÃO INTEGRAL do dano (art. 944 CC) — nada além do dano, mas todo o dano.",
+      "refs": [
+        "Art. 944 CC",
+        "Art. 1.277 CC",
+        "Art. 927 CC",
+        "Súmula 387 STJ",
+        "REsp 1.653.397/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
