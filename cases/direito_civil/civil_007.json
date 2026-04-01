@@ -1,8 +1,9 @@
 {
-  "id": "case-008",
+  "id": "civil-007",
   "icon": "🚗",
   "title": "Colisão na Avenida Principal",
   "area": "RESPONSABILIDADE CIVIL · CULPA · INDENIZAÇÃO",
+  "area_id": "direito_civil",
   "plaintiff": "Marcos Oliveira",
   "defendant": "André Sousa",
   "intro": "Seu cliente Marcos Oliveira estava parado no semáforo vermelho quando seu veículo foi atingido por trás pelo carro de André Sousa, que usava o celular no momento da colisão.\n\nMarcos sofreu fratura cervical, ficou 45 dias afastado do trabalho como técnico de TI (salário de R$ 6.000/mês) e o veículo teve dano total avaliado em R$ 28.000.\n\nAndré admitiu o acidente à polícia mas agora, aconselhado por advogado, nega culpa exclusiva.\n\nVocê é o advogado de Marcos — prove a responsabilidade e garanta a indenização integral!",
