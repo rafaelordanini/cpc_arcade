@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_008",
+  "icon": "🔓",
+  "title": "A Prisão que a Constituição Proíbe",
+  "area": "DIREITO CONSTITUCIONAL · HABEAS CORPUS · DEPOSITÁRIO INFIEL",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Sérgio Drummond (paciente)",
+  "defendant": "Juiz da 3ª Vara Cível de Campinas (autoridade coatora)",
+  "intro": "Sérgio Drummond foi preso por ordem judicial em ação de busca e apreensão. O juiz o declarou 'depositário infiel' de bem alienado fiduciariamente — um automóvel que Sérgio não devolveu após a consolidação da propriedade pelo credor.\n\nSérgio foi recolhido ao presídio com base no art. 652 do Código Civil e no Decreto-Lei 911/69, que prevê prisão civil do depositário infiel.\n\nO advogado de Sérgio quer impetrá-lo imediatamente, mas está inseguro sobre o fundamento constitucional e o tribunal competente.\n\nVocê é o advogado — encontre o fundamento correto e liberte Sérgio!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "FUNDAMENTO DO HC",
+      "stepIcon": "📋",
+      "narrative": "O credor alega que a prisão é legítima com base no art. 652 CC e que o HC não é cabível pois a restrição à liberdade foi determinada por juiz competente em processo regular — o que afastaria o cabimento do remédio constitucional.",
+      "speaker": null,
+      "question": "O Habeas Corpus é cabível para questionar a prisão de Sérgio como depositário infiel? Qual o fundamento?",
+      "opts": [
+        "Sim — o HC é cabível sempre que houver restrição ilegal ou abusiva à liberdade de locomoção (art. 5º, LXVIII CF); a ilegalidade aqui é a incompatibilidade da prisão civil do depositário infiel com a Súmula Vinculante 25 STF e com o Pacto de San José da Costa Rica",
+        "Não — o HC não pode questionar decisão judicial proferida por juiz competente; o meio correto seria o agravo regimental",
+        "O HC não é cabível em matéria civil — serve apenas para crimes e infrações penais",
+        "O HC só é cabível antes da prisão (preventivo) — após a prisão já efetivada, o instrumento é o recurso de apelação"
+      ],
+      "correct": 0,
+      "explanation": "O art. 5º, LXVIII CF/88 prevê:\n'Conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder.'\n\nO HC é cabível tanto em matéria PENAL quanto CIVIL (prisão civil do devedor de alimentos) sempre que a LIBERDADE DE LOCOMOÇÃO estiver ameaçada ou violada ilegalmente.\n\nNo caso de Sérgio, a ILEGALIDADE é a própria fundamentação da prisão — a Súmula Vinculante 25 STF veda expressamente a prisão civil do depositário infiel, e o Pacto de San José da Costa Rica (incorporado ao ordenamento com status supralegal) proíbe qualquer prisão por dívida que não seja alimentos.\n\nHC REPRESSIVO: libera quem já está preso ilegalmente.\nHC PREVENTIVO: protege quem está ameaçado de ser preso.",
+      "refs": [
+        "Art. 5º, LXVIII CF/88",
+        "Súmula Vinculante 25 STF",
+        "Art. 7º, 7 CADH (Pacto de San José)",
+        "RE 466.343/SP",
+        "HC 87.585/TO"
+      ],
+      "bridge": "O HC foi impetrado. O credor apresentou defesa alegando que a Súmula Vinculante 25 não retroage a contratos anteriores..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "SÚMULA VINCULANTE 25",
+      "stepIcon": "🛡️",
+      "narrative": "O credor sustenta que o contrato de alienação fiduciária foi celebrado antes da Súmula Vinculante 25 (editada em 2009) e que contratos anteriores ainda autorizam a prisão civil do depositário infiel. Alega ainda que a Súmula não revogou o art. 652 do CC.",
+      "speaker": {
+        "name": "Dr. Castro — Advogado do Credor",
+        "icon": "🕴️",
+        "text": "O contrato é anterior à Súmula 25! O art. 652 CC e o DL 911/69 nunca foram revogados formalmente! A Súmula não pode retroagir para alterar contratos já celebrados! E a prisão foi determinada por juiz competente em processo regular!",
+        "color": "var(--red)"
+      },
+      "question": "A Súmula Vinculante 25 é aplicável independentemente da data do contrato? O art. 652 CC foi revogado?",
+      "opts": [
+        "A SV 25 é aplicável independentemente da data do contrato — ela reflete decisão de inconstitucionalidade do regime de prisão civil do depositário infiel, que não pode ser ressuscitada por contrato anterior; o art. 652 CC não foi revogado mas não pode ser aplicado para gerar prisão",
+        "O credor tem razão — contratos anteriores à SV 25 ainda autorizam a prisão civil com base na legislação vigente à época da contratação",
+        "O art. 652 CC foi expressamente revogado pela SV 25, que tem força de lei",
+        "A SV 25 só se aplica a alienações fiduciárias de veículos — outros tipos de depósito ainda autorizam a prisão"
+      ],
+      "correct": 0,
+      "explanation": "A Súmula Vinculante 25 STF é expressa:\n'É ilícita a prisão civil de depositário infiel, qualquer que seja a modalidade do depósito.'\n\nO STF (RE 466.343 e HC 87.585) fundamentou a SV 25 na incompatibilidade da prisão civil do depositário infiel com:\n1. O Pacto de San José da Costa Rica (art. 7º, §7º CADH): veda prisão por dívida, salvo obrigação alimentar\n2. O Pacto Internacional de Direitos Civis e Políticos\n\nAmbos têm STATUS SUPRALEGAL (acima das leis ordinárias, abaixo da CF) — o art. 652 CC e o DL 911/69 foram PARALISADOS em sua eficácia por esses tratados, embora não revogados formalmente.\n\nA data do contrato é irrelevante: a PRISÃO CIVIL ocorre no presente e deve observar o ordenamento vigente — que proíbe tal restrição. O contrato cria obrigação patrimonial, não autoriza prisão.",
+      "refs": [
+        "Súmula Vinculante 25 STF",
+        "Art. 7º, §7º CADH",
+        "Art. 5º, §2º CF/88",
+        "RE 466.343/SP",
+        "HC 87.585/TO"
+      ],
+      "bridge": "O fundamento foi demonstrado. Surge a questão sobre a competência para julgar o HC..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "COMPETÊNCIA DO HC",
+      "stepIcon": "📜",
+      "narrative": "A questão da competência surge: o HC foi impetrado no TJ do Estado, mas o credor alega que, sendo a SV 25 do STF o fundamento principal, o HC deveria ter sido impetrado diretamente no STF.",
+      "speaker": null,
+      "question": "Qual é o tribunal competente para julgar HC quando a autoridade coatora é um Juiz de Direito estadual?",
+      "opts": [
+        "O TJ do respectivo Estado — pois a autoridade coatora é juiz de 1ª instância estadual; o STF só tem competência originária para HC quando a autoridade coatora for tribunal superior ou quando o paciente for pessoa com foro privilegiado no STF",
+        "O STF diretamente — pois o fundamento do HC é uma Súmula Vinculante do STF",
+        "O STJ — pois toda questão de liberdade de locomoção envolvendo direito federal vai ao STJ",
+        "A competência é concorrente entre TJ e STF — o impetrante pode escolher"
+      ],
+      "correct": 0,
+      "explanation": "A competência para o HC segue a regra da hierarquia sobre a AUTORIDADE COATORA:\n\nAUTORIDADE COATORA → TRIBUNAL COMPETENTE\n— Juiz de Direito estadual → TJ do Estado\n— Juiz Federal / TRF → STJ (art. 105, I, 'c' CF)\n— Tribunal Superior (STJ, TST etc.) → STF (art. 102, I, 'i' CF)\n— Ministro do STF → STF em composição plena\n\nO fato de o FUNDAMENTO do HC envolver SV ou questão constitucional não altera a competência originária — é a AUTORIDADE COATORA que define.\n\nSe o TJ denegar o HC, cabe:\n— Recurso Ordinário ao STJ (se autoridade coatora for Juiz Estadual de 1ª instância — art. 105, II, 'a' CF)\n— Recurso Extraordinário ao STF se houver questão constitucional\n\nImpetrar diretamente no STF quando a coatora é juiz de 1ª instância é SUPRESSÃO DE INSTÂNCIA — o STF não conhece do HC nessa hipótese (Súmula 691 STF).",
+      "refs": [
+        "Art. 102, I, 'i' CF/88",
+        "Art. 105, I, 'c' CF/88",
+        "Art. 105, II, 'a' CF/88",
+        "Súmula 691 STF",
+        "HC 86.864/SP"
+      ],
+      "bridge": null
+    }
+  ]
+}
