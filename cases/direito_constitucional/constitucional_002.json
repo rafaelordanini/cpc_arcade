@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_002",
+  "icon": "📜",
+  "title": "A Constitucionalidade em Disputa",
+  "area": "DIREITO CONSTITUCIONAL · CONTROLE CONCENTRADO · ADC",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Presidente da República (requerente)",
+  "defendant": "STF — Plenário",
+  "intro": "A Lei Federal nº 10.887/2022, que instituiu contribuição previdenciária sobre proventos de servidores públicos aposentados, passou a ser questionada em centenas de ações nos tribunais de todo o Brasil.\n\nDezesseis tribunais regionais federais e estaduais emitiram decisões antagônicas: alguns declararam a lei inconstitucional por violar direito adquirido; outros a aplicaram normalmente — gerando grave insegurança jurídica e tratamento desigual entre contribuintes.\n\nO Presidente da República propôs Ação Declaratória de Constitucionalidade (ADC) perante o STF para pacificar definitivamente a controvérsia.\n\nVocê é o assessor jurídico da Presidência — demonstre os requisitos da ADC e seus efeitos!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "REQUISITOS DA ADC",
+      "stepIcon": "📋",
+      "narrative": "Antes de conhecer a ADC, o STF verifica se estão presentes os requisitos de admissibilidade. A oposição parlamentar alega que não há controvérsia suficiente e que a ADC é mero mecanismo político para validar lei impopular.",
+      "speaker": null,
+      "question": "Qual é o requisito específico da ADC que a diferencia da ADI e deve ser rigorosamente demonstrado?",
+      "opts": [
+        "Controvérsia judicial relevante — deve haver divergência real entre órgãos do Poder Judiciário sobre a constitucionalidade da lei federal, ameaçando sua aplicação uniforme em todo o país",
+        "A ADC não exige qualquer requisito específico além da legitimidade do proponente — basta a petição inicial",
+        "A ADC só é cabível se a lei federal já tiver sido declarada inconstitucional pelo STJ em recurso especial",
+        "O único requisito adicional é que a lei tenha no mínimo 2 anos de vigência sem questionamento"
+      ],
+      "correct": 0,
+      "explanation": "O art. 14, III da Lei 9.868/99 exige, como requisito específico de admissibilidade da ADC, a demonstração de CONTROVÉRSIA JUDICIAL RELEVANTE sobre a aplicação da disposição objeto da ação.\n\nEssa exigência diferencia a ADC da ADI:\n— ADI: impugna lei/ato normativo presumidamente inconstitucional\n— ADC: pede declaração de constitucionalidade de lei FEDERAL já questionada judicialmente\n\nSem a juntada de decisões divergentes dos tribunais comprovando a controvérsia, o STF não conhece da ADC — seria transformar o STF em consultor legislativo, o que é vedado.\n\nOBSERVAÇÃO IMPORTANTE: A ADC só cabe para impugnar lei ou ato normativo FEDERAL — não estadual (ao contrário da ADI).",
+      "refs": [
+        "Art. 102, I, 'a' CF/88",
+        "Art. 14, III Lei 9.868/99",
+        "Art. 103 CF/88",
+        "ADC 1/DF",
+        "ADC 8/DF"
+      ],
+      "bridge": "O requisito foi demonstrado com 47 decisões divergentes juntadas. O STF conheceu da ADC e julgou procedente. Surge então a questão sobre o efeito vinculante..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "EFEITO VINCULANTE",
+      "stepIcon": "⚖️",
+      "narrative": "O STF julgou procedente a ADC, declarando constitucional a lei. Um juiz federal, inconvencido da correção do julgamento, afirma que irá continuar aplicando sua interpretação de inconstitucionalidade nos processos futuros, invocando independência funcional.",
+      "speaker": {
+        "name": "Juiz Federal Dr. Albuquerque",
+        "icon": "👨‍⚖️",
+        "text": "A decisão do STF é um precedente que posso deixar de seguir motivadamente! Minha independência funcional me garante decidir conforme minha convicção jurídica! A ADC não me vincula absolutamente — sou livre para interpretar a Constituição!",
+        "color": "var(--red)"
+      },
+      "question": "O juiz federal está correto? Quais são os efeitos da decisão de procedência em ADC?",
+      "opts": [
+        "Não — a decisão em ADC tem efeito vinculante e erga omnes (art. 102, §2º CF), alcançando todos os órgãos do Poder Judiciário; o descumprimento autoriza Reclamação Constitucional ao STF para cassação da decisão",
+        "Sim — a independência funcional do juiz permite afastar qualquer precedente do STF desde que haja fundamentação adequada",
+        "O efeito vinculante da ADC alcança apenas o Poder Executivo — juízes têm garantia constitucional de independência absoluta",
+        "A decisão vincula apenas os processos que estavam pendentes quando a ADC foi proposta"
+      ],
+      "correct": 0,
+      "explanation": "O art. 102, §2º da CF/88 é expresso:\n\n'As decisões definitivas de mérito, proferidas pelo STF, nas ações diretas de inconstitucionalidade e nas ações declaratórias de constitucionalidade produzirão eficácia contra todos e efeito vinculante, relativamente aos demais órgãos do Poder Judiciário e à administração pública direta e indireta, nas esferas federal, estadual e municipal.'\n\nEfeitos da procedência em ADC:\n— ERGA OMNES: vincula a todos indistintamente\n— EFEITO VINCULANTE: todos os juízes e órgãos administrativos devem respeitar o precedente\n— EX TUNC: retroage à data da lei\n\nO descumprimento da decisão vinculante autoriza o ajuizamento de RECLAMAÇÃO CONSTITUCIONAL ao STF (art. 102, I, 'l' CF) para cassar a decisão recalcitrante.\n\nA independência funcional não autoriza o juiz a descumprir decisão vinculante do STF — ela protege o juiz de pressões externas, não de vinculação ao sistema de precedentes constitucionais.",
+      "refs": [
+        "Art. 102, §2º CF/88",
+        "Art. 102, I, 'l' CF/88",
+        "Art. 28, parágrafo único Lei 9.868/99",
+        "ADC 4/DF",
+        "Rcl 23.457/RJ"
+      ],
+      "bridge": "O juiz insistiu. A Reclamação Constitucional foi ajuizada e o STF cassou a decisão. Surge nova questão: poderia ter sido proposta ADI sobre a mesma lei após a ADC?"
+    },
+    {
+      "step": 3,
+      "stepLabel": "FUNGIBILIDADE ADI × ADC",
+      "stepIcon": "📜",
+      "narrative": "Após o julgamento da ADC declarando a lei constitucional, um partido de oposição propõe ADI sobre a mesma lei, com a mesma fundamentação. O relator questiona a admissibilidade dessa nova ação.",
+      "speaker": null,
+      "question": "Após o STF declarar lei constitucional em ADC com eficácia erga omnes, é possível propor ADI sobre a mesma lei com o mesmo fundamento?",
+      "opts": [
+        "Não — a ADC procedente tem eficácia erga omnes e vinculante; propor ADI sobre o mesmo objeto com idêntico fundamento seria desconsiderar a coisa julgada constitucional — a ação não deve ser conhecida",
+        "Sim — ADI e ADC são ações diferentes e qualquer legitimado pode propor ADI a qualquer tempo, independentemente de ADC anterior",
+        "Pode ser admitida a ADI apenas se proposta dentro de 2 anos da ADC, prazo de revisão do precedente",
+        "Apenas o PGR pode propor ADI após ADC procedente, como fiscal da Constituição"
+      ],
+      "correct": 0,
+      "explanation": "O STF reconhece o princípio da FUNGIBILIDADE entre ADI e ADC, pois são ações simétricas e opostas sobre a mesma norma:\n— Improcedência da ADI = Procedência da ADC (e vice-versa)\n\nUma vez que a ADC declarou a lei constitucional com eficácia erga omnes e vinculante, propor ADI sobre o mesmo objeto com o mesmo fundamento constitucional seria repetir a mesma discussão — o que viola a coisa julgada constitucional e a segurança jurídica.\n\nExceções em que nova análise pode ser admitida:\n1. Mudança no texto constitucional (emenda constitucional posterior)\n2. Novo fundamento constitucional diverso do analisado na ADC\n3. Alteração substancial das circunstâncias fáticas\n\nFora dessas hipóteses, a segunda ação não deve ser conhecida — a controvérsia foi definitivamente resolvida.",
+      "refs": [
+        "Art. 102, §2º CF/88",
+        "Lei 9.868/99, art. 24",
+        "ADI 2.158/PR",
+        "ADC 9/DF",
+        "ADI 4.029/AM"
+      ],
+      "bridge": null
+    }
+  ]
+}
