@@ -1,26 +1,95 @@
 {
-  "cases": [
-    "case-001.json",
-    "case-002.json",
-    "case-003.json",
-    "case-004.json",
-    "case-005.json",
-    "case-006.json",
-    "case-007.json",
-    "case-008.json",
-    "case-009.json",
-    "case-010.json",
-    "case-011.json",
-    "case-012.json",
-    "case-013.json",
-    "case-014.json",
-    "case-015.json",
-    "case-016.json",
-    "case-017.json",
-    "case-018.json",
-    "case-019.json",
-    "case-020.json",
-    "case-021.json",
-    "case-022.json"
+  "versao": "2.0.0",
+  "totalCasos": 22,
+  "areas": [
+    {
+      "id": "direito_consumidor",
+      "nome": "Direito do Consumidor",
+      "icone": "🛒",
+      "cor": "#00BCD4",
+      "casos": [
+        "direito_consumidor/consumidor_001.json"
+      ]
+    },
+    {
+      "id": "direito_civil",
+      "nome": "Direito Civil e Processo Civil",
+      "icone": "⚖️",
+      "cor": "#2196F3",
+      "casos": [
+        "direito_civil/civil_001.json",
+        "direito_civil/civil_002.json",
+        "direito_civil/civil_003.json",
+        "direito_civil/civil_004.json",
+        "direito_civil/civil_005.json",
+        "direito_civil/civil_006.json",
+        "direito_civil/civil_007.json",
+        "direito_civil/civil_008.json",
+        "direito_civil/civil_009.json",
+        "direito_civil/civil_010.json",
+        "direito_civil/civil_011.json",
+        "direito_civil/civil_012.json",
+        "direito_civil/civil_013.json",
+        "direito_civil/civil_014.json",
+        "direito_civil/civil_015.json",
+        "direito_civil/civil_016.json",
+        "direito_civil/civil_017.json",
+        "direito_civil/civil_018.json"       
+      ]
+    },
+    {
+      "id": "direito_penal",
+      "nome": "Direito Penal e Processo Penal",
+      "icone": "🔒",
+      "cor": "#F44336",
+      "casos": [
+        "direito_penal/penal_001.json"
+      ]
+    },
+    {
+      "id": "direito_tributario",
+      "nome": "Direito Tributário",
+      "icone": "💰",
+      "cor": "#FF9800",
+      "casos": [
+        "direito_tributario/tributario_001.json"
+      ]
+    },
+    {
+      "id": "direito_administrativo",
+      "nome": "Direito Administrativo",
+      "icone": "🏛️",
+      "cor": "#9C27B0",
+      "casos": [
+        "direito_administrativo/administrativo_001.json"
+      ]
+    },
+    {
+      "id": "direito_ambiental",
+      "nome": "Direito Ambiental",
+      "icone": "🌿",
+      "cor": "#4CAF50",
+      "casos": [
+        "direito_ambiental/ambiental_001.json"
+      ]
+    },
+    {
+      "id": "direito_trabalho",
+      "nome": "Direito do Trabalho",
+      "icone": "👷",
+      "cor": "#795548",
+      "casos": [
+        "direito_trabalho/trabalho_001.json"
+      ]
+    },
+    {
+      "id": "direito_constitucional",
+      "nome": "Direito Constitucional",
+      "icone": "📜",
+      "cor": "#607D8B",
+      "casos": [
+        "direito_constitucional/constitucional_001.json"
+      ]
+    }
   ]
 }
