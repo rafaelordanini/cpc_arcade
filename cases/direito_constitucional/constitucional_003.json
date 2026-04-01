@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_003",
+  "icon": "⛪",
+  "title": "O Decreto que Proíbe a Procissão",
+  "area": "DIREITO CONSTITUCIONAL · CONTROLE CONCENTRADO · ADPF",
+  "area_id": "direito_constitucional",    
+  "plaintiff": "Conferência Nacional dos Bispos do Brasil — CNBB (requerente)",
+  "defendant": "Município de São Leopoldo das Pedras",
+  "intro": "O Município de São Leopoldo das Pedras editou o Decreto Municipal nº 3.200/2019, proibindo toda e qualquer manifestação religiosa em espaços públicos — praças, avenidas e parques — entre os meses de janeiro e março, sob alegação de 'preservação da ordem pública e do lazer secular'.\n\nO decreto atinge procissões, terços nas praças, pregações e qualquer manifestação de fé em logradouros públicos, com multa de R$ 5.000 para os organizadores.\n\nA CNBB quer impugnar o decreto perante o STF, mas seu advogado alertou que ADI não cabe para atos municipais em face da Constituição Federal.\n\nVocê é o advogado da entidade — encontre o instrumento correto e leve o caso ao STF!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "CABIMENTO DA ADPF",
+      "stepIcon": "📋",
+      "narrative": "O advogado do Município alega que o decreto é de âmbito estritamente local, que nenhuma ação do controle concentrado no STF é cabível contra decretos municipais, e que a CNBB deve recorrer aos tribunais estaduais.",
+      "speaker": null,
+      "question": "Por que a ADPF é o instrumento correto para impugnar decreto municipal em face da Constituição Federal?",
+      "opts": [
+        "A ADPF tem objeto mais amplo que a ADI — pode impugnar lei ou ato normativo municipal, estadual ou federal (inclusive pré-constitucional) quando violar preceito fundamental da CF, e não houver outro meio eficaz",
+        "A ADI perante o STF também pode impugnar decretos municipais — não há distinção entre espécies normativas",
+        "A ADPF não é cabível para decretos — serve apenas para leis em sentido formal aprovadas pelo Legislativo",
+        "O instrumento correto seria o Recurso Extraordinário para o STF após esgotamento das instâncias ordinárias"
+      ],
+      "correct": 0,
+      "explanation": "A ADI perante o STF tem objeto restrito: lei ou ato normativo FEDERAL ou ESTADUAL (art. 102, I, 'a' CF). Atos municipais NÃO podem ser impugnados via ADI no STF.\n\nA ADPF (art. 102, §1º CF + Lei 9.882/99) preenche essa lacuna:\n— Pode impugnar QUALQUER ato do Poder Público (federal, estadual ou municipal, inclusive pré-constitucional)\n— Quando violar PRECEITO FUNDAMENTAL da CF (direitos fundamentais, princípios sensíveis, cláusulas pétreas)\n— CARÁTER SUBSIDIÁRIO (art. 4º, §1º Lei 9.882/99): só é admitida quando não houver outro instrumento processual igualmente eficaz\n\nNo caso, não há outro meio eficaz para que o STF analise a constitucionalidade desse decreto municipal — a ADPF é o instrumento adequado.",
+      "refs": [
+        "Art. 102, §1º CF/88",
+        "Art. 1º Lei 9.882/99",
+        "Art. 4º, §1º Lei 9.882/99",
+        "ADPF 54/DF",
+        "ADPF 130/DF"
+      ],
+      "bridge": "O STF conheceu da ADPF reconhecendo sua subsidiariedade. No mérito, o Município apresentou defesa baseada em segurança pública..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "MÉRITO — LIBERDADE RELIGIOSA",
+      "stepIcon": "⛪",
+      "narrative": "No mérito, o Município alega que o decreto é constitucional por razões de segurança pública e separação entre Estado e religião (laicidade estatal). Defende que o Estado laico não pode 'privilegiar' manifestações religiosas em espaços públicos.",
+      "speaker": {
+        "name": "Procurador Municipal Dr. Lacerda",
+        "icon": "🏛️",
+        "text": "O Brasil é um Estado laico! O art. 19, I CF proíbe embaraços ao funcionamento de cultos, mas o Município pode regular o uso dos espaços públicos! Segurança pública e laicidade justificam plenamente o decreto!",
+        "color": "var(--orange)"
+      },
+      "question": "O decreto municipal é compatível com a Constituição Federal? A laicidade permite proibição de manifestações religiosas em espaços públicos?",
+      "opts": [
+        "Não — o art. 5º, VI CF garante a liberdade de crença e de culto; a laicidade (art. 19, I CF) significa neutralidade estatal, não hostilidade à religião; o decreto proíbe — não apenas regula — as manifestações, violando o núcleo essencial do direito fundamental",
+        "Sim — o Estado laico tem direito e dever de manter os espaços públicos livres de influência religiosa de qualquer natureza",
+        "O decreto é constitucional pois a liberdade religiosa se exerce em locais privados — não em logradouros públicos",
+        "A restrição é proporcional se limitada a 3 meses por ano — não viola o núcleo essencial da liberdade religiosa"
+      ],
+      "correct": 0,
+      "explanation": "O art. 5º, VI CF garante 'a inviolabilidade da liberdade de consciência e de crença, sendo assegurado o livre exercício dos cultos religiosos e garantida, na forma da lei, a proteção aos locais de culto e a suas liturgias'.\n\nA LAICIDADE ESTATAL (art. 19, I CF) significa que o Estado não pode:\n— Estabelecer cultos oficiais\n— Embaraçar o funcionamento de cultos\n— Subvencionar igrejas\n\nMas laicidade NÃO significa hostilidade à religião ou proibição de manifestações religiosas no espaço público.\n\nO STF (ADPF 54, ADI 4.439) consolidou que:\n1. Espaço público também é espaço legítimo de manifestação religiosa\n2. A restrição deve ser proporcional e justificada — não pode proibir totalmente\n3. O Estado pode REGULAR (horário, ruído, segurança), mas não pode PROIBIR manifestações religiosas de forma genérica",
+      "refs": [
+        "Art. 5º, VI CF/88",
+        "Art. 19, I CF/88",
+        "Art. 5º, XV CF/88",
+        "ADPF 54/DF",
+        "ADI 4.439/DF"
+      ],
+      "bridge": "O STF declarou o decreto inconstitucional. O Município questiona quais serão os efeitos práticos da decisão..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "EFEITOS DA ADPF",
+      "stepIcon": "📜",
+      "narrative": "O STF julgou procedente a ADPF e declarou o decreto inconstitucional. O Município questiona se outros decretos de teor similar em diferentes municípios também ficam automaticamente suspensos, e se a decisão tem efeito retroativo.",
+      "speaker": null,
+      "question": "Quais são os efeitos da decisão de procedência em ADPF?",
+      "opts": [
+        "A decisão em ADPF tem eficácia erga omnes, efeito vinculante e, em regra, ex tunc — o STF pode modular os efeitos temporais por maioria de 2/3; todos os atos similares em outros municípios ficam tacitamente incompatíveis com o entendimento do STF",
+        "Os efeitos são apenas inter partes — somente o decreto do Município de São Leopoldo das Pedras é afetado; outros municípios precisam de ações individuais",
+        "A ADPF produz apenas efeito ex nunc (prospectivo) — nunca retroativo, independentemente da decisão",
+        "A decisão em ADPF não tem efeito vinculante — é apenas uma orientação jurisprudencial sem força cogente"
+      ],
+      "correct": 0,
+      "explanation": "O art. 10, §3º da Lei 9.882/99 prevê que a decisão em ADPF terá eficácia contra todos (ERGA OMNES) e efeito vinculante relativamente aos demais órgãos do Poder Público.\n\nCaracterísticas dos efeitos da ADPF procedente:\n— ERGA OMNES: alcança todos\n— EFEITO VINCULANTE: vincula Judiciário e Administração Pública em todas as esferas\n— EX TUNC (regra geral): retroage à edição do ato inconstitucional\n— MODULAÇÃO POSSÍVEL: por maioria de 2/3, o STF pode fixar efeito ex nunc ou a partir de momento futuro (art. 11 Lei 9.882/99)\n\nDecisionalmente, outros decretos municipais de teor idêntico ficam suspensos pela força do efeito vinculante — o Município que não os revogar espontaneamente sujeita-se a Reclamação Constitucional.",
+      "refs": [
+        "Art. 10, §3º Lei 9.882/99",
+        "Art. 11 Lei 9.882/99",
+        "Art. 102, §1º CF/88",
+        "ADPF 130/DF",
+        "ADPF 153/DF"
+      ],
+      "bridge": null
+    }
+  ]
+}
