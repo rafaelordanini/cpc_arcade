@@ -416,6 +416,11 @@ body{animation:flicker 10s infinite}
     <button class="filter-btn"        onclick="filterArea('administrativo')" data-area="direito_administrativo">🏢 ADMINISTRATIVO</button>
     <button class="filter-btn"        onclick="filterArea('tributario')" data-area="direito_tributario">💰 TRIBUTÁRIO</button>
     <button class="filter-btn"        onclick="filterArea('ambiental')" data-area="direito_ambiental">🌿 AMBIENTAL </button>
+    <button class="filter-btn"        onclick="filterArea('consumidor')" data-area="direito_consumidor">🧢 CONSUMIDOR </button>
+
+    <button class="filter-btn" data-area="consumidor" onclick="filterArea('consumidor')">
+  🛒 CONSUMIDOR
+</button>
   </div>
   <p id="filter-case-count" class="filter-count">⏳ carregando...</p>
 </div>
@@ -689,6 +694,7 @@ const SFX = {
 const CASES_DIR = 'cases/';
 
 let manifest       = [];
+let manifestAreas = null;  
 let selectedArea = 'todos'; // ← ADICIONE
 let filteredCases = [];     // ← ADICIONE  
 let sessionPlayed  = new Set();
@@ -716,14 +722,24 @@ let hiScore = parseInt(SafeStorage.get('tdp_hi','0'));
   try {
     const res = await fetch(`${CASES_DIR}manifest.json?cb=${Date.now()}`, { cache:'no-store' });
     if (!res.ok) throw new Error('manifest.json não encontrado');
-    const data = await res.json();
-    manifest = Array.isArray(data.cases) ? data.cases : Array.isArray(data) ? data : [];
-    if (manifest.length === 0) {
-    console.error('[TRIBUNAL] manifest.json carregado mas .cases está vazio ou inválido', data);
-    }
+   const data = await res.json();
 
-    filteredCases = [...manifest];
-     applyAreaFilter();  
+if (Array.isArray(data.areas)) {
+  // ✅ Nova estrutura (sua atual)
+  manifestAreas = data.areas;
+  manifest = data.areas.flatMap(area => area.casos);
+} else if (Array.isArray(data.cases)) {
+  // ✅ Estrutura antiga (compatibilidade)
+  manifestAreas = null;
+  manifest = data.cases;
+} else {
+  manifest = [];
+  manifestAreas = null;
+  console.error('[TRIBUNAL] manifest.json com estrutura desconhecida', data);
+}
+
+filteredCases = [...manifest];
+applyAreaFilter();  
     updateManifestInfo();
     const btn = document.getElementById('btn-abrir');
     btn.disabled = false;
@@ -1289,7 +1305,6 @@ function filterArea(area) {
 
 // COMO DEVE FICAR:
 function applyAreaFilter() {
-  // Guarda: se manifest ainda não carregou, aborta silenciosamente
   if (!manifest || !Array.isArray(manifest)) {
     filteredCases = [];
     updateFilterCount();
@@ -1298,12 +1313,18 @@ function applyAreaFilter() {
 
   if (selectedArea === 'todos') {
     filteredCases = [...manifest];
+
+  } else if (manifestAreas) {
+    // Nova estrutura: busca o id da área que contém o filtro selecionado
+    // ex: selectedArea = "civil" → encontra id = "direito_civil"
+    const areaObj = manifestAreas.find(a => a.id.includes(selectedArea));
+    filteredCases = areaObj ? [...areaObj.casos] : [];
+
   } else {
-    filteredCases = manifest.filter(casePath => {
-      const normalized = casePath.toLowerCase().replace(/[_\-]/g, '');
-      const area = selectedArea.toLowerCase().replace(/[_\-]/g, '');
-      return normalized.includes(area);
-    });
+    // Estrutura antiga: filtra pelo caminho do arquivo
+    filteredCases = manifest.filter(casePath =>
+      casePath.toLowerCase().includes(selectedArea.toLowerCase())
+    );
   }
 
   updateFilterCount();
