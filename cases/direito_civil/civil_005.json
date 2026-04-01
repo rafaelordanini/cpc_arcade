@@ -1,8 +1,9 @@
 {
-  "id": "case-006",
+  "id": "civil-005",
   "icon": "📉",
   "title": "Alimentos em Revisão",
   "area": "DIREITO DE FAMÍLIA · ALIMENTOS · REVISÃO",
+  "area_id": "direito_civil",
   "plaintiff": "Paulo Henrique Dias",
   "defendant": "Carla Dias (em nome de Pedro Dias)",
   "intro": "Seu cliente Paulo Henrique Dias paga R$ 3.000/mês de alimentos ao filho Pedro, de 15 anos, valor fixado há 5 anos quando trabalhava como gerente bancário com salário de R$ 12.000/mês.\n\nHá 8 meses, Paulo foi demitido sem justa causa e desde então recebe apenas seguro-desemprego de R$ 2.200/mês, que se encerrará em 3 meses.\n\nCarla, mãe de Pedro, recusa-se a qualquer acordo, afirmando que Paulo está omitindo renda e trabalhando informalmente.\n\nVocê é o advogado de Paulo — use os instrumentos processuais adequados para revisar os alimentos!",
