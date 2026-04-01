@@ -1,6 +1,6 @@
 {
   "versao": "2.0.0",
-  "totalCasos": 22,
+  "totalCasos": 32,
   "areas": [
     {
       "id": "direito_consumidor",
@@ -8,7 +8,10 @@
       "icone": "🛒",
       "cor": "#00BCD4",
       "casos": [
-        "direito_consumidor/consumidor_001.json"
+        "direito_consumidor/consumidor_001.json",
+        "direito_consumidor/consumidor_002.json",
+        "direito_consumidor/consumidor_003.json",
+        "direito_consumidor/consumidor_004.json"
       ]
     },
     {
