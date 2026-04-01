@@ -1,1 +1,89 @@
-
+{
+  "id": "constitucional_001",
+  "icon": "🏛️",
+  "title": "A Lei que Burla o Concurso Público",
+  "area": "DIREITO CONSTITUCIONAL · CONTROLE CONCENTRADO · ADI",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Partido Democracia Brasileira (requerente)",
+  "defendant": "Estado de Palmas do Norte",
+  "intro": "O Estado de Palmas do Norte aprovou a Lei Estadual nº 12.345/2023, criando 600 cargos em comissão de 'Assistente Técnico Administrativo' para desempenho de atividades burocráticas de rotina, sem qualquer atribuição de direção, chefia ou assessoramento.\n\nO Partido Democracia Brasileira, com representação no Congresso Nacional, ajuizou ADI perante o STF, sustentando violação aos arts. 37, II e V da Constituição Federal.\n\nO Governador defende a constitucionalidade da lei alegando autonomia organizacional do Estado-membro.\n\nVocê é o advogado da causa no STF — construa os argumentos para a ADI!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "LEGITIMIDADE DA ADI",
+      "stepIcon": "📋",
+      "narrative": "Antes do mérito, o STF analisa a legitimidade do partido. A Advocacia do Estado alega que o partido não possui 'pertinência temática' com a organização administrativa estadual e não pode propor ADI sobre essa matéria.",
+      "speaker": null,
+      "question": "O partido político com representação no Congresso precisa demonstrar pertinência temática para propor ADI?",
+      "opts": [
+        "Não — partidos políticos com representação no Congresso são legitimados universais (art. 103, VIII CF) e não precisam de pertinência temática",
+        "Sim — todos os legitimados do art. 103 CF precisam demonstrar pertinência temática com o objeto da ação",
+        "Apenas o PGR e o Presidente da República são legitimados universais sem pertinência temática",
+        "Partidos políticos só têm legitimidade para ADI se a lei impugnada afetar diretamente direitos políticos"
+      ],
+      "correct": 0,
+      "explanation": "O STF divide os legitimados do art. 103 CF em duas categorias:\n\nLEGITIMADOS UNIVERSAIS (dispensam pertinência temática):\n— Presidente da República, Mesas do CN, Câmara e Senado, PGR, Conselho Federal da OAB e PARTIDOS POLÍTICOS COM REPRESENTAÇÃO NO CONGRESSO (art. 103, VIII CF).\n\nLEGITIMADOS ESPECIAIS (exigem pertinência temática):\n— Mesas de Assembleias Legislativas, Governadores de Estado, confederações sindicais e entidades de classe de âmbito nacional.\n\nO partido político com representação no Congresso é legitimado universal porque representa interesses difusos da sociedade — não precisa demonstrar relação entre seus fins estatutários e o objeto da impugnação.\n\nA ADI perante o STF é cabível para questionar leis estaduais em face da CF/88 (art. 102, I, 'a' CF).",
+      "refs": [
+        "Art. 103, VIII CF/88",
+        "Art. 102, I, 'a' CF/88",
+        "Lei 9.868/99",
+        "ADI 1.396/SC",
+        "ADI 3.943/DF"
+      ],
+      "bridge": "O STF reconheceu a legitimidade e admitiu a ADI. No julgamento do mérito, surge o debate sobre os limites constitucionais dos cargos em comissão..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "MÉRITO — ART. 37, V CF",
+      "stepIcon": "⚖️",
+      "narrative": "No mérito, o Estado defende que os cargos têm 'natureza de assessoramento técnico especializado'. O Advogado-Geral da União — que por força da lei deve defender a constitucionalidade da norma impugnada — corrobora o argumento estatal.",
+      "speaker": {
+        "name": "AGU — Defesa da Norma Impugnada",
+        "icon": "🏛️",
+        "text": "Os cargos têm atribuições técnicas que se enquadram no conceito de assessoramento! O Estado tem autonomia para organizar sua estrutura administrativa! O STF não pode substituir a avaliação discricionária do legislador estadual!",
+        "color": "var(--orange)"
+      },
+      "question": "O art. 37, V CF admite cargos em comissão para funções burocráticas de rotina? Como fundamentar a inconstitucionalidade?",
+      "opts": [
+        "Não — o art. 37, V CF restringe os cargos em comissão a direção, chefia e assessoramento; funções burocráticas de rotina exigem concurso público (art. 37, II CF), e a lei frauda essa exigência constitucional",
+        "Sim — o Estado tem discricionariedade ampla para criar cargos em comissão conforme conveniência administrativa",
+        "Os cargos são constitucionais se preenchidos por servidores que já sejam aprovados em concurso anteriormente",
+        "A inconstitucionalidade é apenas formal — deveria haver lei complementar para criar tais cargos"
+      ],
+      "correct": 0,
+      "explanation": "O art. 37, II CF exige concurso público para ingresso em cargo ou emprego público.\n\nO art. 37, V CF cria EXCEÇÃO restrita: permite cargos em comissão, mas EXCLUSIVAMENTE para funções de DIREÇÃO, CHEFIA E ASSESSORAMENTO.\n\nO STF possui jurisprudência consolidada:\n— ADI 3.706/MS: inconstitucional lei que cria cargos em comissão para funções burocráticas, sem atribuição de direção ou assessoramento real.\n— ADI 4.125/TO: quantitativo elevado de comissionados para funções técnicas de rotina frauda o concurso público.\n\nO Estado não tem autonomia para criar exceções ao concurso público além das previstas expressamente na Constituição Federal — a autonomia estadual encontra limite nos princípios da Administração Pública do art. 37 CF.",
+      "refs": [
+        "Art. 37, II CF/88",
+        "Art. 37, V CF/88",
+        "ADI 3.706/MS",
+        "ADI 4.125/TO",
+        "Súmula Vinculante 13 STF"
+      ],
+      "bridge": "O STF julgou procedente a ADI. O Estado requereu modulação dos efeitos para proteger os 600 servidores já nomeados..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "MODULAÇÃO DOS EFEITOS",
+      "stepIcon": "📜",
+      "narrative": "O STF julgou procedente a ADI. O Estado requer modulação dos efeitos (ex nunc), alegando que 600 servidores foram nomeados de boa-fé e que a retroatividade plena geraria caos na Administração Pública.",
+      "speaker": null,
+      "question": "O STF pode modular os efeitos da declaração de inconstitucionalidade na ADI? Qual é o quorum exigido?",
+      "opts": [
+        "Sim — o art. 27 da Lei 9.868/99 permite modulação por maioria qualificada de 2/3 do STF (8 ministros) para preservar segurança jurídica ou excepcional interesse social",
+        "Não — a decisão em ADI é sempre ex tunc (retroativa) e o STF não tem poder para modular efeitos em nenhuma hipótese",
+        "Sim — a modulação pode ser feita por maioria simples (6 ministros) a qualquer pedido do Estado",
+        "Apenas o Senado Federal pode suspender os efeitos de lei declarada inconstitucional pelo STF"
+      ],
+      "correct": 0,
+      "explanation": "O art. 27 da Lei 9.868/99 prevê expressamente a MODULAÇÃO TEMPORAL:\n\n'Ao declarar a inconstitucionalidade de lei ou ato normativo, e tendo em vista razões de segurança jurídica ou de excepcional interesse social, poderá o STF, por maioria de dois terços de seus membros, restringir os efeitos daquela declaração.'\n\nRequisitos cumulativos para modulação:\n1. QUORUM QUALIFICADO: 2/3 do STF = mínimo de 8 ministros (não maioria simples)\n2. FUNDAMENTO: segurança jurídica OU excepcional interesse social\n\nEfeitos normais da ADI procedente (sem modulação):\n— Erga omnes, ex tunc (retroativo), vinculante (art. 102, §2º CF)\n\nIMPORTANTE: O art. 52, X CF (Senado) suspende leis inconstitucionais APENAS em sede de controle DIFUSO — no concentrado, a decisão do STF já tem eficácia geral e vinculante, sem necessidade de resolução senatorial.",
+      "refs": [
+        "Art. 27 Lei 9.868/99",
+        "Art. 102, §2º CF/88",
+        "Art. 52, X CF/88",
+        "ADI 2.240/BA",
+        "ADI 3.458/GO"
+      ],
+      "bridge": null
+    }
+  ]
+}
