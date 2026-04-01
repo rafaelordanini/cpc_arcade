@@ -1,8 +1,9 @@
 {
-  "id": "case-005",
+  "id": "civil_004",
   "icon": "👧",
   "title": "A Guarda Disputada",
   "area": "DIREITO DE FAMÍLIA · GUARDA · PODER FAMILIAR",
+  "area_id": "direito_civil",
   "plaintiff": "Fernanda Lima",
   "defendant": "Marcelo Lima",
   "intro": "Seus clientes Fernanda e Marcelo Lima estão em processo de divórcio após 8 anos de casamento. Têm uma filha, Sofia, de 6 anos.\n\nMarcelo quer a guarda unilateral para si, alegando que Fernanda viaja frequentemente a trabalho e não tem condições de cuidar da filha no dia a dia.\n\nFernanda quer a guarda compartilhada, argumentando que ambos têm condições de cuidar de Sofia e que a participação do pai é fundamental.\n\nVocê é o advogado de Fernanda — defenda a solução que melhor atende ao interesse de Sofia!",
