@@ -1,8 +1,9 @@
 {
-  "id": "case-015",
+  "id": "consumidor_004",
   "icon": "💳",
   "title": "O Contrato Armadilha",
   "area": "DIREITO DO CONSUMIDOR · CLÁUSULA ABUSIVA · REVISÃO CONTRATUAL",
+  "area_id": "direito_consumidor",
   "plaintiff": "Fernando Costa",
   "defendant": "Financeira CréditoFácil S/A",
   "intro": "Seu cliente Fernando Costa contratou empréstimo pessoal de R$ 10.000 com a Financeira CréditoFácil S/A. O contrato prevê:\n\n• Taxa de juros: 12% ao mês\n• Seguro prestamista obrigatório: R$ 150/mês\n• Tarifa de cadastro: R$ 800\n• Capitalização de juros diária\n• Foro exclusivo: cidade do credor (500 km de distância)\n\nApós 6 meses, Fernando já pagou R$ 12.400 e ainda deve R$ 14.800.\n\nVocê é o advogado de Fernando — identifique os abusos e revise o contrato!",
