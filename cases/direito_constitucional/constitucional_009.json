@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_009",
+  "icon": "💊",
+  "title": "O Remédio que o Estado Nega",
+  "area": "DIREITO CONSTITUCIONAL · DIREITO À SAÚDE · MÍNIMO EXISTENCIAL",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Dona Benedita Alves (paciente)",
+  "defendant": "Estado do Mato Verde",
+  "intro": "Dona Benedita Alves, 67 anos, portadora de esclerose múltipla progressiva, necessita do medicamento Natalizumabe (R$ 18.000/mês), não incorporado ao rol do SUS, mas prescrito por neurologista do Hospital das Clínicas como única alternativa terapêutica eficaz para seu caso.\n\nO Estado do Mato Verde negou o fornecimento alegando: (a) o medicamento não consta na lista do SUS; (b) aplicação da 'reserva do possível'; (c) impossibilidade de o Judiciário determinar despesas não previstas no orçamento.\n\nA família de Dona Benedita não tem condições de arcar com o custo.\n\nVocê é o advogado de Dona Benedita — garanta o medicamento!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "JUDICIABILIDADE DO DIREITO À SAÚDE",
+      "stepIcon": "⚡",
+      "narrative": "O Estado alega que o direito à saúde é norma programática que depende de políticas públicas e escolhas orçamentárias do Poder Executivo, não podendo ser exigido individualmente pelo Judiciário.",
+      "speaker": null,
+      "question": "O art. 196 CF (direito à saúde) pode ser exigido judicialmente de forma individual?",
+      "opts": [
+        "Sim — o STF reconhece o direito à saúde como direito fundamental de aplicabilidade imediata (art. 5º, §1º CF); quando envolve o mínimo existencial, o Judiciário pode determinar prestações concretas ao Estado independentemente de previsão orçamentária",
+        "Não — o art. 196 CF é norma programática que depende exclusivamente de políticas públicas do Executivo; o Judiciário não pode determinar despesas não previstas no orçamento",
+        "O direito à saúde só pode ser exigido individualmente para medicamentos que já constem na lista do SUS",
+        "O Judiciário pode interferir apenas quando houver desvio de finalidade comprovado na política de saúde"
+      ],
+      "correct": 0,
+      "explanation": "O STF consolidou no RE 855.178/SE (Tema 793) e na STA 175 que o direito à saúde é:\n\n1. DIREITO FUNDAMENTAL com aplicabilidade imediata (art. 5º, §1º CF)\n2. EXIGÍVEL INDIVIDUALMENTE quando envolve o mínimo existencial\n3. NÃO meramente programático para situações de urgência vital\n\nO art. 196 CF impõe ao Estado obrigações positivas concretas — não apenas promessas políticas.\n\nO STF (ADPF 45/DF — Rel. Min. Celso de Mello) firmou:\n— O Judiciário PODE determinar implementação de políticas públicas quando a omissão estatal violar o mínimo existencial\n— A 'reserva do possível' não pode ser invocada para negar o mínimo vital à dignidade humana\n\nPara Dona Benedita, cuja vida depende do medicamento, o mínimo existencial está em jogo.",
+      "refs": [
+        "Art. 196 CF/88",
+        "Art. 5º, §1º CF/88",
+        "RE 855.178/SE (Tema 793)",
+        "STA 175 AgR/CE",
+        "ADPF 45/DF"
+      ],
+      "bridge": "A judiciabilidade foi reconhecida. O Estado apresentou o argumento da reserva do possível e da ausência de previsão orçamentária..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "RESERVA DO POSSÍVEL",
+      "stepIcon": "🛡️",
+      "narrative": "O Estado insiste na reserva do possível: não há dotação orçamentária para fornecimento individual de medicamentos de alto custo não listados no SUS. Alega que atender individualmente compromete as políticas coletivas de saúde pública.",
+      "speaker": {
+        "name": "Procurador do Estado Dr. Brandão",
+        "icon": "🏛️",
+        "text": "Respeito a situação de Dona Benedita, mas o Estado não pode ser caixa ilimitado! R$ 18.000 por mês por paciente inviabiliza as políticas coletivas! A reserva do possível é cláusula constitucional implícita! O Judiciário não pode criar despesa não prevista no orçamento — isso viola a Lei de Responsabilidade Fiscal!",
+        "color": "var(--orange)"
+      },
+      "question": "A 'reserva do possível' é fundamento suficiente para o Estado negar medicamento vital a Dona Benedita?",
+      "opts": [
+        "Não — a reserva do possível não pode se opor ao mínimo existencial; o Estado deve demonstrar efetivamente a impossibilidade financeira, não apenas alegá-la; quando a vida está em risco, a dignidade humana prevalece sobre o argumento orçamentário",
+        "Sim — a reserva do possível é argumento constitucional válido que impede qualquer condenação estatal além da lista do SUS",
+        "A reserva do possível só cede quando o medicamento constar da RENAME (lista nacional) — fora dela, o Estado nunca pode ser compelido a fornecer",
+        "O STF entende que a reserva do possível sempre prevalece em casos de medicamentos de alto custo acima de R$ 10.000/mês"
+      ],
+      "correct": 0,
+      "explanation": "O STF (STF — STA 175, Rel. Min. Gilmar Mendes) estabeleceu o equilíbrio entre mínimo existencial e reserva do possível:\n\nRESERVA DO POSSÍVEL é reconhecida como limitação real, mas:\n1. O Estado deve PROVAR concretamente a impossibilidade financeira — não basta a alegação genérica\n2. A reserva do possível NÃO se opõe ao MÍNIMO EXISTENCIAL (direito à vida e dignidade)\n3. Quando há risco à vida ou grave comprometimento da saúde, a obrigação estatal é imediata\n\nCritérios do STJ/STF para fornecimento de medicamento não listado no SUS (RE 657.718 — Tema 6):\n1. Comprovação por laudo médico da necessidade do medicamento\n2. Incapacidade financeira do paciente de arcar com o custo\n3. Registro na ANVISA (ou pedido de extensão de uso)\n4. Ineficácia dos medicamentos fornecidos pelo SUS para o caso concreto",
+      "refs": [
+        "Art. 196 CF/88",
+        "Art. 1º CF/88",
+        "RE 657.718/MG (Tema 6)",
+        "STA 175 AgR/CE",
+        "REsp 1.657.156/RJ (Tema 106 STJ)"
+      ],
+      "bridge": "O argumento da reserva do possível foi afastado. Surge a questão sobre a responsabilidade solidária dos entes federativos..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "RESPONSABILIDADE FEDERATIVA",
+      "stepIcon": "💰",
+      "narrative": "O Estado alega que a responsabilidade pelo fornecimento é exclusivamente federal (Ministério da Saúde) e que o Estado é parte ilegítima. Dona Benedita acionou apenas o Estado — a União e o Município não foram citados.",
+      "speaker": null,
+      "question": "O Estado tem responsabilidade pelo fornecimento de medicamentos? A União e o Município precisam ser acionados conjuntamente?",
+      "opts": [
+        "O STF fixou responsabilidade SOLIDÁRIA entre União, Estados e Municípios pelo direito à saúde; o autor pode acionar qualquer um deles individualmente ou em conjunto; o acionado pode chamar os demais ao processo mas a ação não pode ser extinta por isso",
+        "A responsabilidade é exclusivamente federal — o Estado é parte ilegítima e a ação deve ser extinta",
+        "O autor precisa obrigatoriamente acionar os três entes conjuntamente, sob pena de impossibilidade de execução da sentença",
+        "O Município é o único responsável pelo fornecimento — o SUS é descentralizado e a responsabilidade é municipal"
+      ],
+      "correct": 0,
+      "explanation": "O STF fixou no RE 855.178/SE (Tema 793) a tese de RESPONSABILIDADE SOLIDÁRIA:\n\n'Os entes da federação, em decorrência da competência comum, são solidariamente responsáveis nas demandas prestacionais na área da saúde, e diante dos critérios constitucionais de descentralização e hierarquização, compete à autoridade judicial direcionar o cumprimento conforme as regras de repartição de competências e determinar o ressarcimento a quem suportou o ônus financeiro.'\n\nPortanto:\n1. RESPONSABILIDADE SOLIDÁRIA: autor pode acionar qualquer ente (federal, estadual ou municipal)\n2. ESCOLHA DO AUTOR: é opção processual acionar um ou todos os entes\n3. DIREITO DE REGRESSO: o ente que cumprir pode cobrar a quota-parte dos demais\n4. NÃO há litisconsórcio necessário entre os entes federativos\n\nO Estado não pode alegar ilegitimidade — sua responsabilidade é constitucionalmente solidária.",
+      "refs": [
+        "Art. 196 CF/88",
+        "Art. 23, II CF/88",
+        "RE 855.178/SE (Tema 793)",
+        "RE 657.718/MG (Tema 6)",
+        "SL 1.403/MA"
+      ],
+      "bridge": null
+    }
+  ]
+}
