@@ -1,8 +1,9 @@
 {
-  "id": "case-013",
+  "id": "civil_010",
   "icon": "🏗",
   "title": "O Contrato Rompido",
   "area": "DIREITO CONTRATUAL · ARRAS · RESCISÃO · CDC",
+  "area_id": "direito_civil",
   "plaintiff": "Renata Campos",
   "defendant": "Construtora Horizonte Ltda",
   "intro": "Sua cliente Renata Campos assinou contrato de compra e venda de apartamento na planta com a Construtora Horizonte Ltda. Pagou R$ 30.000 de sinal e parcelas mensais durante 18 meses, totalizando R$ 80.000 pagos.\n\nA construtora atrasou a obra em 14 meses além do prazo contratual (tolerância era de 6 meses). Renata não consegue mais arcar com as parcelas e quer rescindir o contrato.\n\nA construtora quer reter 30% de tudo que foi pago 'a título de indenização', conforme cláusula contratual.\n\nVocê é o advogado de Renata — garanta a restituição justa!",
