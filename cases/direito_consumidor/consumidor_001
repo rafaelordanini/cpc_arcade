@@ -1,8 +1,9 @@
 {
-  "id": "case-001",
+  "id": "consumidor_001",
   "title": "O Nome Sujo Indevido",
   "icon": "💳",
   "area": "DIREITO DO CONSUMIDOR · DANO MORAL · CDC",
+  "area_id": "direito_consumidor", 
   "plaintiff": "Maria Silva",
   "defendant": "Banco Digital S/A",
   "intro": "Sua cliente Maria Silva descobriu que seu nome foi inscrito no SPC/Serasa pelo Banco Digital S/A — mesmo após ter quitado sua dívida há 3 meses, com recibo em mãos.\n\nPor causa dessa negativação indevida, ela perdeu a aprovação de um financiamento imobiliário que aguardava há anos.\n\nVocê é o advogado de Maria. Analise o caso, tome as decisões corretas e leve a causa até o fim!",
