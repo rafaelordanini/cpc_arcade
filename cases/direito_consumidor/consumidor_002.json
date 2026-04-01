@@ -1,8 +1,9 @@
 {
-  "id": "case-011",
+  "id": "consumidor_002",
   "icon": "🔥",
   "title": "O Eletrodoméstico em Chamas",
   "area": "DIREITO DO CONSUMIDOR · FATO DO PRODUTO · CDC",
+  "area_id": "direito_consumidor",
   "plaintiff": "Eduardo Santos",
   "defendant": "BrasilMax Eletrodomésticos S/A",
   "intro": "Seu cliente Eduardo Santos comprou uma fritadeira elétrica da BrasilMax há 8 meses. Na semana passada, o produto pegou fogo espontaneamente enquanto estava desligado, causando incêndio que destruiu parcialmente a cozinha (R$ 35.000 de dano) e queimou o braço de Eduardo (queimadura de segundo grau).\n\nA empresa alega que Eduardo usou o produto de forma incorreta — o manual proíbe deixar o aparelho na tomada quando não está em uso.\n\nVocê é o advogado de Eduardo — comprove a responsabilidade do fabricante!",
