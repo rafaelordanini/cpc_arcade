@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_010",
+  "icon": "✊",
+  "title": "A Greve Sem Lei",
+  "area": "DIREITO CONSTITUCIONAL · MANDADO DE INJUNÇÃO · GREVE DO SERVIDOR",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Sindicato dos Servidores Públicos Federais — SINSEF (impetrante)",
+  "defendant": "Congresso Nacional (omisso)",
+  "intro": "O art. 37, VII da Constituição Federal garante ao servidor público o direito de greve, 'nos termos e nos limites definidos em lei específica'.\n\nO Congresso Nacional não editou essa lei específica em mais de 35 anos desde a promulgação da CF/88.\n\nO SINSEF, representando servidores federais que querem paralisar em defesa de reajuste salarial, precisa de amparo jurídico para exercer o direito de greve sem sofrer descontos salariais e processos administrativos.\n\nVocê é o advogado do Sindicato — use o instrumento constitucional correto e garanta o direito de greve!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "MANDADO DE INJUNÇÃO",
+      "stepIcon": "📋",
+      "narrative": "O advogado do governo federal alega que, sem a lei específica, os servidores simplesmente não têm direito de greve e que qualquer paralisação é ilegal. Alega que o instrumento adequado seria uma ADO ao STF, não um MI.",
+      "speaker": null,
+      "question": "Por que o Mandado de Injunção é o instrumento correto para o SINSEF, e não a ADO?",
+      "opts": [
+        "O MI (art. 5º, LXXI CF) é cabível quando a ausência de norma regulamentadora torne inviável o exercício de direito constitucional; ao contrário da ADO (que apenas declara a omissão), o MI permite que o STF concretize o direito para o impetrante",
+        "A ADO é mais adequada pois tem efeito erga omnes — o MI só tem efeito inter partes e não resolve o problema para todos os servidores",
+        "O instrumento correto é o recurso ao TST, que tem competência para questões de greve de servidores públicos",
+        "Sem a lei específica do art. 37, VII CF, nenhum instrumento jurídico pode garantir o direito de greve — deve-se aguardar a lei"
+      ],
+      "correct": 0,
+      "explanation": "O art. 5º, LXXI CF/88 prevê o Mandado de Injunção:\n'Conceder-se-á mandado de injunção sempre que a falta de norma regulamentadora torne inviável o exercício dos direitos e liberdades constitucionais e das prerrogativas inerentes à nacionalidade, à soberania e à cidadania.'\n\nDIFERENÇAS FUNDAMENTAIS MI × ADO:\n\nADO:\n— Controle concentrado ABSTRATO\n— Legitimados do art. 103 CF (não inclui sindicatos diretamente)\n— Efeito: declaração da omissão + ciência ao Legislativo\n— NÃO resolve concretamente o caso\n\nMANDADO DE INJUNÇÃO:\n— Ação CONCRETA individual ou coletiva\n— Legitimado: qualquer titular do direito inviabilizado\n— Efeito (posição concretista): o STF SUPRE a omissão para o caso\n— RESOLVE o problema concreto do impetrante\n\nNo caso do SINSEF, o MI coletivo (art. 12 Lei 13.300/16) é o instrumento correto.",
+      "refs": [
+        "Art. 5º, LXXI CF/88",
+        "Art. 37, VII CF/88",
+        "Lei 13.300/2016",
+        "MI 708/DF",
+        "MI 712/PA"
+      ],
+      "bridge": "O MI foi admitido. O STF analisou como suprir a omissão legislativa no mérito..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "POSIÇÃO CONCRETISTA DO STF",
+      "stepIcon": "⚖️",
+      "narrative": "O governo federal sustenta que o STF só pode declarar a omissão e notificar o Congresso — não pode criar regras para o direito de greve do servidor. Alega que qualquer determinação concreta do STF seria 'legislar' e violar a separação dos poderes.",
+      "speaker": {
+        "name": "AGU — Advogado-Geral da União",
+        "icon": "🏛️",
+        "text": "O STF não pode legislar! Se não há lei, o MI apenas notifica o Congresso — o STF não tem poder de criar normas sobre greve! Isso violaria a separação de poderes e o mandato democrático do Legislativo! A posição não concretista é a única constitucionalmente adequada!",
+        "color": "var(--orange)"
+      },
+      "question": "Qual é a posição atual do STF sobre os efeitos da decisão em Mandado de Injunção?",
+      "opts": [
+        "O STF adota a posição CONCRETISTA — pode suprir a omissão concretamente para o caso, aplicando analogicamente a Lei de Greve do setor privado (Lei 7.783/89) ao caso dos servidores públicos, com adaptações (MI 670, 708, 712)",
+        "O STF adota a posição não concretista — apenas declara a omissão e cientifica o Congresso, sem criar normas",
+        "O STF cria lei provisória com prazo de 6 meses, que perde eficácia se o Congresso não legislar nesse prazo",
+        "O STF encaminha o caso ao TST para que este regulamente o direito de greve dos servidores por analogia"
+      ],
+      "correct": 0,
+      "explanation": "O STF superou a posição NÃO CONCRETISTA e adotou a posição CONCRETISTA nos MI 670/ES, 708/DF e 712/PA (julgados em 2007):\n\nA POSIÇÃO CONCRETISTA permite ao STF, em sede de MI:\n1. Reconhecer a omissão inconstitucional\n2. SUPRIR CONCRETAMENTE a lacuna para o caso\n3. Aplicar a norma mais próxima por ANALOGIA\n\nNo caso do direito de greve dos servidores (art. 37, VII CF), o STF determinou a aplicação da Lei 7.783/89 (greve no setor privado) com as seguintes adaptações para o serviço público:\n— Atividades essenciais têm limitação maior de adesão\n— Serviços mínimos devem ser mantidos\n— Negociação prévia é obrigatória\n\nA Lei 13.300/2016 (Lei do MI) codificou a posição concretista, prevendo efeitos inter partes ou erga omnes conforme decisão do tribunal.",
+      "refs": [
+        "MI 670/ES",
+        "MI 708/DF",
+        "MI 712/PA",
+        "Lei 13.300/2016",
+        "Lei 7.783/89"
+      ],
+      "bridge": "O STF concedeu o MI determinando aplicação da Lei 7.783/89. Surge a questão sobre os efeitos do MI coletivo para todos os servidores representados pelo sindicato..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "EFEITOS DO MI COLETIVO",
+      "stepIcon": "📜",
+      "narrative": "O MI foi concedido aplicando a Lei 7.783/89 com adaptações. O governo federal questiona se a decisão se aplica apenas aos filiados do SINSEF ou a todos os servidores federais. Outro sindicato, que não participou do MI, quer se beneficiar da decisão.",
+      "speaker": null,
+      "question": "Quais são os efeitos do Mandado de Injunção coletivo impetrado pelo SINSEF?",
+      "opts": [
+        "O MI coletivo (art. 13 Lei 13.300/16) produz efeitos para todos os substituídos do sindicato (independentemente de autorização individual); o STF pode atribuir efeito erga omnes à decisão se a natureza do direito o justificar; sindicatos não impetrantes não são automaticamente beneficiados",
+        "O MI coletivo tem efeitos apenas para os servidores que individualmente se habilitaram no processo",
+        "O MI coletivo tem efeito automático erga omnes para todos os servidores públicos do Brasil, independentemente de sindicato",
+        "Qualquer sindicato pode se beneficiar da decisão sem necessidade de impetrar novo MI — o precedente é vinculante para todos"
+      ],
+      "correct": 0,
+      "explanation": "A Lei 13.300/2016 regulamentou o MI e codificou os efeitos:\n\nArt. 9º: A decisão terá EFICÁCIA SUBJETIVA limitada às partes e produzirá efeitos até o advento da norma regulamentadora.\n\nArt. 9º, §1º: Poderá ser conferida eficácia ULTRA PARTES ou ERGA OMNES à decisão, quando isso for inerente ou indispensável ao exercício do direito.\n\nMI COLETIVO (art. 12):\n— Pode ser impetrado por entidades de classe, sindicatos, associações\n— Abrange todos os substituídos do impetrante (INDEPENDENTEMENTE de autorização individual — diferença do MS coletivo)\n\nPara o SINSEF:\n— A decisão alcança TODOS OS FILIADOS ao sindicato\n— O STF PODE (não está obrigado) estender os efeitos a outros servidores se a natureza do direito exigir\n— Sindicatos não impetrantes devem impetrar MI próprio para beneficiar seus filiados — ou aguardar nova decisão\n\nApós o julgamento do MI 708, o precedente orienta novos casos, mas não há vinculação automática sem novo MI.",
+      "refs": [
+        "Art. 5º, LXXI CF/88",
+        "Art. 9º Lei 13.300/2016",
+        "Art. 12 Lei 13.300/2016",
+        "Art. 13 Lei 13.300/2016",
+        "MI 708/DF"
+      ],
+      "bridge": null
+    }
+  ]
+}
