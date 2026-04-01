@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_005",
+  "icon": "🏙️",
+  "title": "O Contrato que Sangra o Erário",
+  "area": "DIREITO CONSTITUCIONAL · AÇÃO POPULAR · PATRIMÔNIO PÚBLICO",
+  "area_id": "direito_constitucional",
+  "plaintiff": "João Eleitor (cidadão)",
+  "defendant": "Prefeito Renato Figueiredo e Construtora Paraíso Ltda",
+  "intro": "O Prefeito Renato Figueiredo celebrou contrato de locação de imóvel particular para sede de secretaria municipal pelo valor de R$ 25.000/mês — quando o valor de mercado na mesma região é de R$ 8.000/mês, conforme três avaliações independentes.\n\nJoão Eleitor, professor municipal e eleitor do município, descobriu o superfaturamento ao analisar as contas públicas disponíveis no portal de transparência.\n\nNão há inquérito ou ação penal instaurada. João quer anular o contrato e responsabilizar o Prefeito e a Construtora.\n\nVocê é o advogado de João — ajuíze a Ação Popular corretamente!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "LEGITIMIDADE ATIVA",
+      "stepIcon": "📋",
+      "narrative": "O Prefeito alega que João não tem legitimidade para a ação, pois não é o prejudicado direto pelo contrato e que apenas o Ministério Público ou o Tribunal de Contas têm competência para questionar atos administrativos financeiros.",
+      "speaker": null,
+      "question": "Quem tem legitimidade ativa para propor Ação Popular?",
+      "opts": [
+        "Qualquer cidadão no pleno gozo dos direitos políticos (eleitor) — a ação popular é instrumento de democracia direta previsto no art. 5º, LXXIII CF; João, como eleitor, tem plena legitimidade",
+        "Apenas o Ministério Público tem legitimidade para questionar contratos administrativos lesivos",
+        "O Tribunal de Contas é o único órgão competente para anular contratos com superfaturamento",
+        "A legitimidade é de qualquer pessoa, incluindo estrangeiros e menores de 18 anos, desde que provem interesse pessoal"
+      ],
+      "correct": 0,
+      "explanation": "O art. 5º, LXXIII CF/88 prevê:\n'Qualquer cidadão é parte legítima para propor ação popular que vise a anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência.'\n\nLEGITIMIDADE ATIVA: qualquer CIDADÃO — pessoa no gozo dos DIREITOS POLÍTICOS, ou seja, eleitor.\n\nNÃO têm legitimidade para ação popular:\n— Pessoas jurídicas (Súmula 365 STF)\n— Estrangeiros (sem título de eleitor)\n— Inalistáveis (menores de 16 anos não emancipados, absolutamente incapazes)\n— Aqueles com direitos políticos suspensos\n\nA prova da cidadania se faz com o título de eleitor (art. 1º, §3º Lei 4.717/65).",
+      "refs": [
+        "Art. 5º, LXXIII CF/88",
+        "Art. 1º Lei 4.717/65",
+        "Súmula 365 STF",
+        "RE 160.381/SP",
+        "AREsp 1.314.581/MG"
+      ],
+      "bridge": "A legitimidade foi reconhecida. A defesa do Prefeito passou a contestar o mérito, negando a lesividade do contrato..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "LESIVIDADE E DOLO",
+      "stepIcon": "🛡️",
+      "narrative": "O Prefeito e a Construtora argumentam que o contrato foi celebrado de boa-fé, que não houve intenção de lesar o erário e que a lesividade depende da prova de dolo ou culpa grave dos agentes.",
+      "speaker": {
+        "name": "Dr. Gomes — Advogado do Prefeito",
+        "icon": "🕴️",
+        "text": "Meu cliente agiu de boa-fé! Não houve dolo nem má-fé! A Ação Popular exige prova da intenção de lesar! Sem dolo comprovado, o ato não pode ser anulado pela Ação Popular — a boa-fé deve ser presumida dos agentes públicos!",
+        "color": "var(--red)"
+      },
+      "question": "A Ação Popular exige prova de dolo ou culpa do agente público para ser procedente?",
+      "opts": [
+        "Não — a lesividade ao patrimônio público, à moralidade administrativa ou ao meio ambiente é suficiente; o superfaturamento objetivo (3x o valor de mercado) é, por si só, prova da lesividade, independentemente de dolo",
+        "Sim — sem prova de dolo ou culpa grave, a Ação Popular não pode anular o contrato",
+        "A Ação Popular só anula o ato se houver condenação criminal prévia do agente público por improbidade",
+        "É necessário provar prejuízo efetivo e quantificado ao erário — mera irregularidade formal não basta"
+      ],
+      "correct": 0,
+      "explanation": "A Ação Popular não exige prova de dolo ou culpa do agente. O STF e o STJ consolidaram que a lesividade pode ser:\n\n1. LESÃO AO PATRIMÔNIO PÚBLICO: prejuízo econômico efetivo (superfaturamento comprovado)\n2. LESÃO À MORALIDADE ADMINISTRATIVA: independentemente de dano patrimonial\n3. LESÃO AO MEIO AMBIENTE ou AO PATRIMÔNIO HISTÓRICO-CULTURAL\n\nA Lei 4.717/65 (art. 2º) enumera as modalidades de nulidade, incluindo a lesividade objetiva — não exige elemento subjetivo.\n\nO superfaturamento de R$ 25.000 em contrato cujo valor de mercado é R$ 8.000 (mais de 3x) é lesividade OBJETIVA e MANIFESTA — demonstrada por 3 avaliações independentes, prescindindo de prova de dolo.\n\nObjeto da Ação Popular: ANULAÇÃO do ato + condenação dos responsáveis ao ressarcimento.",
+      "refs": [
+        "Art. 5º, LXXIII CF/88",
+        "Art. 2º Lei 4.717/65",
+        "Art. 11 Lei 4.717/65",
+        "REsp 1.109.557/MG",
+        "RE 170.768/SP"
+      ],
+      "bridge": "O mérito foi reconhecido. Surge a questão sobre as custas processuais e a responsabilidade solidária dos réus..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "CUSTAS E RESPONSABILIDADE",
+      "stepIcon": "💰",
+      "narrative": "O juiz julgou procedente a Ação Popular, anulou o contrato e condenou o Prefeito e a Construtora ao ressarcimento. A Construtora pede que sua responsabilidade seja limitada ao período em que recebeu os valores, e o Prefeito pede que João arque com as custas do processo.",
+      "speaker": null,
+      "question": "João deve pagar custas do processo? Qual é a responsabilidade da Construtora?",
+      "opts": [
+        "João está isento de custas salvo comprovada má-fé (art. 5º, LXXIII CF); o Prefeito e a Construtora respondem solidariamente pelo ressarcimento integral, incluindo os valores recebidos indevidamente pela empresa",
+        "João deve pagar as custas proporcionalmente ao benefício obtido com a procedência da ação",
+        "A Construtora é isenta de responsabilidade por ter recebido em boa-fé — o Prefeito responde sozinho",
+        "A isenção de custas só vale se João ganhar a ação — como houve contestação intensa, as custas devem ser divididas"
+      ],
+      "correct": 0,
+      "explanation": "O art. 5º, LXXIII CF/88 é expresso: o autor da Ação Popular está isento de custas e ônus da sucumbência, SALVO COMPROVADA MÁ-FÉ.\n\nEssa isenção é um incentivo constitucional à fiscalização popular dos atos públicos — sem ela, o custo financeiro desestimularia cidadãos comuns de exercer esse direito.\n\nRESPONSABILIDADE DOS RÉUS (art. 6º Lei 4.717/65):\n— Responsabilidade SOLIDÁRIA entre os beneficiários do ato lesivo\n— A Construtora, como beneficiária direta do contrato superfaturado, responde solidariamente pelos valores recebidos indevidamente\n— A boa-fé não exclui a responsabilidade de devolução do ENRIQUECIMENTO SEM CAUSA\n\nO MP, mesmo que não seja o autor, atua como fiscal da lei (custos legis) e pode PROSSEGUIR na ação se o autor desistir ou abandonar (art. 9º Lei 4.717/65).",
+      "refs": [
+        "Art. 5º, LXXIII CF/88",
+        "Art. 6º Lei 4.717/65",
+        "Art. 9º Lei 4.717/65",
+        "Art. 11 Lei 4.717/65",
+        "REsp 1.236.026/MS"
+      ],
+      "bridge": null
+    }
+  ]
+}
