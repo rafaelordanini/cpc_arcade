@@ -88,7 +88,16 @@
       "icone": "📜",
       "cor": "#607D8B",
       "casos": [
-        "direito_constitucional/constitucional_001.json"
+        "direito_constitucional/constitucional_001.json",
+        "direito_constitucional/constitucional_002.json",
+        "direito_constitucional/constitucional_003.json",
+        "direito_constitucional/constitucional_004.json",
+        "direito_constitucional/constitucional_005.json",
+        "direito_constitucional/constitucional_006.json",
+        "direito_constitucional/constitucional_007.json",
+        "direito_constitucional/constitucional_008.json",
+        "direito_constitucional/constitucional_009.json",
+        "direito_constitucional/constitucional_010.json"
       ]
     }
   ]
