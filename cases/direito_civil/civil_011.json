@@ -1,8 +1,9 @@
 {
-  "id": "case-014",
+  "id": "civil_011",
   "icon": "🔑",
   "title": "O Inquilino Inadimplente",
   "area": "DIREITO DAS LOCAÇÕES · DESPEJO · LEI 8.245/91",
+  "area_id": "direito_civil",
   "plaintiff": "João Azevedo (Locador)",
   "defendant": "Marcos Silveira (Locatário)",
   "intro": "Seu cliente João Azevedo é proprietário de imóvel residencial que alugou a Marcos Silveira por R$ 2.200/mês.\n\nMarcos está inadimplente há 4 meses, acumulando R$ 8.800 de aluguel + R$ 1.200 de IPTU que ele deveria pagar conforme contrato, totalizando R$ 10.000.\n\nO contrato tinha fiador (Paulo), mas Paulo faleceu há 2 meses e seus herdeiros recusaram a herança.\n\nVocê é o advogado de João — retome o imóvel e recupere os valores atrasados!",
