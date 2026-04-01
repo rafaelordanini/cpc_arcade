@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_006",
+  "icon": "🔇",
+  "title": "A Lei que Nunca Veio",
+  "area": "DIREITO CONSTITUCIONAL · CONTROLE CONCENTRADO · ADO",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Confederação Nacional dos Trabalhadores Públicos (requerente)",
+  "defendant": "Congresso Nacional (omisso)",
+  "intro": "O art. 37, VII da Constituição Federal de 1988 garante o direito de greve ao servidor público, 'nos termos e nos limites definidos em lei específica'.\n\nPassados mais de 35 anos da promulgação da CF, o Congresso Nacional jamais editou a lei específica regulamentando o exercício desse direito — deixando milhões de servidores sem segurança jurídica para exercer uma garantia constitucional.\n\nA Confederação Nacional dos Trabalhadores Públicos propôs Ação Direta de Inconstitucionalidade por Omissão (ADO) perante o STF.\n\nVocê é o advogado da entidade — demonstre a omissão inconstitucional e seus efeitos!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "CABIMENTO DA ADO",
+      "stepIcon": "📋",
+      "narrative": "O Congresso Nacional, em nota, alega que a não edição de lei é opção política legítima do Legislativo, que a omissão não pode ser objeto de controle judicial, e que a ADO viola a separação dos poderes.",
+      "speaker": null,
+      "question": "A ADO é cabível para impugnar omissão do Congresso em regulamentar norma constitucional de eficácia limitada?",
+      "opts": [
+        "Sim — o art. 103, §2º CF prevê a ADO para combater omissão que torne ineficaz norma constitucional; o art. 37, VII CF é norma de eficácia limitada que depende de lei regulamentadora, e a inércia por 35 anos configura omissão inconstitucional",
+        "Não — a inércia legislativa é opção política legítima e o Judiciário não pode compelir o Legislativo a legislar sob pena de violação da separação de poderes",
+        "A ADO só é cabível para omissões do Poder Executivo — omissões legislativas devem ser questionadas pelo Mandado de Injunção",
+        "A omissão legislativa só é inconstitucional se houver prazo expresso na Constituição para edição da lei, o que não existe no art. 37, VII CF"
+      ],
+      "correct": 0,
+      "explanation": "O art. 103, §2º CF/88 prevê a ADO:\n'Declarada a inconstitucionalidade por omissão de medida para tornar efetiva norma constitucional, será dada ciência ao Poder competente para a adoção das providências necessárias e, em se tratando de órgão administrativo, para fazê-lo em trinta dias.'\n\nCABIMENTO DA ADO: quando norma constitucional de eficácia limitada (que depende de lei para produzir plenos efeitos) não é regulamentada pelo órgão competente.\n\nO art. 37, VII CF é norma de eficácia limitada — o direito de greve do servidor público só pode ser plenamente exercido após a lei regulamentadora.\n\nA omissão por 35 anos configura INCONSTITUCIONALIDADE POR OMISSÃO — o Congresso tem dever constitucional de legislar e sua inércia injustificada viola a Constituição.\n\nADO ≠ interferência indevida: o STF declara a omissão e cientifica o Legislativo — não substitui o legislador.",
+      "refs": [
+        "Art. 103, §2º CF/88",
+        "Art. 37, VII CF/88",
+        "Art. 12-A Lei 9.868/99",
+        "ADO 3/DF",
+        "ADO 26/DF"
+      ],
+      "bridge": "O STF reconheceu a omissão inconstitucional. O debate passou para os efeitos dessa decisão..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "EFEITOS DA PROCEDÊNCIA",
+      "stepIcon": "⚖️",
+      "narrative": "O STF julgou procedente a ADO e declarou a omissão inconstitucional. O Congresso questiona quais são suas obrigações após a decisão e se pode ser multado ou sofrer sanções por não legislar no prazo.",
+      "speaker": {
+        "name": "Líder do Governo no Congresso",
+        "icon": "🏛️",
+        "text": "O STF pode declarar a omissão, mas não pode nos obrigar a votar uma lei! Isso violaria a separação dos poderes e o mandato que recebemos do povo! E se não editarmos a lei, o que acontece? Nenhuma sanção é constitucional!",
+        "color": "var(--orange)"
+      },
+      "question": "Quais são os efeitos da procedência da ADO em relação ao Poder Legislativo?",
+      "opts": [
+        "O STF dá ciência ao Congresso da omissão inconstitucional — não pode fixar prazo para legislar nem aplicar multa ao Legislativo; em relação a órgão administrativo, pode fixar prazo de 30 dias (art. 103, §2º CF)",
+        "O STF pode fixar prazo de 30 dias para o Congresso editar a lei, sob pena de multa diária",
+        "O STF pode editar a lei por decreto judicial para suprir a omissão legislativa diretamente",
+        "Não há qualquer consequência para o Congresso — a ADO é meramente declaratória e não produz efeitos práticos"
+      ],
+      "correct": 0,
+      "explanation": "O art. 103, §2º CF estabelece dois regimes diferentes após procedência da ADO:\n\n1. PODER LEGISLATIVO (Congresso): o STF dá CIÊNCIA da omissão. Não pode fixar prazo nem aplicar multa — isso violaria a separação dos poderes e a autonomia do Legislativo.\n\n2. ÓRGÃO ADMINISTRATIVO: o STF pode fixar PRAZO DE 30 DIAS para adoção das providências necessárias.\n\nA ADO em relação ao Legislativo tem efeito preponderantemente POLÍTICO E MORAL — pressiona a instituição perante a sociedade, mas não é executável por coerção direta.\n\nDIFERENÇA COM O MI: No Mandado de Injunção (art. 5º, LXXI CF), o STF pode suprir a omissão concretamente para o caso específico (posição concretista).",
+      "refs": [
+        "Art. 103, §2º CF/88",
+        "Art. 12-H Lei 9.868/99",
+        "ADO 25/DF",
+        "MI 708/DF",
+        "MI 712/PA"
+      ],
+      "bridge": "Os efeitos foram esclarecidos. Surge a questão sobre as diferenças práticas entre a ADO e o Mandado de Injunção..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "ADO × MANDADO DE INJUNÇÃO",
+      "stepIcon": "📜",
+      "narrative": "Um servidor público de outro estado, que quer exercer o direito de greve individualmente, pergunta se deve propor ADO ou Mandado de Injunção. Ele quer saber qual instrumento é mais efetivo para seu caso concreto.",
+      "speaker": null,
+      "question": "Qual a diferença prática entre ADO e Mandado de Injunção para o servidor que quer exercer o direito de greve?",
+      "opts": [
+        "MI é mais efetivo para o caso concreto — é ação individual ou coletiva que permite ao STF suprir a omissão concretamente para o impetrante; a ADO é ação abstrata do controle concentrado que apenas declara a omissão e cientifica o Legislativo",
+        "A ADO é mais efetiva pois tem efeito erga omnes e vinculante — o MI produz efeitos apenas no processo em que é impetrado",
+        "Os dois instrumentos são idênticos — basta escolher qualquer um para exercer o direito de greve",
+        "Nenhum dos dois é efetivo — sem a lei específica, o direito de greve do servidor é simplesmente inexercível"
+      ],
+      "correct": 0,
+      "explanation": "ADO × MANDADO DE INJUNÇÃO — diferenças fundamentais:\n\nADO (Ação Direta de Inconstitucionalidade por Omissão):\n— Ação do CONTROLE CONCENTRADO ABSTRATO\n— Legitimados: apenas os do art. 103 CF (partidos, confederações, PGR etc.)\n— Efeito: declaração da omissão + ciência ao Legislativo\n— NÃO resolve concretamente o caso do indivíduo\n\nMANDADO DE INJUNÇÃO (art. 5º, LXXI CF):\n— Ação CONCRETA com base em caso individual\n— Legitimado: qualquer pessoa com direito constitucional inviabilizado pela omissão\n— Efeito: o STF SUPRE CONCRETAMENTE a omissão para o caso (posição concretista adotada nos MIs 670, 708, 712)\n— No caso do direito de greve: o STF aplicou a lei de greve do setor privado (Lei 7.783/89) analogicamente por meio do MI\n\nO servidor deve impetrar MANDADO DE INJUNÇÃO para exercer concretamente seu direito de greve.",
+      "refs": [
+        "Art. 5º, LXXI CF/88",
+        "Art. 103, §2º CF/88",
+        "Lei 13.300/2016",
+        "MI 670/ES",
+        "MI 708/DF"
+      ],
+      "bridge": null
+    }
+  ]
+}
