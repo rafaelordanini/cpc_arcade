@@ -261,6 +261,91 @@ body{animation:flicker 10s infinite}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:#000}
 ::-webkit-scrollbar-thumb{background:#1a1a1a}
+
+/* =========================================
+   FILTRO DE ÁREA DO DIREITO
+   ========================================= */
+
+#area-filter-container {
+  margin: 18px auto 10px auto;
+  text-align: center;
+  max-width: 640px;
+  animation: fadeIn 0.5s ease;
+}
+
+.filter-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  color: var(--yellow);
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  text-shadow: 0 0 8px var(--yellow);
+}
+
+#area-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.42rem;
+  padding: 8px 10px;
+  border: 2px solid var(--gray);
+  background: transparent;
+  color: var(--gray);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+  background: rgba(255, 200, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(0, 255, 136, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.filter-btn.active:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.filter-btn.disabled-area {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.filter-count {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  color: var(--cyan, #00eeff);
+  min-height: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.filter-count.zero {
+  color: var(--red);
+}
+
+/* =========================================
+   FIM — FILTRO DE ÁREA
+   ========================================= */
+
+  
 </style>
 </head>
 
@@ -319,6 +404,22 @@ body{animation:flicker 10s infinite}
       </button>
     </div>
     <div class="blink-lbl" style="text-align:center">✦ SELECIONE UM CASO ✦</div>
+    <!-- ===== FILTRO DE ÁREA ===== -->
+<div id="area-filter-container">
+  <p class="filter-label">⚖️ ESCOLHA A ÁREA DO DIREITO</p>
+  <div id="area-filter-buttons">
+    <button class="filter-btn active" onclick="filterArea('todos')"     data-area="todos">🌐 TODOS</button>
+    <button class="filter-btn"        onclick="filterArea('civil')"     data-area="direito_civil">📋 CIVIL</button>
+    <button class="filter-btn"        onclick="filterArea('penal')"     data-area="direito_penal">⚔️ PENAL</button>
+    <button class="filter-btn"        onclick="filterArea('constitucional')" data-area="direito_constitucional">🏛️ CONSTITUCIONAL</button>
+    <button class="filter-btn"        onclick="filterArea('trabalho')"  data-area="direito_trabalho">👷 TRABALHO</button>
+    <button class="filter-btn"        onclick="filterArea('administrativo')" data-area="direito_administrativo">🏢 ADMINISTRATIVO</button>
+    <button class="filter-btn"        onclick="filterArea('tributario')" data-area="direito_tributario">💰 TRIBUTÁRIO</button>
+    <button class="filter-btn"        onclick="filterArea('ambiental')" data-area="direito_ambiental">🌿 AMBIENTAL </button>
+  </div>
+  <p id="filter-case-count" class="filter-count">⏳ carregando...</p>
+</div>
+<!-- ===== FIM DO FILTRO ===== -->
   </div>
 
   <!-- ════ JOGO ════════════════════════════════════ -->
@@ -588,6 +689,8 @@ const SFX = {
 const CASES_DIR = 'cases/';
 
 let manifest       = [];
+let selectedArea = 'todos'; // ← ADICIONE
+let filteredCases = [];     // ← ADICIONE  
 let sessionPlayed  = new Set();
 let sessionSkipped = new Set();
 let currentFile    = null;
@@ -614,6 +717,8 @@ let hiScore = parseInt(SafeStorage.get('tdp_hi','0'));
     const res = await fetch(`${CASES_DIR}manifest.json?cb=${Date.now()}`, { cache:'no-store' });
     if (!res.ok) throw new Error('manifest.json não encontrado');
     manifest = (await res.json()).cases;
+    filteredCases = [...manifest]; // ← ADICIONE
+    applyAreaFilter();  
     updateManifestInfo();
     const btn = document.getElementById('btn-abrir');
     btn.disabled = false;
@@ -641,9 +746,20 @@ function updateManifestInfo() {
 /* ═══════════════════════════════════════════════════════
    SELEÇÃO ALEATÓRIA
 ═══════════════════════════════════════════════════════ */
-function pickRandom(excludeFile=null) {
-  let pool = manifest.filter(f => !sessionPlayed.has(f));
-  if (pool.length === 0) { sessionPlayed.clear(); sessionSkipped.clear(); pool = [...manifest]; }
+function pickRandom(excludeFile = null) {
+  // Usa filteredCases se houver filtro ativo, senão usa manifest completo
+  const base = filteredCases.length > 0 ? filteredCases : [...manifest];
+
+  let pool = base.filter(f => !sessionPlayed.has(f));
+  if (pool.length === 0) {
+    sessionPlayed.clear();
+    sessionSkipped.clear();
+    pool = [...base]; // ← reinicia só dentro da área filtrada
+  }
+  if (excludeFile) pool = pool.filter(f => f !== excludeFile);
+  if (pool.length === 0) pool = [...base];
+
+  
   if (excludeFile && pool.length > 1) pool = pool.filter(f => f !== excludeFile);
   const notSkipped = pool.filter(f => !sessionSkipped.has(f));
   const final = notSkipped.length > 0 ? notSkipped : pool;
@@ -1155,6 +1271,47 @@ function renderResult() {
     updateManifestInfo();
   });
 }
+function filterArea(area) {
+  selectedArea = area;
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.area === area) btn.classList.add('active');
+  });
+
+  applyAreaFilter();
+}
+
+function applyAreaFilter() {
+  if (selectedArea === 'todos') {
+    filteredCases = [...manifest]; // ← usa manifest, não allCases
+  } else {
+    filteredCases = manifest.filter(casePath => { // ← usa manifest, não allCases
+      const normalized = casePath.toLowerCase().replace(/[_\-]/g, '');
+      const area = selectedArea.toLowerCase().replace(/[_\-]/g, '');
+      return normalized.includes(area);
+    });
+  }
+
+  updateFilterCount();
+}
+
+function updateFilterCount() {
+  const el = document.getElementById('filter-case-count');
+  if (!el) return;
+
+  const count = filteredCases.length;
+
+  if (count === 0) {
+    el.textContent = '⚠️ nenhum caso nessa área ainda';
+    el.classList.add('zero');
+  } else {
+    el.textContent = `✔ ${count} caso${count > 1 ? 's' : ''} disponível${count > 1 ? 'is' : ''}`;
+    el.classList.remove('zero');
+  }
+}
+
+  
 </script>
 </body>
 </html>
