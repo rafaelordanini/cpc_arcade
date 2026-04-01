@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_004",
+  "icon": "🛡️",
+  "title": "O Candidato Preterido",
+  "area": "DIREITO CONSTITUCIONAL · MANDADO DE SEGURANÇA · CONCURSO PÚBLICO",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Carla Mendes (candidata aprovada)",
+  "defendant": "Governador do Estado de São Paulo (autoridade coatora)",
+  "intro": "Carla Mendes foi aprovada em concurso público para o cargo de Fiscal de Rendas do Estado de São Paulo, classificada em 3º lugar — dentro do número de vagas previsto no edital (5 vagas).\n\nApós o prazo de validade do concurso, o Estado nomeou 12 candidatos de concurso posterior para o mesmo cargo, alegando que o concurso de Carla havia expirado.\n\nCarla nunca foi nomeada, apesar de aprovada dentro das vagas. O prazo de validade do seu concurso expirou há 15 dias.\n\nVocê é o advogado de Carla — impetre o Mandado de Segurança correto!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "CABIMENTO E PRAZO",
+      "stepIcon": "📋",
+      "narrative": "O Estado alega que o MS não é cabível pois o concurso de Carla já expirou há 15 dias, tornando seu direito incerto. Além disso, sustenta que passou o prazo decadencial para a impetração do MS.",
+      "speaker": null,
+      "question": "O Mandado de Segurança é cabível no caso de Carla? Qual é o prazo decadencial para impetração?",
+      "opts": [
+        "Sim — MS é cabível para proteger direito líquido e certo não amparado por HC ou HD; o prazo decadencial é de 120 dias a contar da ciência do ato coator (art. 23 Lei 12.016/09); o prazo ainda não se esgotou pois o concurso expirou há apenas 15 dias",
+        "Não — o MS só cabe quando o direito ainda está em vigor; o vencimento do concurso extinguiu o direito de Carla e o prazo decadencial já começou com a aprovação",
+        "O prazo do MS é de 30 dias contados da aprovação no concurso — já está decaído",
+        "MS não é o instrumento correto — Carla deve propor ação ordinária declaratória de direito à nomeação"
+      ],
+      "correct": 0,
+      "explanation": "O Mandado de Segurança (art. 5º, LXIX CF/88) protege direito líquido e certo, não amparado por Habeas Corpus ou Habeas Data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público.\n\nDIREITO LÍQUIDO E CERTO: é aquele demonstrado de plano, com prova documental pré-constituída — sem necessidade de dilação probatória.\n\nPRAZO DECADENCIAL: 120 dias a contar da data em que o interessado tiver ciência oficial do ato coator (art. 23 Lei 12.016/09). O prazo começa na ciência do ato — não na aprovação.\n\nNo caso de Carla, o ato coator é a preterição (nomeação de candidatos de concurso posterior sem nomear os aprovados dentro das vagas do concurso anterior). O prazo de 120 dias conta desse ato e ainda não se esgotou.",
+      "refs": [
+        "Art. 5º, LXIX CF/88",
+        "Art. 1º Lei 12.016/09",
+        "Art. 23 Lei 12.016/09",
+        "Súmula 632 STF",
+        "RE 598.099/MS (repercussão geral)"
+      ],
+      "bridge": "A decadência foi afastada. O juiz agora analisa se a autoridade coatora foi corretamente indicada..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "AUTORIDADE COATORA",
+      "stepIcon": "🎤",
+      "narrative": "Carla impetrou o MS contra o Governador do Estado. A Procuradoria do Estado alega que a autoridade coatora correta seria o Secretário de Gestão de Pessoas, responsável pela listagem de nomeações — e que a impetração contra o Governador seria equivocada.",
+      "speaker": {
+        "name": "Procurador do Estado Dr. Valente",
+        "icon": "🏛️",
+        "text": "O Governador não assina os atos de nomeação individualmente! A autoridade coatora é o Secretário de Gestão de Pessoas! O MS deve ser extinto sem resolução de mérito por ilegitimidade passiva — Carla errou quem acionar!",
+        "color": "var(--orange)"
+      },
+      "question": "Quem deve ser indicado como autoridade coatora no MS de Carla?",
+      "opts": [
+        "A autoridade coatora é quem detém competência para praticar o ato ou deixar de praticá-lo; se o Governador tem competência constitucional/legal para as nomeações, ele é a autoridade correta — ainda que delegue a execução ao Secretário",
+        "O Procurador do Estado tem razão — a autoridade coatora é sempre o servidor de menor hierarquia que assina os atos burocráticos",
+        "O MS deve ser impetrado contra o Estado como pessoa jurídica, não contra autoridade específica",
+        "Qualquer autoridade pode ser indicada como coatora, pois o erro pode ser corrigido a qualquer momento sem prejuízo"
+      ],
+      "correct": 0,
+      "explanation": "A AUTORIDADE COATORA é quem pratica ou ordena de forma concreta a ação ou omissão impugnada, sendo competente para corrigir a ilegalidade.\n\nO STF e o STJ consolidaram:\n— Autoridade coatora é a que detém COMPETÊNCIA PARA O ATO — não necessariamente quem assina o papel\n— Em nomeações, a competência constitucional pode ser do Governador (art. 84, II CF como modelo), ainda que delegada operacionalmente\n\nA regra geral: quem tem poder de DESCONSTITUIR o ato ou PRATICAR O ATO OMITIDO é a autoridade coatora.\n\nIMPORTANTE: O erro na indicação da autoridade coatora NÃO gera extinção automática — o juiz pode determinar a emenda da petição inicial (art. 321 CPC), especialmente se dentro do prazo decadencial. A jurisprudência é mais flexível quando a confusão é razoável dentro da mesma estrutura de poder.",
+      "refs": [
+        "Art. 6º Lei 12.016/09",
+        "Art. 5º, LXIX CF/88",
+        "Súmula 510 STF",
+        "RMS 47.682/DF",
+        "MS 24.584/DF"
+      ],
+      "bridge": "A autoridade coatora foi corretamente identificada. O mérito do direito à nomeação chegou ao julgamento..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "DIREITO À NOMEAÇÃO",
+      "stepIcon": "⚖️",
+      "narrative": "No mérito, o Estado sustenta que a nomeação de candidatos aprovados em concurso público é ato discricionário da Administração — mesmo que dentro do número de vagas —, e que o vencimento do prazo de validade do concurso extinguiu qualquer direito de Carla.",
+      "speaker": null,
+      "question": "Carla tem direito subjetivo à nomeação por ter sido aprovada dentro do número de vagas do edital?",
+      "opts": [
+        "Sim — o STF fixou que candidato aprovado dentro do número de vagas previsto no edital tem DIREITO SUBJETIVO À NOMEAÇÃO, não mera expectativa; a Administração só pode deixar de nomear em situações excepcionais devidamente fundamentadas",
+        "Não — a nomeação é sempre ato discricionário da Administração, mesmo para aprovados dentro das vagas; não existe direito subjetivo",
+        "Carla perdeu o direito com o vencimento do prazo de validade do concurso — não pode ser nomeada após esse prazo",
+        "O direito à nomeação só existe se o edital expressamente garantir a contratação dos aprovados"
+      ],
+      "correct": 0,
+      "explanation": "O STF fixou tese de repercussão geral no RE 598.099/MS:\n\n'O candidato aprovado dentro do número de vagas previsto no edital possui direito subjetivo à nomeação, e não mera expectativa.'\n\nO raciocínio é que o edital é lei entre as partes — se o Estado abre vagas e aprova candidatos, cria direito subjetivo à nomeação. A discricionariedade existe ANTES do edital (decidir se vai fazer concurso), não depois.\n\nA Administração só pode deixar de nomear aprovados dentro das vagas em situações EXCEPCIONAIS e fundamentadas:\n— Superveniência de grave crise financeira\n— Extinção do cargo ou órgão\n— Necessidade pública imperiosa\n\nA mera conveniência ou preferência por concurso posterior NÃO justifica a preterição.\n\nO vencimento do prazo do concurso não extingue o direito se a omissão de nomear foi ilegal — o prazo de 120 dias do MS conta da ciência da preterição, não da aprovação.",
+      "refs": [
+        "RE 598.099/MS (Tema 161)",
+        "Súmula 15 STF",
+        "Art. 37, II CF/88",
+        "Art. 37, IV CF/88",
+        "MS 24.660/DF"
+      ],
+      "bridge": null
+    }
+  ]
+}
