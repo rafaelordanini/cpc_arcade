@@ -716,9 +716,14 @@ let hiScore = parseInt(SafeStorage.get('tdp_hi','0'));
   try {
     const res = await fetch(`${CASES_DIR}manifest.json?cb=${Date.now()}`, { cache:'no-store' });
     if (!res.ok) throw new Error('manifest.json não encontrado');
-    manifest = (await res.json()).cases;
-    filteredCases = [...manifest]; // ← ADICIONE
-    applyAreaFilter();  
+    const data = await res.json();
+    manifest = Array.isArray(data.cases) ? data.cases : Array.isArray(data) ? data : [];
+    if (manifest.length === 0) {
+    console.error('[TRIBUNAL] manifest.json carregado mas .cases está vazio ou inválido', data);
+    }
+
+    filteredCases = [...manifest];
+     applyAreaFilter();  
     updateManifestInfo();
     const btn = document.getElementById('btn-abrir');
     btn.disabled = false;
@@ -1282,11 +1287,19 @@ function filterArea(area) {
   applyAreaFilter();
 }
 
+// COMO DEVE FICAR:
 function applyAreaFilter() {
+  // Guarda: se manifest ainda não carregou, aborta silenciosamente
+  if (!manifest || !Array.isArray(manifest)) {
+    filteredCases = [];
+    updateFilterCount();
+    return;
+  }
+
   if (selectedArea === 'todos') {
-    filteredCases = [...manifest]; // ← usa manifest, não allCases
+    filteredCases = [...manifest];
   } else {
-    filteredCases = manifest.filter(casePath => { // ← usa manifest, não allCases
+    filteredCases = manifest.filter(casePath => {
       const normalized = casePath.toLowerCase().replace(/[_\-]/g, '');
       const area = selectedArea.toLowerCase().replace(/[_\-]/g, '');
       return normalized.includes(area);
