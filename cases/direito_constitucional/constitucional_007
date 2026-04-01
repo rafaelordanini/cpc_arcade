@@ -1,0 +1,89 @@
+{
+  "id": "constitucional_007",
+  "icon": "⚖️",
+  "title": "A Câmara que Decidiu Sozinha",
+  "area": "DIREITO CONSTITUCIONAL · CONTROLE DIFUSO · RESERVA DE PLENÁRIO",
+  "area_id": "direito_constitucional",
+  "plaintiff": "Empresa Alfa Ltda (recorrente)",
+  "defendant": "União Federal",
+  "intro": "A 3ª Câmara Cível do Tribunal de Justiça do Estado do Rio decidiu, por unanimidade de seus 3 desembargadores, que o art. 15 de uma lei estadual era inconstitucional por violar o princípio da isonomia, deixando de aplicá-lo ao caso concreto.\n\nA decisão foi tomada sem remessa ao Órgão Especial (Pleno) do TJ, pois os desembargadores entenderam ser desnecessário já que a matéria era 'evidente'.\n\nA parte contrária interpôs Recurso Especial ao STJ, alegando violação ao art. 97 da Constituição Federal.\n\nVocê é o advogado da parte que recorreu — demonstre a nulidade da decisão!",
+  "phases": [
+    {
+      "step": 1,
+      "stepLabel": "CLÁUSULA DE RESERVA DE PLENÁRIO",
+      "stepIcon": "📋",
+      "narrative": "A parte vencedora defende que a câmara agiu corretamente, que a inconstitucionalidade era óbvia e que o art. 97 CF é 'mero procedimento que não gera nulidade substancial'. O relator do REsp no STJ analisa a questão.",
+      "speaker": null,
+      "question": "O que é a cláusula de reserva de plenário do art. 97 CF e a câmara cível violou essa norma?",
+      "opts": [
+        "Sim — o art. 97 CF exige que a declaração de inconstitucionalidade de lei seja feita pelo PLENO ou pelo ÓRGÃO ESPECIAL do tribunal, pela maioria absoluta de seus membros; câmara com 3 desembargadores não tem competência para declarar inconstitucionalidade",
+        "Não — quando a inconstitucionalidade é evidente e unânime na câmara, dispensa-se a remessa ao pleno",
+        "A câmara pode declarar a inconstitucionalidade se decidir por unanimidade — o quorum da câmara substitui o quorum do pleno nesse caso",
+        "O art. 97 CF só se aplica ao STF — tribunais estaduais e federais podem declarar inconstitucionalidade por câmaras ou turmas"
+      ],
+      "correct": 0,
+      "explanation": "O art. 97 CF/88 prevê a CLÁUSULA DE RESERVA DE PLENÁRIO:\n\n'Somente pelo voto da maioria absoluta de seus membros ou dos membros do respectivo órgão especial poderão os tribunais declarar a inconstitucionalidade de lei ou ato normativo do Poder Público.'\n\nA norma se aplica a TODOS os tribunais — TJs, TRFs, STJ e STF.\n\nRequisitos:\n1. ÓRGÃO: somente o PLENO ou o ÓRGÃO ESPECIAL do tribunal\n2. QUORUM: maioria absoluta dos membros (não basta maioria relativa)\n3. OBJETO: declaração de inconstitucionalidade de lei ou ato normativo\n\nA câmara com 3 desembargadores NÃO tem competência para declarar inconstitucionalidade — mesmo que vote por unanimidade. A regra não tem exceção pelo mérito da matéria.",
+      "refs": [
+        "Art. 97 CF/88",
+        "Art. 948 CPC",
+        "Art. 949 CPC",
+        "Súmula Vinculante 10 STF",
+        "RE 361.829/RJ"
+      ],
+      "bridge": "A violação foi identificada. O STJ analisou as consequências processuais da violação do art. 97 CF..."
+    },
+    {
+      "step": 2,
+      "stepLabel": "CONSEQUÊNCIAS DA VIOLAÇÃO",
+      "stepIcon": "🔨",
+      "narrative": "O advogado da parte vencedora no TJ alega que, mesmo que houvesse violação do art. 97 CF, a nulidade seria meramente formal e sanável — e que o mérito da inconstitucionalidade poderia ser reconhecido pelo próprio STJ no julgamento do REsp.",
+      "speaker": {
+        "name": "Dra. Brandão — Advogada da parte vencedora",
+        "icon": "👩‍⚖️",
+        "text": "Mesmo que haja irregularidade procedimental, o STJ pode analisar o mérito e confirmar a inconstitucionalidade! É formalismo excessivo anular uma decisão correta no mérito por questão processual! O resultado final seria o mesmo!",
+        "color": "var(--red)"
+      },
+      "question": "Qual é a consequência da violação da cláusula de reserva de plenário pelo tribunal?",
+      "opts": [
+        "A violação do art. 97 CF gera NULIDADE ABSOLUTA da decisão — o acórdão deve ser cassado e os autos remetidos ao Órgão Especial/Pleno do tribunal de origem para julgamento regular; o STJ não pode sanar a nulidade julgando o mérito",
+        "A violação gera nulidade relativa sanável — o STJ pode confirmar o mérito se a inconstitucionalidade for evidente",
+        "O STJ pode julgar o mérito da inconstitucionalidade diretamente, sanando a irregularidade procedimental",
+        "A consequência é apenas a aplicação de multa ao relator que descumpriu o procedimento, sem anulação do acórdão"
+      ],
+      "correct": 0,
+      "explanation": "A Súmula Vinculante 10 do STF é expressa:\n\n'Viola a cláusula de reserva de plenário (CF, art. 97) a decisão de órgão fracionário de tribunal que, embora não declare expressamente a inconstitucionalidade de lei ou ato normativo do Poder Público, afasta sua incidência, no todo ou em parte.'\n\nA violação do art. 97 CF gera NULIDADE ABSOLUTA — não há possibilidade de convalidação pelo STJ.\n\nIsso porque a reserva de plenário não é mero formalismo: ela garante:\n1. Segurança jurídica (decisão mais refletida e coletiva)\n2. Isonomia (a lei só é declarada inconstitucional após análise ampla)\n3. Prestígio ao legislador democrático\n\nA consequência correta: cassar o acórdão da câmara e determinar a remessa ao Órgão Especial para que este delibere sobre a inconstitucionalidade pela maioria absoluta de seus membros.",
+      "refs": [
+        "Súmula Vinculante 10 STF",
+        "Art. 97 CF/88",
+        "Art. 948 CPC",
+        "Art. 949 CPC",
+        "RE 592.012/RS"
+      ],
+      "bridge": "A nulidade foi reconhecida. O advogado da outra parte perguntou sobre as exceções à reserva de plenário..."
+    },
+    {
+      "step": 3,
+      "stepLabel": "EXCEÇÕES À RESERVA",
+      "stepIcon": "📜",
+      "narrative": "Após a cassação, o Órgão Especial do TJ foi instado a julgar. Um dos desembargadores afirmou que poderia simplesmente replicar a decisão da câmara pois o STF já tinha Súmula Vinculante sobre a mesma matéria, dispensando nova análise pelo pleno.",
+      "speaker": null,
+      "question": "Em que hipóteses a reserva de plenário pode ser dispensada pelo órgão fracionário?",
+      "opts": [
+        "Quando o STF já tiver se pronunciado sobre a constitucionalidade da matéria em Súmula Vinculante ou em decisão de mérito em controle concentrado — nessas hipóteses, o órgão fracionário pode aplicar o entendimento sem remessa ao pleno (art. 949, parágrafo único CPC)",
+        "Nunca — a reserva de plenário é absoluta e não admite exceção em nenhuma circunstância",
+        "Quando a câmara decidir por unanimidade — a unanimidade substitui o quorum do pleno",
+        "Apenas quando tratar de lei municipal — para leis federais e estaduais a reserva é sempre obrigatória"
+      ],
+      "correct": 0,
+      "explanation": "O art. 949, parágrafo único do CPC prevê a DISPENSA DA RESERVA DE PLENÁRIO em duas hipóteses:\n\n1. Quando já existir SÚMULA VINCULANTE do STF declarando a inconstitucionalidade da norma\n2. Quando já existir DECISÃO DO PLENÁRIO DO STF EM CONTROLE CONCENTRADO (ADI, ADC, ADPF, ADO) declarando a inconstitucionalidade\n\nNessas hipóteses, o órgão fracionário pode aplicar diretamente o entendimento do STF — não há necessidade de nova deliberação do pleno local, pois a questão já foi definitivamente resolvida pela corte constitucional.\n\nFUNDAMENTO: seria inútil remeter ao pleno do tribunal algo que o STF já decidiu com força vinculante. A reserva de plenário serve para garantir análise cuidadosa — quando o STF já fez isso, o fim da norma está satisfeito.",
+      "refs": [
+        "Art. 949, parágrafo único CPC",
+        "Art. 97 CF/88",
+        "Súmula Vinculante 10 STF",
+        "Art. 103-A CF/88",
+        "RE 190.725/PR"
+      ],
+      "bridge": null
+    }
+  ]
+}
