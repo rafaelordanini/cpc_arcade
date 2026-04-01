@@ -1,8 +1,9 @@
 {
-  "id": "case-002",
+  "id": "civil_001",
   "title": "O Carro que Não Era do Vendedor",
   "icon": "🚗",
   "area": "DIREITO CIVIL · EVICÇÃO · CONTRATOS",
+  "area_id": "direito_civil",
   "plaintiff": "João Costa",
   "defendant": "Pedro Matos",
   "intro": "Seu cliente João Costa comprou um carro usado de Pedro Matos por R$ 35.000, com contrato particular assinado.\n\nTrês meses depois, a polícia apreendeu o veículo: era produto de roubo. O verdadeiro proprietário obteve decisão judicial reintegrando a posse.\n\nJoão perdeu o carro e quer seu dinheiro de volta. Você é o advogado de João — conheça a evicção e entre em ação!",
