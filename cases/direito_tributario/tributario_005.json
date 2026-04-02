@@ -1,0 +1,94 @@
+{
+  "id": "tributario_005",
+  "icone": "⛽",
+  "titulo": "O Posto e o Preço que Caiu",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Posto Delta Combustíveis Ltda.",
+  "requerido": "Estado de São Paulo — Fazenda Estadual",
+  "intro": "O Posto Delta adquire gasolina de distribuidora com ICMS recolhido antecipadamente pela distribuidora (substituto tributário) sobre preço presumido fixado em pauta fiscal pelo Estado de SP. Em razão de guerra de preços na região, o Posto vendeu combustível por valor 22% abaixo da pauta, gerando ICMS retido na fonte maior do que o efetivamente incidente sobre o preço real praticado. O Posto pede restituição da diferença. A Fazenda nega: o fato gerador do ICMS-ST ocorreu na saída da distribuidora — o preço final de varejo é irrelevante. Você é o juiz estadual.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🔄",
+      "label": "CONSTITUCIONALIDADE DA SUBSTITUIÇÃO TRIBUTÁRIA",
+      "narrativa": "A defesa questiona a constitucionalidade da própria substituição tributária 'para frente': cobrar ICMS sobre fato gerador FUTURO (venda ao consumidor final) que ainda não ocorreu violaria o princípio da capacidade contributiva e a vedação ao emprego de base de cálculo presumida.",
+      "falante": {
+        "nome": "Dr. Marcelo Simonetti",
+        "papel": "Advogado do Posto Delta",
+        "fala": "Como pode o Estado cobrar imposto sobre operação que ainda não aconteceu? A ST para frente tributa fato gerador futuro e incerto — viola o art. 150, I da CF e o princípio da capacidade contributiva! O regime todo é inconstitucional!"
+      },
+      "pergunta": "A substituição tributária progressiva (para frente) no ICMS, com cobrança antecipada sobre fato gerador PRESUMIDO, é constitucional?",
+      "opcoes": [
+        "Não. A tributação sobre fato gerador futuro viola os princípios da legalidade e da capacidade contributiva — o ICMS-ST 'para frente' é inconstitucional por natureza, devendo ser restituído integralmente o imposto antecipado",
+        "Sim, com restrições: é constitucional apenas para combustíveis e produtos sob monopólio estatal, sendo inconstitucional para demais mercadorias onde há volatilidade de preços no varejo",
+        "A constitucionalidade depende de convênio CONFAZ específico para cada produto — sem convênio aprovado, a ST para frente não tem amparo constitucional, independentemente da EC 3/93",
+        "Sim. O art. 150, §7º da CF, incluído pela EC 3/93, autoriza expressamente a atribuição ao sujeito passivo da obrigação tributária da condição de responsável pelo pagamento de imposto cujo fato gerador deva ocorrer posteriormente — a base de cálculo presumida é constitucionalmente legítima"
+      ],
+      "correta": 3,
+      "explicacao": "A EC 3/93 inseriu o art. 150, §7º na CF: 'A lei poderá atribuir a sujeito passivo de obrigação tributária a condição de responsável pelo pagamento de imposto ou contribuição, cujo fato gerador deva ocorrer posteriormente, assegurada a imediata e preferencial restituição da quantia paga, caso não se realize o fato gerador presumido.' O STF confirmou a constitucionalidade no RE 213.396/SP: a ST para frente é instrumento legítimo de praticidade tributária e combate à sonegação. PORÉM, o mesmo dispositivo que autoriza a ST exige 'imediata e preferencial restituição caso não se realize o fato gerador presumido.' A grande questão evolutiva é: o que significa 'não se realizar' o fato gerador — apenas a não-ocorrência total ou também a ocorrência por valor menor que o presumido? Isso é respondido pelo Tema 201.",
+      "refs": [
+        "Art. 150, §7º da CF (EC 3/93)",
+        "STF RE 213.396/SP — constitucionalidade da ST progressiva",
+        "LC 87/96 (Lei Kandir) — art. 10",
+        "STF RE 593.849/MG — Tema 201"
+      ],
+      "ponte": "A ST é constitucional. Mas o Posto vendeu abaixo do preço presumido — o ICMS pago foi maior que o devido. Em 2002, o STF negava o direito à restituição nesse caso. Em 2016, o Tribunal reverteu sua posição no Tema 201. A Fazenda insiste na posição antiga. Como decidir?"
+    },
+    {
+      "fase": 2,
+      "icone": "💸",
+      "label": "RESTITUIÇÃO — TEMA 201 DO STF",
+      "narrativa": "Em 2002, o STF havia decidido no RE 266.602/MG que a restituição só era devida se o fato gerador NÃO ocorresse — se ocorresse por preço menor, não havia direito à diferença. Em 2016, o STF revisou essa posição no RE 593.849/MG (Tema 201). A Fazenda insiste na posição anterior.",
+      "falante": {
+        "nome": "Dra. Sandra Aurélio",
+        "papel": "Procuradora do Estado de SP",
+        "fala": "A jurisprudência do STF de 2002 é clara: se o fato gerador ocorreu, não há restituição! Não importa se o preço foi menor — o Estado arrecadou legitimamente e o comerciante assumiu o risco da ST ao adotar esse regime de tributação antecipada!"
+      },
+      "pergunta": "Após o RE 593.849/MG (Tema 201 STF, 2016), o contribuinte substituído tem direito à restituição do ICMS-ST quando a operação final ocorre por valor INFERIOR à base de cálculo presumida?",
+      "opcoes": [
+        "Sim. O STF no RE 593.849/MG (Tema 201) alterou sua jurisprudência e fixou que É DEVIDA a restituição da diferença de ICMS-ST sempre que a base de cálculo real for inferior à presumida — o art. 150, §7º da CF garante restituição proporcional à diferença entre o presumido e o efetivamente realizado",
+        "Não. A jurisprudência consolidada do STF (RE 266.602) mantém que a restituição só é cabível quando o fato gerador presumido não se realiza — venda por preço menor não configura 'não realização' do fato gerador e não dá direito à devolução da diferença",
+        "Sim, mas apenas quando a diferença superar 20% do valor presumido — abaixo disso, aplica-se tolerância de mercado e não há restituição, por entendimento do STJ em recurso repetitivo",
+        "A questão é regulada exclusivamente pelos Estados — o direito ou não à restituição depende de cada convênio CONFAZ e lei estadual específica, sem norma geral fixada pelo STF"
+      ],
+      "correta": 0,
+      "explicacao": "STF RE 593.849/MG (2016) — VIRADA JURISPRUDENCIAL do Tema 201: 'É devida a restituição da diferença do ICMS pago a mais no regime de substituição tributária para a frente se a base de cálculo efetiva da operação for inferior à presumida.' O STF SUPEROU a posição do RE 266.602/MG (2002) que negava a restituição quando o fato gerador ocorria por valor menor. Fundamento da virada: o art. 150, §7º CF 'assegurada a imediata e preferencial restituição' não pode ser interpretado apenas para a não-ocorrência total — a proporcionalidade e a capacidade contributiva exigem a restituição da diferença. No caso do Posto Delta: ICMS retido sobre pauta (100) > ICMS devido sobre venda real (78) → diferença de 22% DEVE SER RESTITUÍDA. O mesmo julgamento estabeleceu, simetricamente, que também é devida complementação quando a venda ocorre acima da pauta.",
+      "refs": [
+        "STF RE 593.849/MG — Tema 201 — restituição na ST para frente",
+        "Art. 150, §7º da CF",
+        "STF RE 266.602/MG — posição anterior superada",
+        "STJ REsp 1.896.526/SP"
+      ],
+      "ponte": "Restituição confirmada quando o preço real fica abaixo da pauta. Mas a mesma lógica exige COMPLEMENTAÇÃO quando o Posto vende ACIMA do preço presumido? O Tema 201 é simétrico nesse ponto?"
+    },
+    {
+      "fase": 3,
+      "icone": "📈",
+      "label": "COMPLEMENTAÇÃO — SIMETRIA DO TEMA 201",
+      "narrativa": "Em mês subsequente, o Posto Delta vendeu combustível 15% ACIMA da pauta fiscal estadual, por causa de desabastecimento regional. O Estado exige complementação do ICMS-ST pela diferença. O Posto contesta: se a restituição é devida quando vende abaixo, não pode haver complementação quando vende acima — o risco foi assumido pelo Estado.",
+      "falante": {
+        "nome": "Dr. Marcelo Simonetti",
+        "papel": "Advogado do Posto Delta",
+        "fala": "O Estado foi beneficiado quando vendi acima da pauta — arrecadou sobre preço inferior ao real. O risco do mercado é do Estado! O Tema 201 não pode ser simétrico: a restituição é direito constitucional, a complementação não tem fundamento expresso!"
+      },
+      "pergunta": "O Tema 201 do STF (RE 593.849/MG) que garante restituição quando a venda ocorre ABAIXO da pauta também impõe COMPLEMENTAÇÃO quando a venda ocorre ACIMA da base presumida?",
+      "opcoes": [
+        "Não. O Tema 201 garante apenas a restituição — a complementação não foi prevista no julgamento e não pode ser exigida sem previsão constitucional expressa, prevalecendo o art. 150, §7º CF que menciona apenas restituição, não complementação",
+        "A complementação depende de lei estadual específica — o STF apenas permitiu a restituição; a exigência de complementação é questão infraconstitucional sujeita à legalidade tributária estadual e à aprovação em convênio CONFAZ",
+        "A complementação é inconstitucional por violar o princípio da anterioridade — exigir tributo complementar após a operação realizada equivale a tributação retroativa vedada pela CF",
+        "Sim. O próprio RE 593.849/MG fixou a SIMETRIA expressamente: se é devida restituição quando se vende abaixo, é devida complementação quando se vende acima — ambas decorrem do princípio da capacidade contributiva e da vedação ao enriquecimento sem causa de qualquer das partes"
+      ],
+      "correta": 3,
+      "explicacao": "O STF, no próprio julgamento do RE 593.849/MG (Tema 201), fixou expressamente a SIMETRIA: 'É devida a restituição da diferença do ICMS pago a mais no regime de substituição tributária para a frente se a base de cálculo efetiva da operação for inferior à presumida. É devido o complemento quando a base de cálculo efetiva for superior à presumida.' Fundamento da simetria: a base de cálculo do ICMS é o VALOR REAL da operação (art. 155, §2º, CF). A pauta fiscal é presunção legal relativa. Se o Estado deve restituir quando a presunção foi maior que a realidade (evitando enriquecimento sem causa do Estado), o contribuinte deve complementar quando a realidade foi maior que a presunção (evitando enriquecimento sem causa do contribuinte). A simetria decorre do princípio da capacidade contributiva e da legalidade. O Posto Delta deve complementar o ICMS sobre os 15% extras praticados acima da pauta.",
+      "refs": [
+        "STF RE 593.849/MG — Tema 201 — simetria restituição/complementação",
+        "Art. 150, §7º da CF",
+        "Art. 8º da LC 87/96 (Lei Kandir) — base de cálculo do ICMS-ST",
+        "STJ REsp 1.938.650/SP"
+      ],
+      "ponte": null
+    }
+  ]
+}
