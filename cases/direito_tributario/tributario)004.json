@@ -1,0 +1,94 @@
+{
+  "id": "tributario_004",
+  "icone": "⚔️",
+  "titulo": "A Guerra dos Estados",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Estado de Minas Gerais",
+  "requerido": "Indústria Gama S/A",
+  "intro": "A Indústria Gama S/A recebeu do Estado do Espírito Santo um benefício de redução de base de cálculo de ICMS de 75% por 10 anos, concedido por decreto estadual sem aprovação do CONFAZ. Com base nesse incentivo, a Gama destacou créditos de ICMS em notas fiscais de vendas para compradores em Minas Gerais. O Fisco mineiro glosou os créditos tomados pelos compradores, lavrando autuações milionárias. Os compradores mineiros impugnam as glosas, alegando que o benefício do ES é válido e que a glosa viola a não-cumulatividade. Você é o desembargador relator no TJ-MG.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📜",
+      "label": "CONVÊNIO CONFAZ",
+      "narrativa": "A defesa sustenta que cada Estado tem autonomia para definir sua política fiscal de ICMS. A exigência de aprovação unânime no CONFAZ seria inconstitucional por limitar a autonomia federativa dos Estados. O Fisco mineiro invoca o art. 155, §2º, XII, 'g' da CF.",
+      "falante": {
+        "nome": "Dr. Bernardo Castello",
+        "papel": "Advogado dos compradores mineiros",
+        "fala": "O Espírito Santo tem autonomia fiscal! Exigir unanimidade no CONFAZ é engessamento inconstitucional — viola a autonomia dos Estados-membros. O benefício é válido e nossos créditos devem ser mantidos pelo princípio da não-cumulatividade!"
+      },
+      "pergunta": "A concessão de benefícios fiscais de ICMS (isenções, reduções de base, créditos presumidos) por Estado-membro SEM convênio aprovado pelo CONFAZ é constitucional?",
+      "opcoes": [
+        "Sim. A autonomia tributária dos Estados-membros (art. 18 CF) permite que cada ente defina seus incentivos fiscais de ICMS sem subordinação a organismos interestaduais — a exigência de convênio é norma infraconstitucional ultrapassada e sem força vinculante",
+        "A exigência de convênio aplica-se apenas a isenções totais — reduções de base de cálculo, créditos presumidos e diferimentos podem ser concedidos unilateralmente pelos Estados sem aprovação do CONFAZ",
+        "É constitucional se o Estado puder demonstrar que o benefício não prejudica as receitas de ICMS dos demais Estados — critério econômico que substitui a exigência formal do convênio em casos justificados",
+        "Não. O art. 155, §2º, XII, 'g', CF exige deliberação do CONFAZ para concessão e revogação de isenções, incentivos e benefícios fiscais de ICMS — qualquer benefício concedido sem convênio é inconstitucional, independentemente da modalidade"
+      ],
+      "correta": 3,
+      "explicacao": "Art. 155, §2º, XII, 'g', CF: cabe à lei complementar 'regular a forma como, mediante deliberação dos Estados e do DF, isenções, incentivos e benefícios fiscais serão concedidos e revogados.' A LC 24/75 regulamentou: exige CONVÊNIO aprovado pelo CONFAZ com unanimidade para concessão e aprovação de 4/5 para revogação. O STF consolidou em diversas ADIs (ADI 2.663, ADI 3.674, ADI 4.481): TODA E QUALQUER modalidade de benefício fiscal de ICMS — isenção, redução de base, crédito presumido, diferimento, prazo especial — exige convênio CONFAZ. Não há distinção entre modalidades. O benefício do ES sem convênio é INCONSTITUCIONAL por violar norma constitucional de observância obrigatória. A autonomia dos Estados não pode se sobrepor à regra constitucional de harmonização do ICMS.",
+      "refs": [
+        "Art. 155, §2º, XII, 'g' da CF/88",
+        "LC 24/75 — CONFAZ e convênios de ICMS",
+        "STF ADI 4.481/PR — crédito presumido sem convênio é inconstitucional",
+        "STF ADI 2.663/RS"
+      ],
+      "ponte": "O benefício do ES é inconstitucional por falta de convênio. Mas os compradores mineiros de boa-fé aproveitaram os créditos com base em notas fiscais regulares. O Estado de MG pode glosar esses créditos unilateralmente, sem aguardar declaração de inconstitucionalidade pelo STF?"
+    },
+    {
+      "fase": 2,
+      "icone": "❌",
+      "label": "GLOSA UNILATERAL DE CRÉDITOS",
+      "narrativa": "O Fisco mineiro glosou os créditos de ICMS aproveitados pelos compradores com base no benefício inconstitucional do ES. Os compradores impugnam: jamais pediram o benefício ao ES, são terceiros de boa-fé que receberam notas fiscais regulares com destaque de ICMS. Pedem proteção pela não-cumulatividade.",
+      "falante": {
+        "nome": "Dra. Miriam Valentin",
+        "papel": "Procuradora do Estado de MG",
+        "fala": "O Estado de origem concedeu benefício inconstitucional — os créditos oriundos dele são ilegítimos desde a origem! A não-cumulatividade não obriga MG a reconhecer créditos gerados por benefício que viola expressamente a Constituição Federal!"
+      },
+      "pergunta": "O Estado de DESTINO pode glosar unilateralmente os créditos de ICMS aproveitados por seus contribuintes, quando o benefício do Estado de ORIGEM foi concedido sem convênio CONFAZ?",
+      "opcoes": [
+        "Não pode jamais. A não-cumulatividade do ICMS (art. 155, §2º, I, CF) é garantia constitucional absoluta — o Estado de destino é obrigado a reconhecer todos os créditos destacados em nota fiscal válida, sendo irrelevante a constitucionalidade do benefício concedido na origem",
+        "Sim, pode glosar unilateralmente. O crédito gerado por benefício inconstitucional é ilegítimo desde a origem — a não-cumulatividade não alcança créditos nascidos de atos contrários à CF, posição reafirmada pelo STF em sede de repercussão geral",
+        "Apenas mediante ação judicial — a glosa administrativa unilateral não tem amparo constitucional; o Estado de destino deve questionar o benefício do Estado de origem no STF via ADI antes de autuar seus contribuintes",
+        "Somente após declaração de inconstitucionalidade com efeitos retroativos em ADI — antes da decisão do STF, a glosa viola a segurança jurídica dos contribuintes que agiram de boa-fé na operação interestadual"
+      ],
+      "correta": 1,
+      "explicacao": "O STF enfrentou diretamente a questão: benefícios concedidos SEM convênio CONFAZ são inconstitucionais desde a origem. A não-cumulatividade do ICMS pressupõe operações tributadas anteriores VÁLIDAS. Se a operação anterior foi artificialmente desonerada por benefício inconstitucional, o crédito dela derivado não é legítimo. STF RE 628.075/RS e ADI 4.481/PR: 'os créditos de ICMS escriturados com base em benefício concedido sem convênio CONFAZ podem ser glosados pelo Estado de destino, sem necessidade de prévia declaração de inconstitucionalidade pelo STF.' O contribuinte de destino, ao tomar o crédito, assume o risco jurídico da inconstitucionalidade do benefício do Estado de origem. A boa-fé subjetiva não convalida o crédito de origem inconstitucional.",
+      "refs": [
+        "Art. 155, §2º, I da CF — não-cumulatividade do ICMS",
+        "STF RE 628.075/RS — glosa de créditos e guerra fiscal",
+        "STF ADI 4.481/PR",
+        "CONFAZ Resolução 13/2012 — operações interestaduais"
+      ],
+      "ponte": "A glosa é constitucionalmente válida. Mas ao declarar inconstitucionais os benefícios fiscais de ICMS, o STF frequentemente modula os efeitos temporais. Essa modulação beneficia automaticamente todos os contribuintes que atuaram de boa-fé sob o benefício inválido?"
+    },
+    {
+      "fase": 3,
+      "icone": "📅",
+      "label": "MODULAÇÃO DE EFEITOS",
+      "narrativa": "O STF julgou procedente ADI contra o benefício do ES, mas modulou os efeitos para proteger os contribuintes que fizeram investimentos de longo prazo com base no incentivo. A Gama S/A argumenta que a modulação a protege contra qualquer glosa retroativa sobre o período anterior ao marco fixado.",
+      "falante": {
+        "nome": "Juíza Dra. Adriana Mendes",
+        "papel": "Desembargadora Relatora",
+        "fala": "Quando o STF modula os efeitos de uma ADI em matéria tributária, qual o alcance dessa modulação? Ela protege automaticamente todos os contribuintes que aproveitaram o benefício ou apenas o Estado que o concedeu no polo passivo da ADI?"
+      },
+      "pergunta": "A modulação de efeitos pelo STF em ADI que declara inconstitucional benefício fiscal de ICMS protege TODOS os contribuintes que praticaram operações no período modulado?",
+      "opcoes": [
+        "A modulação beneficia apenas o Estado réu na ADI — os contribuintes que aproveitaram os benefícios não são partes na ADI e não podem invocar a modulação em seu favor em autuações estaduais individuais",
+        "A modulação protege os contribuintes apenas contra multas e juros — o tributo principal pode ser cobrado retroativamente pelo período modulado, pois a modulação não se estende ao núcleo da obrigação tributária",
+        "A modulação apenas suspende a declaração de inconstitucionalidade por prazo determinado — não tem efeito protetivo sobre contribuintes individuais, que devem questionar cada autuação autonomamente no Judiciário",
+        "A modulação em controle concentrado tem efeito ERGA OMNES: protege todos os contribuintes e operações realizadas no período modulado, inclusive contra autuações já lavradas — o fisco fica impedido de cobrar retroativamente pelo período coberto pela modulação"
+      ],
+      "correta": 3,
+      "explicacao": "A modulação de efeitos em ADI (art. 27, Lei 9.868/99) fixa que a decisão de inconstitucionalidade produz efeitos apenas a partir de determinada data ou condição, por razões de segurança jurídica ou excepcional interesse social. Quando o STF modula os efeitos da declaração de inconstitucionalidade de benefícios fiscais de ICMS: (1) protege os ATOS JURÍDICOS PERFEITOS praticados no período modulado; (2) a proteção é ERGA OMNES e vinculante (art. 102, §2º, CF); (3) abrange todos os contribuintes que atuaram de boa-fé no período; (4) o Fisco estadual fica impedido de cobrar retroativamente pelo período modulado. No caso da Gama: se a ADI modulou para proteger operações realizadas até determinada data, as autuações sobre esse período são indevidas. Após o marco temporal, as cobranças são válidas. A modulação é um dos institutos mais cobrados em concursos de magistratura federal e estadual.",
+      "refs": [
+        "Art. 27 da Lei 9.868/99 — modulação de efeitos",
+        "Art. 102, §2º da CF — efeito vinculante e erga omnes",
+        "STF ADI 4.481/PR — modulação em benefícios ICMS",
+        "STF ADI 3.521/PR — créditos presumidos de ICMS e modulação"
+      ],
+      "ponte": null
+    }
+  ]
+}
