@@ -818,8 +818,9 @@ async function loadCase(file) {
         narrative:   f.narrative   ?? f.narrativa   ?? '',
         question:    f.question    ?? f.pergunta    ?? '',
         opts:        f.opts        ?? f.opcoes      ?? [],
-        correct:     f.correct     ?? f.correta     ?? 0,
-        explanation: f.explanation ?? f.fundamento  ?? '',
+        correct: (typeof f.correct === 'number') ? f.correct
+        : (typeof f.correta === 'number') ? f.correta
+        : 0,        explanation: f.explanation ?? f.fundamento  ?? '',
         refs:        f.refs        ?? f.referencias ?? [],
         bridge:      f.bridge      ?? f.ponte       ?? null,
         speaker:     f.speaker     ?? null,
@@ -983,12 +984,24 @@ function renderIntro() {
    RENDER: FASE
 ═══════════════════════════════════════════════════════ */
 
-  function shuffleArray(array) {
+// SUBSTITUA a função shuffleArray existente por esta:
+function shuffleArray(array) {
+  if (array.length <= 1) return [...array];
   const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
+  let attempts = 0;
+  const originalCorrectIdx = arr.findIndex(o => o.isCorrect);
+
+  do {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    attempts++;
+  } while (
+    arr.findIndex(o => o.isCorrect) === originalCorrectIdx
+    && attempts < 20
+  );
+
   return arr;
 }
   
@@ -1094,6 +1107,16 @@ currentShuffledOpts = shuffleArray(optsWithMeta);
   const jc = document.getElementById('jc');
   if (jc) renderCharacter(jc, currentPhaseChar, 'neutral');
   window.scrollTo({top:0, behavior:'smooth'});
+
+    // ── bloqueia cliques acidentais por 400ms ──────────
+  const optsEl = document.getElementById('opts');
+  if (optsEl) {
+    optsEl.style.pointerEvents = 'none';
+    setTimeout(() => {
+      const el = document.getElementById('opts');
+      if (el) el.style.pointerEvents = 'auto';
+    }, 400);
+  }
 }
 
 /* ═══════════════════════════════════════════════════════
