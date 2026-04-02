@@ -1,0 +1,94 @@
+{
+  "id": "penal_010",
+  "icone": "🔙",
+  "titulo": "O Ladrão Arrependido",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "intermediário",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "André L. Campos",
+  "intro": "André arrombou o cofre de uma joalheria após o fechamento, carregou joias avaliadas em R$ 47.000 e se dirigia à saída. Ao ouvir a sirene policial, devolveu todas as joias ao balcão antes de sair. Foi preso a 2 quarteirões. A defesa sustenta arrependimento eficaz. O MP denuncia por furto qualificado consumado. Você é o juiz.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🔙",
+      "label": "DESISTÊNCIA OU ARREPENDIMENTO EFICAZ",
+      "narrativa": "André devolveu todas as joias antes de sair. A defesa invoca o art. 15, 2ª parte, CP (arrependimento eficaz), sustentando que o resultado não se consumou. O MP contra-argumenta: o furto estava consumado no momento em que André carregou as joias.",
+      "falante": {
+        "nome": "Dr. Eduardo Salgado",
+        "papel": "Advogado de Defesa",
+        "fala": "Ele devolveu TUDO antes de sair! Não houve subtração consolidada — o resultado não se produziu. Arrependimento eficaz: André responde apenas pelos atos anteriores, não pelo furto consumado!"
+      },
+      "pergunta": "Qual a distinção entre DESISTÊNCIA VOLUNTÁRIA (art. 15, 1ª parte) e ARREPENDIMENTO EFICAZ (art. 15, 2ª parte) do CP?",
+      "opcoes": [
+        "Desistência voluntária: o agente abandona antes de iniciar a execução do crime; Arrependimento eficaz: abandona durante a fase executória — a distinção é temporal, sem diferença de consequência jurídica",
+        "São sinônimos — o CP usa dois termos para a mesma realidade (abandono voluntário do iter criminis), com idênticas consequências",
+        "Desistência voluntária: aplica-se a crimes tentados; Arrependimento eficaz: aplica-se a crimes consumados — só o segundo exclui a pena, pois pressupõe resultado a ser revertido",
+        "Desistência voluntária: agente abandona a execução antes de esgotar os atos executórios disponíveis ('posso continuar, mas não quero' — fórmula de Frank); Arrependimento eficaz: agente já esgotou os atos executórios e age ativamente para impedir que o resultado se produza — ambos exigem voluntariedade"
+      ],
+      "correta": 3,
+      "explicacao": "Art. 15 CP: 'O agente que, voluntariamente, desiste de prosseguir na execução ou impede que o resultado se produza, só responde pelos atos já praticados.' DESISTÊNCIA VOLUNTÁRIA (1ª parte): na fase executória, com atos ainda disponíveis, o agente PARA de executar — 'posso continuar, mas não quero' (fórmula de Frank). ARREPENDIMENTO EFICAZ (2ª parte): o agente já ESGOTOU todos os atos executórios (iter completo), mas age ATIVAMENTE para impedir o resultado. Exemplo clássico: após ministrar veneno, dá o antídoto. ATENÇÃO: ambos exigem VOLUNTARIEDADE — não precisam ser espontâneos (podem decorrer de medo da polícia). NÃO CONFUNDIR com arrependimento posterior (art. 16 CP): este ocorre APÓS a consumação do crime e não exclui o crime, apenas reduz a pena.",
+      "refs": [
+        "Art. 15 do CP — Desistência voluntária e arrependimento eficaz",
+        "Art. 16 do CP — Arrependimento posterior",
+        "Frank, Reinhard — fórmula da voluntariedade",
+        "STJ HC 306.504/SP"
+      ],
+      "ponte": "A distinção está clara. Mas no caso de André: o furto já estava consumado quando ele carregou as joias? Isso determina se o arrependimento eficaz é sequer cabível."
+    },
+    {
+      "fase": 2,
+      "icone": "⏱️",
+      "label": "CONSUMAÇÃO DO FURTO",
+      "narrativa": "O MP invoca a Súmula 582 STJ. A defesa argumenta pela teoria da ablatio — se André não saiu com as joias, não houve subtração consumada.",
+      "falante": {
+        "nome": "Dra. Sandra Braga",
+        "papel": "Promotora de Justiça",
+        "fala": "Súmula 582 STJ: o furto consuma-se com a posse de fato da res furtiva, ainda que por breve tempo e seguida de perseguição! André carregou as joias — furto consumado independentemente de onde ele estava no imóvel!"
+      },
+      "pergunta": "Qual é o critério adotado pelo STJ (Súmula 582) para a CONSUMAÇÃO do furto?",
+      "opcoes": [
+        "Teoria da APPREHENSIO/AMOTIO: consuma-se com a INVERSÃO DA POSSE, ainda que por breve tempo e seguida de perseguição — não é necessário que o agente saia do local ou que a vítima perca totalmente a vigilância do bem",
+        "Teoria da ABLATIO: consuma-se quando o agente SAI DO LOCAL do crime com a coisa — sem saída do imóvel, há apenas tentativa de furto",
+        "Teoria da ILLATIO: consuma-se quando o agente atinge LOCAL SEGURO para fruição tranquila — sem atingir local seguro, há furto tentado",
+        "Teoria da CONTRECTATIO: consuma-se no mero CONTATO FÍSICO com a coisa, antes mesmo de qualquer deslocamento"
+      ],
+      "correta": 0,
+      "explicacao": "Súmula 582 STJ: 'Consuma-se o crime de furto com a posse de fato da res furtiva, ainda que por breve espaço de tempo e seguida de perseguição ao agente, sendo prescindível a posse mansa e pacífica ou desvigiada.' O STJ adotou a teoria da APPREHENSIO (amotio): basta que o agente tome a coisa em suas mãos com cessação do contato direto do dono. NÃO exige: (1) saída do local; (2) posse tranquila; (3) vigilância totalmente perdida; (4) local seguro atingido. No caso: quando André CARREGOU as joias do cofre ao balcão, o furto já estava CONSUMADO. A devolução posterior é IRRELEVANTE para afastar a consumação — configura arrependimento POSTERIOR (art. 16 CP), que não exclui o crime mas reduz a pena.",
+      "refs": [
+        "Súmula 582 do STJ — consumação do furto",
+        "STJ EREsp 1.492.601/RS — leading case da Súmula 582",
+        "Art. 16 do CP — Arrependimento Posterior",
+        "STJ AgRg no AREsp 1.541.069/SP"
+      ],
+      "ponte": "Furto consumado — arrependimento eficaz afastado. André responde por furto qualificado. Mas a devolução integral pode gerar arrependimento posterior (art. 16) com redução de pena?"
+    },
+    {
+      "fase": 3,
+      "icone": "💎",
+      "label": "ARREPENDIMENTO POSTERIOR",
+      "narrativa": "A defesa requer subsidiariamente o arrependimento posterior (art. 16 CP). O MP objeta: André devolveu apenas por medo da sirene — ausência de espontaneidade vicia a voluntariedade e afasta o benefício.",
+      "falante": {
+        "nome": "Juíza Dra. Fátima Cunha",
+        "papel": "Juíza de Direito",
+        "fala": "Art. 16 exige reparação voluntária e integral até o recebimento da denúncia. André devolveu por medo da sirene policial — isso configura voluntariedade ou é coação que vicia o benefício?"
+      },
+      "pergunta": "Para o ARREPENDIMENTO POSTERIOR (art. 16 CP), a reparação deve ser ESPONTÂNEA ou basta ser VOLUNTÁRIA (livre, mesmo que motivada por medo ou pressão externa)?",
+      "opcoes": [
+        "Basta ser VOLUNTÁRIA — o art. 16 exige apenas que o ato seja voluntário (não coagido), sendo desnecessária a espontaneidade. André devolveu livremente mesmo que motivado pela sirene — medo da polícia não é coação irresistível; o requisito da voluntariedade está cumprido",
+        "É necessária ESPONTANEIDADE — o agente deve agir por livre iniciativa sem qualquer fator externo que o pressione. Medo da polícia vicia a voluntariedade e afasta o benefício do art. 16",
+        "A espontaneidade é exigida apenas quando o crime causa dano moral; para danos exclusivamente materiais basta a voluntariedade segundo o STJ",
+        "O art. 16 não exige nem voluntariedade nem espontaneidade — qualquer reparação integral antes da denúncia gera o benefício independentemente da motivação"
+      ],
+      "correta": 0,
+      "explicacao": "Art. 16 CP: 'Nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até o recebimento da denúncia ou da queixa, por ATO VOLUNTÁRIO do agente, a pena será reduzida de um a dois terços.' A lei exige ATO VOLUNTÁRIO — não ato espontâneo. Voluntário = livre (sem coação física ou moral irresistível). O STJ é firme: 'A voluntariedade no arrependimento posterior não exige espontaneidade — basta que o ato seja livre, mesmo que motivado por temor da pena, pressão familiar ou iminência da prisão' (REsp 1.123.148/SP). André devolveu com medo da sirene, mas LIVREMENTE — sem coação irresistível. Requisitos do art. 16: (1) crime sem violência/grave ameaça — FURTO ✓; (2) reparação integral — joias devolvidas ✓; (3) antes da denúncia ✓; (4) ato voluntário ✓. Redução de 1/3 a 2/3 aplicável.",
+      "refs": [
+        "Art. 16 do CP — Arrependimento Posterior",
+        "STJ REsp 1.123.148/SP — voluntariedade vs. espontaneidade",
+        "STJ HC 400.459/SP",
+        "Nucci, Guilherme de Souza — Manual de Direito Penal"
+      ],
+      "ponte": null
+    }
+  ]
+}
