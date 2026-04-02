@@ -1,0 +1,94 @@
+{
+  "id": "tributario_002",
+  "icone": "🏛️",
+  "titulo": "Os Correios e o IPTU Municipal",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Município de São Paulo",
+  "requerido": "Empresa Brasileira de Correios e Telégrafos — ECT",
+  "intro": "O Município de São Paulo lavrou autos de infração cobrando IPTU de três imóveis pertencentes à ECT: (1) um centro de distribuição postal; (2) uma agência própria de atendimento ao público; (3) um imóvel cedido em comodato a uma cooperativa de entregadores privados. A ECT invoca a imunidade recíproca. O Município argumenta que a ECT compete com empresas privadas de courier e não presta serviço público exclusivo. Você é o procurador municipal — analise cada imóvel.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📮",
+      "label": "FUNDAMENTO DA IMUNIDADE",
+      "narrativa": "A ECT invoca a imunidade recíproca do art. 150, VI, 'a', da CF. O Município contesta: a imunidade recíproca destina-se às pessoas jurídicas de direito público; a ECT é empresa pública — pessoa jurídica de direito PRIVADO — e não se enquadra na imunidade.",
+      "falante": {
+        "nome": "Dr. Augusto Neri",
+        "papel": "Procurador Municipal",
+        "fala": "Imunidade recíproca é para entes públicos — União, Estados e Municípios! A ECT é empresa pública de direito privado. A literalidade do art. 150, VI, 'a' não contempla pessoas jurídicas de direito privado, nem mesmo as estatais!"
+      },
+      "pergunta": "A imunidade recíproca (art. 150, VI, 'a', CF) aplica-se exclusivamente às pessoas jurídicas de direito público ou pode ser estendida a empresas públicas e sociedades de economia mista?",
+      "opcoes": [
+        "Aplica-se apenas às pessoas jurídicas de direito público (União, Estados, DF, Municípios e suas autarquias e fundações públicas) — empresas públicas e sociedades de economia mista, como pessoas de direito privado, estão expressamente excluídas pelo art. 150, §3º da CF",
+        "Aplica-se a todas as empresas estatais sem distinção, pois o patrimônio público não pode ser objeto de tributação por ente político diverso, independentemente do regime jurídico da entidade",
+        "Pode ser estendida às empresas públicas e sociedades de economia mista que prestam serviços públicos em regime de exclusividade ou delegação constitucional, pois nelas o capital é integralmente público e a atividade é essencialmente estatal — posição do STF no RE 601.392",
+        "A extensão depende de lei complementar federal que a autorize expressamente para cada empresa estatal — sem autorização legislativa específica, prevalece a vedação do art. 150, §3º, CF"
+      ],
+      "correta": 2,
+      "explicacao": "O STF, no RE 601.392/PR (Tema 201 — repercussão geral), fixou a tese: 'A imunidade tributária recíproca reconhecida à ECT alcança o IPTU incidente sobre imóveis de sua propriedade.' Fundamento: (1) a ECT presta o serviço público postal (art. 21, X, CF) em regime de exclusividade constitucional; (2) capital 100% público; (3) a tributação por ente diverso violaria o princípio federativo — ratio essendi da imunidade recíproca. CRITÉRIOS do STF para extensão às estatais: (a) prestação de serviço público essencial; (b) sem fins lucrativos privados; (c) capital público. NÃO se aplica a empresas estatais exploradoras de atividade econômica em regime de concorrência com o setor privado — para essas, vigora a vedação do §3º do art. 150 CF.",
+      "refs": [
+        "Art. 150, VI, 'a' e §3º da CF/88",
+        "STF RE 601.392/PR — Tema 201 — ECT e imunidade recíproca",
+        "STF ACO 765/RJ — distinção serviço público vs. atividade econômica",
+        "STF RE 627.051/PE — empresa pública e imunidade"
+      ],
+      "ponte": "A imunidade é reconhecida para a ECT em razão da prestação de serviço público postal. Mas um dos imóveis é cedido a uma cooperativa privada de entregadores. A imunidade persiste quando o bem é utilizado por terceiro com fins privados?"
+    },
+    {
+      "fase": 2,
+      "icone": "🔑",
+      "label": "IMÓVEL CEDIDO A TERCEIROS",
+      "narrativa": "O terceiro imóvel da ECT foi cedido em comodato gratuito a uma cooperativa de entregadores autônomos que presta serviços privados de courier. O Município cobra IPTU desse imóvel. A ECT sustenta que o título de propriedade permanece dela — logo, a imunidade persiste.",
+      "falante": {
+        "nome": "Dra. Carla Fontes",
+        "papel": "Procuradora da ECT",
+        "fala": "O imóvel é nosso! Somos os proprietários — o sujeito passivo do IPTU é o proprietário. Se a imunidade subjetiva recai sobre a ECT, ela protege o imóvel independentemente de quem o ocupa temporariamente!"
+      },
+      "pergunta": "A imunidade tributária recíproca protege imóvel de entidade imune cedido a terceiro PARTICULAR para uso em atividade privada sem vinculação às finalidades institucionais da cedente?",
+      "opcoes": [
+        "Sim. A imunidade é subjetiva — recai sobre a pessoa (ECT), não sobre o uso do bem. Enquanto a ECT for proprietária e o IPTU for de sua responsabilidade legal, a imunidade prevalece independentemente do uso por terceiros",
+        "Depende: se a cessão é onerosa (locação), perde a imunidade; se gratuita (comodato), mantém a imunidade por ausência de finalidade lucrativa da própria entidade imune",
+        "Não. O STF fixou que a imunidade não se aplica quando o imóvel é cedido a terceiro para uso em atividade privada sem vinculação às finalidades institucionais da entidade imune — o uso desvinculado da finalidade pública afasta a proteção constitucional",
+        "A questão é resolvida pelo art. 32, §1º do CTN: somente o proprietário é contribuinte do IPTU, logo a imunidade sempre segue o proprietário, nunca o ocupante"
+      ],
+      "correta": 2,
+      "explicacao": "O STF consolidou posição no RE 594.015/SP e na Súmula Vinculante 52: 'Ainda quando alugado a terceiros, considera-se destinado às finalidades essenciais da entidade sindical a que se refere este artigo o imóvel cujo produto dos aluguéis seja aplicado nessas finalidades.' Para a imunidade RECÍPROCA (art. 150, VI, 'a'), o STF é mais restritivo: imóvel cedido a particular para uso exclusivamente privado — como a cooperativa de courier privado, sem nexo com o serviço postal público — NÃO está abrangido pela imunidade. O fundamento da imunidade recíproca (proteção do pacto federativo) não se aplica quando o bem serve a interesses privados. A ECT perde a imunidade sobre o terceiro imóvel. O art. 150, §4º, CF exige que o bem esteja 'vinculado às suas finalidades essenciais ou às delas decorrentes'.",
+      "refs": [
+        "Art. 150, §4º da CF — vinculação às finalidades essenciais",
+        "STF RE 594.015/SP — imunidade e uso por terceiros",
+        "Súmula Vinculante 52 do STF",
+        "STF RE 434.251/RJ — IPTU e imunidade de bem cedido"
+      ],
+      "ponte": "Dois imóveis imunes (distribuição postal e agência própria), um tributável (cooperativa privada). Questão final: a imunidade recíproca protege apenas o IPTU, ou também alcança as TAXAS cobradas pelo Município sobre os mesmos imóveis?"
+    },
+    {
+      "fase": 3,
+      "icone": "📊",
+      "label": "ALCANCE DA IMUNIDADE",
+      "narrativa": "Além do IPTU, o Município cobra da ECT: (a) Taxa de Coleta de Lixo; (b) Contribuição para Custeio do Serviço de Iluminação Pública — COSIP; (c) ISS sobre serviços de logística da ECT no território municipal. A ECT invoca imunidade recíproca para todas as exações.",
+      "falante": {
+        "nome": "Dr. Augusto Neri",
+        "papel": "Procurador Municipal",
+        "fala": "A imunidade recíproca é específica para IMPOSTOS! O art. 150, VI é expresso: 'instituir IMPOSTOS sobre...' Taxa e contribuição têm natureza jurídica distinta — estão fora da imunidade recíproca constitucional!"
+      },
+      "pergunta": "A imunidade recíproca do art. 150, VI, 'a', da CF abrange apenas IMPOSTOS ou também alcança TAXAS e CONTRIBUIÇÕES?",
+      "opcoes": [
+        "Abrange todos os tributos sem distinção — a expressão 'impostos' no art. 150, VI deve ser interpretada extensivamente como qualquer exação compulsória, pois a ratio da norma é proteger o pacto federativo de qualquer tributação entre entes",
+        "Abrange apenas IMPOSTOS, por expressa previsão constitucional — taxas e contribuições de melhoria podem ser cobradas de entes imunes, pois são vinculadas a serviços ou obras específicas, sem conotação política federativa; para o ISS, sendo tecnicamente imposto sobre serviços, aplica-se a imunidade quando incidente sobre atividade essencial da entidade",
+        "Abrange impostos e taxas, mas não contribuições — a taxa pelo serviço público prestado ao ente imune é inconstitucional por equivaler a cobrança entre entes federativos",
+        "A distinção entre taxas e impostos é irrelevante — toda exação fiscal entre entes federados viola a autonomia constitucional, incluindo COSIP e contribuições parafiscais"
+      ],
+      "correta": 1,
+      "explicacao": "O art. 150, VI, CF é taxativo: 'Sem prejuízo de outras garantias asseguradas ao contribuinte, é vedado à União, aos Estados, ao DF e aos Municípios instituir IMPOSTOS sobre...' A vedação alcança SOMENTE impostos — tributos não vinculados. TAXAS: podem ser cobradas de entes imunes, pois são contraprestação por serviço público específico prestado ao ente — não há reciprocidade violada (STF RE 364.202/RS — taxa de lixo cobrada de imóvel da União); COSIP: contribuição especial com fundamento próprio no art. 149-A CF — pode ser cobrada. ISS: apesar do nome, tem natureza de imposto (não vinculado a atividade do Estado para o contribuinte) — STF: o ISS integra a imunidade recíproca quando incidente sobre serviços prestados pela entidade no exercício de sua atividade essencial (RE 601.392/PR). Portanto: Taxa de lixo e COSIP → cobráveis; ISS sobre atividade postal essencial da ECT → imune.",
+      "refs": [
+        "Art. 150, VI, 'a' da CF/88 — literalidade: 'impostos'",
+        "STF RE 364.202/RS — taxa de lixo e entes imunes",
+        "STF RE 451.152/RJ — COSIP e imunidade recíproca",
+        "STF RE 601.392/PR — ISS e imunidade recíproca da ECT"
+      ],
+      "ponte": null
+    }
+  ]
+}
