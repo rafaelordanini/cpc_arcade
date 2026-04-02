@@ -46,7 +46,17 @@
       "icone": "🔒",
       "cor": "#F44336",
       "casos": [
-        "direito_penal/penal_001.json"
+        "direito_penal/penal_001.json",
+        "direito_penal/penal_002.json",
+        "direito_penal/penal_003.json",
+        "direito_penal/penal_004.json",
+        "direito_penal/penal_005.json",
+        "direito_penal/penal_006.json",
+        "direito_penal/penal_007.json",
+        "direito_penal/penal_008.json",
+        "direito_penal/penal_009.json",
+        "direito_penal/penal_010.json",
+        "direito_penal/penal_011.json"
       ]
     },
     {
