@@ -1,0 +1,94 @@
+{
+  "id": "penal_009",
+  "icone": "⏳",
+  "titulo": "O Tempo que Apaga o Crime",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "avançado",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "Júlio C. Mendes",
+  "intro": "Júlio foi condenado em 1ª instância a 2 anos por estelionato (art. 171 CP). A sentença foi proferida 4 anos e 3 meses após o recebimento da denúncia. O MP recorreu pedindo aumento para 4 anos. Júlio não recorreu. A defesa alega prescrição da pretensão punitiva na modalidade retroativa. O MP recorre e contra-argumenta. Você é o desembargador relator no TJSP.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📅",
+      "label": "PRESCRIÇÃO RETROATIVA",
+      "narrativa": "A defesa sustenta que, aplicada pena de 2 anos, a prescrição pela pena concretizada é de 4 anos (art. 109, V, CP). Como transcorreram 4 anos e 3 meses entre o recebimento da denúncia e a sentença, a PPP retroativa estaria consumada.",
+      "falante": {
+        "nome": "Dr. Henrique Bastos",
+        "papel": "Advogado de Defesa",
+        "fala": "Pena de 2 anos = prazo prescricional de 4 anos. Denúncia à sentença: 4 anos e 3 meses. A prescrição retroativa está configurada — extingue-se a punibilidade de pleno direito!"
+      },
+      "pergunta": "O que é a PPP RETROATIVA e qual é sua base legal após a Lei 12.234/2010?",
+      "opcoes": [
+        "A PPP retroativa calcula o prazo pela pena concretizada, podendo retroagir ao período entre o CRIME e o recebimento da denúncia — a Lei 12.234/2010 não alterou esse marco inicial",
+        "A PPP retroativa foi totalmente abolida pela Lei 12.234/2010, substituída pela prescrição intercorrente que corre apenas após o trânsito em julgado para a acusação",
+        "A PPP retroativa calcula o prazo pela pena concretizada na sentença, mas após a Lei 12.234/2010 só pode retroagir ao período POSTERIOR ao recebimento da denúncia — ficou vedada a retroação ao período entre o crime e a denúncia",
+        "A PPP retroativa mantém-se integralmente, calculada pela pena mínima abstrata — a Lei 12.234/2010 alterou apenas a prescrição em perspectiva (virtual), não a retroativa"
+      ],
+      "correta": 2,
+      "explicacao": "A Lei 12.234/2010 alterou o art. 110, §1º do CP: 'A prescrição, depois da sentença condenatória com trânsito em julgado para a acusação ou depois de improvido seu recurso, regula-se pela pena aplicada, não podendo, EM NENHUMA HIPÓTESE, ter por termo inicial data anterior à da DENÚNCIA ou QUEIXA.' A reforma VEDOU a PPP retroativa ao período entre o CRIME e o RECEBIMENTO DA DENÚNCIA. A prescrição retroativa AINDA EXISTE, mas só pode retroagir até a data do recebimento da denúncia. No caso: pena = 2 anos → prescrição em 4 anos (art. 109, V). Período entre a denúncia e a sentença: 4 anos e 3 meses > 4 anos = PRESCRITO? ATENÇÃO: verificar se houve trânsito para a acusação, pois o MP recorreu.",
+      "refs": [
+        "Art. 109, V do CP — prazo de 4 anos para pena de 2 anos",
+        "Art. 110, §1º do CP (redação Lei 12.234/2010)",
+        "STJ REsp 1.767.773/SP",
+        "STF HC 122.694/SP"
+      ],
+      "ponte": "A PPP retroativa parece configurada. Mas o MP recorreu pedindo aumento para 4 anos. Sem trânsito em julgado para a acusação, o parâmetro de cálculo muda radicalmente!"
+    },
+    {
+      "fase": 2,
+      "icone": "🔄",
+      "label": "RECURSO DA ACUSAÇÃO",
+      "narrativa": "O MP recorreu pedindo pena de 4 anos. Júlio não recorreu. O TJSP precisa definir: para calcular a PPP retroativa, usa-se a pena da sentença (2 anos) ou a pena máxima que pode ser imposta no recurso?",
+      "falante": {
+        "nome": "Dra. Luciana Motta",
+        "papel": "Promotora de Justiça",
+        "fala": "Não há trânsito para a acusação — o MP recorreu! Antes do trânsito para a acusação, a pena ainda pode ser aumentada. Não se pode usar a pena de 2 anos como parâmetro para a prescrição retroativa!"
+      },
+      "pergunta": "Antes do TRÂNSITO EM JULGADO PARA A ACUSAÇÃO, qual prazo prescricional deve ser usado para a PPP retroativa?",
+      "opcoes": [
+        "Enquanto não há trânsito para a acusação (MP recorreu), a PPP retroativa NÃO pode ser calculada pela pena da sentença — usa-se a pena MÁXIMA ABSTRATA, pois a pena concretizada ainda pode ser majorada em grau recursal",
+        "Mesmo sem trânsito para a acusação, usa-se a pena da sentença — o recurso do MP apenas suspende a prescrição, não altera o parâmetro de cálculo",
+        "Aplica-se a pena MÍNIMA ABSTRATA antes da sentença; após a sentença usa-se a pena concretizada independentemente de recursos pendentes",
+        "Usa-se a média entre a pena da sentença e a pena requerida pelo MP como parâmetro provisório enquanto pendente o julgamento do recurso"
+      ],
+      "correta": 0,
+      "explicacao": "Art. 110, §1º, CP: a PPP retroativa pela pena concretizada só é aplicável 'depois da sentença condenatória com TRÂNSITO EM JULGADO PARA A ACUSAÇÃO ou depois de improvido seu recurso.' O raciocínio: se o MP recorreu pedindo aumento, a pena de 2 anos ainda NÃO é definitiva para a acusação. O tribunal pode aumentá-la. Usar a pena de 2 anos seria premiar o réu com prescrição calculada em patamar que ainda pode ser majorado. Antes do trânsito para a acusação → prescrição regula-se pela pena MÁXIMA ABSTRATA (art. 109 CP). Para estelionato (art. 171 CP): pena máxima = 5 anos → prescrição em 12 anos (art. 109, III). 4 anos e 3 meses << 12 anos: NÃO HÁ PRESCRIÇÃO. A Súmula 146 STF confirma: a PPP retroativa exige trânsito para a acusação.",
+      "refs": [
+        "Art. 110, §1º do CP",
+        "Súmula 146 do STF",
+        "Art. 109, III do CP — prescrição em 12 anos para pena máx. de 5 anos",
+        "STJ HC 459.643/SP"
+      ],
+      "ponte": "Sem prescrição por ora. O TJSP aumenta a pena para 3 anos. Com trânsito em julgado para ambas as partes, Júlio foge antes da execução. Como fica a prescrição executória?"
+    },
+    {
+      "fase": 3,
+      "icone": "🏃",
+      "label": "FUGA E PRESCRIÇÃO EXECUTÓRIA",
+      "narrativa": "Pena definitiva: 3 anos. Júlio foge antes de iniciar o cumprimento. Após 6 anos sem captura, a defesa alega prescrição da pretensão executória (pena de 3 anos = prazo de 8 anos, art. 109, IV) com a fuga tendo corrido o prazo.",
+      "falante": {
+        "nome": "Juiz Dr. Maurício Alves",
+        "papel": "Juiz de Execução Penal",
+        "fala": "Pena de 3 anos, trânsito em julgado para ambas as partes. 6 anos sem execução por fuga do réu. A prescrição executória correu durante a fuga ou ela foi interrompida pela evasão?"
+      },
+      "pergunta": "A fuga do réu após o trânsito em julgado INTERROMPE ou SUSPENDE o prazo da prescrição da pretensão EXECUTÓRIA?",
+      "opcoes": [
+        "A fuga SUSPENDE a prescrição executória enquanto durar — o prazo fica paralisado durante o período de fuga e retoma do ponto onde parou após recaptura",
+        "A fuga não tem efeito sobre a prescrição executória — o prazo corre normalmente, pois a responsabilidade pela execução é do Estado e a ineficiência estatal não pode prejudicar o réu",
+        "A fuga após trânsito em julgado gera extinção do processo executório — a recaptura após a prescrição abstrata gera extinção da punibilidade automática",
+        "A fuga INTERROMPE a prescrição executória (art. 117, V, CP) — enquanto dura a fuga o prazo não corre; com a recaptura ou apresentação, o prazo RECOMEÇA DO ZERO"
+      ],
+      "correta": 3,
+      "explicacao": "Art. 117, V do CP: 'O curso da prescrição interrompe-se pela evasão do condenado ou pela revogação do livramento condicional.' A fuga/evasão do condenado é causa de INTERRUPÇÃO da prescrição executória — NÃO de suspensão. Efeito da INTERRUPÇÃO: o prazo prescricional decorrido se perde; com a recaptura ou apresentação voluntária, o prazo RECOMEÇA DO ZERO. Portanto, o Estado não perde o direito de executar pela fuga do réu — a fuga reinicia o contador. No caso: pena de 3 anos → prescrição executória em 8 anos (art. 110, §1º c/c art. 109, IV). A fuga interrompeu a prescrição. Os 6 anos de fuga não contam — quando Júlio for recapturado, novo prazo de 8 anos começa do zero.",
+      "refs": [
+        "Art. 117, V do CP — evasão como causa de interrupção",
+        "Art. 110 c/c art. 109, IV do CP",
+        "STJ AgRg no REsp 1.851.384/SP",
+        "STF HC 85.031/MG"
+      ],
+      "ponte": null
+    }
+  ]
+}
