@@ -1,0 +1,94 @@
+{
+  "id": "tributario_003",
+  "icone": "👔",
+  "titulo": "O Sócio na Mira da Fazenda",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Fazenda do Estado de São Paulo",
+  "requerido": "Carlos Eduardo B. Pinto — ex-sócio-gerente",
+  "intro": "A Fazenda Estadual ajuizou execução fiscal de R$ 890.000 em ICMS contra a empresa Beta Distribuidora Ltda., encerrada informalmente em 2020 sem liquidação regular. Carlos Eduardo foi sócio-gerente de 2015 a 2018; Renato assumiu a gerência em 2019 e geriu a empresa até o fechamento irregular. Os débitos de ICMS referem-se aos anos de 2017 a 2020. A Fazenda redireciona a execução para ambos os sócios. Carlos impugna: afirma que saiu antes dos últimos débitos e que a dissolução irregular ocorreu sob gestão de Renato. Você é o juiz da vara de execuções fiscais.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "⚖️",
+      "label": "ART. 134 vs. ART. 135 CTN",
+      "narrativa": "Carlos sustenta que apenas poderia responder como responsável subsidiário nos termos do art. 134, VII do CTN (sócios em liquidação de sociedades), não como responsável pessoal do art. 135. O advogado da Fazenda alerta: a confusão entre os dois artigos é a armadilha clássica de concurso!",
+      "falante": {
+        "nome": "Dr. Péricles Amaral",
+        "papel": "Advogado de Carlos Eduardo",
+        "fala": "Art. 134, VII do CTN: os sócios respondem subsidiariamente pelas obrigações da empresa em processo de liquidação. Responsabilidade pessoal plena do art. 135 exige ato com excesso de poderes ou infração à lei — não é automática pelo simples fato de ser sócio!"
+      },
+      "pergunta": "Qual a distinção ESSENCIAL entre a responsabilidade dos sócios nos arts. 134, VII e 135, III do CTN?",
+      "opcoes": [
+        "Art. 134, VII: responsabilidade SUBSIDIÁRIA dos sócios em processo REGULAR de liquidação quando a empresa não puder solver o débito; Art. 135, III: responsabilidade PESSOAL de diretores e sócios-gerentes que praticaram atos com excesso de poderes ou infração à lei, ao contrato social ou ao estatuto — pressupostos e natureza juridicamente distintos",
+        "Art. 134, VII: responsabilidade solidária automática de todos os sócios pelas dívidas fiscais; Art. 135, III: responsabilidade exclusiva do sócio administrador, com exclusão da empresa do polo passivo da execução",
+        "Os artigos 134 e 135 têm conteúdo idêntico — a distinção é meramente formal entre os termos 'subsidiária' e 'pessoal', sem diferença prática na execução fiscal estadual",
+        "Art. 134 aplica-se a tributos federais; Art. 135 aplica-se a tributos estaduais e municipais — a distinção é de competência tributária, não de natureza da responsabilidade"
+      ],
+      "correta": 0,
+      "explicacao": "Distinção fundamental: ART. 134, VII CTN — responsabilidade SUBSIDIÁRIA de sócios em caso de liquidação REGULAR da sociedade. Pressupostos: (a) impossibilidade de cobrança do contribuinte; (b) atos praticados pelo responsável na qualidade de sócio durante a liquidação regular; (c) não resultar de dolo — dolo remete ao art. 135. ART. 135, III CTN — responsabilidade PESSOAL de diretores, gerentes ou representantes que praticaram atos: (a) com EXCESSO DE PODERES; (b) com INFRAÇÃO À LEI; (c) com INFRAÇÃO AO CONTRATO SOCIAL ou estatuto. A responsabilidade do art. 135 é excludente ou sobreposta à do contribuinte originário — o STJ já oscilou entre as duas posições, mas predomina que é pessoal do gestor. No caso: dissolução IRREGULAR é ato ilícito (infração à lei) → qualifica a responsabilidade no art. 135, não no art. 134.",
+      "refs": [
+        "Art. 134, VII e art. 135, III do CTN",
+        "STJ REsp 1.377.019/SP — Tema 962 — distinção entre arts. 134 e 135",
+        "STJ EREsp 174.532/PR — responsabilidade pessoal do art. 135",
+        "STJ Súmula 430 — responsabilidade do sócio-gerente"
+      ],
+      "ponte": "A moldura jurídica correta é o art. 135, III. Agora: a empresa fechou irregularmente sem quitação dos débitos. Essa dissolução irregular, por si só, já autoriza o redirecionamento para Carlos Eduardo — mesmo ele tendo saído dois anos antes do encerramento?"
+    },
+    {
+      "fase": 2,
+      "icone": "🚪",
+      "label": "DISSOLUÇÃO IRREGULAR — SÚMULA 435 STJ",
+      "narrativa": "A Fazenda demonstra que a Beta Distribuidora encerrou as atividades sem procedimento regular de liquidação — simplesmente fechou as portas, cancelou o alvará e abandonou o CNPJ ativo com débitos. A Fazenda invoca a Súmula 435 do STJ para redirecionar a execução.",
+      "falante": {
+        "nome": "Dra. Luísa Fonseca",
+        "papel": "Procuradora do Estado",
+        "fala": "Súmula 435 do STJ: presume-se dissolvida irregularmente a empresa que deixa de funcionar no seu domicílio fiscal sem comunicação aos órgãos competentes. Isso autoriza o redirecionamento para os sócios-gerentes — e Carlos foi sócio-gerente nos anos dos débitos!"
+      },
+      "pergunta": "A Súmula 435 do STJ permite o redirecionamento da execução fiscal para o sócio-gerente que NÃO estava na gestão no momento da dissolução irregular?",
+      "opcoes": [
+        "Sim. A Súmula 435 autoriza o redirecionamento para qualquer sócio que tenha integrado o quadro societário durante o período dos fatos geradores dos débitos, independentemente de quem era o gestor no momento do fechamento irregular",
+        "Sim, mas apenas solidariamente com o atual gestor — todos os ex-sócios respondem conjuntamente pela dissolução irregular, cabendo ao redirecionado provar sua inocência",
+        "A Súmula 435 é de aplicação restrita a execuções fiscais federais — não se aplica a créditos estaduais de ICMS, que têm regime próprio de responsabilidade no CTN",
+        "Não. O STJ, interpretando a Súmula 435, consolidou que o redirecionamento por dissolução irregular alcança o sócio-gerente que estava NO COMANDO da empresa no momento do encerramento irregular — quem saiu regularmente antes não pode ser responsabilizado pela dissolução que não praticou"
+      ],
+      "correta": 3,
+      "explicacao": "Súmula 435 STJ: 'Presume-se dissolvida irregularmente a empresa que deixar de funcionar no seu domicílio fiscal, sem comunicação aos órgãos competentes, legitimando o redirecionamento da execução fiscal para o sócio-gerente.' O STJ PRECISOU o alcance no Tema 962 (REsp 1.377.019/SP): o redirecionamento por dissolução irregular atinge o sócio que era GESTOR NO MOMENTO da dissolução — pois a irregularidade do encerramento é o ato ensejador da responsabilidade. Carlos Eduardo saiu em 2018; a dissolução irregular ocorreu em 2020 sob gestão de Renato → Carlos NÃO pode ser redirecionado pelo fundamento da dissolução irregular. PORÉM: atenção aos débitos de 2017 — se Carlos praticou atos com excesso de poderes ou infração à lei durante sua gestão (2015-2018), pode responder por esses débitos com fundamento distinto (art. 135, III CTN).",
+      "refs": [
+        "Súmula 435 do STJ",
+        "STJ REsp 1.377.019/SP — Tema 962 — redirecionamento e dissolução irregular",
+        "STJ AgRg no AREsp 433.631/SP",
+        "STJ EREsp 1.201.993/SP"
+      ],
+      "ponte": "Carlos escapa do redirecionamento pela dissolução irregular. Mas os débitos de 2017, gerados durante sua gestão, ainda podem ser cobrados dele por outro fundamento. Quem tem o ônus de provar os atos ilícitos nessa hipótese — Fazenda ou sócio?"
+    },
+    {
+      "fase": 3,
+      "icone": "🔍",
+      "label": "ÔNUS DA PROVA NO REDIRECIONAMENTO",
+      "narrativa": "A Fazenda argumenta que o art. 135, III é de responsabilidade objetiva: basta ser sócio-gerente para responder pelos débitos do período de gestão. Carlos sustenta que a responsabilidade é subjetiva e exige prova do ato ilícito pela Fazenda. O Tema 962 STJ é o parâmetro definitivo.",
+      "falante": {
+        "nome": "Dr. Péricles Amaral",
+        "papel": "Advogado de Carlos Eduardo",
+        "fala": "O art. 135 exige ato COM EXCESSO DE PODERES ou infração à lei! Não é responsabilidade objetiva — a Fazenda tem que PROVAR o ato ilícito. O simples fato de ser sócio-gerente no período do fato gerador não basta para o redirecionamento!"
+      },
+      "pergunta": "No redirecionamento da execução fiscal para o sócio-gerente fundado em atos ilícitos do art. 135, III (excesso de poderes ou infração à lei), de quem é o ÔNUS DA PROVA?",
+      "opcoes": [
+        "A responsabilidade do art. 135 é objetiva: uma vez comprovado que o réu era sócio-gerente no período dos fatos geradores, o redirecionamento é automático — não há ônus probatório da Fazenda sobre o ato ilícito específico",
+        "O ônus é sempre da Fazenda: cabe a ela provar o ato ilícito em qualquer hipótese de redirecionamento fundado no art. 135, III, antes mesmo do ajuizamento da execução fiscal",
+        "O ônus da prova VARIA conforme o fundamento: (a) se fundado em dissolução irregular (Súmula 435) → presunção de ilicitude → ônus do sócio para ilidir; (b) se fundado em excesso de poderes ou infração à lei (art. 135, III, demais hipóteses) → ônus da FAZENDA demonstrar o ato — Tema 962 STJ",
+        "O ônus é sempre do sócio, pois uma vez incluído na CDA como responsável solidário, cabe a ele provar sua exclusão mediante embargos à execução fiscal"
+      ],
+      "correta": 2,
+      "explicacao": "STJ, REsp 1.377.019/SP (Tema 962 — Recurso Repetitivo): o STJ estabeleceu distinção crucial sobre o ônus da prova: (a) DISSOLUÇÃO IRREGULAR (Súmula 435): a irregularidade no encerramento É O PRÓPRIO ATO ILÍCITO — há PRESUNÇÃO de responsabilidade, invertendo o ônus para o sócio-gerente que estava no comando ao tempo do encerramento; (b) DEMAIS HIPÓTESES DO ART. 135, III (excesso de poderes, infração à lei ou ao contrato): NÃO há presunção — o ônus de provar o ato ilícito concreto é da FAZENDA, que deve demonstrar a conduta irregular do gestor. No caso de Carlos: os débitos de 2017 não decorrem de dissolução irregular — decorreriam de eventual ato ilícito durante sua gestão. A Fazenda precisaria apontar e provar o ato ilícito específico praticado por Carlos no período 2015-2018 para fundar o redirecionamento.",
+      "refs": [
+        "STJ REsp 1.377.019/SP — Tema 962 — ônus da prova no redirecionamento",
+        "Súmula 435 do STJ",
+        "Art. 135, III do CTN",
+        "STJ AgRg no AREsp 712.290/SP"
+      ],
+      "ponte": null
+    }
+  ]
+}
