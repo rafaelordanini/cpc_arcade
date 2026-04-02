@@ -1,1 +1,94 @@
-
+{
+  "id": "administrativo_001",
+  "icone": "🏛️",
+  "titulo": "O Candidato Preterido",
+  "area": "Direito Administrativo",
+  "area_id": "direito_administrativo",
+  "dificuldade": "avançado",
+  "requerente": "João Ferreira",
+  "requerido": "Estado de São Paulo",
+  "intro": "João foi aprovado em 4º lugar no concurso público para Analista Jurídico do Estado de SP, com prazo de validade de 2 anos. O edital previa 3 vagas imediatas mais cadastro de reserva. As 3 vagas foram preenchidas. Nos 18 meses seguintes, 2 servidores se aposentaram, abrindo novas vagas. O Estado abriu novo concurso sem convocar João, alegando discricionariedade para convocar candidatos em cadastro de reserva. João impetrou mandado de segurança. Você é o procurador de João — vença!",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📌",
+      "label": "DIREITO À NOMEAÇÃO",
+      "narrativa": "O Estado sustenta que candidatos além do número de vagas imediatas (3) têm mera expectativa de direito, não direito subjetivo à nomeação — e que a convocação do cadastro de reserva é ato discricionário, insuscetível de controle judicial. João comprova que as 2 aposentadorias ocorreram dentro do prazo de validade do concurso.",
+      "falante": {
+        "nome": "Dr. Siqueira",
+        "papel": "Procurador do Estado",
+        "fala": "Cadastro de reserva gera mera expectativa de direito! A nomeação é ato discricionário da Administração. O Estado pode abrir novo concurso se entender conveniente e oportuno — isso é a própria essência da discricionariedade."
+      },
+      "pergunta": "Segundo o STF (RE 598.099 — Repercussão Geral, Tema 161), quando o candidato aprovado em concurso passa a ter DIREITO SUBJETIVO À NOMEAÇÃO, superando a mera expectativa de direito?",
+      "opcoes": [
+        "Quando surgem vagas dentro do prazo de validade e a Administração demonstra necessidade do cargo — a nomeação torna-se ato vinculado, salvo situação excepcional devidamente fundamentada",
+        "Apenas quando aprovado dentro do número de vagas imediatas previstas no edital — candidatos em cadastro de reserva NUNCA têm direito subjetivo à nomeação",
+        "Somente após decisão judicial transitada em julgado, pois a nomeação é ato administrativo discricionário absolutamente insuscetível de controle pelo Judiciário",
+        "Quando o candidato está em 1º ou 2º lugar no cadastro de reserva, pois a jurisprudência limita o direito subjetivo aos dois primeiros colocados além das vagas"
+      ],
+      "correta": 0,
+      "explicacao": "O RE 598.099/MS (Repercussão Geral — Pleno STF, rel. Min. Gilmar Mendes, Tema 161) fixou tese vinculante: 'O candidato aprovado em concurso público tem direito subjetivo à nomeação quando o cargo for provido ou a sua vaga for preenchida por servidor transferido ou contratado de forma precária.' O fundamento é duplo: (1) princípio da boa-fé objetiva e da proteção da confiança legítima — o Estado criou expectativa legítima ao realizar concurso; (2) a discricionariedade administrativa encontra limite nos direitos fundamentais e na boa-fé. Exceções admitidas: situação orçamentária excepcional superveniência, extinção do cargo, interesse público devidamente fundamentado. A simples conveniência ou oportunidade NÃO justifica a preterição.",
+      "refs": [
+        "STF RE 598.099/MS — Repercussão Geral (Tema 161)",
+        "STF Súmula Vinculante 43",
+        "Art. 37, II e IV da CF/88 — concurso público",
+        "STJ REsp 1.266.388/RS — preterição e direito subjetivo"
+      ],
+      "ponte": "O Estado muda de argumento: afirma que as vagas decorrentes das aposentadorias são 'vagas supervenientes' não previstas no edital original, quebrando o vínculo com o concurso anterior e permitindo a abertura de novo certame."
+    },
+    {
+      "fase": 2,
+      "icone": "🔄",
+      "label": "VAGAS SUPERVENIENTES",
+      "narrativa": "O Estado sustenta que o edital previa 3 vagas específicas, já preenchidas. As 2 aposentadorias geraram vagas não cobertas pelo concurso anterior. A Administração abre novo concurso. João demonstra que o cargo, as atribuições e o órgão são idênticos, e que o concurso ainda estava dentro do prazo de validade.",
+      "falante": {
+        "nome": "Dra. Renata Lima",
+        "papel": "Advogada de João",
+        "fala": "O cargo é idêntico, as funções são as mesmas, o concurso ainda está válido. O surgimento de vagas no prazo de validade obriga a Administração a convocar o próximo da lista — isso é o que diz o STF no RE 837.311!"
+      },
+      "pergunta": "O surgimento de NOVAS VAGAS por aposentadoria durante o prazo de validade do concurso gera direito subjetivo à nomeação para candidatos do cadastro de reserva (RE 837.311 STF — Tema 784)?",
+      "opcoes": [
+        "Sim. Consolidada a necessidade de preenchimento de cargo idêntico dentro do prazo, a Administração está vinculada ao concurso vigente — abrir novo concurso nessas condições configura preterição ilegal",
+        "Não. Vagas supervenientes não vinculam ao concurso anterior, pois o edital previa número específico de vagas e o cadastro de reserva tem natureza meramente precautória e facultativa",
+        "Depende: apenas vagas criadas por lei posterior ao edital geram direito subjetivo; vagas por aposentadoria são vacâncias cuja convocação é sempre discricionária",
+        "Sim, mas somente se o candidato preterido estiver entre os 3 primeiros colocados no cadastro de reserva, independentemente do número de vagas surgidas"
+      ],
+      "correta": 0,
+      "explicacao": "O STF no RE 837.311/PI (Repercussão Geral, Tema 784, rel. Min. Luiz Fux) fixou: 'Existe direito subjetivo à nomeação quando: (a) o candidato foi aprovado dentro do número de vagas previstas; (b) houver preterição na nomeação por não observância da ordem de classificação; ou (c) surgirem novas vagas, ou for aberto novo concurso durante a validade do certame anterior, e ocorrer preterição de candidatos de forma arbitrária e imotivada.' As 2 aposentadorias geraram vagas para o mesmo cargo dentro do prazo de validade: a Administração está vinculada ao concurso vigente. A abertura de novo concurso sem esgotar o cadastro de reserva existente é preterição ilegal que viola o direito subjetivo de João.",
+      "refs": [
+        "STF RE 837.311/PI — Repercussão Geral (Tema 784)",
+        "STF RE 598.099/MS — Tema 161",
+        "STJ MS 21.004/DF — preterição durante a validade",
+        "Art. 37, II e IV da CF/88"
+      ],
+      "ponte": "João tem direito subjetivo à nomeação reconhecido. Falta definir a via processual adequada: o mandado de segurança foi impetrado 140 dias após a publicação do edital do novo concurso. O Estado levanta a decadência."
+    },
+    {
+      "fase": 3,
+      "icone": "⏱️",
+      "label": "MANDADO DE SEGURANÇA",
+      "narrativa": "O Estado suscita prejudicial de decadência: o mandado de segurança foi impetrado 140 dias após a publicação do edital do novo concurso no Diário Oficial. O art. 23 da Lei 12.016/2009 prevê prazo decadencial de 120 dias. O Estado requer extinção do processo sem julgamento de mérito.",
+      "falante": {
+        "nome": "Juiz Dr. Marcos Andrade",
+        "papel": "Juiz Federal",
+        "fala": "A preliminar de decadência é séria. O art. 23 da Lei 12.016 é expresso: 120 dias do ato impugnado. Qual é o dies a quo correto neste caso? A defesa tem a palavra."
+      },
+      "pergunta": "No mandado de segurança que visa a nomeação em concurso público, qual é o DIES A QUO (termo inicial) do prazo decadencial de 120 dias do art. 23 da Lei 12.016/2009?",
+      "opcoes": [
+        "Da ciência inequívoca do ato lesivo pelo impetrante — publicação do edital do novo concurso ou ato expresso de não convocação, e não da data interna das aposentadorias (fato administrativo interno que João pode desconhecer)",
+        "Da data das aposentadorias dos servidores, pois é neste momento que nasce o direito subjetivo à nomeação e o prazo começa a correr imediatamente",
+        "Da data de posse dos aprovados no novo concurso, pois apenas então a preterição se torna definitiva, irreversível e passível de impugnação judicial",
+        "O mandado de segurança para nomeação em concurso não tem prazo decadencial, por tutelar direito líquido e certo de natureza continuada e imprescritível"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 23 da Lei 12.016/2009 fixa prazo decadencial de 120 dias 'contado da ciência do ato impugnado pelo interessado.' O STJ e STF pacificaram: o dies a quo é a data da CIÊNCIA INEQUÍVOCA do ato lesivo pelo impetrante. As aposentadorias são atos administrativos internos — João não é automaticamente notificado nem obrigado a monitorar o Diário Oficial de todos os servidores do órgão. O ato público e inequívoco de preterição é a PUBLICAÇÃO DO EDITAL DO NOVO CONCURSO (ou ato expresso de não convocação), que torna pública a intenção de preterir o candidato. Se João impetrou o MS 140 dias após a publicação do edital do novo concurso, há, em princípio, decadência. A defesa deve demonstrar que João só tomou ciência inequívoca em momento posterior (publicação em veículo de comunicação diferente, irregularidade na publicação etc.). Tema muito cobrado em concurso de Juiz, Promotor e PGE.",
+      "refs": [
+        "Art. 23 da Lei 12.016/2009 — Prazo decadencial do mandado de segurança",
+        "STJ AgRg no RMS 44.836/SP — dies a quo no MS de concurso público",
+        "STF MS 32.074/DF",
+        "STJ Súmula 430 — prazo do mandado de segurança"
+      ],
+      "ponte": null
+    }
+  ]
+}
