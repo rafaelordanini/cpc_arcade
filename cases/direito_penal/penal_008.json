@@ -1,0 +1,94 @@
+{
+  "id": "penal_008",
+  "icone": "💰",
+  "titulo": "Os Imóveis de Fernanda",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "avançado",
+  "requerente": "Ministério Público Federal",
+  "requerido": "Fernanda R. Campos",
+  "intro": "Fernanda, empresária do setor imobiliário, recebeu R$ 2,3 milhões de uma organização criminosa como pagamento por suposta 'consultoria'. Com o dinheiro, adquiriu 4 imóveis em nome de parentes e 2 em nome próprio, todos com escrituras declarando valor muito inferior ao real. O MPF a denuncia por lavagem de dinheiro (Lei 9.613/98). A defesa alega desconhecimento da origem ilícita. Você é o promotor federal.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🧠",
+      "label": "DOLO EVENTUAL NA LAVAGEM",
+      "narrativa": "A defesa apresenta contratos de consultoria formalmente assinados e sustenta que Fernanda não tinha conhecimento de que o dinheiro era proveniente de crime — não há dolo direto. O MPF contesta: o volume e a forma de pagamento eram sinais objetivos inequívocos.",
+      "falante": {
+        "nome": "Dr. Márcio Tavares",
+        "papel": "Advogado de Defesa",
+        "fala": "Há contratos! Há serviços formalmente prestados! Minha cliente não tinha como saber que era dinheiro ilícito — sem dolo direto comprovado, não há crime de lavagem!"
+      },
+      "pergunta": "O crime de lavagem de dinheiro (art. 1º, Lei 9.613/98) admite punição por DOLO EVENTUAL?",
+      "opcoes": [
+        "Sim. Após a reforma pela Lei 12.683/2012, o tipo passou a abranger quem 'sabe ou deveria saber' — STF e STJ reconhecem o dolo eventual, punindo quem assume conscientemente o risco de que os bens têm origem criminosa diante de sinais objetivos inequívocos",
+        "Não. A lavagem exige exclusivamente dolo direto — conhecimento pleno e certeza da origem ilícita, sendo o dolo eventual incompatível com o elemento volitivo do tipo",
+        "O dolo eventual é admitido apenas na fase de 'ocultação' (1ª fase), não nas fases de 'dissimulação' e 'integração', que exigem dolo direto específico",
+        "STF e STJ divergem — aplica-se o princípio in dubio pro reo para afastar o dolo eventual, exigindo prova de conhecimento direto da origem ilícita"
+      ],
+      "correta": 0,
+      "explicacao": "A Lei 9.613/98, reformada pela Lei 12.683/2012, alterou o tipo: 'ocultar ou dissimular a natureza, origem, localização, disposição, movimentação ou propriedade de bens provenientes de infração penal.' O tipo não exige que o agente SAIBA com certeza da origem — basta que 'deveria saber' (dolo eventual). O STF (AP 470/MG — Mensalão) e STJ (REsp 1.628.170/SP) reconhecem o DOLO EVENTUAL na lavagem: o agente que, diante de circunstâncias suspeitas inequívocas (valores despropositados, ausência de atividade econômica real correspondente, pagamentos em estrutura irregular), continua operando ASSUME O RISCO. Fernanda: R$ 2,3 milhões por 'consultoria', imóveis subfaturados, pagos por organização criminosa = sinais objetivos que ela conscientemente ignorou.",
+      "refs": [
+        "Art. 1º da Lei 9.613/98 (redação Lei 12.683/2012)",
+        "STF AP 470/MG — Mensalão, dolo eventual na lavagem",
+        "STJ REsp 1.628.170/SP",
+        "FATF/GAFI — 40 Recomendações"
+      ],
+      "ponte": "Elemento subjetivo configurado. Agora: Fernanda pode ser condenada por lavagem se ela MESMA participou do crime antecedente — autolavagem?"
+    },
+    {
+      "fase": 2,
+      "icone": "🔄",
+      "label": "AUTOLAVAGEM",
+      "narrativa": "Investigações revelam que Fernanda não apenas recebeu o dinheiro: ela PARTICIPOU do esquema criminoso como facilitadora dos desvios (crime antecedente). A defesa sustenta bis in idem — punir pela lavagem quem praticou o crime antecedente seria dupla punição pelo mesmo fato.",
+      "falante": {
+        "nome": "Dra. Cristiane Faria",
+        "papel": "Procuradora da República",
+        "fala": "Autolavagem é punível autonomamente! Fernanda não apenas praticou o crime antecedente — ela ADICIONALMENTE ocultou os bens em imóveis de terceiros. São condutas distintas que violam bens jurídicos diferentes!"
+      },
+      "pergunta": "A AUTOLAVAGEM (self-laundering) — lavagem praticada pelo mesmo agente do crime antecedente — é punível em concurso com o crime antecedente no Brasil?",
+      "opcoes": [
+        "Não. A autolavagem é absorvida pelo crime antecedente (princípio da consunção), pois a ocultação dos produtos do crime é post factum impunível natural de todo crime patrimonial",
+        "Depende: punível quando o crime antecedente é doloso; impunível quando culposo — critério derivado da natureza subjetiva do crime antecedente para evitar excesso punitivo",
+        "Sim. STF e STJ pacificaram que a autolavagem é punível autonomamente em concurso material com o crime antecedente — são condutas distintas que violam bens jurídicos diferentes, não configurando bis in idem",
+        "Apenas quando o crime antecedente está listado taxativamente no art. 1º, §1º da Lei 9.613/98 — nas demais hipóteses é atípica pela vedação de analogia in malam partem"
+      ],
+      "correta": 2,
+      "explicacao": "O STF consolidou a punibilidade da AUTOLAVAGEM: STF AP 470/MG (Mensalão) e Inq. 2.471/SP. Fundamento: (1) Crime antecedente e lavagem são CRIMES AUTÔNOMOS com tipos distintos; (2) Protegem bens jurídicos DIFERENTES: antecedente protege o bem diretamente lesado; lavagem protege a ORDEM ECONÔMICA, o sistema financeiro e a ADMINISTRAÇÃO DA JUSTIÇA (impede a identificação da origem ilícita); (3) As CONDUTAS são temporalmente distintas: cometer o crime e depois ocultar/dissimular são ações separadas; (4) Após Lei 12.683/2012, não há mais rol taxativo de crimes antecedentes. A única limitação: atos meramente exaurentes do crime antecedente (gastar dinheiro em compras simples) podem não configurar lavagem; a ocultação ESTRUTURADA (imóveis em nome de terceiros, subfaturamento) é claramente típica.",
+      "refs": [
+        "STF AP 470/MG — Mensalão, autolavagem punível",
+        "STF Inq. 2.471/SP",
+        "Art. 1º da Lei 9.613/98",
+        "STJ REsp 1.612.581/SP"
+      ],
+      "ponte": "Autolavagem confirmada. Mas como o MPF pode confiscar os imóveis adquiridos em nome de parentes que não integram o polo passivo?"
+    },
+    {
+      "fase": 3,
+      "icone": "🏠",
+      "label": "CONFISCO ALARGADO",
+      "narrativa": "Os 4 imóveis estão em nome de parentes. O MPF requer o confisco alargado (art. 91-A CP) e bloqueio de bens dos parentes como instrumentos da lavagem. A defesa alega que parentes são terceiros de boa-fé, protegidos constitucionalmente pelo direito de propriedade.",
+      "falante": {
+        "nome": "Juíza Dra. Eliane Torres",
+        "papel": "Juíza Federal",
+        "fala": "Precisamos definir o alcance do confisco: parentes como laranjas perdem os imóveis? Qual o standard probatório para afastar a boa-fé e decretar o confisco alargado sobre bens de terceiros?"
+      },
+      "pergunta": "O CONFISCO ALARGADO (art. 91-A, CP, Lei 13.964/2019 — Pacote Anticrime) pode atingir bens registrados em nome de TERCEIROS (interpostas pessoas) na lavagem?",
+      "opcoes": [
+        "Não. O confisco só atinge bens em nome do condenado — bens de terceiros são protegidos constitucionalmente pelo direito de propriedade, mesmo que sejam interpostas pessoas",
+        "Sim, mas apenas mediante ação civil autônoma de perdimento — o juiz criminal não tem competência para declarar perdimento de bens de não-réus no mesmo processo",
+        "O confisco de bens de terceiros exige condenação prévia do terceiro em processo autônomo — vedado o confisco incidental sobre quem não foi denunciado",
+        "Sim, quando demonstrado que os bens estão em nome de terceiros como instrumento da própria ocultação, invertendo-se o ônus para que o terceiro comprove a origem lícita dos recursos — a interposição fraudulenta afasta a boa-fé"
+      ],
+      "correta": 3,
+      "explicacao": "Art. 91-A CP (Lei 13.964/2019): 'Na hipótese de condenação por infrações às quais a lei comine pena máxima superior a 6 anos de reclusão, poderá ser decretada a perda dos bens correspondentes à diferença entre o valor do patrimônio do condenado e aquele que seja compatível com o seu rendimento lícito.' Para bens em nome de TERCEIROS (laranjas): STJ e STF reconhecem que a interposição de terceiros é TÉCNICA da própria lavagem — o confisco pode atingi-los quando demonstrada a simulação (STJ REsp 1.565.030/SP). O terceiro-laranja que não comprova recursos lícitos para a aquisição NÃO pode invocar boa-fé: a condição de interposta pessoa afasta a proteção. O art. 4º, §2º da Lei 9.613/98 também permite bloqueio cautelar de bens de terceiros investigados como interpostas pessoas.",
+      "refs": [
+        "Art. 91-A do CP (Lei 13.964/2019 — Pacote Anticrime)",
+        "Art. 4º, §2º da Lei 9.613/98",
+        "STJ REsp 1.565.030/SP — confisco de bens de laranjas",
+        "STF Inq. 3.017/DF"
+      ],
+      "ponte": null
+    }
+  ]
+}
