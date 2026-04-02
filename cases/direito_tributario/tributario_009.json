@@ -1,0 +1,94 @@
+{
+  "id": "tributario_009",
+  "icone": "💻",
+  "titulo": "O ISS da Empresa de Tecnologia",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Município de São Paulo",
+  "requerido": "TechSolve Sistemas Ltda.",
+  "intro": "A TechSolve tem sede em Barueri/SP e presta serviços de desenvolvimento de software e manutenção de sistemas para clientes em São Paulo/SP. São Paulo lavrou auto de infração cobrando ISS, alegando que os serviços foram efetivamente prestados em seu território. Barueri também cobra ISS sobre os mesmos serviços, gerando bitributação. Adicionalmente, a TechSolve discute se o licenciamento de software padronizado se sujeita ao ISS municipal ou ao ICMS estadual após as ADIs 1.945 e 5659 do STF. Você é o desembargador relator.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📍",
+      "label": "LOCAL DE RECOLHIMENTO DO ISS",
+      "narrativa": "O conflito é clássico: Barueri (sede do prestador) cobra com base no estabelecimento prestador. São Paulo (local onde os técnicos executam o serviço nas dependências dos clientes) cobra com base no local de execução material. A TechSolve paga em Barueri e questiona a autuação de SP.",
+      "falante": {
+        "nome": "Dra. Ana Flávia Maia",
+        "papel": "Procuradora do Município de SP",
+        "fala": "A LC 116/2003 lista os serviços em que o ISS cabe ao local da prestação — desenvolvimento executado nas dependências do cliente em São Paulo é prestado aqui! A regra da sede é subsidiária — não se aplica quando o serviço é fisicamente executado no território de outro município!"
+      },
+      "pergunta": "Segundo a LC 116/2003 e a jurisprudência do STJ (REsp 1.060.210/SC — Tema 354), qual é a REGRA GERAL de competência para o ISS e quando se aplica a exceção do local da prestação?",
+      "opcoes": [
+        "A regra geral é o local da PRESTAÇÃO DO SERVIÇO — onde o serviço é materialmente executado; a sede do prestador é critério apenas quando não é possível identificar o local de execução",
+        "A regra geral é o local do TOMADOR DO SERVIÇO — onde o benefício econômico é aproveitado; a sede do prestador é irrelevante para fins de competência tributária do ISS segundo o STJ",
+        "Não há regra geral — cada município define por lei local o critério de competência do ISS, sujeito apenas à vedação de dupla tributação pela LC 116/2003",
+        "A regra geral é o local do ESTABELECIMENTO PRESTADOR (ou domicílio do prestador quando não houver estabelecimento), conforme art. 3º, caput, da LC 116/2003; o local da prestação é exceção expressa apenas para os serviços listados nos incisos do art. 3º"
+      ],
+      "correta": 3,
+      "explicacao": "LC 116/2003, art. 3º, caput: 'O serviço considera-se prestado, e o imposto, devido, no local do estabelecimento prestador ou, na falta do estabelecimento, no local do domicílio do prestador.' REGRA GERAL: local do ESTABELECIMENTO PRESTADOR. O art. 3º lista EXCEÇÕES específicas para determinados serviços onde o ISS é devido no local de execução material (obras de construção civil, serviços portuários, alguns serviços de saúde). Para DESENVOLVIMENTO DE SOFTWARE, não há exceção expressa no art. 3º → aplica-se a regra geral → ISS devido em BARUERI (sede da TechSolve). STJ REsp 1.060.210/SC (Tema 354): confirmou que a regra geral é o estabelecimento prestador. O STF nas ADIs 5835/5862 discutiu a questão com novas nuances para serviços prestados em estabelecimento do tomador — acompanhar evolução.",
+      "refs": [
+        "Art. 3º, caput e incisos da LC 116/2003",
+        "STJ REsp 1.060.210/SC — Tema 354 — local de recolhimento do ISS",
+        "STF ADI 5835 e 5862 — local do ISS no STF",
+        "Art. 4º da LC 116/2003 — conceito de estabelecimento prestador"
+      ],
+      "ponte": "O ISS de desenvolvimento de software cabe a Barueri pela regra do estabelecimento prestador. Mas surge questão mais importante: o STF nas ADIs 1.945 e 5659 decidiu sobre software — esse serviço se sujeita ao ISS ou ao ICMS? A resposta mudou a tributação de toda a indústria de tecnologia."
+    },
+    {
+      "fase": 2,
+      "icone": "🖥️",
+      "label": "SOFTWARE: ISS OU ICMS?",
+      "narrativa": "A TechSolve também licencia software padronizado (de prateleira). O Estado de SP cobra ICMS sobre a circulação do software como mercadoria. O Município de SP cobra ISS sobre o licenciamento como serviço. A TechSolve busca definição após o julgamento histórico do STF em 2021.",
+      "falante": {
+        "nome": "Dr. Bruno Castelo",
+        "papel": "Advogado da TechSolve",
+        "fala": "O STF decidiu nas ADIs 1.945 e 5659 em 2021! Software padronizado ou personalizado — não importa mais: licenciamento de software sujeita-se ao ISS, não ao ICMS. A velha distinção entre software de prateleira e por encomenda foi definitivamente superada!"
+      },
+      "pergunta": "Após o julgamento das ADIs 1.945/MT e 5659/MG pelo STF (2021), como fica a tributação do LICENCIAMENTO DE SOFTWARE pelo ICMS e pelo ISS?",
+      "opcoes": [
+        "Software de prateleira (padronizado, vendido em massa): ICMS; software personalizado (desenvolvido sob encomenda): ISS — distinção clássica mantida pelo STF com base na Súmula 1 do próprio Tribunal",
+        "Todo software sujeita-se ao ICMS quando comercializado como produto em mídia física e ao ISS quando prestado como serviço remoto — a distinção depende do meio de entrega, não do tipo de software",
+        "O STF declarou inconstitucional a cobrança tanto de ICMS quanto de ISS sobre software, por violação ao princípio da não-bitributação — software é bem imaterial não enquadrado em nenhuma dessas incidências",
+        "O STF nas ADIs 1.945/5659 decidiu que o licenciamento ou cessão de uso de SOFTWARE (padronizado ou personalizado) sujeita-se ao ISS — NÃO ao ICMS; software não é mercadoria para fins de ICMS e a lista da LC 116/2003 o inclui expressamente no item 1.05"
+      ],
+      "correta": 3,
+      "explicacao": "STF ADIs 1.945/MT e 5659/MG (julgadas em 2021) — VIRADA HISTÓRICA. Tese fixada: 'O licenciamento de uso de software está na lista de serviços da LC 116/2003 (item 1.05: Licenciamento ou cessão de direito de uso de programas de computação) e sujeita-se ao ISS. O ICMS não incide sobre o licenciamento de software.' O STF SUPEROU a distinção anterior entre software de prateleira (ICMS, conforme Súmula 1 STF anterior) e personalizado (ISS). Fundamento: software é bem IMATERIAL; a cessão de direito de uso não é circulação de mercadoria; a lista da LC 116/2003 inclui o licenciamento como serviço tributável pelo ISS. O STF modulou os efeitos para não prejudicar quem pagou ICMS de boa-fé. Consequência: ICMS não mais incide; ISS é o tributo correto para qualquer modalidade de licenciamento de software.",
+      "refs": [
+        "STF ADI 1.945/MT — software e ISS vs. ICMS",
+        "STF ADI 5659/MG — pacificação da tributação do software",
+        "Item 1.05 da Lista de Serviços da LC 116/2003",
+        "STF Súmula 1 (anterior) — superada pelas ADIs de 2021"
+      ],
+      "ponte": "Software sujeita-se ao ISS após as ADIs. Última questão: a TechSolve presta serviços de desenvolvimento de software para empresa americana, recebendo pagamento em dólar. O Município de SP quer tributar esses serviços com ISS. Há imunidade de exportação?"
+    },
+    {
+      "fase": 3,
+      "icone": "🌍",
+      "label": "ISS E EXPORTAÇÃO DE SERVIÇOS",
+      "narrativa": "A TechSolve desenvolve software para empresa americana, recebendo pagamento em dólar. O Município de SP cobra ISS sobre esses serviços. A empresa invoca a não-incidência do art. 2º, I da LC 116/2003. O Município contesta: o software foi desenvolvido no Brasil — o serviço foi prestado aqui, independentemente de onde é usado.",
+      "falante": {
+        "nome": "Dra. Ana Flávia Maia",
+        "papel": "Procuradora do Município de SP",
+        "fala": "O serviço de desenvolvimento foi executado em solo brasileiro! A equipe da TechSolve trabalhou aqui — o fato gerador ocorreu no Brasil. O resultado ser usado no exterior não transforma a prestação em exportação isenta de ISS!"
+      },
+      "pergunta": "Qual é o critério para configurar 'exportação de serviços' não sujeita ao ISS, conforme o art. 2º, I e parágrafo único, da LC 116/2003?",
+      "opcoes": [
+        "O critério determinante é o PAGAMENTO em moeda estrangeira — qualquer serviço pago em dólar, euro ou outra moeda estrangeira configura exportação e não se sujeita ao ISS municipal",
+        "O critério é a RESIDÊNCIA ou domicílio do tomador — se o contratante é residente ou domiciliado no exterior, a operação é exportação independentemente de onde o serviço é fisicamente executado",
+        "O ISS não incide sobre exportação de serviços quando os RESULTADOS do serviço são verificados e aproveitados exclusivamente NO EXTERIOR; serviços desenvolvidos no Brasil mas cujos resultados aqui se verifiquem são tributados mesmo com pagamento do exterior — critério é o local dos resultados",
+        "Exportação de serviços é sempre tributada pelo ISS quando o serviço é fisicamente executado no Brasil — o critério é sempre o local de execução, nunca o de aproveitamento dos resultados pelo tomador"
+      ],
+      "correta": 2,
+      "explicacao": "LC 116/2003, art. 2º, I: 'O imposto não incide sobre: as exportações de serviços para o exterior do país.' Parágrafo único: 'Não se enquadram no disposto no inciso I os serviços desenvolvidos no Brasil, cujo resultado aqui se verifique, ainda que o pagamento seja feito por residente no exterior.' O CRITÉRIO é o LOCAL DOS RESULTADOS: (a) serviço executado no Brasil, resultado verificado e aproveitado NO EXTERIOR → EXPORTAÇÃO → ISS NÃO incide; (b) serviço executado no Brasil, resultado verificado NO BRASIL → ISS INCIDE, mesmo que pago em moeda estrangeira por empresa estrangeira. Para a TechSolve: software desenvolvido no Brasil e utilizado EXCLUSIVAMENTE pela empresa americana em seus sistemas nos EUA → resultado verificado no exterior → EXPORTAÇÃO → ISS NÃO incide. STJ consolidou: o critério é o resultado/aproveitamento, não o local de execução (REsp 831.124/RJ).",
+      "refs": [
+        "Art. 2º, I e parágrafo único da LC 116/2003",
+        "STJ REsp 831.124/RJ — critério do resultado na exportação de serviços",
+        "STJ REsp 1.322.840/SP",
+        "STF RE 627.106/PR — ISS e exportação de serviços"
+      ],
+      "ponte": null
+    }
+  ]
+}
