@@ -1,0 +1,94 @@
+{
+  "id": "tributario_007",
+  "icone": "📆",
+  "titulo": "A Lei de Dezembro e o IPTU de Janeiro",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "intermediário",
+  "requerente": "Contribuinte Osvaldo M. Torres",
+  "requerido": "Município de Campinas",
+  "intro": "Em 28 de dezembro de 2023, o Município de Campinas publicou lei que: (I) aumentou a alíquota do IPTU de 1% para 1,5%; e (II) corrigiu a Planta Genérica de Valores — base de cálculo — em 15%, sendo que o IPCA do período foi de 5,8%. A lei determinou vigência a partir de 01/01/2024. Osvaldo, proprietário de imóvel residencial, impugna ambas as medidas invocando os princípios da anterioridade anual e da anterioridade nonagesimal. Em paralelo, o Prefeito edita decreto majorando a alíquota por razões orçamentárias emergenciais. Você é o promotor de justiça — emita parecer.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📅",
+      "label": "ANTERIORIDADE ANUAL DO IPTU",
+      "narrativa": "O Município sustenta que publicou a lei em dezembro de 2023, portanto ela vigora em 2024 — passou o exercício financeiro anterior ao da cobrança. Osvaldo contra-argumenta: a anterioridade exige prazo mínimo dentro do exercício, não apenas que a publicação ocorra no ano anterior.",
+      "falante": {
+        "nome": "Dr. Gustavo Leal",
+        "papel": "Procurador Municipal",
+        "fala": "A anterioridade anual exige que o tributo seja instituído ou majorado em exercício financeiro anterior ao da cobrança. A lei foi publicada em 2023 e cobra em 2024 — exatamente isso! O princípio foi integralmente respeitado!"
+      },
+      "pergunta": "O princípio da anterioridade anual (art. 150, III, 'b', CF) exige apenas que a lei seja publicada em exercício ANTERIOR ao da cobrança, sem prazo mínimo adicional dentro desse exercício?",
+      "opcoes": [
+        "A anterioridade anual exige publicação com no mínimo 90 dias de antecedência em relação ao início do exercício seguinte — a anterioridade anual e a nonagesimal são sempre cumulativas e inseparáveis para o IPTU",
+        "A anterioridade anual exige publicação até 30 de setembro do exercício anterior — publicação em outubro, novembro ou dezembro viola a anterioridade por não permitir planejamento adequado ao contribuinte",
+        "Sim. A anterioridade anual é autônoma e suficiente para o IPTU: basta a publicação em qualquer dia do exercício anterior, sem prazo mínimo adicional. A anterioridade nonagesimal tem exigência distinta e aplica-se apenas aos tributos listados expressamente pelo art. 150, §1º",
+        "A anterioridade anual exige publicação até o último dia útil do exercício anterior — publicação em feriado ou final de semana não cumpre a anterioridade por ausência de ciência efetiva"
+      ],
+      "correta": 2,
+      "explicacao": "Art. 150, III, 'b', CF: é vedado cobrar tributos 'no mesmo exercício financeiro em que haja sido publicada a lei que os instituiu ou aumentou.' A anterioridade ANUAL exige que a lei seja publicada no exercício ANTERIOR ao da cobrança — basta isso. Não há prazo mínimo dentro do exercício anterior. Publicação em 28/12/2023 para cobrar a partir de 01/01/2024: CUMPRE a anterioridade anual. ATENÇÃO ao IPTU especificamente: o STF decidiu que a anterioridade nonagesimal (art. 150, III, 'c') NÃO se aplica à ALÍQUOTA do IPTU — ela consta da lista de exceções do art. 150, §1º, CF ('o imposto previsto no art. 156, I' — IPTU). A majoração de alíquota do IPTU, respeitando apenas a anterioridade anual, é constitucional. Mas a correção da BASE DE CÁLCULO acima da inflação é questão diversa.",
+      "refs": [
+        "Art. 150, III, 'b' e §1º da CF/88 — anterioridade anual e exceções",
+        "STF RE 585.535/MG — IPTU e anterioridade nonagesimal",
+        "STF RE 442.578/SP — alíquota do IPTU e anterioridade",
+        "Art. 156, I da CF — IPTU"
+      ],
+      "ponte": "A majoração de alíquota cumpre a anterioridade anual e está dispensada da nonagesimal. Mas a correção da base de cálculo em 15%, acima do IPCA de 5,8%, também é válida? O STF distingue atualização monetária de majoração real da base."
+    },
+    {
+      "fase": 2,
+      "icone": "📈",
+      "label": "BASE DE CÁLCULO E ANTERIORIDADE NONAGESIMAL",
+      "narrativa": "O Município aplica correção de 15% na Planta Genérica de Valores com IPCA de apenas 5,8%. Osvaldo alega: correção acima da inflação é majoração real da base de cálculo. O Município defende: qualquer atualização da base do IPTU está isenta da nonagesimal por força do art. 150, §1º, segunda parte, CF.",
+      "falante": {
+        "nome": "Promotor Dr. Cláudio Véras",
+        "papel": "Promotor de Justiça",
+        "fala": "A CF isenta da anterioridade nonagesimal a 'fixação da base de cálculo' do IPTU — mas 15% quando a inflação foi 5,8% não é correção monetária: é aumento real de 8,7 pontos percentuais! Correção acima da inflação é majoração disfarçada!"
+      },
+      "pergunta": "A atualização da Planta Genérica de Valores do IPTU em percentual SUPERIOR à inflação configura mera 'fixação da base de cálculo' (exceção à nonagesimal — art. 150, §1º, CF) ou majoração real sujeita às restrições da Súmula 160 do STJ?",
+      "opcoes": [
+        "Qualquer atualização da Planta Genérica de Valores, independentemente do índice aplicado, é 'fixação da base de cálculo' do IPTU — o art. 150, §1º, 2ª parte exclui essa medida da anterioridade nonagesimal sem qualquer limitação ao IPCA ou à inflação oficial",
+        "A atualização da base de cálculo do IPTU acima da inflação configura MAJORAÇÃO REAL — além de violar a Súmula 160 do STJ (que veda correção superior ao índice inflacionário oficial sem lei específica), representa aumento real do patrimônio tributado que não pode ser imposto por mera planta administrativa",
+        "A questão é puramente infraconstitucional — a CF delega à lei municipal fixar os critérios de atualização da Planta Genérica, sem violação de anterioridade quando a lei municipal respeita os limites do CTN",
+        "A atualização acima da inflação é permitida a cada 5 anos para atualização cumulativa dos valores de mercado — a regra do IPCA só se aplica às correções anuais, não às revisões periódicas estruturais da planta"
+      ],
+      "correta": 1,
+      "explicacao": "Análise em dois níveis: (1) ART. 150, §1º, 2ª parte CF: excepciona da anterioridade nonagesimal 'a fixação da base de cálculo dos impostos previstos nos arts. 155, III e 156, I' (IPVA e IPTU). Essa exceção refere-se à CORREÇÃO MONETÁRIA — recomposição da perda inflacionária do valor venal. (2) CORREÇÃO ACIMA DA INFLAÇÃO = MAJORAÇÃO REAL: quando a atualização ultrapassa a inflação do período, não é mais correção — é aumento real do valor tributável. Súmula 160 STJ: 'É defeso ao Município atualizar o IPTU, mediante decreto, em percentual superior ao índice oficial de correção monetária.' Dois problemas na lei de Campinas: (a) correção de 15% vs. IPCA 5,8% = excedente de 9,2% configura majoração real de base, não mera correção; (b) a parcela excedente não está coberta pela exceção constitucional do §1º — sujeita-se à anterioridade nonagesimal e exige lei específica justificando o percentual.",
+      "refs": [
+        "Art. 150, §1º, 2ª parte da CF — exceção nonagesimal para IPTU",
+        "Súmula 160 do STJ — atualização da base de cálculo do IPTU",
+        "STF RE 648.245/MG — IPTU e atualização da base",
+        "STJ REsp 1.111.124/PR — recurso repetitivo sobre IPTU"
+      ],
+      "ponte": "A correção acima da inflação é irregular. Mas há situação ainda mais grave: o Prefeito tenta majorar alíquota por DECRETO emergencial. A legalidade tributária admite essa flexibilidade para o IPTU?"
+    },
+    {
+      "fase": 3,
+      "icone": "📜",
+      "label": "LEGALIDADE TRIBUTÁRIA E DECRETOS",
+      "narrativa": "Em março de 2024, o Prefeito editou decreto aumentando a alíquota do IPTU em 0,2% para cobrir déficit orçamentário emergencial. Argumenta: por analogia ao poder do Executivo de alterar alíquotas do IPI e IOF por decreto, situações de emergência justificariam a mesma flexibilidade para tributos municipais.",
+      "falante": {
+        "nome": "Dr. Gustavo Leal",
+        "papel": "Procurador Municipal",
+        "fala": "O Poder Executivo pode alterar alíquotas de certos tributos por decreto — IPI, IOF, II, IE são exemplos consagrados na CF! Por analogia, emergências orçamentárias justificam a mesma flexibilidade para o IPTU municipal. A rigidez do princípio seria desproporcional!"
+      },
+      "pergunta": "O princípio da legalidade tributária (art. 150, I, CF) admite exceções que permitam ao Poder Executivo majorar alíquotas de IPTU por decreto?",
+      "opcoes": [
+        "Sim. O Poder Executivo pode alterar alíquotas de qualquer tributo por decreto em situações de emergência orçamentária, dentro dos limites mínimo e máximo fixados em lei — o princípio da legalidade é relativo e comporta exceções implícitas",
+        "Sim, mas apenas para o ISS e o IPTU, por serem tributos exclusivamente municipais — a autonomia municipal justifica flexibilidade na gestão de suas próprias alíquotas por decreto do Prefeito",
+        "Não. O princípio da legalidade tributária (art. 150, I, CF) é absoluto para o IPTU — as exceções são TAXATIVAS e se limitam a II, IE, IPI, IOF, CIDE-combustíveis e ICMS-combustíveis. Analogia com tributos extrafiscais não tem fundamento constitucional: o IPTU não está nas exceções e exige lei formal para qualquer majoração",
+        "O princípio da legalidade admite exceção para qualquer imposto se houver delegação em lei complementar federal — o Congresso pode ampliar as exceções constitucionais por legislação infraconstitucional específica"
+      ],
+      "correta": 2,
+      "explicacao": "Art. 150, I, CF — LEGALIDADE TRIBUTÁRIA: é vedado exigir ou aumentar tributo sem lei que o estabeleça. A regra é a lei formal (lei ordinária no mínimo). EXCEÇÕES CONSTITUCIONAIS TAXATIVAS ao princípio da legalidade (possibilidade de alterar alíquotas por ato do Executivo): (1) II — Imposto de Importação; (2) IE — Imposto de Exportação; (3) IPI — Imposto sobre Produtos Industrializados; (4) IOF — Imposto sobre Operações Financeiras (art. 153, §1º CF); (5) CIDE-Combustíveis: redução e restabelecimento de alíquotas (art. 177, §4º, I, 'b'); (6) ICMS-Combustíveis: alíquotas por deliberação (art. 155, §4º, IV). IPTU não consta dessas exceções — exige LEI MUNICIPAL para qualquer majoração. A justificativa por analogia com tributos extrafiscais não tem amparo: as exceções constitucionais são taxativas e não admitem interpretação extensiva. O decreto do Prefeito é inconstitucional.",
+      "refs": [
+        "Art. 150, I da CF — legalidade tributária",
+        "Art. 153, §1º da CF — exceções ao princípio da legalidade",
+        "Art. 177, §4º da CF — CIDE combustíveis",
+        "STF ADI 4.016/PR — legalidade tributária e decretos"
+      ],
+      "ponte": null
+    }
+  ]
+}
