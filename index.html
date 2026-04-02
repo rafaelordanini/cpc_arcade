@@ -768,7 +768,7 @@ function updateManifestInfo() {
 ═══════════════════════════════════════════════════════ */
 function pickRandom(excludeFile = null) {
   // Usa filteredCases se houver filtro ativo, senão usa manifest completo
-  const base = filteredCases.length > 0 ? filteredCases : [...manifest];
+  const base = filteredCases.length > 0 ? filteredCases : manifest.flatMap(a => a.casos ?? [a]);;
 
   let pool = base.filter(f => !sessionPlayed.has(f));
   if (pool.length === 0) {
@@ -793,6 +793,9 @@ async function openCase()   { SFX.blip(); await loadCase(pickRandom()); }
 async function changeCase() { SFX.blip(); if (currentFile) sessionSkipped.add(currentFile); await loadCase(pickRandom(currentFile)); }
 
 async function loadCase(file) {
+  // ↓ ADICIONE essas 2 linhas logo no início
+  if (!file) { renderError('Caso não encontrado.', true); return; }
+  if (!currentCase && !file) return;
   showScreen('s-game');
   renderLoading(file);
   try {
