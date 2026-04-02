@@ -802,6 +802,32 @@ async function loadCase(file) {
     const res = await fetch(CASES_DIR + file);
     if (!res.ok) throw new Error(`Não encontrado: ${file}`);
     currentCase = await res.json();
+
+    // ↓ normaliza JSONs em português → inglês (1 lugar, cobre todos os arquivos)
+    if (currentCase.fases && !currentCase.phases) {
+      currentCase.title     = currentCase.titulo      ?? 'Caso';
+      currentCase.icon      = currentCase.icone       ?? '⚖️';
+      currentCase.plaintiff = currentCase.requerente  ?? 'Autor';
+      currentCase.defendant = currentCase.requerido   ?? 'Réu';
+      currentCase.intro     = currentCase.introducao  ?? currentCase.intro ?? '';
+      currentCase.phases    = currentCase.fases.map(f => ({
+        ...f,
+        step:        f.step        ?? f.fase        ?? 1,
+        stepLabel:   f.stepLabel   ?? f.label       ?? f.titulo ?? `Fase ${f.fase}`,
+        stepIcon:    f.stepIcon    ?? f.icone       ?? '📌',
+        narrative:   f.narrative   ?? f.narrativa   ?? '',
+        question:    f.question    ?? f.pergunta    ?? '',
+        opts:        f.opts        ?? f.opcoes      ?? [],
+        correct:     f.correct     ?? f.correta     ?? 0,
+        explanation: f.explanation ?? f.fundamento  ?? '',
+        refs:        f.refs        ?? f.referencias ?? [],
+        bridge:      f.bridge      ?? f.ponte       ?? null,
+        speaker:     f.speaker     ?? null,
+      }));
+    }
+
+    currentFile = file;
+    
     currentFile = file;
     renderIntro();
   } catch(e) {
