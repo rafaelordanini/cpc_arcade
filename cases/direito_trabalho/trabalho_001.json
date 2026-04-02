@@ -1,1 +1,94 @@
-
+{
+  "id": "trabalho_001",
+  "icone": "👷",
+  "titulo": "A Rescisão da Dignidade",
+  "area": "Direito do Trabalho",
+  "area_id": "direito_trabalho",
+  "dificuldade": "avançado",
+  "requerente": "Marina Costa",
+  "requerido": "Construção Rápida Ltda.",
+  "intro": "Marina trabalhou como supervisora de obras por 5 anos. Nos últimos 8 meses, seu gerente direto passou a humilhá-la publicamente em reuniões semanais, atribuiu metas inatingíveis acompanhadas de ameaças de demissão e deixou de pagar o adicional de periculosidade por 3 meses consecutivos. Sem condições de continuar, Marina ajuizou reclamação trabalhista pleiteando rescisão indireta, todas as verbas rescisórias e indenização por danos morais. Você é o juiz do trabalho — decida!",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📝",
+      "label": "RESCISÃO INDIRETA",
+      "narrativa": "A empresa sustenta que as condutas descritas não chegam a configurar falta grave do empregador: as metas eram razoáveis e compatíveis com o cargo, e a falta do adicional de periculosidade teria sido mero equívoco administrativo já regularizado. Marina apresentou e-mails agressivos, contracheques sem o adicional e arrolou 3 testemunhas.",
+      "falante": {
+        "nome": "Dr. Paulo Henrique",
+        "papel": "Advogado do Empregador",
+        "fala": "Rescisão indireta é medida extrema, Excelência! Um deslize no holerite e metas exigentes não configuram falta grave patronal. A empresa jamais praticou conduta ilícita contra a reclamante!"
+      },
+      "pergunta": "Com base nos fatos narrados, quais hipóteses do art. 483 da CLT estão, em tese, configuradas para fundamentar a rescisão indireta?",
+      "opcoes": [
+        "Art. 483, 'd' (descumprimento de obrigações contratuais — falta de adicional) e 'e' (ato lesivo da honra — humilhações públicas sistemáticas), que autorizam a rescisão indireta por falta grave do empregador",
+        "Apenas o art. 483, 'a' (serviços superiores às forças), pois somente o excesso de metas inatingíveis, se comprovado objetivamente, gera rescisão indireta",
+        "Nenhuma hipótese, pois a rescisão indireta só se configura com violência física ou redução formal do salário — assédio moral é matéria exclusiva de ação autônoma de danos morais",
+        "Art. 483, 'c' (perigo manifesto de mal considerável), pois obras de construção civil sempre expõem o supervisor a risco à integridade física"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 483 da CLT elenca as hipóteses de rescisão indireta, também chamada de despedida indireta ou justa causa do empregador. No caso: (d) 'não cumprir o empregador as obrigações do contrato' — o não pagamento do adicional de periculosidade por 3 meses é descumprimento objetivo de obrigação legal incorporada ao contrato (Súmula 456 TST: o adicional é direito irrenunciável independentemente do percentual fixado em norma coletiva); (e) 'praticar o empregador ou seus prepostos, contra ele ou pessoas de sua família, ato lesivo da honra e boa fama' — humilhações públicas sistemáticas por preposto direto (gerente) enquadram-se nesta alínea. As duas alíneas podem ser cumuladas, tornando o pleito de rescisão indireta ainda mais robusto.",
+      "refs": [
+        "Art. 483, alíneas 'd' e 'e' da CLT",
+        "Súmula 456 do TST — adicional de periculosidade",
+        "TST-RR 1001569-55.2017.5.02.0384 — rescisão indireta por assédio",
+        "OJ SDI-1 TST n. 279 — assédio moral como falta grave do empregador"
+      ],
+      "ponte": "As hipóteses estão configuradas em tese. A empresa contesta agora o ônus da prova: quem deve provar as humilhações e o não pagamento do adicional — Marina ou a empresa?"
+    },
+    {
+      "fase": 2,
+      "icone": "🔍",
+      "label": "ÔNUS DA PROVA",
+      "narrativa": "A empresa requer que o juiz atribua a Marina o ônus integral de provar o assédio moral e o não pagamento do adicional, sob pena de improcedência. Marina juntou 3 e-mails com linguagem agressiva, contracheques e arrolou 2 colegas como testemunhas.",
+      "falante": {
+        "nome": "Dra. Renata Souza",
+        "papel": "Advogada de Marina",
+        "fala": "O assédio é de difícil documentação! A empresa guarda todos os registros de reunião e os holerites originais. Deve ser dela o ônus de provar que cumpriu suas obrigações!"
+      },
+      "pergunta": "Na reclamação trabalhista por rescisão indireta, como se distribui o ônus da prova entre empregado e empregador, após a Reforma Trabalhista (Lei 13.467/2017)?",
+      "opcoes": [
+        "Ao empregado incumbe provar os fatos constitutivos do direito (conduta patronal ilícita); ao empregador incumbe provar fatos extintivos — e em especial o pagamento de verbas, por ser fato extintivo do crédito do trabalhador",
+        "Todo o ônus é do empregado, pois é o autor da ação e os fatos que alega são constitutivos de seu direito, sem exceção",
+        "O ônus é integralmente do empregador, pois na relação de trabalho presume-se a hipossuficiência do trabalhador, gerando inversão automática do ônus probatório",
+        "O juiz do trabalho tem liberdade absoluta para distribuir o ônus como quiser em cada caso, sem vinculação às regras dos arts. 818 CLT e 373 CPC"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 818 da CLT (redação da Lei 13.467/2017) c/c art. 373 do CPC prevê: ônus ao autor quanto aos fatos constitutivos; ao réu quanto aos fatos extintivos, impeditivos ou modificativos. Na prática trabalhista: (1) Pagamento do adicional de periculosidade → ônus do EMPREGADOR, pois é fato extintivo do direito de Marina — quem paga deve provar o pagamento (quittance); a ausência nos contracheques cria presunção de não pagamento (Súmula 338 TST, por analogia). (2) Assédio moral → ônus do EMPREGADO (fato constitutivo), admitindo prova indireta (e-mails, testemunhos). A reforma trabalhista afastou a inversão automática do ônus, mas manteve o princípio de que documentos sob guarda exclusiva do empregador invertem o ônus (art. 818, §1º CLT).",
+      "refs": [
+        "Art. 818 e §1º da CLT — redação dada pela Lei 13.467/2017",
+        "Art. 373, I e II do CPC — distribuição estática do ônus",
+        "Súmula 338 do TST — ônus do empregador sobre registros",
+        "TST-RR 20900-58.2009.5.04.0401 — assédio moral e ônus probatório"
+      ],
+      "ponte": "Marina prova o assédio e o não pagamento. A empresa é condenada à rescisão indireta com todas as verbas. Surge o debate final: a indenização por danos morais pelo assédio é cumulável com as verbas rescisórias ou estas já as absorvem?"
+    },
+    {
+      "fase": 3,
+      "icone": "💼",
+      "label": "DANOS MORAIS",
+      "narrativa": "Reconhecida a rescisão indireta, Marina faz jus a aviso prévio indenizado, FGTS + 40%, férias + 1/3, 13º salário proporcional e demais verbas. A empresa contesta a indenização por danos morais, alegando que as verbas rescisórias tarifadas já compensam integralmente todo o dano sofrido pela trabalhadora.",
+      "falante": {
+        "nome": "Dr. Paulo Henrique",
+        "papel": "Advogado do Empregador",
+        "fala": "As verbas rescisórias são tarifadas pela CLT justamente para cobrir todos os danos da ruptura contratual! Acumular danos morais seria punir duas vezes o mesmo fato!"
+      },
+      "pergunta": "As verbas rescisórias decorrentes da rescisão indireta ABSORVEM a indenização por danos morais causados pelo assédio moral, ou são cumuláveis?",
+      "opcoes": [
+        "São plenamente cumuláveis: verbas rescisórias indenizam a ruptura do contrato; danos morais indenizam a lesão à dignidade do trabalhador — fundamentos jurídicos autônomos e distintos",
+        "As verbas rescisórias absorvem os danos morais, pois a CLT prevê sistema tarifado e fechado de indenização trabalhista que exclui a aplicação do Código Civil",
+        "A cumulação é vedada pelo princípio do non bis in idem: não é possível condenar o empregador duas vezes pelo mesmo fato que gerou a rescisão indireta",
+        "Os danos morais só são cabíveis se o assédio também configurar crime (constrangimento ilegal), não podendo ser pleiteados exclusivamente na Justiça do Trabalho"
+      ],
+      "correta": 0,
+      "explicacao": "Tema pacificado no TST: verbas rescisórias e danos morais são CUMULÁVEIS porque possuem fundamentos jurídicos distintos e autônomos. As verbas rescisórias (aviso prévio, FGTS, férias, 13º) indenizam a extinção do contrato de trabalho — são consequências objetivas e tarifadas da rescisão. A indenização por danos morais (art. 5º, X da CF/88 + arts. 223-A a 223-G da CLT, inseridos pela Lei 13.467/2017) repara a LESÃO À DIGNIDADE do trabalhador — fato ilícito autônomo e independente. O assédio moral sistemático configura dano in re ipsa em casos de humilhação pública reiterada, dispensando prova específica do abalo psicológico (entendimento do TST por analogia à Súmula 443). A vedação constitucional ao non bis in idem não é violada: são bens jurídicos e causas de pedir diferentes.",
+      "refs": [
+        "Art. 5º, X da CF/88 — direito à honra e dignidade",
+        "Arts. 223-A a 223-G da CLT — dano extrapatrimonial (Lei 13.467/2017)",
+        "Súmula 443 do TST",
+        "TST-RR 1000382-55.2016.5.02.0461 — cumulação danos morais e verbas rescisórias"
+      ],
+      "ponte": null
+    }
+  ]
+}
