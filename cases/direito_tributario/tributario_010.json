@@ -1,0 +1,94 @@
+{
+  "id": "tributario_010",
+  "icone": "📚",
+  "titulo": "Os Livros e os Bytes",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "intermediário",
+  "requerente": "Editora Conhecimento Ltda.",
+  "requerido": "União Federal — Receita Federal do Brasil",
+  "intro": "A Editora Conhecimento importa: (1) papel offset para impressão de livros; (2) tinta especial para impressão editorial; (3) e-readers (dispositivos Kindle) para vender junto com os e-books de seu catálogo. A Receita Federal cobra II e IPI sobre todos os itens. A editora invoca a imunidade cultural do art. 150, VI, 'd', CF para cada item. Em paralelo, discute se e-books têm a mesma imunidade dos livros físicos, questão decidida pelo STF no RE 330.817 em 2017. Você é o juiz federal.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📄",
+      "label": "IMUNIDADE DOS INSUMOS EDITORIAIS",
+      "narrativa": "A RFB cobra II e IPI sobre papel e tinta importados pela editora. A editora invoca a imunidade do art. 150, VI, 'd' da CF. A RFB sustenta: a imunidade é do LIVRO (produto final), não dos insumos utilizados na produção editorial.",
+      "falante": {
+        "nome": "Dr. Hélio Macedo",
+        "papel": "Procurador da Fazenda Nacional",
+        "fala": "A CF imuniza LIVROS, JORNAIS e PERIÓDICOS — e o papel destinado à impressão. Nada mais! Tinta de impressão, equipamentos gráficos, outros materiais são tributáveis normalmente. A imunidade cultural é estrita ao texto constitucional — não comporta extensão!"
+      },
+      "pergunta": "A imunidade cultural do art. 150, VI, 'd', CF alcança os INSUMOS utilizados na produção de livros além do papel (ex.: tinta, cola, filmes fotográficos)?",
+      "opcoes": [
+        "Sim, a imunidade alcança todos os insumos indispensáveis à produção de livros — interpretação teleológica amplia a proteção constitucional para garantir a efetividade do direito à informação e cultura, incluindo tinta, cola e equipamentos gráficos",
+        "A imunidade abrange papel, tinta e materiais diretamente utilizados na impressão, mas não maquinários e equipamentos com vida útil além da produção específica dos livros",
+        "A imunidade é RESTRITA ao texto constitucional: livros, jornais, periódicos e o PAPEL DESTINADO À SUA IMPRESSÃO — somente o papel está expressamente incluído; tinta e demais insumos não mencionados na CF são tributáveis normalmente",
+        "A imunidade alcança apenas o produto final comercializado ao consumidor — nem mesmo o papel tem imunidade pois é insumo intermediário, não o bem cultural protegido"
+      ],
+      "correta": 2,
+      "explicacao": "Art. 150, VI, 'd', CF: 'é vedado à União, aos Estados, ao DF e aos Municípios instituir impostos sobre: d) livros, jornais, periódicos e o PAPEL DESTINADO À SUA IMPRESSÃO.' O texto constitucional é TAXATIVO: a imunidade alcança (1) livros; (2) jornais; (3) periódicos; e (4) O PAPEL destinado à impressão. Somente esses quatro objetos estão no texto. O STF interpretou RESTRITIVAMENTE: tinta, cola, fios de costura de lombada, equipamentos gráficos, filmes fotográficos e outros insumos NÃO estão incluídos na imunidade por não estarem no texto constitucional (RE 202.149/RS e RE 221.239/SP). A editora tem imunidade apenas para o papel importado — a tinta é tributável normalmente. A interpretação teleológica não pode substituir o texto expresso da Constituição nesse ponto.",
+      "refs": [
+        "Art. 150, VI, 'd' da CF — imunidade cultural",
+        "STF RE 202.149/RS — insumos e imunidade cultural (papel: imune; outros: não)",
+        "STF RE 221.239/SP — tinta de impressão não está na imunidade cultural",
+        "STF RE 179.893/SP — alcance da imunidade do art. 150, VI, 'd'"
+      ],
+      "ponte": "Somente o papel está imune entre os insumos. Mas a editora vende e-books e e-readers. O STF decidiu em 2017 no RE 330.817 se livros digitais têm a mesma imunidade dos livros físicos — decisão que revolucionou a tributação da indústria editorial digital!"
+    },
+    {
+      "fase": 2,
+      "icone": "📱",
+      "label": "E-BOOKS: IMUNIDADE CULTURAL DIGITAL",
+      "narrativa": "A RFB cobra IPI sobre os e-books comercializados pela editora em seu site. A editora sustenta: e-book é livro — tem o mesmo conteúdo e mesma finalidade cultural; a imunidade do art. 150, VI, 'd', CF deve alcançá-lo. O Fisco contesta: o texto constitucional de 1988 se refere a objetos físicos de papel — e-books inexistiam à época.",
+      "falante": {
+        "nome": "Juíza Dra. Renata Maciel",
+        "papel": "Juíza Federal",
+        "fala": "O STF em 2017 julgou o RE 330.817 — leading case sobre e-books e imunidade cultural. Qual foi a tese vencedora — a interpretação literal-histórica (somente livros de papel) ou a interpretação teleológica (proteção do conteúdo cultural independentemente do suporte)?"
+      },
+      "pergunta": "O STF, no RE 330.817/RJ (2017), estendeu a imunidade cultural do art. 150, VI, 'd', CF aos LIVROS ELETRÔNICOS (e-books)?",
+      "opcoes": [
+        "Não. O STF adotou interpretação histórico-literal: em 1988 'livro' significava objeto físico de papel; a Constituição não pode ser reinterpretada para abranger objetos tecnológicos inexistentes ao tempo da promulgação do texto",
+        "Sim, mas apenas se o e-book for versão digital exata de livro físico pré-existente — obras publicadas exclusivamente em formato digital não têm imunidade por não terem equivalente físico",
+        "Sim. O STF por maioria decidiu que a imunidade do art. 150, VI, 'd', CF alcança os LIVROS ELETRÔNICOS (e-books), adotando interpretação teleológica: o bem protegido é o conhecimento, a cultura e a expressão intelectual — independentemente do suporte material (papel ou digital)",
+        "A questão foi remetida ao Congresso para alteração constitucional — o STF declarou omissão inconstitucional e determinou ao legislador adequar o texto da CF para incluir expressamente os meios digitais de disseminação cultural"
+      ],
+      "correta": 2,
+      "explicacao": "STF RE 330.817/RJ (2017) — HISTÓRICO: Plenário decidiu por maioria que a imunidade do art. 150, VI, 'd', CF alcança os LIVROS ELETRÔNICOS (e-books). Tese fixada: 'A imunidade tributária constante do art. 150, VI, 'd', da Constituição Federal aplica-se ao livro eletrônico (e-book), inclusive aos suportes exclusivamente utilizados para fixá-lo.' Fundamento: interpretação TELEOLÓGICA da Constituição — a CF protege o acesso ao conhecimento, a cultura, a informação e a formação intelectual, independentemente do suporte tecnológico. A imunidade não é do PAPEL — é do CONTEÚDO cultural. Com a evolução tecnológica, o suporte mudou mas a essência (o livro, o conhecimento) permanece. O mesmo conteúdo que é imune em papel é imune em formato digital.",
+      "refs": [
+        "STF RE 330.817/RJ — Tema 593 — imunidade dos e-books",
+        "Art. 150, VI, 'd' da CF",
+        "STF RE 595.676/RJ — apreciado conjuntamente ao RE 330.817",
+        "Tese fixada no Tema 593: e-book e suportes exclusivos"
+      ],
+      "ponte": "E-books são imunes. A tese do STF incluiu também os 'suportes exclusivamente utilizados para fixá-los'. Os e-READERS (dispositivos Kindle) são 'suportes exclusivos' de livros digitais para fins de imunidade, ou são dispositivos de uso geral não abrangidos pela tese?"
+    },
+    {
+      "fase": 3,
+      "icone": "📖",
+      "label": "E-READERS: O CRITÉRIO DA EXCLUSIVIDADE",
+      "narrativa": "A editora importa e-readers para vender junto com seus e-books. A RFB cobra II e IPI: o dispositivo é bem eletroeletrônico de uso geral com acesso à internet, loja virtual e outras funções. A editora invoca a parte final da tese do RE 330.817 — 'suportes exclusivamente utilizados para fixar o livro eletrônico'.",
+      "falante": {
+        "nome": "Dr. Hélio Macedo",
+        "papel": "Procurador da Fazenda Nacional",
+        "fala": "Kindle tem acesso à internet, loja virtual, reprodução de áudio e múltiplas funções além de leitura! Não é suporte EXCLUSIVO de livro eletrônico — é dispositivo multifuncional de uso geral. A tese do STF é clara: 'exclusivamente' utilizados para fixar livros — e o Kindle não é exclusivo!"
+      },
+      "pergunta": "Os dispositivos leitores de e-books (e-readers como Kindle) enquadram-se na imunidade do art. 150, VI, 'd', CF, nos termos da tese fixada no RE 330.817/RJ?",
+      "opcoes": [
+        "Sim. Qualquer dispositivo eletrônico capaz de reproduzir livros digitais tem imunidade cultural, independentemente de suas funções adicionais — basta que funcione como leitor de e-books para ser protegido pela tese do STF",
+        "Sim. O STF adotou posição ampliativa que protege qualquer hardware associado ao acesso ao conhecimento digital, incluindo tablets, smartphones e computadores que também leem e-books",
+        "A questão dos suportes não foi decidida pelo STF no RE 330.817 — o Tribunal limitou expressamente a decisão aos e-books, deixando para legislação infraconstitucional definir os suportes imunes",
+        "Não necessariamente. O STF fixou que a imunidade alcança os suportes EXCLUSIVAMENTE utilizados para fixar o livro eletrônico — dispositivos multifuncionais de uso geral, como e-readers com acesso à internet, loja virtual e funções de áudio, NÃO cumprem o requisito da exclusividade e não estão abrangidos pela imunidade"
+      ],
+      "correta": 3,
+      "explicacao": "STF RE 330.817/RJ — tese completa: 'A imunidade tributária constante do art. 150, VI, 'd', CF aplica-se ao livro eletrônico (e-book), inclusive aos suportes EXCLUSIVAMENTE utilizados para fixá-lo.' A palavra-chave é EXCLUSIVAMENTE. O STF limitou expressamente a extensão da imunidade: (a) e-book: imune; (b) suporte dedicado e exclusivo à leitura de livros digitais (sem funções adicionais): imune; (c) dispositivo multifuncional que TAMBÉM lê e-books mas tem outras funções: NÃO imune — serve a múltiplos propósitos além dos culturais. Os e-readers modernos (Kindle, Kobo) possuem acesso à internet, lojas virtuais, reprodução de áudio, visualização de imagens e outros recursos → não cumprem a exclusividade exigida pela tese do STF → não têm imunidade. A linha divisória é a EXCLUSIVIDADE DE FUNÇÃO para fixar conteúdo de livro eletrônico.",
+      "refs": [
+        "STF RE 330.817/RJ — tese: 'suportes exclusivamente utilizados'",
+        "Art. 150, VI, 'd' da CF",
+        "STF RE 595.676/RJ",
+        "Tema 593 do STF — abrangência da tese sobre e-books e suportes"
+      ],
+      "ponte": null
+    }
+  ]
+}
