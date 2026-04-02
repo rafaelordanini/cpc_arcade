@@ -1,0 +1,94 @@
+{
+  "id": "tributario_011",
+  "icone": "🏭",
+  "titulo": "O Conceito de Insumo",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Agroindústria Zeta S/A",
+  "requerido": "União Federal — Receita Federal do Brasil",
+  "intro": "A Agroindústria Zeta S/A, no regime não-cumulativo de PIS/COFINS, tomou créditos sobre: (1) energia elétrica consumida no processo produtivo; (2) frete no transporte de matérias-primas entre filiais; (3) equipamentos de proteção individual — EPIs (luvas, máscaras, botinas) fornecidos obrigatoriamente aos trabalhadores; (4) serviços de higienização das instalações fabris exigidos pela ANVISA. A RFB glosou os créditos de todos os itens, alegando que não são 'insumos' na acepção técnica da legislação. A empresa recorreu ao CARF e posteriormente ao Judiciário. Você é o juiz federal.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📐",
+      "label": "CONCEITO DE INSUMO — TEMA 779 STJ",
+      "narrativa": "A RFB interpretou 'insumo' para fins de PIS/COFINS de forma restritiva, equiparando-o ao conceito de matéria-prima e produto intermediário do IPI — apenas bens físicos diretamente incorporados ao produto final. A Zeta sustenta que o conceito é mais amplo, abrangendo todos os bens e serviços essenciais ao processo produtivo.",
+      "falante": {
+        "nome": "Dr. Leandro Paschoal",
+        "papel": "Advogado da Agroindústria Zeta",
+        "fala": "Insumo de PIS/COFINS NÃO é o mesmo que insumo de IPI! O STJ no Tema 779 adotou critério de ESSENCIALIDADE e RELEVÂNCIA — o conceito é funcional, não físico-material. Energia, frete, EPIs e higienização são essenciais ao processo produtivo e geram crédito!"
+      },
+      "pergunta": "Qual o conceito de INSUMO para fins de creditamento de PIS/COFINS no regime não-cumulativo, conforme definido pelo STJ no REsp 1.221.170/PR (Tema 779)?",
+      "opcoes": [
+        "Conceito RESTRITO, idêntico ao IPI: apenas matérias-primas, produtos intermediários e materiais de embalagem que se incorporam fisicamente ao produto final ou são consumidos diretamente no processo produtivo",
+        "Conceito AMPLO, idêntico ao IR: qualquer despesa necessária à atividade empresarial, incluindo administrativas, comerciais e financeiras, desde que deduzidas do lucro para fins de IRPJ e registradas na contabilidade",
+        "Conceito INTERMEDIÁRIO por ESSENCIALIDADE e RELEVÂNCIA: são insumos os bens e serviços essenciais ou relevantes para o desenvolvimento da atividade econômica do contribuinte, que não sejam meros instrumentos de conforto ou conveniência, identificados no processo produtivo de forma casuística",
+        "O conceito é definido exclusivamente por ato normativo da RFB para cada setor econômico — não há conceito geral do STJ; cada atividade tem seus próprios critérios reconhecidos mediante solução de consulta"
+      ],
+      "correta": 2,
+      "explicacao": "STJ, REsp 1.221.170/PR (2018) — Tema 779 — LEADING CASE: 'O conceito de insumo deve ser aferido à luz dos critérios de essencialidade ou relevância, considerando-se a imprescindibilidade ou a importância de determinado item para o desenvolvimento da atividade econômica desempenhada pelo contribuinte.' O STJ REJEITOU: (a) o conceito restrito do IPI (bens que integram fisicamente o produto final); (b) o conceito amplo do IR (qualquer despesa necessária ao negócio). ADOTOU: critério INTERMEDIÁRIO funcional — essencialidade (o item é imprescindível para o processo produtivo: sem ele, o processo para ou é inviável juridicamente) OU relevância (o item contribui significativamente para o processo, mesmo que não seja absolutamente indispensável). A análise é sempre CASUÍSTICA, avaliando o papel de cada item no processo específico de cada empresa.",
+      "refs": [
+        "STJ REsp 1.221.170/PR — Tema 779 — conceito de insumo PIS/COFINS",
+        "Art. 3º das Leis 10.637/2002 e 10.833/2003 — créditos no regime não-cumulativo",
+        "STJ REsp 1.246.317/MG",
+        "STJ AgRg no AREsp 761.955/SP"
+      ],
+      "ponte": "O critério é essencialidade e relevância — análise casuística. Aplicando esse critério a casos concretos: a energia elétrica no processo produtivo e o frete de matérias-primas entre filiais geram crédito de PIS/COFINS? O STJ já enfrentou esses itens específicos."
+    },
+    {
+      "fase": 2,
+      "icone": "⚡",
+      "label": "CRÉDITOS ESPECÍFICOS — ENERGIA E FRETE",
+      "narrativa": "A RFB glosou a energia elétrica e o frete entre filiais. Sobre energia: alega que não se incorpora fisicamente ao produto. Sobre frete: alega que transporte interno entre filiais é logística administrativa, não insumo de produção. A Zeta apresenta laudo técnico mostrando que 35% dos custos industriais são de energia elétrica.",
+      "falante": {
+        "nome": "Dra. Cleonice Borges",
+        "papel": "Procuradora da Fazenda Nacional",
+        "fala": "Energia é utilidade geral — ilumina escritório, banheiro e fábrica sem distinção! Frete entre filiais é logística interna, não insumo do produto. A empresa teria que segregar a energia estritamente do processo produtivo, o que é impraticável, para justificar o crédito!"
+      },
+      "pergunta": "A ENERGIA ELÉTRICA consumida no processo produtivo e o FRETE no transporte de matérias-primas entre estabelecimentos da mesma empresa geram crédito de PIS/COFINS como insumo?",
+      "opcoes": [
+        "Não. Energia elétrica e frete são utilidades e serviços de apoio geral — não são insumos do processo produtivo; crédito de energia só é admissível com medição individualizada e certificada da energia consumida exclusivamente na linha de produção",
+        "Sim para energia, não para frete: a energia tem previsão específica no art. 3º, III das Leis 10.637/2002 e 10.833/2003; frete interno entre estabelecimentos da mesma empresa não tem previsão legal como insumo",
+        "Ambos são insumos geradores de crédito. Energia consumida no processo produtivo é reconhecida como insumo pelo STJ por ESSENCIALIDADE — sem ela, a produção industrial para completamente. Frete de matérias-primas entre estabelecimentos como etapa necessária do processo produtivo também é insumo por essencialidade e tem previsão legal no art. 3º, IX das Leis 10.637 e 10.833",
+        "Ambos geram apenas crédito PARCIAL proporcional ao percentual da atividade produtiva especificamente comprovado por laudo técnico aprovado previamente pela RFB"
+      ],
+      "correta": 2,
+      "explicacao": "ENERGIA ELÉTRICA: o art. 3º, III das Leis 10.637/2002 e 10.833/2003 prevê EXPRESSAMENTE crédito de 'energia elétrica e energia térmica, inclusive sob a forma de vapor, consumidas nos estabelecimentos da pessoa jurídica.' Além da previsão expressa, o STJ reconhece a ESSENCIALIDADE: sem energia, a produção industrial para completamente — critério do Tema 779 cumprido. FRETE DE MATÉRIAS-PRIMAS: o art. 3º, IX das mesmas leis prevê crédito sobre 'armazenagem de mercadoria e frete na operação de venda.' Para frete entre estabelecimentos da mesma empresa como etapa do processo produtivo (transporte de insumos da filial fornecedora para a filial produtora), o STJ admite o crédito quando o transporte é etapa NECESSÁRIA ao processo produtivo, não mera logística administrativa. Ambos geram crédito na agroindústria Zeta.",
+      "refs": [
+        "Art. 3º, III e IX das Leis 10.637/2002 e 10.833/2003",
+        "STJ REsp 1.221.170/PR — Tema 779 — essencialidade aplicada a energia",
+        "STJ REsp 1.894.741/RS — frete como insumo no regime não-cumulativo",
+        "Solução de Consulta COSIT 35/2018 — energia elétrica e crédito PIS/COFINS"
+      ],
+      "ponte": "Energia e frete geram crédito. A questão mais controvertida: os EPIs obrigatórios por lei (NR-6 do MTE) e os serviços de higienização exigidos pela ANVISA como condição de funcionamento — são insumos essenciais ou custos trabalhistas e de manutenção não creditáveis?"
+    },
+    {
+      "fase": 3,
+      "icone": "🧤",
+      "label": "EPIs E HIGIENIZAÇÃO INDUSTRIAL",
+      "narrativa": "A RFB glosou os créditos sobre EPIs (R$ 180.000/ano) e serviços de limpeza industrial (R$ 95.000/ano). A Fazenda: EPIs são custos trabalhistas; higienização é serviço de suporte não produtivo. A Zeta: sem EPIs a empresa é autuada e interditada pelo MTE; sem higienização a ANVISA cancela o registro sanitário — ambos são essenciais à existência legal da atividade produtiva.",
+      "falante": {
+        "nome": "Juiz Dr. Fernando Amorim",
+        "papel": "Juiz Federal",
+        "fala": "O critério do Tema 779 é essencialidade e relevância. A questão é: EPIs obrigatórios por lei e serviços de higiene exigidos pela vigilância sanitária como condição para funcionamento da agroindústria atendem ao critério de essencialidade para gerar crédito de PIS/COFINS?"
+      },
+      "pergunta": "EPIs fornecidos obrigatoriamente por lei (NR-6/MTE) e serviços de higienização industrial exigidos pela ANVISA como condição de funcionamento geram CRÉDITO de PIS/COFINS como insumo?",
+      "opcoes": [
+        "Não. EPIs são benefícios e custos trabalhistas — o crédito de PIS/COFINS alcança a cadeia produtiva do produto, não as relações de trabalho; higienização é serviço de suporte e manutenção sem incidência direta no processo produtivo",
+        "EPIs geram crédito, limpeza não: o critério decisivo é a obrigatoriedade legal direta sobre o processo produtivo — EPIs são exigidos pela CLT e NRs do MTE como condição de trabalho; higienização, embora útil, é serviço de apoio sem relação direta com o produto final",
+        "Sim para ambos. EPIs obrigatórios por lei são ESSENCIAIS à continuidade legal do processo produtivo — sem eles, a empresa deve paralisar as atividades por determinação do MTE; higienização exigida pela ANVISA como condição do registro sanitário é ESSENCIAL à própria existência jurídica da atividade da agroindústria — ambos atendem ao critério do Tema 779",
+        "O crédito de EPIs é reconhecido apenas para indústrias com registro sanitário federal — para as demais, EPIs são custos trabalhistas sem direito a crédito de PIS/COFINS"
+      ],
+      "correta": 2,
+      "explicacao": "Aplicando o Tema 779 (essencialidade/relevância) aos casos concretos: EPIs: o STJ e o CARF reconhecem que EPIs obrigatórios por lei (NR-6 do MTE) são INSUMOS geradores de crédito de PIS/COFINS. Fundamento: (a) a obrigatoriedade legal torna o item imprescindível à atividade; (b) sem fornecer EPIs adequados, a empresa sofre autuação trabalhista e interdição pelo MTE — paralisação do processo produtivo; (c) o custo integra o processo produtivo como condição de exercício legal da atividade. SERVIÇOS DE HIGIENIZAÇÃO INDUSTRIAL: em agroindústrias (alimentos, medicamentos, embalagens), a higienização das instalações é exigida pela ANVISA e por normas do MAPA como condição para manutenção do registro sanitário. Sem higienização regular e certificada, a agroindústria perde o registro e encerra obrigatoriamente suas atividades → ESSENCIALIDADE configurada → crédito reconhecido pelo STJ (REsp 1.848.993/SP). Ambos atendem ao critério do Tema 779.",
+      "refs": [
+        "STJ REsp 1.221.170/PR — Tema 779 — essencialidade e relevância",
+        "CARF Acórdão 3302-008.825 — EPIs como insumo PIS/COFINS",
+        "STJ REsp 1.848.993/SP — serviços de higienização industrial como insumo",
+        "Art. 3º das Leis 10.637/2002 e 10.833/2003"
+      ],
+      "ponte": null
+    }
+  ]
+}
