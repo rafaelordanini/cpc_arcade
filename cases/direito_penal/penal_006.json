@@ -1,0 +1,94 @@
+{
+  "id": "penal_006",
+  "icone": "🔪",
+  "titulo": "A Vingança de Humberto",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "avançado",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "Humberto F. Lacerda",
+  "intro": "Humberto descobriu que sua esposa o traía há 2 anos com seu melhor amigo, Fábio. Após 3 semanas planejando, Humberto abordou Fábio na saída do trabalho e desferiu 3 facadas, causando morte. Humberto entregou-se à polícia horas depois. A defesa requer reconhecimento do homicídio privilegiado por relevante valor moral (honra). O MP sustenta homicídio qualificado por motivo torpe. Você é o juiz titular do Júri.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "💔",
+      "label": "PRIVILÉGIO — VIOLENTA EMOÇÃO",
+      "narrativa": "A defesa invoca o homicídio privilegiado (art. 121, §1º, CP), alegando que Humberto agiu sob domínio de violenta emoção após injusta provocação da vítima (traição por 2 anos). Apresenta laudos psicológicos sobre o estado emocional de Humberto.",
+      "falante": {
+        "nome": "Dr. Carlinhos Meireles",
+        "papel": "Advogado de Defesa",
+        "fala": "Dois anos de traição! A honra conjugal violada, a família destruída — injusta provocação que gerou violenta emoção. Meu cliente não é assassino frio: é um homem destruído que perdeu o controle!"
+      },
+      "pergunta": "Para o homicídio privilegiado por 'domínio de violenta emoção' (art. 121, §1º, CP), é necessário que o crime ocorra 'logo em seguida' à injusta provocação?",
+      "opcoes": [
+        "Sim. O CP exige expressamente que o agente cometa o crime 'logo em seguida' à injusta provocação — o intervalo de 3 semanas entre a descoberta e o crime rompe o nexo temporal e afasta o privilégio da violenta emoção",
+        "Não. O requisito 'logo em seguida' é interpretado elasticamente, admitindo-se dias ou semanas quando a emoção é reconhecidamente permanente e intensa em laudo psicológico",
+        "O requisito 'logo em seguida' aplica-se apenas ao homicídio por 'domínio de violenta emoção'; para 'relevante valor moral' não há requisito temporal de qualquer espécie",
+        "O CP não exige 'logo em seguida' para homicídio privilegiado — esse requisito existe apenas na atenuante genérica do art. 65, III, 'c', de campo de aplicação distinto"
+      ],
+      "correta": 0,
+      "explicacao": "Art. 121, §1º, CP: 'Se o agente comete o crime impelido por motivo de relevante valor social ou moral, ou sob o DOMÍNIO de violenta emoção, LOGO EM SEGUIDA a injusta provocação da vítima...' O requisito 'LOGO EM SEGUIDA' é elemento expresso e imprescindível para o privilégio da violenta emoção. O STJ é firme: o estado emocional deve ainda DOMINAR o agente no momento da ação. 3 semanas de planejamento demonstram que Humberto saiu do estado emocional e passou para deliberação fria — AFASTA o privilégio da violenta emoção. ATENÇÃO: distinguir da atenuante do art. 65, III, 'c' (influência — não domínio — de violenta emoção, sem requisito 'logo em seguida') que pode ainda ser reconhecida, mas não o privilégio do §1º.",
+      "refs": [
+        "Art. 121, §1º do CP — Homicídio Privilegiado",
+        "Art. 65, III, 'c' do CP — Atenuante da violenta emoção",
+        "STJ HC 341.472/SP",
+        "STJ REsp 1.836.556/MG"
+      ],
+      "ponte": "O privilégio da violenta emoção está afastado pelo lapso temporal. Mas a defesa insiste no 'relevante valor moral'. E o MP sustenta motivo torpe. São compatíveis no mesmo homicídio?"
+    },
+    {
+      "fase": 2,
+      "icone": "⚔️",
+      "label": "HOMICÍDIO QUALIFICADO-PRIVILEGIADO",
+      "narrativa": "A doutrina debate: pode o homicídio ser simultaneamente privilegiado (relevante valor moral) e qualificado (motivo torpe)? A defesa sustenta que sim — o STJ admite o homicídio qualificado-privilegiado. O MP argumenta que motivo torpe e relevante valor moral são mutuamente excludentes.",
+      "falante": {
+        "nome": "Juiz Dr. Álvaro Domingues",
+        "papel": "Juiz de Direito",
+        "fala": "Vou submeter ao júri, mas preciso decidir quais quesitos formular. Podem coexistir privilégio e qualificadora de motivo torpe neste caso? A natureza da qualificadora é determinante!"
+      },
+      "pergunta": "O homicídio QUALIFICADO-PRIVILEGIADO é admitido? Se sim, qual é o critério que define a compatibilidade entre privilégio e qualificadora?",
+      "opcoes": [
+        "Sim, é admitido quando a qualificadora for de natureza OBJETIVA (modo de execução: meio cruel, traição, emboscada, dissimulação) — qualificadoras SUBJETIVAS (motivo torpe, motivo fútil) são incompatíveis com o privilégio pois ambos se referem ao elemento subjetivo e são logicamente contraditórios",
+        "Não é admitido em nenhuma hipótese — privilégio e qualificadora são mutuamente excludentes no homicídio, pois alteram fundamentalmente a natureza do crime e não coexistem",
+        "É admitido em qualquer combinação — tanto qualificadoras objetivas quanto subjetivas são compatíveis com o privilégio, cabendo ao júri decidir soberanamente qual circunstância prevalece",
+        "É admitido apenas para a qualificadora de meio cruel (§2º, III), sendo incompatível com as demais qualificadoras por vedação jurisprudencial expressa do STF"
+      ],
+      "correta": 0,
+      "explicacao": "STF e STJ consolidaram: homicídio qualificado-privilegiado é POSSÍVEL quando a qualificadora for de natureza OBJETIVA. O raciocínio: privilégios (relevante valor moral/social, violenta emoção) referem-se ao ELEMENTO SUBJETIVO do agente. Qualificadoras SUBJETIVAS (motivo torpe — §2º, I; motivo fútil — §2º, II; assegurar vantagem — §2º, V) também referem-se ao elemento subjetivo → INCOMPATÍVEIS: não é possível agir simultaneamente por motivo torpe E por relevante valor moral. Qualificadoras OBJETIVAS (meio cruel — §2º, III; recurso que dificultou defesa — §2º, IV; traição, emboscada, dissimulação) referem-se ao MODO DE EXECUÇÃO → COMPATÍVEIS. No caso: motivo torpe (vingança) é qualificadora SUBJETIVA → incompatível com o privilégio. O júri decide: ou torpe, ou relevante valor moral — não ambos.",
+      "refs": [
+        "STF HC 101.409/MG — homicídio qualificado-privilegiado",
+        "STJ REsp 1.836.556/MG",
+        "Art. 121, §1º e §2º do CP",
+        "Hungria, Nelson — Comentários ao Código Penal, Vol. V"
+      ],
+      "ponte": "O júri condenou por homicídio qualificado-motivo torpe. Na dosimetria: regime inicial obrigatoriamente fechado? O STF alterou a regra para crimes hediondos."
+    },
+    {
+      "fase": 3,
+      "icone": "🔒",
+      "label": "HEDIONDEZ E REGIME INICIAL",
+      "narrativa": "Humberto foi condenado a 13 anos por homicídio qualificado (crime hediondo). O MP requer regime inicial fechado obrigatório com base na Lei 8.072/90. A defesa invoca o HC 111.840 STF, que declarou inconstitucional o regime fechado obrigatório para hediondos.",
+      "falante": {
+        "nome": "Dra. Vanessa Queiroz",
+        "papel": "Promotora de Justiça",
+        "fala": "Crime hediondo! Lei 8.072/90 — regime inicial fechado e progressão em 40% para réu primário. A pena de 13 anos e a natureza hedionda não comportam outro regime inicial!"
+      },
+      "pergunta": "Após o HC 111.840/STF, o homicídio qualificado (crime hediondo) impõe obrigatoriamente regime inicial FECHADO?",
+      "opcoes": [
+        "Sim. A Lei 8.072/90, mesmo após a reforma de 2007, manteve o regime inicial fechado obrigatório — o STF julgou o HC 111.840 mas esse entendimento não foi convertido em súmula vinculante",
+        "Não. O STF declarou inconstitucional o regime inicial fechado OBRIGATÓRIO para crimes hediondos — o regime deve ser fixado conforme o art. 33, §2º CP, com base na pena e nas circunstâncias do caso, sendo vedada a imposição automática do fechado",
+        "O regime fechado é obrigatório apenas se a pena superar 12 anos — abaixo disso o juiz pode fixar semiaberto mesmo em crimes hediondos, por critério híbrido",
+        "A questão não foi resolvida — o STF declarou inconstitucional em 2012 mas o Congresso restaurou a obrigatoriedade no Pacote Anticrime de 2019"
+      ],
+      "correta": 1,
+      "explicacao": "STF HC 111.840/ES (2012) — Plenário: declarou INCONSTITUCIONAL o art. 2º, §1º da Lei 8.072/90 na parte que impunha regime inicial fechado obrigatório para crimes hediondos. Fundamento: viola o princípio da INDIVIDUALIZAÇÃO DA PENA (art. 5º, XLVI, CF). O regime inicial deve ser fixado conforme o art. 33, §2º CP: (a) pena superior a 8 anos → FECHADO; (b) não reincidente com pena ≤ 8 anos → SEMIABERTO; (c) não reincidente com pena ≤ 4 anos → ABERTO. Para Humberto (13 anos, réu primário): pela regra do CP, pena > 8 anos = regime FECHADO. MAS não por ser hediondo — pela PENA CONCRETA. A parte que foi mantida constitucional: PROGRESSÃO em 40% (primário) ou 60% (reincidente em crime hediondo) — art. 2º, §2º da Lei 8.072/90.",
+      "refs": [
+        "STF HC 111.840/ES — inconstitucionalidade do regime fechado obrigatório",
+        "Art. 2º, §1º e §2º da Lei 8.072/90 (redação Lei 11.464/07)",
+        "Art. 33, §2º do CP",
+        "STF ARE 1.327.606/SP — reafirmação 2021"
+      ],
+      "ponte": null
+    }
+  ]
+}
