@@ -1,0 +1,94 @@
+{
+  "id": "penal_002",
+  "icone": "🛡️",
+  "titulo": "A Defesa que Foi Longe Demais",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "intermediário",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "Danilo R. Menezes",
+  "intro": "Danilo, segurança de uma boate, foi agredido com socos por um cliente embriagado. Ele revidou com dois socos e derrubou o agressor. Mesmo com o agressor desacordado no chão, Danilo desferiu mais 4 chutes no rosto, causando fraturas graves. A defesa alega legítima defesa plena durante todo o episódio. Você é o promotor público — analise o caso.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "👊",
+      "label": "LEGÍTIMA DEFESA",
+      "narrativa": "A defesa sustenta que Danilo agiu em legítima defesa durante todo o episódio, pois havia agressão injusta em curso. O MP reconhece a legítima defesa inicial, mas questiona a continuidade dos chutes após a neutralização do agressor.",
+      "falante": {
+        "nome": "Dr. Alexsandro Pires",
+        "papel": "Advogado de Defesa",
+        "fala": "Meu cliente foi atacado! A reação foi única e indivisível — não há como fragmentar a legítima defesa após iniciada. Tudo foi uma única ação contínua de defesa!"
+      },
+      "pergunta": "Quais são os requisitos CUMULATIVOS da legítima defesa previstos no art. 25 do CP?",
+      "opcoes": [
+        "Agressão injusta, atual ou iminente; uso moderado dos meios necessários; para repelir a agressão a direito próprio ou alheio — todos cumulativos",
+        "Agressão injusta passada ou atual; qualquer meio disponível; apenas para proteção de direito próprio",
+        "Perigo atual; inevitabilidade do perigo; sacrifício razoável do bem ameaçado — estrutura idêntica ao estado de necessidade",
+        "Agressão injusta atual; proporcionalidade abstrata entre bens em conflito; ausência de provocação anterior do defendente"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 25 do CP estabelece: age em legítima defesa quem, usando MODERADAMENTE dos meios NECESSÁRIOS, repele injusta agressão, ATUAL ou IMINENTE, a direito seu ou de outrem. Os requisitos são cumulativos: (1) agressão injusta — humana, não necessariamente dolosa; (2) atual ou iminente — afasta-se a LD em relação a agressão passada (vingança) ou futura remota; (3) meios necessários — os menos lesivos disponíveis e eficazes; (4) uso moderado — proporcional para cessar a agressão; (5) animus defendendi. A estrutura difere do estado de necessidade (art. 24 CP): neste, o perigo pode ter origem em qualquer fonte (animal, força da natureza); naquela, exige-se especificamente agressão humana.",
+      "refs": [
+        "Art. 25 do CP — Legítima Defesa",
+        "Art. 24 do CP — Estado de Necessidade",
+        "STJ HC 250.017/SP",
+        "Greco, Rogério — Curso de Direito Penal, Vol. I"
+      ],
+      "ponte": "O tribunal reconhece a legítima defesa nos dois primeiros socos. A questão agora é: os chutes após a neutralização configuram excesso? E qual a natureza jurídica desse excesso?"
+    },
+    {
+      "fase": 2,
+      "icone": "⚠️",
+      "label": "EXCESSO",
+      "narrativa": "As câmeras da boate mostram que Danilo continuou agredindo após o agressor perder a consciência. A defesa sustenta excesso culposo, alegando que Danilo, em estado de perturbação emocional, não percebeu que a ameaça havia cessado.",
+      "falante": {
+        "nome": "Dra. Marina Louzada",
+        "papel": "Promotora de Justiça",
+        "fala": "As imagens são inequívocas: após os dois socos, o agressor já estava inerte. Os quatro chutes foram deliberados e conscientes — não há como falar em excesso culposo!"
+      },
+      "pergunta": "Quanto ao excesso na legítima defesa (art. 23, parágrafo único, CP), qual é a distinção entre excesso DOLOSO, CULPOSO e EXTENSIVO?",
+      "opcoes": [
+        "Doloso: agente deliberadamente usa meio mais lesivo que o necessário; Culposo: agente não percebe por imprudência que superou os limites; Extensivo: defesa prossegue após cessada a agressão — o extensivo tem natureza dolosa e todos geram responsabilidade penal em graus distintos",
+        "Doloso: crime autônomo; Culposo: exclui o crime; Extensivo: apenas atenuante — o excesso extensivo nunca gera responsabilidade penal",
+        "Excesso doloso e extensivo são sinônimos; o culposo só ocorre com meios desproporcionais; ambos excluem a antijuridicidade do ato",
+        "Apenas o excesso doloso é punível; o culposo e o extensivo são absorvidos pela causa de justificação original, não gerando responsabilidade criminal"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 23, parágrafo único, CP: 'O agente, em qualquer das causas de justificação, responde pelo excesso doloso ou culposo.' Temos três modalidades: (1) Excesso INTENSIVO/DOLOSO: dentro da reação, o agente usa meio mais lesivo que o necessário conscientemente; (2) Excesso CULPOSO: por imprudência, o agente equivoca-se sobre a persistência da agressão ou sobre a necessidade dos meios — responde por crime culposo se houver previsão legal; (3) Excesso EXTENSIVO: após cessada a agressão, o agente continua a reação — tem natureza DOLOSA, pois a agressão visivelmente encerrou. No caso de Danilo, os chutes após a neutralização configuram excesso extensivo DOLOSO, não culposo como sustenta a defesa.",
+      "refs": [
+        "Art. 23, parágrafo único do CP",
+        "STJ REsp 1.455.100/MT",
+        "STJ HC 347.818/SP",
+        "Zaffaroni, Eugenio Raúl — Manual de Derecho Penal"
+      ],
+      "ponte": "O excesso extensivo doloso está caracterizado. Agora: Danilo responde pela totalidade das lesões ou apenas pelo excesso? As condutas são juridicamente cindíveis?"
+    },
+    {
+      "fase": 3,
+      "icone": "📋",
+      "label": "TIPIFICAÇÃO DO EXCESSO",
+      "narrativa": "O laudo médico-legal atesta fratura de zigomático e mandíbula (lesões graves — art. 129, §1º, CP). O MP precisa definir: Danilo responde por qual crime e em relação a qual conduta?",
+      "falante": {
+        "nome": "Juiz Dr. Renato Cavalcanti",
+        "papel": "Juiz de Direito",
+        "fala": "A legítima defesa cobre os dois primeiros socos. O excesso extensivo abrange os quatro chutes. Promotora, como fica a responsabilização penal de Danilo?"
+      },
+      "pergunta": "Reconhecida a legítima defesa nos dois primeiros socos e excesso extensivo doloso nos chutes posteriores, como deve ser a IMPUTAÇÃO PENAL de Danilo?",
+      "opcoes": [
+        "Danilo responde por lesão corporal grave em relação a TODA a conduta, pois o excesso contamina retroativamente a causa de justificação original, tornando-a ilícita desde o início",
+        "Danilo não responde pelos dois socos iniciais (legítima defesa) e responde por lesão corporal grave (art. 129, §1º, CP) apenas pelo excesso — as condutas são juridicamente cindíveis e a excludente não é contaminada",
+        "Danilo responde por tentativa de homicídio, pois o dolo de lesionar gravemente pode ser requalificado como dolo eventual de matar em crimes praticados por seguranças",
+        "Danilo responde por lesão corporal leve em concurso formal, pois a lesão grave só seria imputável se o excesso fosse doloso desde o primeiro ato"
+      ],
+      "correta": 1,
+      "explicacao": "A doutrina e jurisprudência assentam que a causa de justificação (legítima defesa) é analisada em relação a cada conduta individualmente. Os dois socos que derrubaram o agressor estão cobertos pela excludente — não há crime aí. Os chutes após a neutralização (excesso extensivo doloso) não estão acobertados por qualquer justificante: Danilo responde pelos resultados produzidos pelo excesso. Como as fraturas (lesões graves — art. 129, §1º, I e II, CP) foram produzidas pelos chutes do excesso, a imputação recai sobre LESÃO CORPORAL GRAVE. A responsabilização é PARCIAL E CINDÍVEL: excludente para a parte legítima, crime para o excesso. STJ consolidou: 'A causa de justificação não se contamina pelo excesso posterior' (HC 347.818/SP).",
+      "refs": [
+        "Art. 129, §1º do CP — Lesão Corporal Grave",
+        "Art. 23, parágrafo único do CP",
+        "STJ HC 347.818/SP",
+        "Bitencourt, Cezar Roberto — Tratado de Direito Penal, Vol. 1"
+      ],
+      "ponte": null
+    }
+  ]
+}
