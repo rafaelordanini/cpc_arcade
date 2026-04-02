@@ -1,0 +1,94 @@
+{
+  "id": "penal_007",
+  "icone": "🚗",
+  "titulo": "O Roubo da Padaria e a Morte na Fuga",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "avançado",
+  "requerente": "Ministério Público Estadual",
+  "requeridos": "Paulo S. Costa e Cláudio R. Lima",
+  "intro": "Paulo e Cláudio planejaram roubar uma padaria. Paulo entrou apontando réplica de arma de fogo (pistola de airsoft realista). Cláudio ficou ao volante. Na fuga, o dono da padaria se atirou na frente do veículo para barrá-los. Cláudio acelerou e o atropelou, causando morte instantânea. Paulo alega que não sabia da intenção de Cláudio de atropelar ninguém. O MP denuncia ambos por latrocínio. Você é o promotor.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🔫",
+      "label": "ARMA DE BRINQUEDO",
+      "narrativa": "A defesa de Paulo sustenta que réplica de airsoft não é arma de fogo real, logo não incide a majorante do art. 157, §2º-A, I (emprego de arma de fogo). Alega que o roubo com simulacro é sempre simples.",
+      "falante": {
+        "nome": "Dr. Tadeu Moreira",
+        "papel": "Advogado de Paulo",
+        "fala": "Airsoft! O perito confirmou: incapaz de disparar projéteis letais. Sem arma de fogo real, cai a majorante — é roubo simples no máximo!"
+      },
+      "pergunta": "O emprego de RÉPLICA de arma de fogo no roubo configura a majorante do art. 157, §2º-A, I do CP (emprego de arma de fogo)?",
+      "opcoes": [
+        "Não configura a majorante do §2º-A (arma de fogo), pois este exige instrumento com potencial lesivo real comprovado por perícia; mas pode configurar o §2º, I (emprego de arma em sentido amplo) pela redução da capacidade de resistência da vítima — posição do STJ após EREsp 961.863/RS",
+        "Sim, configura integralmente a majorante do §2º-A, pois a finalidade protetora da norma visa proteger a vítima da intimidação independentemente da capacidade lesiva real",
+        "Não configura nenhuma majorante — réplica não é arma; roubo com simulacro é sempre simples (art. 157, caput) sem qualquer causa de aumento",
+        "Configura apenas o §2º-A quando a vítima não percebeu que era réplica — critério subjetivo da percepção da vítima é o determinante segundo o STJ"
+      ],
+      "correta": 0,
+      "explicacao": "O STJ modificou sua posição em 2015 (EREsp 961.863/RS): RÉPLICA/SIMULACRO DE ARMA: (1) NÃO configura a majorante do art. 157, §2º-A, I (arma de fogo real) — pois esse dispositivo exige arma de fogo com potencial lesivo intrínseco, comprovado por perícia; (2) MAS configura a majorante do art. 157, §2º, I (emprego de arma em sentido amplo) pela redução da capacidade de resistência da vítima. Com a Lei 13.654/2018, a estrutura do roubo foi reformada: criou-se o §2º-A específico para arma de fogo (pena aumentada) e a arma branca saiu do §2º, I. Para réplicas de arma de fogo pós-2018: não incide o §2º-A, cabendo ao STJ consolidar nova posição sobre qual dispositivo se aplica — tendência de manter o §2º, I.",
+      "refs": [
+        "Art. 157, §2º, I e §2º-A do CP",
+        "STJ EREsp 961.863/RS — virada jurisprudencial 2015",
+        "Lei 13.654/2018 — reforma do roubo",
+        "STJ AgRg no HC 698.546/SP"
+      ],
+      "ponte": "A majorante está configurada. Agora a questão central: Paulo responde por latrocínio pela morte causada POR CLÁUDIO durante a fuga, sem sua participação direta?"
+    },
+    {
+      "fase": 2,
+      "icone": "💀",
+      "label": "LATROCÍNIO EM CO-AUTORIA",
+      "narrativa": "O MP denuncia Paulo por latrocínio em co-autoria. Paulo alega que nunca combinou matar ninguém, que estava dentro da padaria quando o atropelamento ocorreu e que Cláudio agiu por conta própria além do plano.",
+      "falante": {
+        "nome": "Dra. Beatriz Nunes",
+        "papel": "Promotora de Justiça",
+        "fala": "Latrocínio é crime único! A morte ocorreu para assegurar a fuga do roubo. Paulo escolheu Cláudio como comparsa — assumiu o risco de todos os resultados necessários para consumar o roubo!"
+      },
+      "pergunta": "No LATROCÍNIO em co-autoria, o comparsa que praticou o roubo mas não causou diretamente a morte responde pelo resultado morte?",
+      "opcoes": [
+        "Não. O latrocínio é crime preterdoloso — o resultado morte não se comunica aos co-autores; cada um responde apenas pelos atos que praticou pessoalmente no iter criminis",
+        "Sim, desde que a morte tenha ocorrido no contexto do roubo e o co-autor tenha assumido o risco (dolo eventual) ou ela fosse objetivamente previsível — a imprevisibilidade absoluta da morte rompe o nexo causal e afasta o latrocínio para o comparsa",
+        "Sim, sempre e incondicionalmente — em co-autoria no roubo, todos respondem por todos os resultados produzidos por qualquer um deles, independentemente de previsibilidade",
+        "Apenas se o comparsa estava fisicamente presente no local da morte — ausência física afasta automaticamente a imputação do resultado, limitando a responsabilidade ao roubo"
+      ],
+      "correta": 1,
+      "explicacao": "STF Súmula 610: 'Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima.' Para co-autoria no latrocínio, STF e STJ consolidaram: o resultado morte é imputável ao co-autor quando: (1) estava previsto no plano criminoso; OU (2) era objetivamente previsível como consequência do roubo (dolo eventual); OU (3) o comparsa assumiu o risco de que violência necessária seria empregada na fuga. Paulo sabia que fugiria de carro com Cláudio; a resistência da vítima e a possibilidade de atropelamento eram OBJETIVAMENTE PREVISÍVEIS em fuga de roubo com veículo. O STJ: previsibilidade objetiva da morte durante fuga comunica o resultado a todos os co-autores (HC 417.779/SP). Se a morte fosse absolutamente imprevisível e desconectada do plano — desvio subjetivo — o comparsa responderia apenas por roubo.",
+      "refs": [
+        "Súmula 610 do STF — latrocínio consumado",
+        "Art. 157, §3º, II do CP",
+        "STJ HC 417.779/SP — latrocínio em co-autoria",
+        "Art. 29 do CP — Concurso de Pessoas"
+      ],
+      "ponte": "Co-autoria no latrocínio confirmada. Última questão: se a morte ocorre mas a subtração falha completamente, o latrocínio é consumado ou tentado?"
+    },
+    {
+      "fase": 3,
+      "icone": "⚖️",
+      "label": "CONSUMAÇÃO DO LATROCÍNIO",
+      "narrativa": "Surge questão processual: se a morte ocorre mas a subtração patrimonial falha (réus presos sem levar nada), o latrocínio é tentado ou consumado? No caso, os réus foram presos com R$ 350 — o restante foi recuperado.",
+      "falante": {
+        "nome": "Juiz Dr. Sérgio Linhares",
+        "papel": "Juiz de Direito",
+        "fala": "A morte está provada. Mas a subtração foi parcial — R$ 850 de R$ 1.200 foram recuperados. O latrocínio se consuma com a morte? Com a subtração? Ou precisa de ambos?"
+      },
+      "pergunta": "O LATROCÍNIO (art. 157, §3º, II) consuma-se com a MORTE da vítima, mesmo que a SUBTRAÇÃO patrimonial não se concretize?",
+      "opcoes": [
+        "Não. O latrocínio exige a consumação de AMBOS os resultados — morte E subtração. Se apenas a morte ocorre, o crime é latrocínio tentado em concurso com homicídio consumado",
+        "Depende da sequência: se a morte ocorrer ANTES da subtração é latrocínio tentado; se APÓS a subtração é latrocínio consumado — critério cronológico do STJ",
+        "A subtração parcial determina latrocínio parcialmente consumado, com causa de diminuição proporcional ao valor não obtido pelos réus",
+        "Sim. A Súmula 610 STF é expressa: há latrocínio consumado quando o homicídio se consuma, ainda que não realizada a subtração — a morte consuma o crime"
+      ],
+      "correta": 3,
+      "explicacao": "Súmula 610 STF: 'Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima.' A lógica: latrocínio é crime COMPLEXO que protege dois bens jurídicos (patrimônio E vida). Para fins de consumação, o STF privilegia o resultado mais grave (morte). Tabela de combinações: MORTE consumada + subtração consumada = latrocínio CONSUMADO; MORTE consumada + subtração NÃO consumada = latrocínio CONSUMADO (Súmula 610); MORTE não consumada + subtração consumada = roubo CONSUMADO (+ tentativa de homicídio ou lesão grave no §3º, I); MORTE não consumada + subtração não consumada = roubo TENTADO. No caso: morte ocorreu = latrocínio CONSUMADO. A recuperação parcial de R$ 850 é irrelevante para a consumação.",
+      "refs": [
+        "Súmula 610 do STF",
+        "Art. 157, §3º, I e II do CP",
+        "STJ REsp 1.870.813/SP",
+        "STF HC 102.984/RS"
+      ],
+      "ponte": null
+    }
+  ]
+}
