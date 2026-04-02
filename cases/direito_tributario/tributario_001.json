@@ -1,1 +1,94 @@
-
+{
+  "id": "tributario_001",
+  "icone": "💰",
+  "titulo": "A Declaração Incompleta",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Fazenda Nacional",
+  "requerido": "Empresa Alfa Comércio Ltda.",
+  "intro": "Em março de 2023, a Receita Federal lavrou auto de infração contra a Empresa Alfa referente ao IRPJ do ano-base 2016, constatando omissão de receitas na DIPJ entregue em abril de 2017. A fiscalização comprovou simulação de notas fiscais para reduzir a base de cálculo. A empresa impugnou o lançamento alegando decadência, confusão entre prescrição e decadência, e efeito do parcelamento solicitado em 2019. Você é o Procurador da Fazenda Nacional — defenda o crédito!",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📅",
+      "label": "DECADÊNCIA",
+      "narrativa": "A empresa sustenta que, por ser o IRPJ tributo sujeito a lançamento por homologação, o prazo decadencial de 5 anos conta-se do fato gerador (01/01/2016), encerrando em 01/01/2021. Logo, o auto de infração de março de 2023 seria nulo por decadência.",
+      "falante": {
+        "nome": "Dr. Fábio Lopes",
+        "papel": "Advogado Tributarista",
+        "fala": "O IRPJ é lançamento por homologação. O §4º do art. 150 do CTN é cristalino: 5 anos do fato gerador. O auto de infração de 2023 está fulminado pela decadência!"
+      },
+      "pergunta": "Qual o prazo decadencial aplicável ao lançamento de ofício do IRPJ quando há DOLO, FRAUDE ou SIMULAÇÃO na declaração do contribuinte?",
+      "opcoes": [
+        "Art. 173, I do CTN: 5 anos contados do 1º dia do exercício seguinte ao que o lançamento poderia ter sido efetuado — o art. 150, §4º é expressamente afastado pela ressalva de dolo/fraude",
+        "Art. 150, §4º do CTN: sempre 5 anos do fato gerador, pois a fraude do contribuinte não altera o prazo fixado em lei para a Fazenda exercer o direito de lançar",
+        "10 anos por analogia ao art. 205 do CC/2002, aplicável quando comprovada fraude fiscal qualificada",
+        "Não há decadência quando comprovada fraude, pois o crédito tributário oriundo de ilícito é imprescritível por força do art. 37, §5º da CF"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 150, §4º do CTN prevê o prazo de 5 anos do fato gerador para homologação tácita, MAS ressalva expressamente: 'salvo se comprovada a ocorrência de dolo, fraude ou simulação.' Nesse caso, aplica-se a regra geral do art. 173, I: o prazo de 5 anos conta-se do 1º dia do exercício seguinte ao que o lançamento poderia ter sido feito. Cálculo do caso: fato gerador em 2016 → Fazenda poderia lançar a partir de 2017 → prazo corre de 01/01/2017 a 01/01/2022. O auto de março de 2023 está decaído, salvo se a Fazenda provar a fraude (simulação de NFs) para afastar o §4º. A comprovação da fraude é, portanto, conditio sine qua non para a validade do lançamento. Tema obrigatório em AFR, PFN e Juiz Federal.",
+      "refs": [
+        "Art. 150, §4º e art. 173, I do CTN",
+        "STJ REsp 1.199.262/DF",
+        "STJ EREsp 276.142/SP — leading case sobre decadência tributária",
+        "STJ REsp 973.733/RS — distinção fraude e prazo decadencial"
+      ],
+      "ponte": "A simulação de notas fiscais é comprovada, mas a empresa muda de tese: como entregou a DIPJ declarando algum valor de IRPJ, alega que o crédito já foi constituído pela declaração (Súmula 436 STJ) — seria caso de prescrição, não decadência."
+    },
+    {
+      "fase": 2,
+      "icone": "📋",
+      "label": "DECLARAÇÃO × LANÇAMENTO",
+      "narrativa": "A empresa invoca a Súmula 436 do STJ: a entrega da DIPJ em 2017 constituiu o crédito tributário, dispensando o lançamento. Portanto, o prazo de 5 anos do art. 174 do CTN teria se iniciado em 2017 — e qualquer cobrança em 2023 estaria prescrita.",
+      "falante": {
+        "nome": "Procuradora Ana Beatriz",
+        "papel": "Procuradora da Fazenda Nacional",
+        "fala": "A Súmula 436 constitui apenas o crédito DECLARADO e não pago. O crédito OMITIDO — descoberto na fiscalização — exige lançamento de ofício. São créditos de natureza e regimes completamente distintos!"
+      },
+      "pergunta": "A Súmula 436 do STJ dispensa o lançamento formal para o crédito declarado. Qual é o seu LIMITE de aplicação?",
+      "opcoes": [
+        "Aplica-se exclusivamente ao valor declarado e não pago — o valor omitido/sonegado exige lançamento de ofício, sujeitando-se ao prazo decadencial do art. 173, I CTN",
+        "Aplica-se a todo e qualquer crédito tributário da pessoa jurídica, desde que ela tenha entregado qualquer declaração fiscal no período de apuração",
+        "Aplica-se apenas a tributos federais administrados pela RFB, não alcançando ICMS, ISS ou contribuições previdenciárias declaradas ao INSS",
+        "A declaração constitui o crédito, mas não inicia o prazo prescricional — este só começa com notificação formal do contribuinte sobre a existência do débito"
+      ],
+      "correta": 0,
+      "explicacao": "Súmula 436 STJ: 'A entrega de declaração pelo contribuinte reconhecendo débito fiscal constitui o crédito tributário, dispensada qualquer outra providência por parte do fazendário.' PORÉM, o limite é preciso: essa regra alcança somente o valor declarado e não pago. Para o valor omitido (não declarado, sonegado), a Fazenda PRECISA realizar lançamento de ofício (art. 149 CTN), sujeitando-se ao prazo decadencial. Existem portanto DOIS créditos distintos: (a) valor declarado na DIPJ → constituído pela declaração → prazo prescricional art. 174 CTN; (b) valor omitido/fraudado → exige lançamento → prazo decadencial art. 173, I CTN (com fraude). A empresa incorreu em confusão deliberada entre os dois regimes.",
+      "refs": [
+        "Súmula 436 STJ",
+        "Art. 149 do CTN — Lançamento de ofício",
+        "Art. 174 do CTN — Prescrição tributária",
+        "STJ REsp 1.120.295/SP — recurso repetitivo sobre constituição do crédito"
+      ],
+      "ponte": "Créditos separados com regimes distintos — a tese da empresa é afastada. Último round: a empresa alega que solicitou parcelamento em 2019 do valor declarado, inadimpliu, e que desde então já se passaram mais de 5 anos sem execução fiscal."
+    },
+    {
+      "fase": 3,
+      "icone": "⏸️",
+      "label": "PRESCRIÇÃO",
+      "narrativa": "Em 2019, a Empresa Alfa solicitou parcelamento do valor declarado na DIPJ, que foi deferido mas inadimplido após 3 parcelas (agosto de 2019). A Fazenda ajuizou execução fiscal em setembro de 2024. A empresa alega prescrição: do inadimplemento (2019) à execução (2024) passaram-se mais de 5 anos.",
+      "falante": {
+        "nome": "Dr. Fábio Lopes",
+        "papel": "Advogado Tributarista",
+        "fala": "Do inadimplemento em agosto de 2019 até a execução em setembro de 2024 são exatos 5 anos e 1 mês. A prescrição consumou-se plenamente!"
+      },
+      "pergunta": "O pedido de PARCELAMENTO é causa de INTERRUPÇÃO da prescrição tributária (art. 174, parágrafo único, IV CTN)? Como se reconta o prazo após o inadimplemento?",
+      "opcoes": [
+        "Sim. O parcelamento constitui reconhecimento inequívoco do débito e interrompe a prescrição; após o inadimplemento, o prazo de 5 anos recomeça DO ZERO a partir da rescisão",
+        "Não. O parcelamento apenas suspende a exigibilidade do crédito (art. 151, VI CTN), sem qualquer efeito interruptivo sobre o prazo prescricional",
+        "O parcelamento interrompe a prescrição, mas o prazo que recomeça é de apenas 2 anos, por força do princípio da eficiência na cobrança fiscal",
+        "O parcelamento tanto interrompe como suspende: durante a vigência suspende; após inadimplemento, retoma de onde parou — não recomeça do zero"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 174, parágrafo único, IV do CTN prevê que a prescrição é interrompida 'por qualquer ato inequívoco, ainda que extrajudicial, que importe em reconhecimento do débito pelo devedor.' O pedido de parcelamento configura exatamente esse reconhecimento — confissão irretratável e irrevogável da dívida (STJ REsp 1.658.517/RS). Com a INTERRUPÇÃO, o prazo de 5 anos RECOMEÇA DO ZERO a partir do inadimplemento (rescisão do parcelamento). No caso: rescisão em agosto de 2019 → novo prazo de 5 anos → encerraria em agosto de 2024. A execução de setembro de 2024 chegou APÓS o prazo — a empresa tem razão neste ponto! A Fazenda deveria ter executado antes de agosto de 2024. Lição: controlar rigorosamente o vencimento do prazo após rescisão de parcelamentos.",
+      "refs": [
+        "Art. 174, parágrafo único, IV do CTN",
+        "STJ REsp 1.340.553/RS — Recurso Repetitivo sobre prescrição tributária",
+        "STJ REsp 1.658.517/RS — parcelamento como confissão e interrupção",
+        "Art. 151, VI do CTN — parcelamento como suspensão da exigibilidade"
+      ],
+      "ponte": null
+    }
+  ]
+}
