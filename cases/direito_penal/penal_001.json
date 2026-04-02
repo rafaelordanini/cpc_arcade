@@ -1,1 +1,94 @@
-
+{
+  "id": "penal_001",
+  "icone": "🔫",
+  "titulo": "A Emboscada na Farmácia",
+  "area": "Direito Penal e Processo Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "avançado",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "Rodrigo A. da Silva",
+  "intro": "Após série de furtos no bairro do Ipiranga, a polícia recebe denúncia de que Rodrigo planejava invadir uma farmácia naquela noite. Os agentes cercam o estabelecimento e aguardam. Rodrigo escala o muro dos fundos (2,5m), acessa janela semiaberta no 1º andar e é detido em flagrante dentro do local. É réu primário e o prejuízo foi de R$ 190,00. A defesa alega flagrante preparado e crime impossível. Você é o promotor — sustente a denúncia!",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🚔",
+      "label": "FLAGRANTE",
+      "narrativa": "A defesa protocolou exceção preliminar sustentando que os policiais, ao cercarem preventivamente a farmácia e aguardarem Rodrigo, criaram artificialmente a situação de flagrante, configurando flagrante preparado e crime impossível (art. 17 CP), nos termos da Súmula 145 do STF.",
+      "falante": {
+        "nome": "Dr. Heitor Mendes",
+        "papel": "Defensor Público",
+        "fala": "Excelência, os agentes sabiam que meu cliente viria. Ficaram de tocaia esperando o crime. Isso é flagrante preparado — crime impossível!"
+      },
+      "pergunta": "O que distingue o flagrante PREPARADO (nulo — Súmula 145 STF) do flagrante ESPERADO (válido)?",
+      "opcoes": [
+        "No preparado, agentes induzem ou criam artificialmente a situação criminosa; no esperado, apenas aguardam o crime já planejado autonomamente pelo agente — este é plenamente válido",
+        "Qualquer monitoramento policial prévio configura flagrante preparado, gerando nulidade absoluta do ato prisional",
+        "A distinção é processual: no preparado há nulidade relativa; no esperado, nulidade absoluta sanável por ratificação do juiz",
+        "Ambos são inválidos quando a polícia tinha conhecimento prévio do crime, pois a omissão policial equivale à preparação"
+      ],
+      "correta": 0,
+      "explicacao": "A Súmula 145 STF dispõe: 'Não há crime quando a preparação do flagrante pela polícia torna impossível a sua consumação.' O flagrante PREPARADO ocorre quando o agente policial instiga, induz ou provoca o sujeito a praticar a infração — criando artificialmente o crime. Aqui, o crime é impossível por intervenção do próprio Estado (art. 17 CP). O flagrante ESPERADO ocorre quando a polícia, tendo informação de que o crime seria praticado, apenas aguarda sua execução sem interferir na livre decisão do agente. Rodrigo planejou o furto de forma autônoma, independente da ação policial: a presença dos agentes não o induziu — apenas aguardou. Flagrante esperado = válido.",
+      "refs": [
+        "Súmula 145 STF",
+        "Art. 17 do CP — Crime Impossível",
+        "STF HC 69.696/SP",
+        "STJ HC 160.940/RJ — distinção flagrante preparado e esperado"
+      ],
+      "ponte": "Superada a preliminar, o juiz recebe a denúncia. A defesa agora nega a qualificadora: afirma que janela semiaberta afasta a escalada, pois não havia obstáculo real a ser vencido."
+    },
+    {
+      "fase": 2,
+      "icone": "🪟",
+      "label": "QUALIFICADORA",
+      "narrativa": "No mérito, a defesa sustenta que a janela estava semiaberta e Rodrigo apenas a empurrou para entrar, sem vencer obstáculo real. O laudo pericial atesta que ele subiu o muro dos fundos (2,5m) para alcançar a janela localizada no primeiro andar do imóvel.",
+      "falante": {
+        "nome": "Dra. Carla Fonseca",
+        "papel": "Promotora de Justiça",
+        "fala": "O laudo é cristalino: o réu escalou muro de dois metros e meio para alcançar a janela. O que importa é a via anormal utilizada, não o estado da abertura que estava no alto!"
+      },
+      "pergunta": "Para configurar a qualificadora de ESCALADA no furto (art. 155, §4º, II, CP), é necessário que a abertura acessada esteja trancada?",
+      "opcoes": [
+        "Não. A escalada caracteriza-se pelo acesso por via anormal (superação de obstáculo vertical), independentemente de a abertura estar trancada ou não",
+        "Sim. Abertura destrancada ou semiaberta elimina o obstáculo e, portanto, afasta necessariamente a qualificadora de escalada",
+        "Não, mas exige-se uso de instrumento específico (escada, corda), sem o qual o acesso vertical não configura a qualificadora",
+        "Sim, pois a qualificadora exige cumulativamente escalada e rompimento, sob pena de configurar bis in idem com a alínea I do mesmo parágrafo"
+      ],
+      "correta": 0,
+      "explicacao": "A escalada (art. 155, §4º, II, CP) consiste no ingresso ao local por via anormal, vencendo obstáculo vertical — subir muros, paredes, telhados, chegar a janelas elevadas. O STJ pacificou: 'o que configura a escalada não é o estado da abertura, mas o esforço anormal empregado para vencê-la' (REsp 1.478.857/SP). Rodrigo subiu um muro de 2,5m para atingir uma janela no 1º andar — via absolutamente anormal, independentemente de a janela estar aberta. A qualificadora está configurada. Vale destacar: escalada (§4º, II) e arrombamento (§4º, I) são figuras autônomas que podem coexistir, mas cada uma tem elemento próprio.",
+      "refs": [
+        "Art. 155, §4º, I e II do CP",
+        "STJ REsp 1.478.857/SP",
+        "STJ AgRg no AREsp 671.565/MG",
+        "Bitencourt, Cezar Roberto — Tratado de Direito Penal, Vol. 3"
+      ],
+      "ponte": "Qualificadora mantida por unanimidade. Mas Rodrigo é réu primário e o valor subtraído foi R$ 190,00. Pode o juiz reconhecer o furto privilegiado mesmo diante de qualificadora? A Súmula 511 do STJ responde."
+    },
+    {
+      "fase": 3,
+      "icone": "⚖️",
+      "label": "DOSIMETRIA",
+      "narrativa": "Na dosimetria, a defesa requer reconhecimento do furto privilegiado (art. 155, §2º, CP): Rodrigo é primário, sem antecedentes, e o prejuízo de R$ 190,00 é de pequeno valor. O MP se opõe, alegando que privilégio e qualificadora são logicamente incompatíveis no mesmo tipo penal.",
+      "falante": {
+        "nome": "Juíza Beatriz Salomão",
+        "papel": "Juíza de Direito",
+        "fala": "A Súmula 511 do STJ encerra a discussão teórica. Quero ouvir os requisitos antes de proferir sentença."
+      },
+      "pergunta": "Segundo a Súmula 511 do STJ, o furto PRIVILEGIADO (§2º) pode coexistir com o furto QUALIFICADO (§4º) — o chamado 'furto híbrido'?",
+      "opcoes": [
+        "Sim, desde que: (1) réu primário, (2) coisa de pequeno valor e (3) qualificadora seja de natureza objetiva — não há incompatibilidade lógica entre circunstâncias de naturezas distintas",
+        "Não. Privilégio e qualificadora são figuras excludentes: a qualificadora eleva o tipo penal ao furto grave, tornando inaplicável o benefício destinado ao furto simples",
+        "Sim, mas somente para a qualificadora de concurso de agentes (§4º, IV), que tem natureza subjetiva compatível com o privilégio",
+        "Não, pois o §2º exige pena mínima de 6 meses — incompatível com o patamar mínimo de 2 anos do furto qualificado"
+      ],
+      "correta": 0,
+      "explicacao": "Súmula 511 STJ: 'É possível o reconhecimento do privilégio previsto no §2º do art. 155 do CP nos casos de crime de furto qualificado, se estiver presente a primariedade do agente, o pequeno valor da coisa e a qualificadora for de ordem objetiva.' O raciocínio do STJ: as qualificadoras do §4º, I a III (arrombamento, escalada, destreza, abuso de confiança) são OBJETIVAS (descrevem o modo de execução do crime); o privilégio do §2º é SUBJETIVO (refere-se à condição pessoal do agente e ao valor da coisa). Não há contradição lógica. Rodrigo preenche os três requisitos: primário + R$ 190,00 (abaixo de 1 salário mínimo) + escalada (objetiva). O juiz DEVE reconhecer o furto híbrido, podendo substituir a pena por multa ou reduzi-la de 1/3 a 2/3.",
+      "refs": [
+        "Súmula 511 do STJ",
+        "Art. 155, §2º e §4º do CP",
+        "STJ REsp 1.173.273/SP — leading case do furto híbrido",
+        "STJ HC 306.450/SP"
+      ],
+      "ponte": null
+    }
+  ]
+}
