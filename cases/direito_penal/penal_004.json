@@ -1,0 +1,94 @@
+{
+  "id": "penal_004",
+  "icone": "🔄",
+  "titulo": "O Caixa e os Desvios Diários",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "intermediário",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "Geraldo M. Souza",
+  "intro": "Geraldo, caixa de supermercado há 12 anos, durante 8 meses subtraiu entre R$ 50 e R$ 200 do caixa por dia útil, totalizando R$ 28.400. O esquema foi descoberto por auditoria interna. São 172 subtrações documentadas. O MP denuncia por crime continuado. A defesa pede reconhecimento como crime único ou, subsidiariamente, crime habitual. Você é o promotor — sustente a qualificação correta.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "📊",
+      "label": "CRIME CONTINUADO",
+      "narrativa": "A defesa sustenta que as 172 subtrações constituem um único crime unificado pelo dolo continuado. Alega que não há como distinguir cada ato pois todos decorrem de um único desígnio criminoso — complementar o salário.",
+      "falante": {
+        "nome": "Dr. Sandro Viegas",
+        "papel": "Advogado de Defesa",
+        "fala": "São 172 atos, mas um único dolo! Meu cliente tinha um único objetivo: complementar o salário. Isso é crime único, não 172 crimes autônomos em concurso!"
+      },
+      "pergunta": "Quais são os requisitos do crime CONTINUADO previstos no art. 71 do CP, segundo a teoria adotada pelo legislador brasileiro?",
+      "opcoes": [
+        "Pluralidade de condutas da mesma espécie praticadas nas mesmas condições de tempo, lugar, modo de execução ou outras semelhantes, de modo que a subsequente seja continuação da anterior — a teoria OBJETIVA adotada pelo CP não exige unidade de desígnio",
+        "Pluralidade de condutas; unidade de desígnio (dolo único desde o início); mesmas condições objetivas — exige-se cumulativamente o elemento subjetivo unitário para distinguir do concurso material",
+        "Pluralidade de condutas da mesma espécie; unicidade da vítima; habitualidade criminosa demonstrada — são requisitos alternativos, bastando dois dos três para reconhecimento",
+        "Condutas da mesma espécie; mesmo lugar; mesmo modus operandi — o requisito temporal é irrelevante, bastando identidade de local e modo de execução"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 71 do CP adota a TEORIA OBJETIVA para o crime continuado: 'Quando o agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes da mesma espécie e, pelas condições de tempo, lugar, maneira de execução e outras semelhantes, devem os subsequentes ser havidos como continuação do primeiro.' Requisitos OBJETIVOS: (1) pluralidade de condutas; (2) crimes da mesma espécie (mesmo tipo legal ou tipo de mesma natureza); (3) condições semelhantes de: tempo (STJ aceita até 30 dias entre os atos), lugar (mesma região, mesma comarca), modo de execução (mesmo método). O CP NÃO exige unidade de desígnio — essa é a teoria subjetiva, REJEITADA pelo legislador de 1940. STJ consolidou a teoria objetiva: HC 442.999/SP.",
+      "refs": [
+        "Art. 71 do CP — Crime Continuado",
+        "STJ HC 442.999/SP — teoria objetiva",
+        "Súmula 497 STJ — prescrição no crime continuado",
+        "Bitencourt, Cezar Roberto — Tratado de Direito Penal, Vol. 1"
+      ],
+      "ponte": "Crime continuado tecnicamente configurado. Mas há uma armadilha processual: a habitualidade criminosa afasta o benefício da continuidade?"
+    },
+    {
+      "fase": 2,
+      "icone": "⚠️",
+      "label": "HABITUALIDADE CRIMINOSA",
+      "narrativa": "O MP alerta que Geraldo realizava as subtrações com método sofisticado e rotineiro: esperava movimento intenso para manipular o caixa, variava os valores para burlar a auditoria e desenvolvia estratégias diferentes conforme o turno. O MP sustenta que isso seria crime habitual.",
+      "falante": {
+        "nome": "Dra. Priscila Andrade",
+        "papel": "Promotora de Justiça",
+        "fala": "Isso não é crime continuado — é habitualidade criminosa! Geraldo criou uma profissão do crime: metodologia própria, rotina estabelecida, sofisticação crescente. Crime habitual não merece o benefício do art. 71!"
+      },
+      "pergunta": "Qual a distinção entre CRIME CONTINUADO (art. 71 CP) e CRIME HABITUAL, e quais crimes são exemplos desta última modalidade?",
+      "opcoes": [
+        "Crime habitual e crime continuado são sinônimos no CP — a distinção é apenas doutrinária sem consequência prática, sendo interchangeable na jurisprudência do STJ",
+        "Crime habitual exige mesmo bem jurídico e mesma vítima; continuado admite vítimas e bens distintos — a distinção é apenas sobre o elemento vítima, sem diferença de consequência",
+        "Crime habitual é aquele cujo tipo exige reiteração de atos como elemento do próprio tipo (ex: curandeirismo art. 284 CP); no crime continuado, cada ato isolado JÁ É CRIME CONSUMADO por si só — a continuidade é um benefício legal de unificação das penas",
+        "Crime habitual exige 30 ou mais condutas; continuado admite qualquer pluralidade — o critério é puramente quantitativo e não qualitativo como sustentam alguns doutrinadores"
+      ],
+      "correta": 2,
+      "explicacao": "Distinção essencial: CRIME HABITUAL: o tipo penal exige que a conduta seja REPETIDA como elemento constitutivo do próprio crime — cada ato isolado é penalmente irrelevante; só há crime com a reiteração. Exemplos: curandeirismo (art. 284 CP), manutenção de casa de prostituição (art. 229 CP), exercício ilegal da medicina (art. 282 CP). CRIME CONTINUADO: cada ato isolado já configura crime CONSUMADO; a continuidade é um BENEFÍCIO LEGAL de unificação por política criminal (evitar penas absurdas por concurso material). No caso de Geraldo: cada subtração diária é um furto consumado individualmente. A sofisticação do método não transforma furtos em crime habitual — apenas evidencia planejamento, podendo influenciar a dosimetria. O crime continuado é aplicável, e a Súmula 497 STJ regula a prescrição.",
+      "refs": [
+        "Art. 71 do CP",
+        "Art. 284 do CP — Curandeirismo (exemplo de crime habitual)",
+        "Súmula 497 do STJ — prescrição no crime continuado",
+        "STJ AgRg no REsp 1.803.256/SP"
+      ],
+      "ponte": "Confirmado o crime continuado. Agora a dosimetria: como calcular a pena com o acréscimo da continuação? E quando se aplica o parágrafo único do art. 71?"
+    },
+    {
+      "fase": 3,
+      "icone": "⚖️",
+      "label": "DOSIMETRIA",
+      "narrativa": "O juiz precisa dosar a pena de Geraldo. São 172 furtos qualificados (abuso de confiança, art. 155, §4º, II, CP). A pena-base ficou em 2 anos. O MP requer acréscimo máximo pelo número de crimes. A defesa alega que o parágrafo único do art. 71 não se aplica a crimes sem violência.",
+      "falante": {
+        "nome": "Juíza Dra. Simone Araújo",
+        "papel": "Juíza de Direito",
+        "fala": "Temos 172 crimes em 8 meses e R$ 28.400 de prejuízo. Promotora, fundamente o acréscimo máximo e esclareça quando se aplica o parágrafo único do art. 71!"
+      },
+      "pergunta": "Como funciona a DOSIMETRIA do crime continuado (art. 71, CP) e quando se aplica o parágrafo único (crime continuado qualificado)?",
+      "opcoes": [
+        "Caput: aplica-se a pena mais grave com acréscimo de 1/6 a 2/3 conforme o número de infrações — STJ correlaciona: 2-3 crimes = 1/6; até 10 = 1/4; 11-20 = 1/3; 21+ = 2/3. Parágrafo único: crimes dolosos com violência ou grave ameaça à pessoa OU praticados contra vítimas diferentes, permitindo até triplicar a pena",
+        "Caput: soma-se todas as penas como no concurso material; Parágrafo único: desconta-se 1/6 a 2/3 da soma total — é exatamente o inverso do caput, beneficiando crimes contra pessoas",
+        "O acréscimo é sempre fixo em 1/2 independente do número de infrações; o parágrafo único é reservado exclusivamente para crimes contra menor de 14 anos",
+        "A pena do crime continuado nunca pode superar a pena máxima abstrata do crime mais grave; parágrafo único aplica-se apenas quando há concurso material superveniente reconhecido"
+      ],
+      "correta": 0,
+      "explicacao": "Art. 71 CP, CAPUT (continuado simples): aplica-se a pena de um dos crimes, se idênticas, ou a mais grave, se diversas, AUMENTADA de 1/6 a 2/3. O STJ correlaciona o quantum ao número de infrações: 2-3 = 1/6; 4-6 = 1/5; 7-10 = 1/4; 11-15 = 1/3; 16-20 = 1/2; 21 ou mais = 2/3. Para 172 crimes: acréscimo máximo de 2/3 é plenamente justificado. PARÁGRAFO ÚNICO (continuado qualificado): quando o agente pratica crimes dolosos com violência ou grave ameaça à pessoa OU dolosos contra VÍTIMAS DIFERENTES, o juiz pode até triplicar a pena — visando evitar que criminosos seriais se beneficiem do art. 71. No caso de Geraldo: furto (sem violência, mesma vítima jurídica — o supermercado) → aplica-se o CAPUT: pena-base 2 anos + 2/3 = 3 anos e 4 meses.",
+      "refs": [
+        "Art. 71, caput e parágrafo único do CP",
+        "STJ HC 442.999/SP — tabela de acréscimos por número de infrações",
+        "Súmula 497 STJ",
+        "STJ AgRg no REsp 1.740.518/MG"
+      ],
+      "ponte": null
+    }
+  ]
+}
