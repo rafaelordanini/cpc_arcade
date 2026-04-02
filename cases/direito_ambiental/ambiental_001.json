@@ -1,1 +1,94 @@
-
+{
+  "id": "ambiental_001",
+  "icone": "🌿",
+  "titulo": "O Rio Envenenado",
+  "area": "Direito Ambiental",
+  "area_id": "direito_ambiental",
+  "dificuldade": "avançado",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "Petroquímica Beta S.A.",
+  "intro": "Entre 2010 e 2012, a Petroquímica Beta S.A. despejou resíduos industriais no Rio Claro, contaminando 80 km de extensão e dizimando a fauna aquática. Em 2018, a empresa vendeu sua planta industrial para a Química Gama Ltda. Em 2022, o Ministério Público ajuizou Ação Civil Pública contra ambas as empresas. A defesa alega: (1) ausência de culpa da Beta, que terceirizou a gestão de efluentes; (2) ausência de nexo causal da Gama, adquirente após os danos; (3) prescrição da pretensão reparatória. Você é o Promotor — sustente a ACP!",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🏭",
+      "label": "RESPONSABILIDADE",
+      "narrativa": "A Petroquímica Beta nega responsabilidade: afirma que a gestão de efluentes foi integralmente terceirizada, e que sem culpa própria não pode ser responsabilizada. Requer exclusão do polo passivo da ACP, invocando o art. 927, parágrafo único, do CC como regra geral de responsabilidade objetiva — que exigiria ao menos nexo causal direto.",
+      "falante": {
+        "nome": "Dr. Cláudio Matos",
+        "papel": "Advogado da Petroquímica Beta",
+        "fala": "A gestão de resíduos foi terceirizada para empresa especializada! Não há culpa da Beta. Sem culpa comprovada, não há responsabilidade. A teoria objetiva não pode punir quem agiu de boa-fé e contratou quem entendia competente!"
+      },
+      "pergunta": "Qual o regime de responsabilidade civil por danos ambientais previsto na Política Nacional do Meio Ambiente (Lei 6.938/81, art. 14, §1º)?",
+      "opcoes": [
+        "Responsabilidade OBJETIVA com teoria do risco integral — não se admitem excludentes como culpa exclusiva de terceiro, caso fortuito ou força maior para o poluidor direto",
+        "Responsabilidade SUBJETIVA: exige comprovação de culpa (negligência, imprudência ou imperícia) do agente poluidor, sendo a lei ambiental especial em relação ao CC",
+        "Responsabilidade OBJETIVA moderada (teoria do risco criado): admite excludente de culpa exclusiva de terceiro, liberando o contratante que adotou todas as precauções",
+        "Responsabilidade OBJETIVA apenas para pessoas jurídicas de direito público; empresas privadas respondem subjetivamente pelo art. 927 do CC/2002"
+      ],
+      "correta": 0,
+      "explicacao": "O art. 14, §1º da Lei 6.938/1981 (PNMA) consagrou a responsabilidade civil OBJETIVA do poluidor: 'É o poluidor obrigado, independentemente da existência de culpa, a indenizar ou reparar os danos causados ao meio ambiente e a terceiros.' O STJ adota a teoria do RISCO INTEGRAL para dano ambiental — não se admitem excludentes de responsabilidade. Fundamentos: (1) natureza difusa e frequentemente irreversível do dano ambiental; (2) princípio do poluidor-pagador (art. 225, §3º CF); (3) quem explora atividade com potencial poluidor assume integralmente o risco. A terceirização NÃO exonera o contratante — há solidariedade passiva entre a Beta e a terceirizada (STJ REsp 1.071.741/SP). Tema obrigatório em concurso de MP, PGE e Juiz Federal.",
+      "refs": [
+        "Art. 14, §1º da Lei 6.938/1981 — PNMA",
+        "Art. 225, §3º da CF/88 — responsabilidade ambiental tríplice",
+        "STJ REsp 1.071.741/SP — teoria do risco integral e solidariedade",
+        "STJ REsp 442.586/SP — excludentes não afastam responsabilidade ambiental"
+      ],
+      "ponte": "Responsabilidade objetiva da Beta configurada. Agora a Química Gama — nova proprietária desde 2018, 6 anos após o despejo — alega que nunca poluiu nada e não pode ser responsabilizada por ato exclusivo da vendedora."
+    },
+    {
+      "fase": 2,
+      "icone": "🏗️",
+      "label": "CADEIA DOMINIAL",
+      "narrativa": "A Química Gama Ltda. comprovou documentalmente que adquiriu a planta industrial apenas em novembro de 2018 — 6 anos após o término do despejo de resíduos. Os laudos periciais confirmam: todos os danos foram causados exclusivamente pela Petroquímica Beta entre 2010-2012. A Gama nunca despejou qualquer resíduo no rio.",
+      "falante": {
+        "nome": "Dra. Lívia Torres",
+        "papel": "Promotora de Justiça",
+        "fala": "O adquirente de imóvel contaminado integra a cadeia de responsabilidade ambiental! A obrigação de reparar é propter rem — segue o bem, não apenas a pessoa que causou o dano!"
+      },
+      "pergunta": "O adquirente de imóvel ou planta industrial onde ocorreu dano ambiental causado pelo alienante responde pela reparação, mesmo sem ter contribuído para a poluição?",
+      "opcoes": [
+        "Sim. A obrigação de recuperar o dano ambiental tem natureza PROPTER REM (real), transmitindo-se ao adquirente do imóvel contaminado, que responde solidariamente com o poluidor original",
+        "Não. Responsabilidade é pessoal e intransferível: somente quem causou o dano responde, por exigência inafastável do nexo de causalidade como elemento da responsabilidade civil",
+        "Somente se o adquirente tinha ciência da contaminação no momento da compra — a boa-fé objetiva na aquisição exclui integralmente a responsabilidade ambiental do adquirente",
+        "Apenas pessoa física adquirente responde; pessoa jurídica que compra imóvel contaminado tem apenas ação regressiva contra o alienante, sem responsabilidade solidária perante terceiros"
+      ],
+      "correta": 0,
+      "explicacao": "O STJ consolidou nos REsp 1.090.968/SP e REsp 1.056.540/GO: a obrigação de recuperar o meio ambiente é de natureza PROPTER REM — adere ao imóvel e se transmite ao adquirente independentemente de culpa ou nexo causal. Fundamentos: (1) Princípio da reparação integral — a recuperação não pode ficar condicionada à permanência do poluidor original na propriedade; (2) art. 225, §1º, III da CF — responsabilidade pelo uso sustentável da propriedade; (3) Se a responsabilidade não seguisse o bem, o poluidor poderia simplesmente alienar o imóvel para liberar-se da obrigação, fraudando a tutela ambiental. O adquirente (Gama) responde solidariamente com o poluidor original (Beta) e tem direito de regresso contra ela (art. 934 CC).",
+      "refs": [
+        "STJ REsp 1.090.968/SP — obrigação propter rem e cadeia dominial",
+        "STJ REsp 1.056.540/GO — responsabilidade do adquirente de imóvel contaminado",
+        "Art. 2º, IV da Lei 6.938/81 — definição de poluidor",
+        "STJ REsp 1.622.512/RJ — solidariedade ambiental na cadeia dominial"
+      ],
+      "ponte": "Beta e Gama respondem solidariamente. Último e decisivo obstáculo: a Petroquímica Beta alega que os danos ocorreram há mais de 10 anos e a ACP está prescrita. O MP afirma que o dano ambiental é imprescritível."
+    },
+    {
+      "fase": 3,
+      "icone": "⏳",
+      "label": "IMPRESCRITIBILIDADE",
+      "narrativa": "A Petroquímica Beta requer o reconhecimento da prescrição da pretensão reparatória: os danos ocorreram entre 2010-2012, e a ACP foi ajuizada em 2022 — mais de 10 anos depois. Invoca o art. 206, §3º, V do CC (3 anos) e o art. 1º-C da Lei 9.494/97 (5 anos) alternativamente. O MP rejeita qualquer prazo prescricional.",
+      "falante": {
+        "nome": "Dra. Lívia Torres",
+        "papel": "Promotora de Justiça",
+        "fala": "A pretensão de reparação de dano ambiental é IMPRESCRITÍVEL! O STJ é absolutamente pacífico nisto. O meio ambiente pertence às gerações presentes e futuras — não há prazo para cobrar sua recuperação!"
+      },
+      "pergunta": "A pretensão de reparação de DANO AMBIENTAL está sujeita a prazo prescricional? Qual o entendimento consolidado do STJ?",
+      "opcoes": [
+        "Não. A pretensão é imprescritível, pois o meio ambiente é bem de uso comum do povo, de natureza difusa e transgeracional — direito fundamental indisponível que não se extingue pelo decurso do tempo",
+        "Sim, prescreve em 5 anos conforme o art. 1º-C da Lei 9.494/97, aplicável por analogia a todas as ações de reparação ambiental contra particulares",
+        "Sim, prescreve em 3 anos conforme o art. 206, §3º, V do CC/2002, que rege a reparação civil extracontratual em geral, incluindo os danos ambientais",
+        "Prescreve em 10 anos (art. 205 CC) para danos de grande extensão territorial, e em 3 anos (art. 206, §3º, V CC) para danos de menor impacto ambiental"
+      ],
+      "correta": 0,
+      "explicacao": "O STJ pacificou no REsp 1.120.117/AC e em centenas de acórdãos posteriores: 'A pretensão de reparação do dano ambiental é IMPRESCRITÍVEL.' Fundamentos: (1) art. 225 da CF/88: o meio ambiente é 'bem de uso comum do povo e essencial à sadia qualidade de vida' — bem fundamental, difuso e indisponível; (2) Os danos ambientais têm caráter transgeracional — afetam gerações presentes e futuras que ainda não existem para exercer o direito; (3) Aplicar prescrição ao dano ambiental equivaleria a legitimar a poluição após determinado prazo, subvertendo a ordem constitucional e o princípio do poluidor-pagador; (4) O STJ aplica por analogia o art. 37, §5º da CF (imprescritibilidade de ressarcimento ao erário) para bens de titularidade difusa. ATENÇÃO: a imprescritibilidade alcança a pretensão REPARATÓRIA e INIBITÓRIA — não confundir com prescrição da pretensão PUNITIVA administrativa ou penal ambiental, que seguem os prazos próprios.",
+      "refs": [
+        "STJ REsp 1.120.117/AC — leading case da imprescritibilidade do dano ambiental",
+        "STJ REsp 1.654.909/SC",
+        "Art. 225 da CF/88 — meio ambiente como direito fundamental",
+        "STJ REsp 1.269.494/MG — reiteração da tese da imprescritibilidade"
+      ],
+      "ponte": null
+    }
+  ]
+}
