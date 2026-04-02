@@ -1,0 +1,94 @@
+{
+  "id": "penal_011",
+  "icone": "⚡",
+  "titulo": "A Sala de Interrogatório",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "avançado",
+  "requerente": "Ministério Público Federal",
+  "requerido": "Delegado Paulo R. Andrade",
+  "intro": "Paulo, Delegado de Polícia, submeteu o suspeito Leandro a choques elétricos de baixa intensidade durante interrogatório para obter confissão sobre um homicídio. O procedimento durou 40 minutos e não deixou marcas permanentes. Paulo alega 'técnicas de pressão psicológica permitidas'. O laudo médico-legal atesta queimaduras superficiais de 1º grau e trauma psicológico agudo. O Delegado-Chefe Osvaldo estava ciente e não interveio. Você é o promotor federal.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "⚡",
+      "label": "CONFIGURAÇÃO DA TORTURA",
+      "narrativa": "A defesa sustenta que: (a) não houve lesões permanentes; (b) a intensidade era baixa; (c) a finalidade era legítima (investigar homicídio). Apresenta laudos de especialistas em segurança que classificam o método como 'pressão física mínima'.",
+      "falante": {
+        "nome": "Dr. Fausto Bernardes",
+        "papel": "Advogado de Defesa",
+        "fala": "Baixíssima intensidade, sem sequelas permanentes! A finalidade era nobre: elucidar um homicídio. Isso é pressão física mínima e proporcional — não preenche o tipo de tortura da Lei 9.455/97!"
+      },
+      "pergunta": "Para configuração da tortura-prova (art. 1º, I, 'a', Lei 9.455/97), exige-se sofrimento INTENSO ou DURADOURO, ou qualquer grau de sofrimento para obter confissão configura o crime?",
+      "opcoes": [
+        "O tipo não exige intensidade ou duração específicas — qualquer sofrimento físico ou mental IMPOSTO com a FINALIDADE de obter informação, declaração ou confissão configura tortura; o elemento definidor é a finalidade, não a intensidade",
+        "Exige-se sofrimento intenso e prolongado — mero desconforto físico sem sequelas permanentes não configura tortura, sendo tratado como abuso de autoridade (Lei 13.869/19)",
+        "A tortura exige dolo específico de causar dano permanente — sem sequelas duradouras, o ato é desqualificado para lesão corporal leve ou abuso de autoridade",
+        "O crime de tortura só se configura com instrumentos que causem dor excruciante objetivamente aferida em escala médica — choques de baixa intensidade ficam abaixo do limiar típico"
+      ],
+      "correta": 0,
+      "explicacao": "Art. 1º, I, 'a', Lei 9.455/97: 'Constitui crime de tortura constranger alguém com emprego de violência ou grave ameaça, causando-lhe sofrimento físico ou mental: a) com o fim de obter informação, declaração ou confissão da vítima ou de terceira pessoa.' O tipo NÃO exige sofrimento intenso, prolongado ou com sequelas permanentes. Elementos: (1) constrangimento mediante violência ou grave ameaça; (2) sofrimento físico ou mental (qualquer grau); (3) finalidade especial = obter informação/confissão. Paulo: violência (choques elétricos); sofrimento físico e mental (queimaduras + trauma psicológico); finalidade = obter confissão. TORTURA CONFIGURADA. A 'nobreza' da finalidade investigativa é irrelevante — a proibição da tortura é ABSOLUTA (art. 5º, III, CF e Convenção ONU contra a Tortura, Decreto 40/1991). Sem exceções.",
+      "refs": [
+        "Art. 1º, I, 'a' da Lei 9.455/97",
+        "Art. 5º, III da CF/88 — vedação absoluta",
+        "Convenção ONU contra a Tortura (Decreto 40/1991)",
+        "STF HC 79.285/SP"
+      ],
+      "ponte": "Tortura configurada. Paulo é delegado em exercício de função. Isso qualifica o crime. E o Delegado-Chefe Osvaldo, que sabia e se omitiu — responde por quê?"
+    },
+    {
+      "fase": 2,
+      "icone": "🚔",
+      "label": "OMISSÃO DO SUPERIOR HIERÁRQUICO",
+      "narrativa": "O MPF decide incluir Osvaldo na denúncia. A defesa de Osvaldo alega que ele não praticou qualquer ato — mera omissão não pode configurar o mesmo crime de tortura praticado ativamente.",
+      "falante": {
+        "nome": "Dra. Mônica Rezende",
+        "papel": "Procuradora da República",
+        "fala": "A Lei 9.455/97 tem artigo específico sobre a omissão de agente público que sabe da tortura e se omite! Osvaldo responde por tipo penal autônomo — e a lei é expressa no §2º do art. 1º!"
+      },
+      "pergunta": "O agente público que, tendo conhecimento da prática de tortura em andamento, NÃO a impede, pratica crime previsto na Lei 9.455/97?",
+      "opcoes": [
+        "Sim. O art. 1º, §2º da Lei 9.455/97 cria tipo OMISSIVO PRÓPRIO: 'Aquele que se omite em face dessas condutas, quando tinha o dever de evitá-las ou apurá-las, incorre na pena de detenção de 1 a 4 anos' — punição autônoma, com pena menor que a tortura ativa",
+        "Não. A omissão do superior só gera responsabilidade penal se ele era garante direto do preso, o que não ocorre com o Delegado-Chefe que não participou do interrogatório",
+        "Sim, mas responde pela MESMA pena da tortura ativa (6 a 10 anos), pois a co-autoria omissiva é equiparada à participação ativa pelo STF em crimes institucionais",
+        "Não existe tipo omissivo específico na Lei 9.455/97 — o Delegado-Chefe responderia apenas por prevaricação (art. 319 CP) ou abuso de autoridade (Lei 13.869/19)"
+      ],
+      "correta": 0,
+      "explicacao": "Art. 1º, §2º da Lei 9.455/97: 'Aquele que se omite em face dessas condutas, quando tinha o dever de evitá-las ou apurá-las, incorre na pena de DETENÇÃO de 1 a 4 anos.' É TIPO OMISSIVO PRÓPRIO — criado especificamente pelo legislador, independente da teoria do crime omissivo impróprio. Pune dois grupos: (a) quem TINHA DEVER DE EVITAR e se omitiu (superior hierárquico presente ou ciente do ato em curso); (b) quem TINHA DEVER DE APURAR e se omitiu (corregedor, delegado-chefe que soube depois e não investigou). Osvaldo: Delegado-Chefe, ciente do procedimento, com dever funcional de evitar → responde pelo §2º. PENAS COMPARADAS: tortura ativa sem qualificadoras: reclusão de 2 a 8 anos; tortura qualificada por agente público (§4º, I): reclusão de 4 a 10 anos; omissão (§2º): detenção de 1 a 4 anos. São crimes AUTÔNOMOS — Paulo e Osvaldo respondem por tipos distintos.",
+      "refs": [
+        "Art. 1º, §2º da Lei 9.455/97 — Omissão de agente público",
+        "Art. 1º, §4º, I da Lei 9.455/97 — Qualificadora: agente público",
+        "STF HC 70.389/SP",
+        "STJ REsp 856.706/RO"
+      ],
+      "ponte": "Paulo responde por tortura qualificada (agente público — §4º, I). Com 8 anos de reclusão: regime inicial e progressão — o STF alterou a regra do regime integralmente fechado da Lei 9.455/97?"
+    },
+    {
+      "fase": 3,
+      "icone": "🔒",
+      "label": "PROGRESSÃO DE REGIME NA TORTURA",
+      "narrativa": "Paulo foi condenado a 8 anos por tortura qualificada. O juiz fixou regime inicial semiaberto, sendo primário. O MP recorre: a Lei 9.455/97 exige cumprimento INTEGRALMENTE fechado. A defesa invoca o HC 111.840 STF.",
+      "falante": {
+        "nome": "Juíza Dra. Isabel Monteiro",
+        "papel": "Juíza Federal",
+        "fala": "Conflito normativo: a Lei 9.455/97 diz 'integralmente' fechado para tortura — mas o STF declarou inconstitucional o regime fechado obrigatório para hediondos. Qual prevalece para a tortura especificamente?"
+      },
+      "pergunta": "A Lei 9.455/97 prevê cumprimento INTEGRALMENTE fechado para tortura. Após o HC 111.840/STF, essa vedação absoluta de progressão foi mantida?",
+      "opcoes": [
+        "Sim. A Lei 9.455/97 é lei especial e posterior à Lei 8.072/90 — prevalece a especialidade: regime integralmente fechado é constitucional e obrigatório especificamente para a tortura",
+        "A questão não foi decidida definitivamente pelo STF para a Lei 9.455/97 — aplica-se por analogia o regime semiaberto com progressão em 1/6 como critério do STJ",
+        "O STF declarou inconstitucional apenas o regime INICIAL fechado obrigatório, mantendo a vedação de progressão para tortura — réu começa em regime fixado pelo juiz, mas não pode progredir",
+        "Não. O STF declarou inconstitucional o regime INTEGRALMENTE fechado mesmo para a tortura (extensão do HC 111.840) — admite-se progressão, aplicando-se os percentuais da Lei 8.072/90 (40% primário, 60% reincidente)"
+      ],
+      "correta": 3,
+      "explicacao": "O STF, após HC 111.840/ES (2012), declarou inconstitucional o regime INTEGRALMENTE fechado por violação da individualização da pena (art. 5º, XLVI CF) e dignidade humana. O STF estendeu expressamente à Lei 9.455/97 (tortura): STF HC 107.370/SP e RHC 90.450/SP. Fundamento: cumprimento INTEGRAL fechado = vedação ABSOLUTA de progressão = viola a individualização da pena e impede a ressocialização = INCONSTITUCIONAL. Regime integralmente fechado não existe mais no sistema constitucional brasileiro. Situação atual para TORTURA: (1) Regime INICIAL: fixado conforme art. 33, §2º CP — para Paulo (8 anos, primário) → SEMIABERTO (pena ≤ 8 anos e réu primário, art. 33, §2º, 'b'); (2) PROGRESSÃO: admitida, seguindo percentuais da Lei 8.072/90 — réu primário = 40% (3 anos e 2 meses). O juiz acertou no caso.",
+      "refs": [
+        "STF HC 111.840/ES — inconstitucionalidade do regime integralmente fechado",
+        "STF HC 107.370/SP — extensão à Lei de Tortura",
+        "Art. 1º, §7º da Lei 9.455/97",
+        "Art. 2º, §2º da Lei 8.072/90 — progressão em hediondos"
+      ],
+      "ponte": null
+    }
+  ]
+}
