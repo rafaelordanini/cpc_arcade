@@ -1,0 +1,94 @@
+{
+  "id": "tributario_008",
+  "icone": "🗑️",
+  "titulo": "Lixo, Luz e Limites da Taxa",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "intermediário",
+  "requerente": "Condomínio Residencial Bela Vista",
+  "requerido": "Município de Santos",
+  "intro": "O Município de Santos cobra três exações dos condôminos: (1) Taxa de Coleta de Lixo Domiciliar calculada com base na área construída do imóvel; (2) Taxa de Fiscalização de Obras calculada com base no valor venal do imóvel; (3) Contribuição para o Custeio da Iluminação Pública — COSIP — inserida na conta de energia elétrica. O condomínio impugna todas as cobranças invocando inconstitucionalidades distintas para cada uma. Você é o juiz estadual.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🗑️",
+      "label": "TAXA DE COLETA DE LIXO E SV 29",
+      "narrativa": "O condomínio alega que a Taxa de Coleta de Lixo calculada pela área construída utiliza base de cálculo própria de imposto (IPTU), violando a Súmula Vinculante 29 do STF e o art. 145, §2º da CF. O Município sustenta que área construída é critério proporcional à quantidade de lixo gerado, não é idêntico à base do IPTU.",
+      "falante": {
+        "nome": "Dr. Eduardo Barata",
+        "papel": "Advogado do Condomínio",
+        "fala": "A taxa é calculada pela área construída — exatamente um dos elementos do IPTU! SV 29 proíbe taxa com base idêntica à de imposto. A Taxa de Lixo calculada pela área construída é inconstitucional e deve ser declarada nula!"
+      },
+      "pergunta": "A Súmula Vinculante 29 veda o uso de base de cálculo IDÊNTICA à de imposto em taxa. A área construída como critério da Taxa de Coleta de Lixo viola essa súmula?",
+      "opcoes": [
+        "Sim. A área construída é critério principal do IPTU — qualquer taxa que utilize a mesma base é inconstitucional por violar a SV 29 e o art. 145, §2º da CF, independentemente da finalidade declarada",
+        "A SV 29 não veda o uso de qualquer elemento do IPTU em taxas — veda apenas a BASE DE CÁLCULO idêntica em sua integralidade. A área construída como CRITÉRIO PROPORCIONAL para estimar geração de lixo é legítimo: a base do IPTU é o valor venal, não a área construída; não há identidade integral — a taxa de lixo baseada em área construída é CONSTITUCIONAL",
+        "A SV 29 é inaplicável a taxas de serviço municipal — aplica-se apenas a taxas de poder de polícia cobradas pela União e pelos Estados em âmbito nacional",
+        "A constitucionalidade depende do porte do município: municípios com menos de 100.000 habitantes podem usar a área construída como base da taxa de lixo; acima disso, é inconstitucional por presunção de disponibilidade de outros critérios"
+      ],
+      "correta": 1,
+      "explicacao": "Súmula Vinculante 29 STF: 'É constitucional a adoção, no cálculo do valor de taxa, de um ou mais elementos da base de cálculo própria de determinado imposto, desde que não haja integral identidade entre uma base e outra.' Art. 145, §2º CF: 'As taxas não poderão ter base de cálculo própria de impostos.' A vedação é de IDENTIDADE TOTAL — não de uso de qualquer elemento compartilhado. No IPTU, a BASE DE CÁLCULO é o VALOR VENAL do imóvel (art. 33 CTN). Na Taxa de Lixo com critério de área construída: a área é ELEMENTO PROPORCIONAL para estimar a geração de lixo (imóvel maior → mais moradores → mais resíduos), mas NÃO é a base de cálculo do IPTU (que é o valor venal). Não há identidade integral → CONSTITUCIONAL. STF RE 576.321/SP: taxa de lixo baseada em área construída é constitucional por não haver identidade com a base do IPTU.",
+      "refs": [
+        "Súmula Vinculante 29 do STF",
+        "Art. 145, §2º da CF",
+        "STF RE 576.321/SP — taxa de lixo e SV 29",
+        "Art. 33 do CTN — base de cálculo do IPTU"
+      ],
+      "ponte": "Taxa de lixo constitucional. Mas a Taxa de Fiscalização de Obras usa o VALOR VENAL do imóvel como base — exatamente a base do IPTU. Aí sim há identidade integral com a base de imposto, violando a SV 29 e o art. 145, §2º da CF?"
+    },
+    {
+      "fase": 2,
+      "icone": "🔨",
+      "label": "TAXA DE FISCALIZAÇÃO — IDENTIDADE COM O IPTU",
+      "narrativa": "A Taxa de Fiscalização de Obras é calculada com base no valor venal do imóvel — idêntica ao IPTU. O Município defende: é critério preciso da complexidade e custo da fiscalização proporcional ao valor da obra. O condomínio: há identidade integral de base com o IPTU, violando expressamente a SV 29.",
+      "falante": {
+        "nome": "Dra. Marina Salave",
+        "papel": "Procuradora Municipal",
+        "fala": "O valor venal reflete a complexidade da obra a ser fiscalizada — obra de maior valor exige maior aparato de fiscalização. É critério razoável e proporcional ao serviço! A identidade com o IPTU é coincidência de critério, não violação constitucional!"
+      },
+      "pergunta": "O uso do VALOR VENAL do imóvel como base de cálculo da Taxa de Fiscalização de Obras configura 'identidade integral' vedada pela SV 29 e art. 145, §2º, CF?",
+      "opcoes": [
+        "Não. O valor venal é critério pertinente para dimensionar a complexidade da fiscalização — sua utilização em taxa de poder de polícia não configura identidade integral com o IPTU, que tem fundamento, fato gerador e finalidade inteiramente distintos",
+        "A identidade de base é permitida quando os tributos têm incidências temporais diferentes — IPTU anual e taxa pontual por serviço específico não conflitam em razão do diferente fato gerador e da periodicidade distinta",
+        "A SV 29 admite identidade integral quando o serviço público é de fiscalização (poder de polícia), restringindo a vedação apenas às taxas de utilização de serviço público divisível",
+        "Sim. O valor venal do imóvel é a base de cálculo do IPTU (art. 33 CTN) — uma taxa que adote exatamente o valor venal como base tem IDENTIDADE INTEGRAL com a base do IPTU, violando o art. 145, §2º CF e a SV 29, sendo inconstitucional"
+      ],
+      "correta": 3,
+      "explicacao": "Art. 33 CTN: 'A base de cálculo do imposto [IPTU] é o valor venal do imóvel.' A SV 29 permite uso parcial de elementos da base de imposto, mas não a IDENTIDADE INTEGRAL. Quando uma taxa usa o VALOR VENAL como base — exatamente o mesmo parâmetro que é a base de cálculo do IPTU — há identidade integral, não mera utilização de elemento parcial. O STF é firme: a proibição do art. 145, §2º veda exatamente isso. A 'proporcionalidade ao custo do serviço' não justifica a identidade integral — se fosse válida essa justificativa, qualquer taxa poderia usar a base de qualquer imposto com argumento de proporcionalidade. STF RE 233.784/RJ e outras decisões: taxa de fiscalização de obras calculada pelo valor venal é inconstitucional por identidade integral com a base do IPTU.",
+      "refs": [
+        "Art. 145, §2º da CF",
+        "Art. 33 do CTN — base de cálculo do IPTU (valor venal)",
+        "Súmula Vinculante 29 do STF",
+        "STF RE 233.784/RJ — taxa de fiscalização e identidade com IPTU"
+      ],
+      "ponte": "Taxa de fiscalização de obras inconstitucional por identidade integral com o IPTU. Agora a COSIP: contribuição cobrada na conta de energia para custear iluminação pública. É taxa inconstitucional disfarçada, ou a EC 39/2002 criou espécie tributária autônoma válida?"
+    },
+    {
+      "fase": 3,
+      "icone": "💡",
+      "label": "COSIP — CONTRIBUIÇÃO DE ILUMINAÇÃO PÚBLICA",
+      "narrativa": "A COSIP foi criada pela EC 39/2002, que inseriu o art. 149-A na CF. O condomínio sustenta que iluminação pública é serviço inespecífico e indivisível, logo não pode ser cobrada por taxa — e a COSIP seria inconstitucional por ser uma taxa de serviço indivisível com nome diferente.",
+      "falante": {
+        "nome": "Dr. Eduardo Barata",
+        "papel": "Advogado do Condomínio",
+        "fala": "Iluminação pública é serviço geral — beneficia todos indiscriminadamente sem possibilidade de individualização! Taxa de serviço indivisível é inconstitucional por violação ao art. 145, II da CF. A COSIP é uma taxa inconstitucional com nome diferente!"
+      },
+      "pergunta": "A COSIP — Contribuição para o Custeio da Iluminação Pública (art. 149-A, CF, EC 39/2002) — é constitucional como espécie tributária autônoma, superando a inconstitucionalidade histórica da taxa de iluminação pública?",
+      "opcoes": [
+        "Não é constitucional. A iluminação pública é serviço inespecífico e indivisível — não pode ser financiado por nenhuma cobrança compulsória individual; deve ser custeado exclusivamente pela arrecadação geral de impostos municipais",
+        "É uma taxa inconstitucional renomeada — a EC 39/2002 não criou nova espécie tributária, apenas deu nome diferente ao que é materialmente uma taxa de serviço indivisível, violando os requisitos do art. 145, II, CF e do art. 77 CTN",
+        "É constitucional somente em municípios com mais de 500.000 habitantes, pois apenas neles o serviço de iluminação pública atinge escala que justifica cobrança compulsória específica proporcional ao consumo",
+        "É constitucional. A EC 39/2002 inseriu o art. 149-A na CF criando espécie tributária AUTÔNOMA com regime próprio, não subordinada às exigências de especificidade e divisibilidade das taxas — o STF confirmou sua constitucionalidade no RE 573.675/SC (Tema 44)"
+      ],
+      "correta": 3,
+      "explicacao": "Antes da EC 39/2002, municípios criavam TAXAS de iluminação pública — o STF as declarava inconstitucionais por violação ao art. 145, II, CF (taxa exige serviço específico e divisível; iluminação pública é serviço geral). A EC 39/2002 criou SOLUÇÃO CONSTITUCIONAL: inseriu o art. 149-A na CF autorizando os Municípios a instituírem a COSIP, com regime próprio: (1) NÃO é taxa — não se submete à exigência de especificidade e divisibilidade; (2) É CONTRIBUIÇÃO ESPECIAL com fundamento constitucional autônomo no art. 149-A; (3) Pode ser cobrada na conta de energia elétrica por convênio com distribuidoras; (4) Deve observar os princípios da legalidade e anterioridade. STF RE 573.675/SC (Tema 44, 2009): 'É constitucional a cobrança da COSIP instituída com base no art. 149-A da CF, inserido pela EC 39/2002.' A EC efetivamente solucionou o problema constitucional criando nova espécie tributária específica para esse fim.",
+      "refs": [
+        "Art. 149-A da CF (EC 39/2002) — COSIP",
+        "STF RE 573.675/SC — Tema 44 — constitucionalidade da COSIP",
+        "Art. 145, II da CF e art. 77 CTN — taxa: especificidade e divisibilidade",
+        "STF RE 233.332/RJ — taxa de iluminação pública inconstitucional (anterior à EC 39)"
+      ],
+      "ponte": null
+    }
+  ]
+}
