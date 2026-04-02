@@ -1,0 +1,94 @@
+{
+  "id": "tributario_006",
+  "icone": "📉",
+  "titulo": "O ICMS que Não é Receita",
+  "area": "Direito Tributário",
+  "area_id": "direito_tributario",
+  "dificuldade": "avançado",
+  "requerente": "Empresa Épsilon Industrial Ltda.",
+  "requerido": "União Federal — Receita Federal do Brasil",
+  "intro": "A Empresa Épsilon ajuizou ação declaratória para excluir o ICMS destacado em suas notas fiscais da base de cálculo do PIS e da COFINS. A RFB se opõe: o ICMS integra o faturamento e deve compor a base dessas contribuições. O STF decidiu sobre o tema em 2017 no RE 574.706 (Tema 69). Porém, após os embargos de declaração julgados em 2021, surgiram novas questões práticas: qual ICMS excluir — o destacado ou o efetivamente recolhido? E qual o marco temporal para as restituições? Você é o juiz federal.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🧮",
+      "label": "O ICMS COMPÕE A RECEITA BRUTA?",
+      "narrativa": "A União argumenta que receita bruta é o total faturado; o ICMS é parte desse total e a empresa recebe o valor cheio do cliente incluindo o imposto. Logo, o ICMS integra a base de PIS/COFINS. A empresa sustenta que o ICMS não é sua receita — é dinheiro que transita pelo caixa apenas para ser repassado ao Estado.",
+      "falante": {
+        "nome": "Dr. Fernando Setta",
+        "papel": "Procurador da Fazenda Nacional",
+        "fala": "A empresa recebe do cliente o valor total incluindo ICMS. Esse valor integra o faturamento e é sobre o faturamento que incide PIS/COFINS. A lei é clara: base de cálculo é o faturamento mensal — e o ICMS faz parte desse valor recebido!"
+      },
+      "pergunta": "O ICMS destacado nas notas fiscais integra a base de cálculo do PIS e da COFINS (conceito de faturamento/receita bruta para fins constitucionais)?",
+      "opcoes": [
+        "Sim. Faturamento é o total das notas fiscais emitidas, incluindo todos os tributos destacados — o ICMS compõe o faturamento por ser ingresso financeiro na conta da empresa, independentemente de sua destinação ulterior ao Estado",
+        "Depende: no regime cumulativo (Lei 9.718/98) o ICMS integra a base; no regime não-cumulativo (Leis 10.637 e 10.833) o ICMS é excluído — os dois regimes têm bases legais distintas previstas em lei ordinária",
+        "A exclusão do ICMS é válida apenas para os setores onde o ICMS é calculado 'por fora' — no cálculo 'por dentro' o tributo se incorpora ao preço e integra indistintamente a receita tributável",
+        "Não. O STF no RE 574.706 (Tema 69) fixou que o ICMS não compõe a base de PIS/COFINS porque não se incorpora definitivamente ao patrimônio do contribuinte — é mero ingresso transitório que o vendedor apenas retém para repassar ao Estado, não configurando receita nem faturamento"
+      ],
+      "correta": 3,
+      "explicacao": "STF RE 574.706/PR (2017) — Tema 69 — LEADING CASE: 'O ICMS não compõe a base de cálculo para a incidência do PIS e da COFINS.' Tese fixada pelo Plenário: o ICMS não constitui receita ou faturamento da empresa, pois não ingressa definitivamente no patrimônio do contribuinte — é mero trânsito contábil destinado aos cofres estaduais. A empresa é mera arrecadadora do imposto estadual. Base constitucional: art. 195, I, 'b' CF define que PIS/COFINS incidem sobre 'a receita ou o faturamento' — e receita é o ingresso que se incorpora ao patrimônio. O ICMS não se incorpora. A decisão abriu espaço para questionamentos similares sobre outros tributos na base (ISS, CSLL), mas o STF tem analisado cada caso individualmente.",
+      "refs": [
+        "STF RE 574.706/PR — Tema 69 — exclusão do ICMS da base PIS/COFINS",
+        "Art. 195, I, 'b' da CF — base constitucional do PIS/COFINS",
+        "STF Embargos de Declaração no RE 574.706/PR (2021)",
+        "STJ REsp 1.144.469/PR"
+      ],
+      "ponte": "A tese é clara: ICMS fora da base. Mas em 2021 o STF julgou os embargos de declaração e precisou: qual ICMS excluir — o destacado na nota fiscal (valor maior) ou o efetivamente recolhido ao Estado (valor menor após uso de créditos)? A diferença pode ser de milhões para grandes industriais."
+    },
+    {
+      "fase": 2,
+      "icone": "📊",
+      "label": "QUAL ICMS EXCLUIR?",
+      "narrativa": "A empresa pretende excluir o ICMS DESTACADO nas notas fiscais, enquanto a RFB sustenta que só pode ser excluído o ICMS efetivamente RECOLHIDO após compensação com créditos. A diferença pode ser significativa: o ICMS destacado é sempre maior que o recolhido líquido.",
+      "falante": {
+        "nome": "Dra. Priya Motta",
+        "papel": "Juíza Federal",
+        "fala": "Nos embargos de declaração do RE 574.706, o STF precisou qual ICMS sai da base — o destacado ou o recolhido. Essa definição não é trivial: pode representar diferença de centenas de milhões para empresas industriais com grandes volumes de créditos de ICMS acumulados."
+      },
+      "pergunta": "Após os embargos de declaração do RE 574.706/PR (2021), qual é o valor do ICMS a ser EXCLUÍDO da base de PIS/COFINS: o DESTACADO na nota fiscal ou o efetivamente RECOLHIDO?",
+      "opcoes": [
+        "O ICMS EFETIVAMENTE RECOLHIDO ao Estado após compensação com créditos — apenas o valor líquido representa o repasse definitivo ao Estado; o crédito de ICMS é ativo da empresa e integra sua receita tributável pelo PIS/COFINS",
+        "O STF nos embargos remeteu ao STJ a definição do quantum a ser excluído — não há posição definitiva do STF sobre se é o destacado ou o recolhido, prevalecendo a posição da RFB enquanto não houver nova decisão",
+        "O STF nos embargos decidiu que o ICMS a ser excluído é o DESTACADO na nota fiscal de vendas — pois é o valor que transita pelo caixa da empresa como ingresso antes de ser repassado ao Estado, devendo ser comprovado por meio de escrituração contábil",
+        "Qualquer dos dois pode ser excluído, à escolha do contribuinte — o STF deu liberdade de critério para evitar complexidade contábil na apuração mensal"
+      ],
+      "correta": 2,
+      "explicacao": "STF, Embargos de Declaração no RE 574.706/PR (julgados em 13/05/2021): o Plenário esclareceu que o ICMS a ser excluído da base do PIS/COFINS é o ICMS DESTACADO nas notas fiscais de venda. Fundamento: é o valor do ICMS que representa o ingresso transitório na conta da empresa — é exatamente o valor que passa pelo caixa antes de ser repassado ao Estado. O ICMS recolhido (após compensação com créditos de entradas) é valor menor e sua exclusão não refletiria fielmente o fenômeno econômico descrito na tese. A empresa deve demonstrar mensalmente o ICMS destacado para fins de exclusão da base de PIS/COFINS, com base na escrituração fiscal. A mesma sessão dos embargos modulou os efeitos temporais da decisão original.",
+      "refs": [
+        "STF ED no RE 574.706/PR — julgamento de 13/05/2021",
+        "STF RE 574.706/PR — tese original Tema 69",
+        "Instrução Normativa RFB 2.121/2022 — orientações sobre a exclusão",
+        "STJ REsp 1.896.526/SP"
+      ],
+      "ponte": "ICMS destacado é o parâmetro correto. Mas o STF modulou os efeitos do Tema 69, estabelecendo um marco temporal. A Épsilon, que não possuía ação judicial anterior ao julgamento, pode recuperar quanto tempo de PIS/COFINS pago a maior?"
+    },
+    {
+      "fase": 3,
+      "icone": "📅",
+      "label": "MODULAÇÃO E MARCO TEMPORAL",
+      "narrativa": "Nos embargos de declaração de 2021, o STF modulou os efeitos do Tema 69. A Épsilon pleiteia restituição de todos os valores pagos a maior desde 2010. A RFB alega que a modulação limita a restituição ao período posterior a 15/03/2017, exceto para quem tinha ação judicial protocolada antes dessa data.",
+      "falante": {
+        "nome": "Dr. Fernando Setta",
+        "papel": "Procurador da Fazenda Nacional",
+        "fala": "A modulação é expressa: efeitos a partir de 15/03/2017, data do julgamento de mérito do STF. A Épsilon não tinha ação judicial antes dessa data — só pode recuperar do marco em diante. Pleito de 2010 a 2017 está fulminado pela modulação!"
+      },
+      "pergunta": "Como o STF modulou os efeitos do Tema 69 (exclusão do ICMS da base PIS/COFINS) e qual o impacto sobre o direito de restituição das empresas sem ação judicial anterior?",
+      "opcoes": [
+        "O STF não modulou os efeitos — a decisão tem efeitos retroativos plenos, permitindo restituição de todos os valores pagos a maior nos últimos 5 anos (prazo prescricional do art. 168 CTN) contados do ajuizamento, independentemente de ação anterior",
+        "O STF modulou para que os efeitos sejam contados apenas a partir de 2021 (data dos embargos de declaração) — empresas sem ação judicial anterior não têm direito à restituição do período 2017-2021",
+        "O STF modulou os efeitos a partir de 15/03/2017: empresas SEM ação judicial ou pedido administrativo anterior a essa data recuperam apenas o período posterior ao marco; empresas COM ação ou pedido protocolado ANTES do marco têm direito integral retroativo",
+        "A modulação afeta apenas as compensações futuras — o direito de pedir restituição por período anterior ao marco é irrestrito para qualquer empresa, inclusive as sem ação anterior"
+      ],
+      "correta": 2,
+      "explicacao": "STF, ED no RE 574.706/PR (13/05/2021) — MODULAÇÃO: o STF fixou o marco temporal em 15/03/2017 (data do julgamento de mérito). Resultado prático: (a) Empresas COM ação judicial OU pedido de restituição/compensação protocolado ANTES de 15/03/2017: direito de recuperar os últimos 5 anos (art. 168 CTN) contados de cada pedido; (b) Empresas SEM qualquer ação ou pedido anterior ao marco: direito de recuperar apenas valores pagos a mais a partir de 15/03/2017. A Épsilon, sem ação anterior ao marco: recupera a partir de 15/03/2017 até o presente, observado o prazo prescricional quinquenal retroativo de cada competência mensal. O STF ressalvou: não afeta os valores já recuperados por compensação ou restituição já homologados antes da modulação. A modulação protegeu o Erário de um passivo bilionário retroativo.",
+      "refs": [
+        "STF ED no RE 574.706/PR — modulação 15/03/2017",
+        "Art. 168, I do CTN — prazo prescricional para repetição do indébito",
+        "STF Tema 69 — tese fixada",
+        "Instrução Normativa RFB 2.121/2022"
+      ],
+      "ponte": null
+    }
+  ]
+}
