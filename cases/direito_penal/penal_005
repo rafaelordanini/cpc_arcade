@@ -1,0 +1,94 @@
+{
+  "id": "penal_005",
+  "icone": "💊",
+  "titulo": "A Mochila do Rafael",
+  "area": "Direito Penal",
+  "area_id": "direito_penal",
+  "dificuldade": "intermediário",
+  "requerente": "Ministério Público Estadual",
+  "requerido": "Rafael C. Barros",
+  "intro": "Rafael, 22 anos, estudante universitário, foi abordado em revista policial a 80 metros do portão de uma escola. Em sua mochila: 15g de maconha separados em 6 embalagens plásticas individuais, R$ 1.200 em notas de R$ 10 e R$ 20, e um caderno com anotações de valores e números de telefone. Sem antecedentes criminais. Alega uso pessoal e que o dinheiro era de trabalho informal. Você é o promotor.",
+  "fases": [
+    {
+      "fase": 1,
+      "icone": "🔍",
+      "label": "TRÁFICO OU USO PESSOAL",
+      "narrativa": "A defesa sustenta que 15g de maconha são compatíveis com usuário ocasional. O MP aponta o fracionamento em 6 embalagens, as anotações e o dinheiro em notas miúdas como indícios irrefutáveis de tráfico.",
+      "falante": {
+        "nome": "Dr. Fábio Lemes",
+        "papel": "Defensor Público",
+        "fala": "15 gramas! Sem testemunha de venda, sem comprador identificado. Apenas indícios circunstanciais — e indícios não bastam para condenar por tráfico!"
+      },
+      "pergunta": "Quais os critérios legais para distinção entre porte para uso pessoal (art. 28) e tráfico (art. 33) na Lei 11.343/06?",
+      "opcoes": [
+        "A lei estabelece limite de 30g para maconha — acima disso presunção absoluta de tráfico; abaixo, presunção de uso pessoal, com ônus do MP para comprovar a comercialização",
+        "O juiz atenderá à natureza e quantidade da substância; local e condições da ação; circunstâncias sociais e pessoais do agente; conduta e antecedentes — critérios concorrentes, sem limite quantitativo legal",
+        "O único critério legal objetivo é a confissão — sem admissão de tráfico pelo réu, a jurisprudência presume uso pessoal como direito de defesa",
+        "O critério determinante é a presença de balança de precisão ou embalagens — sem esses instrumentos típicos de comercialização, não há tráfico independentemente da quantidade"
+      ],
+      "correta": 1,
+      "explicacao": "O art. 28, §2º da Lei 11.343/06 não estabelece limite quantitativo — estabelece critérios QUALITATIVOS: I - natureza e quantidade da substância apreendida (15g fracionados em 6 doses individuais é diferente de 15g inteiros); II - local e condições da apreensão (80m de escola, com padrão de varejo); III - circunstâncias sociais e pessoais (estudante sem antecedentes); IV - conduta e antecedentes. O STJ consolidou: o fracionamento + dinheiro em notas miúdas + anotações são elementos objetivos que apontam para tráfico (HC 528.651/SP). A ausência de flagrante de venda NÃO afasta o tráfico — o tipo do art. 33 inclui 'ter em depósito', 'guardar' e 'trazer consigo'.",
+      "refs": [
+        "Art. 28, §2º da Lei 11.343/06",
+        "Art. 33 da Lei 11.343/06",
+        "STJ HC 528.651/SP",
+        "STJ AgRg no AREsp 1.642.091/SP"
+      ],
+      "ponte": "Rafael é enquadrado no art. 33. Agora: a apreensão ocorreu a 80 metros de escola. Isso ativa a causa de aumento do art. 40, III. Qual é o critério jurisprudencial para aplicação?"
+    },
+    {
+      "fase": 2,
+      "icone": "🏫",
+      "label": "CAUSA DE AUMENTO — ESCOLA",
+      "narrativa": "O MP requer a majorante do art. 40, III (tráfico nas proximidades de escola). A defesa sustenta que: (a) Rafael não estava dentro da escola; (b) não há prova de destinação a estudantes; (c) a escola estava fechada no horário da abordagem.",
+      "falante": {
+        "nome": "Dra. Renata Coutinho",
+        "papel": "Promotora de Justiça",
+        "fala": "80 metros do portão! A lei não exige que o tráfico ocorra DENTRO da escola — basta a PROXIMIDADE. A proteção do ambiente escolar é o bem jurídico tutelado!"
+      },
+      "pergunta": "Para a causa de aumento do art. 40, III (tráfico próximo a estabelecimentos de ensino), é necessário que a escola esteja em funcionamento ou que a droga se destine a estudantes?",
+      "opcoes": [
+        "Exige-se que a escola esteja em funcionamento — o bem jurídico tutelado é a proteção dos estudantes em atividade, logo sem alunos presentes a majorante não incide",
+        "Exige-se prova de destinação da droga a menores ou estudantes — a majorante tem natureza teleológica e sem nexo de destinação aplica-se apenas agravante genérica",
+        "Basta a proximidade objetiva — a Súmula 607 STJ pacificou que a majorante incide pela simples constatação do tráfico nas proximidades, independentemente do funcionamento do estabelecimento ou da destinação da droga",
+        "A majorante requer cumulativamente: proximidade, escola em funcionamento e destinação a alunos — interpretação restritiva pelo princípio da proporcionalidade penal"
+      ],
+      "correta": 2,
+      "explicacao": "Súmula 607 STJ: 'A majorante do tráfico de drogas, prevista no art. 40, III, da Lei n. 11.343/2006, aplica-se quando o delito é praticado nas proximidades de estabelecimentos de ensino, ainda que não exista prova de que a droga seria comercializada para os frequentadores daquele local.' O STJ rejeitou a interpretação subjetiva: o fundamento é de POLÍTICA CRIMINAL PREVENTIVA — a mera proximidade do ambiente escolar já constitui risco ao bem jurídico tutelado. Não importa: se escola estava aberta ou fechada, se havia alunos presentes, se era fim de semana, se a droga se destinava a estudantes. O critério é OBJETIVO: tráfico nas proximidades = majorante aplicável. Para Rafael: 80m do portão = majorante do art. 40, III incidente.",
+      "refs": [
+        "Súmula 607 do STJ",
+        "Art. 40, III da Lei 11.343/06",
+        "STJ HC 431.598/SP",
+        "STJ AgRg no AREsp 1.354.217/MG"
+      ],
+      "ponte": "Tráfico com causa de aumento configurados. Mas Rafael é primário, de bons antecedentes, não integra organização criminosa. A defesa requer o tráfico privilegiado. Qual a natureza jurídica após o HC 118.533 STF?"
+    },
+    {
+      "fase": 3,
+      "icone": "🏛️",
+      "label": "TRÁFICO PRIVILEGIADO",
+      "narrativa": "Rafael preenche os requisitos do art. 33, §4º: primário, bons antecedentes, não se dedica a atividades criminosas e não integra organização criminosa. A defesa requer redução máxima e regime aberto. O debate central: após o HC 118.533 STF, o tráfico privilegiado é crime hediondo?",
+      "falante": {
+        "nome": "Juiz Dr. Marcelo Saraiva",
+        "papel": "Juiz de Direito",
+        "fala": "O STF decidiu no HC 118.533. Preciso da posição atualizada: o tráfico privilegiado é hediondo? Isso afeta o regime inicial, a progressão e a possibilidade de fiança!"
+      },
+      "pergunta": "Após o julgamento do HC 118.533 pelo STF, o tráfico de drogas PRIVILEGIADO (art. 33, §4º, Lei 11.343/06) mantém a natureza de crime hediondo ou equiparado?",
+      "opcoes": [
+        "Sim. O STF manteve a natureza hedionda do tráfico privilegiado, apenas admitindo progressão de regime em percentual menor — 1/6 da pena em vez dos 40%/60% da Lei 8.072/90",
+        "Não. O STF decidiu que o tráfico privilegiado NÃO é hediondo — não se aplica a vedação de fiança, os percentuais gravosos de progressão da Lei 8.072/90, nem as demais restrições aos crimes hediondos",
+        "A questão não foi decidida definitivamente — prevalece divergência, cabendo ao juiz singular decidir caso a caso com base na proporcionalidade e nas circunstâncias pessoais do réu",
+        "Depende do quantum de redução: se inferior a 1/2, mantém a hediondez; se igual ou superior a 1/2, afasta — critério proporcional fixado pelo STJ após a decisão do STF"
+      ],
+      "correta": 1,
+      "explicacao": "STF HC 118.533/MS (2016) — Plenário: decidiu por maioria que o TRÁFICO PRIVILEGIADO (art. 33, §4º) NÃO é crime hediondo nem equiparado. Fundamento: a minorante do §4º foi criada exatamente para diferenciar o traficante eventual do traficante profissional. Submeter esse agente às restrições dos hediondos seria desproporcional e violaria a individualização da pena. Consequências práticas para Rafael: (1) ADMITE fiança; (2) progressão de regime pelo art. 112 LEP (sem percentuais gravosos da Lei 8.072/90); (3) regime inicial não precisa ser fechado se pena compatível com outro regime; (4) não há vedação à suspensão condicional da pena. O STF reafirmou esse entendimento no Tema 712 em 2023.",
+      "refs": [
+        "STF HC 118.533/MS — tráfico privilegiado não é hediondo",
+        "Art. 33, §4º da Lei 11.343/06",
+        "Lei 8.072/90 — Crimes Hediondos",
+        "STF Tema 712 (2023)"
+      ],
+      "ponte": null
+    }
+  ]
+}
