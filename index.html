@@ -1399,15 +1399,35 @@ function updateFilterCount() {
   
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+<style>
+  .entrada-footer {
+    border-top: 1px solid var(--border);
+    padding: 0.6rem 2rem;
+    text-align: center;
+  }
+  .entrada-footer p {
+    color: var(--text-dim);
+    font-size: 0.65rem;
+    line-height: 1.5;
+  }
+  .entrada-footer a {
+    color: var(--text-dim);
+    transition: color 0.2s;
+  }
+  .entrada-footer a:hover {
+    color: var(--accent);
+  }
+  .entrada-footer .dot {
+    margin: 0 0.35rem;
+    opacity: 0.35;
+  }
+</style>
+
 <footer class="entrada-footer">
   <p>
     Feito por concurseiros para concurseiros
     <span class="dot">·</span>
-    Fale conosco:
     <a href="mailto:rafaelordanini@gmail.com">rafaelordanini@gmail.com</a>
-  </p>
-  <p style="margin-top: 0.2rem; font-size: 0.63rem;">
-    Casos elaborados com base em questões reais dos concursos mais exigentes do país, como ENAM, Procuradorias e Promotorias.
   </p>
 </footer>
 </body>
